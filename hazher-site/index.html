@@ -15,10 +15,12 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="main.js" defer></script>
   </head>
   <body>
-    <div class="bg-mesh" aria-hidden="true"></div>
-    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <div class="bg-mesh" aria-hidden="true" data-parallax="0.03"></div>
+    <div class="bg-grid" aria-hidden="true" data-parallax="0.06"></div>
 
     <header class="nav">
       <div class="wrap nav-inner">
@@ -42,7 +44,7 @@
     <main>
       <section class="hero">
         <div class="wrap hero-grid">
-          <div>
+          <div data-reveal="left">
             <div class="badge">
               <span class="badge-dot" aria-hidden="true"></span>
               Flutter · Supabase · iOS &amp; Android
@@ -54,19 +56,35 @@
               <strong>Loop Marked</strong> (marked med virtuell valuta og sterk kryptering). Vi tar også oppdrag:
               din idé, vår gjennomføringsevne.
             </p>
+            <p class="hero-lead hero-lead-tight">
+              Appikonene er de samme som i butikk: EcoShelf som høyoppløselig PNG fra app-pakken, Loop Marked hentet fra
+              <a href="https://loopmarked.com/" target="_blank" rel="noopener noreferrer">loopmarked.com</a>.
+            </p>
             <div class="hero-actions">
               <a href="#ecoshelf" class="btn btn-primary">Les om EcoShelf</a>
               <a href="#tjenester" class="btn btn-ghost">Vi bygger for deg</a>
             </div>
           </div>
-          <div class="hero-visual">
+          <div class="hero-visual hero-float" data-reveal="scale">
             <div class="mockup-row">
               <div class="device-frame">
-                <img src="images/ecoshelf-logo.svg" width="180" height="180" alt="EcoShelf logo" />
+                <img
+                  src="images/ecoshelf-app-icon.png"
+                  width="180"
+                  height="180"
+                  alt="EcoShelf appikon"
+                  loading="eager"
+                />
                 <p class="device-label">EcoShelf</p>
               </div>
               <div class="device-frame">
-                <img src="images/loop-marked-icon.png" width="180" height="180" alt="Loop Marked appikon" />
+                <img
+                  src="images/loop-marked-icon.png"
+                  width="180"
+                  height="180"
+                  alt="Loop Marked appikon (som på loopmarked.com)"
+                  loading="eager"
+                />
                 <p class="device-label">Loop Marked</p>
               </div>
             </div>
@@ -75,7 +93,7 @@
       </section>
 
       <div class="wrap">
-        <aside class="ad-slot" aria-label="Annonseplass">
+        <aside class="ad-slot" aria-label="Annonseplass" data-reveal="up">
           <p>
             <strong>Annonse</strong><br />
             Her kan du lime inn Google AdSense- eller annet annonse-script når utgiverkontoen er godkjent.
@@ -86,7 +104,7 @@
 
       <section class="section" id="ecoshelf">
         <div class="wrap">
-          <div class="section-head">
+          <div class="section-head" data-reveal="up">
             <p class="section-label">Produkt</p>
             <h2>EcoShelf — full kontroll på maten du har hjemme</h2>
             <p class="section-desc">
@@ -96,13 +114,14 @@
             </p>
           </div>
 
-          <div class="panel eco-accent">
-            <div class="two-cols">
-              <div>
-                <div class="brand-lockup">
-                  <img class="logo-img" src="images/ecoshelf-logo.svg" width="72" height="72" alt="" />
-                  <h3>EcoShelf</h3>
-                </div>
+          <div class="panel eco-accent" data-reveal="up">
+            <div class="product-intro product-intro--eco">
+              <div class="app-icon-tile" aria-hidden="true">
+                <img src="images/ecoshelf-app-icon.png" width="128" height="128" alt="" />
+              </div>
+              <div class="product-intro-main">
+                <h3 class="product-intro-title">EcoShelf</h3>
+                <p class="product-intro-tagline">Matlager, utløp og handleliste — bygget for hverdagen.</p>
                 <div class="tag-row">
                   <span class="tag hit-eco">Matsvinn</span>
                   <span class="tag">Strekkodeskanner</span>
@@ -111,29 +130,14 @@
                   <span class="tag">Oppskrifter</span>
                   <span class="tag">Varsler</span>
                 </div>
-                <p class="prose-block" style="margin-top: 8px">
+                <div class="product-intro-actions">
                   <a href="https://ecoshelf.app" class="btn btn-sm btn-eco" target="_blank" rel="noopener noreferrer">ecoshelf.app</a>
                   <a href="https://www.ecoshelf.app/privacy" class="btn btn-sm btn-ghost" target="_blank" rel="noopener noreferrer">Personvern (app)</a>
-                </p>
-              </div>
-              <div class="device-frame" style="max-width: 220px; margin: 0 auto">
-                <div
-                  style="
-                    aspect-ratio: 9/19;
-                    border-radius: 20px;
-                    background: linear-gradient(160deg, rgba(52, 211, 153, 0.25), rgba(5, 150, 105, 0.08));
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                  "
-                >
-                  <img src="images/ecoshelf-logo.svg" width="100" height="100" alt="" />
                 </div>
-                <p class="device-label">Illustrasjon av app-opplevelse</p>
               </div>
             </div>
 
-            <div class="prose-block" style="max-width: none; margin-top: 28px">
+            <div class="prose-block product-prose" style="max-width: none; margin-top: 32px">
               <h4>Hva EcoShelf gjør i praksis</h4>
               <p>
                 Du legger inn varer med utløpsdato og lagringssted (kjøleskap, fryser eller tørrskap). Alt vises i en
@@ -167,7 +171,7 @@
 
       <section class="section" id="loopmarked">
         <div class="wrap">
-          <div class="section-head">
+          <div class="section-head" data-reveal="up">
             <p class="section-label">Produkt</p>
             <h2>Loop Marked — marked med personvern i kjernen</h2>
             <p class="section-desc">
@@ -178,13 +182,14 @@
             </p>
           </div>
 
-          <div class="panel loop-accent">
-            <div class="two-cols">
-              <div>
-                <div class="brand-lockup">
-                  <img class="logo-img" src="images/loop-marked-icon.png" width="72" height="72" alt="" />
-                  <h3>Loop Marked</h3>
-                </div>
+          <div class="panel loop-accent" data-reveal="up">
+            <div class="product-intro product-intro--loop">
+              <div class="app-icon-tile app-icon-tile--loop" aria-hidden="true">
+                <img src="images/loop-marked-icon.png" width="128" height="128" alt="" />
+              </div>
+              <div class="product-intro-main">
+                <h3 class="product-intro-title">Loop Marked</h3>
+                <p class="product-intro-tagline">Personvern-først-marked med sanntid, kart og strukturerte tilbud.</p>
                 <div class="tag-row">
                   <span class="tag hit-loop">Lumo (in-app)</span>
                   <span class="tag">Kryptert chat</span>
@@ -192,28 +197,13 @@
                   <span class="tag">Kart &amp; radius</span>
                   <span class="tag">Tilbud &amp; reviews</span>
                 </div>
-                <p class="prose-block" style="margin-top: 8px">
+                <div class="product-intro-actions">
                   <a href="https://loopmarked.com/" class="btn btn-sm btn-loop" target="_blank" rel="noopener noreferrer">loopmarked.com</a>
-                </p>
-              </div>
-              <div class="device-frame" style="max-width: 220px; margin: 0 auto">
-                <div
-                  style="
-                    aspect-ratio: 9/19;
-                    border-radius: 20px;
-                    background: linear-gradient(160deg, rgba(167, 139, 250, 0.3), rgba(91, 33, 182, 0.12));
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                  "
-                >
-                  <img src="images/loop-marked-icon.png" width="96" height="96" alt="" />
                 </div>
-                <p class="device-label">Illustrasjon av app-opplevelse</p>
               </div>
             </div>
 
-            <div class="prose-block" style="max-width: none; margin-top: 28px">
+            <div class="prose-block product-prose" style="max-width: none; margin-top: 32px">
               <h4>Opplevelsen for brukeren</h4>
               <p>
                 Brukere oppretter profil med Apple eller Google, utforsker annonser med filtre for kategori, pris (i Lumo),
@@ -244,15 +234,95 @@
         </div>
       </section>
 
+      <section class="section section-deep" aria-labelledby="deep-heading">
+        <div class="wrap">
+          <div class="section-head" data-reveal="up">
+            <p class="section-label">Arkitektur</p>
+            <h2 id="deep-heading">Hvordan vi bygger produkter som tåler ekte bruk — og ekte skroll</h2>
+            <p class="section-desc">
+              Det du ser på denne siden er bevisst en liten «meta-demo»: samme mønster vi bruker i appene — tydelig
+              typografi, rolige overganger, og bevegelse som <em>forklarer hierarki</em> i stedet for å distrahere. Under
+              finner du en mer teknisk gjennomgang av hvordan EcoShelf og Loop Marked utnytter Flutter, Supabase og
+              kryptografisk tenkning uten å ofre brukerflyt.
+            </p>
+          </div>
+
+          <div class="stat-row stat-row--prose" data-stagger>
+            <div class="stat-pill">
+              <strong>Sanntid</strong>
+              <span>PostgreSQL + abonnementer gir øyeblikkelige oppdateringer i chat, annonser og tilbud — uten at
+                klienten må polle seg i kne.</span>
+            </div>
+            <div class="stat-pill">
+              <strong>RLS</strong>
+              <span>Row Level Security betyr at databasen, ikke bare appen, håndhever «hvem får se hva» — et
+                sikkerhetsnett når UI og API endrer seg.</span>
+            </div>
+            <div class="stat-pill">
+              <strong>Flutter</strong>
+              <span>Én render-pipeline, konsistente animasjoner og delte komponenter på iOS og Android — færre
+                avvik, raskere iterasjoner.</span>
+            </div>
+          </div>
+
+          <blockquote class="quote-block" data-reveal="right">
+            <p>
+              «Personvern er ikke et avkrysningsfelt — det er en arkitekturavgjørelse. Når meldinger krypteres før de
+              forlater enheten, og når matdata isoleres per konto i skyen, bygger vi tillit som varer lenger enn
+              kampanjer.»
+            </p>
+            <footer>— produktfilosofi Hazher / Loop Marked / EcoShelf</footer>
+          </blockquote>
+
+          <div class="panel panel-glow" data-reveal="up">
+            <div class="prose-block" style="max-width: none">
+              <h3>Fra piksel til policy</h3>
+              <p>
+                I Loop Marked møter du et komplekst snitt av funksjoner som ellers spres over flere apper: markedsplass,
+                strukturert forhandling, omdømme, flerspråklighet med RTL, kart og radius, samt en chanel som er ment å
+                være konfidensiell. Å kombinere det med Lumo — en tydelig virtuell valuta — gjør det mulig å drive
+                økonomi og belønning inne i økosystemet uten å blande inn tradisjonell betalingsinfrastruktur i hver
+                skjermflate. Det forenkler risikovurdering, klarerhet i vilkår og brukerens mentale modell: «jeg handler
+                med poeng i appen», ikke «jeg sender penger til en ukjent motpart via samme tråd som en
+                tekstmelding».
+              </p>
+              <p>
+                EcoShelf adresserer et annet, like krevende domene: husholdningens tidsforløp. Utløpsdatoer, batcher,
+                lagringssteder og handlelister er tilstand som endrer seg flere ganger om dagen. Når vi legger til
+                strekkode, kvitteringsskanning og KI-assistert innlesing av «hva som faktisk står i skapet», øker
+                kompleksiteten — men gevinsten er at brukeren slipper manuell dataføring som uansett ville blitt utdatert.
+                Alt lander i en modell der brukeren godkjenner forslag, og der RLS sørger for at rådata om hjemmet ditt
+                ikke lekker på tvers av kontoer.
+              </p>
+              <p>
+                På web (som her) bruker vi lette, deklarative animasjoner: elementer som glir inn når de faktisk blir
+                synlige (<code>IntersectionObserver</code>), et svakt parallax-lag på bakgrunnen, og en tynn
+                fremdriftslinje som speiler leseposisjon. I app bruker vi oftere implicit animasjoner og fysikk-lignende
+                kurver — men prinsippet er det samme: bevegelse skal alltid respektere
+                <code>prefers-reduced-motion</code>.
+              </p>
+              <h3>Operasjonell modenhet</h3>
+              <p>
+                Når vi tar eksterne oppdrag, tar vi med oss erfaring fra butikkkrav (personvern-URL, innholdsdeklarasjoner,
+                metadata), fra observabilitet (hvordan feil i feltet fanges uten å eksponere persondata), og fra
+                lokaliseringsdisiplin (streng separation av strenger, RTL-layout, og kulturell sensitivitet i
+                tall/dato/valuta). Det er den samme «siste mil»-tenkningen som skiller en demo fra en app folk faktisk
+                beholder på hjemskjermen.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <div class="wrap">
-        <aside class="ad-slot" aria-label="Annonseplass">
+        <aside class="ad-slot" aria-label="Annonseplass" data-reveal="up">
           <p>Annonseplass (valgfritt andre annonseblokk). Samme bredde som anbefalt for responsive annonser.</p>
         </aside>
       </div>
 
       <section class="section" id="tjenester">
         <div class="wrap">
-          <div class="section-head">
+          <div class="section-head" data-reveal="up">
             <p class="section-label">Tjenester</p>
             <h2>Vi kan lage appen for deg</h2>
             <p class="section-desc">
@@ -262,7 +332,7 @@
             </p>
           </div>
 
-          <div class="feature-grid">
+          <div class="feature-grid" data-stagger>
             <div class="feature-card">
               <strong>Strategi og produkt</strong>
               <span>Vi hjelper deg å avgrense MVP, prioriter funksjoner og definere suksesskriterier før en linje kode skrives.</span>
@@ -289,7 +359,7 @@
             </div>
           </div>
 
-          <div class="panel" style="margin-top: 32px">
+          <div class="panel" style="margin-top: 32px" data-reveal="up">
             <h3>Typisk samarbeidsløp</h3>
             <div class="prose-block" style="max-width: none">
               <p>
@@ -312,7 +382,7 @@
 
       <section class="section" id="om">
         <div class="wrap">
-          <div class="section-head">
+          <div class="section-head" data-reveal="up">
             <p class="section-label">Om Hazher</p>
             <h2>Hvorfor vi mener du kan stole på oss</h2>
             <p class="section-desc">
@@ -324,7 +394,7 @@
           </div>
 
           <div class="two-cols">
-            <div class="panel">
+            <div class="panel" data-reveal="left">
               <h3>Det vi er gode på</h3>
               <ul class="prose-block" style="list-style: disc; color: var(--muted)">
                 <li>Helhetlig tenkning: UX, ytelse, sikkerhet og forretningslogikk i samme team.</li>
@@ -333,7 +403,7 @@
                 <li>Erfaring med både forbrukerapper og plattformer med høyere risiko (chat, handel, data).</li>
               </ul>
             </div>
-            <div class="panel">
+            <div class="panel" data-reveal="right">
               <h3>Det vi ikke lover</h3>
               <ul class="prose-block" style="list-style: disc; color: var(--muted)">
                 <li>Vi lover ikke «nummer én på App Store på tre dager» — vi lover derimot solid håndverk og ærlige estimater.</li>
@@ -343,7 +413,7 @@
             </div>
           </div>
 
-          <div class="tech-strip" style="margin-top: 28px">
+          <div class="tech-strip" style="margin-top: 28px" data-stagger>
             <div class="tech-item"><strong>Flutter</strong> · UI på tvers av plattformer</div>
             <div class="tech-item"><strong>Dart</strong> · typesikker app-logikk</div>
             <div class="tech-item"><strong>Supabase</strong> · PostgreSQL, auth, lagring</div>
@@ -355,7 +425,7 @@
 
       <section class="section" id="kontakt">
         <div class="wrap">
-          <div class="cta-box">
+          <div class="cta-box" data-reveal="scale">
             <h2>La oss snakke</h2>
             <p>
               <strong>EcoShelf:</strong>
@@ -404,37 +474,5 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXX"
       crossorigin="anonymous"></script>
     -->
-
-    <script>
-      document.getElementById("y").textContent = new Date().getFullYear();
-      (function () {
-        var t = document.getElementById("navToggle");
-        var l = document.getElementById("navLinks");
-        if (t && l) {
-          t.addEventListener("click", function () {
-            l.classList.toggle("is-open");
-          });
-          l.querySelectorAll("a").forEach(function (a) {
-            a.addEventListener("click", function () {
-              l.classList.remove("is-open");
-            });
-          });
-        }
-        var b = document.getElementById("cookieBanner");
-        var k = "hazher_cookie_ok";
-        if (b && !localStorage.getItem(k)) {
-          requestAnimationFrame(function () {
-            b.classList.add("is-visible");
-          });
-        }
-        var btn = document.getElementById("cookieAccept");
-        if (btn) {
-          btn.addEventListener("click", function () {
-            localStorage.setItem(k, "1");
-            b.classList.remove("is-visible");
-          });
-        }
-      })();
-    </script>
   </body>
 </html>

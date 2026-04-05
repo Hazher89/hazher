@@ -43,5 +43,5 @@ Repo **Settings** → **Pages** → Source: branch `main`, folder `/root` (eller
 
 ## Ressurser i mappen
 
-- `images/ecoshelf-logo.svg` — Hazher-produsert logo for EcoShelf på nett.
-- `images/loop-marked-icon.png` — kopiert fra Loop Marked Android `mipmap-xxxhdpi` (bytt til offisiell markedsførings-PNG om du har).
+- `images/ecoshelf-app-icon.png` — 1024×1024 appikon (samme som i app-pakken).
+- `images/loop-marked-icon.png` — hentet fra produksjonssiden [loopmarked.com](https://loopmarked.com/) (`/images/app-icon.png`).
