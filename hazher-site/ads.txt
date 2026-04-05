@@ -1,0 +1,4 @@
+# Google AdSense / ads.txt for hazher.no
+# Etter at du har fått Publisher-ID fra Google AdSense, legg til én linje slik:
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+# (bytt ut pub-XXXXXXXXXXXXXXXX med ditt faktiske ID)

@@ -33,3 +33,15 @@ DNS for hazher.no må være hos Cloudflare (eller du peker A/CNAME dit leverand�
 ## GitHub Pages (alternativ)
 
 Repo **Settings** → **Pages** → Source: branch `main`, folder `/root` (eller `/hazher-site`). Tilpass domene under **Custom domain** når du er klar.
+
+## Google AdSense / annonser
+
+- Siden har **tykk, egen tekst**, tydelig navigasjon, **personvern** (`privacy.html`) som omtaler informasjonskapsler og annonser, **ads.txt**-mal og **informasjonskapsel-banner**.
+- Etter godkjenning i AdSense: lim inn publisher-script i `index.html` (se kommentar nederst i fila), legg inn **annonse-blokker** der `.ad-slot`-boksene står (eller bytt dem ut med `ins.adsbygoogle`), og oppdater **ads.txt** med ditt `pub-…`-ID.
+- Opprett faktisk e-post for **kontakt@hazher.no** og **personvern@hazher.no** (eller oppdater adressene i `index.html` og `privacy.html`).
+- For brukere i EØS kan Google kreve **samtykke** (Consent Mode / CMP) for personaliserte annonser; vurder offisielt CMP-verktøy når du skrur på målretting.
+
+## Ressurser i mappen
+
+- `images/ecoshelf-logo.svg` — Hazher-produsert logo for EcoShelf på nett.
+- `images/loop-marked-icon.png` — kopiert fra Loop Marked Android `mipmap-xxxhdpi` (bytt til offisiell markedsførings-PNG om du har).

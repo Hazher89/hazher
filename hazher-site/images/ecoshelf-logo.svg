@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" aria-hidden="true">
+  <defs>
+    <linearGradient id="ecoG" x1="0" y1="0" x2="120" y2="120">
+      <stop stop-color="#34d399"/>
+      <stop offset="1" stop-color="#047857"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="26" fill="url(#ecoG)"/>
+  <ellipse cx="60" cy="52" rx="28" ry="34" fill="#ecfdf5" transform="rotate(-12 60 52)"/>
+  <path stroke="#047857" stroke-width="3" stroke-linecap="round" d="M60 30v44"/>
+  <rect x="38" y="86" width="44" height="10" rx="3" fill="#047857" fill-opacity="0.5"/>
+</svg>
