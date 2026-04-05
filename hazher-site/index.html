@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="nb">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hazher — EcoShelf & Loop Marked</title>
+    <meta
+      name="description"
+      content="Hazher bygger moderne apper: EcoShelf for smartere mat og mindre svinn, og Loop Marked — et personvern-først-marked med Lumo."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-mesh" aria-hidden="true"></div>
+    <div class="bg-grid" aria-hidden="true"></div>
+
+    <header class="nav">
+      <div class="wrap nav-inner">
+        <a href="#" class="logo">Hazher</a>
+        <button
+          type="button"
+          class="nav-toggle"
+          aria-label="Åpne meny"
+          id="navToggle"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        <nav class="nav-links" id="navLinks" aria-label="Hovedmeny">
+          <a href="#apps">Appene</a>
+          <a href="#om">Om</a>
+          <a href="#kontakt" class="nav-cta">Kontakt</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="wrap">
+          <div class="badge">
+            <span class="badge-dot" aria-hidden="true"></span>
+            Apper bygget med Flutter &amp; Supabase
+          </div>
+          <h1>Vi lager software folk faktisk bruker hver dag</h1>
+          <p class="hero-lead">
+            Hazher samler arbeidet vårt: fra kjøleskapet til markedsplassen.
+            To produkter, én ambisjon — tydelig design, solid teknikk og respekt
+            for brukerens data.
+          </p>
+          <div class="hero-actions">
+            <a href="#apps" class="btn btn-primary">Se appene</a>
+            <a href="https://loopmarked.com/" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">Loop Marked</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="apps">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="section-label">Portefølje</p>
+            <h2>To apper, to verdener</h2>
+            <p class="section-desc">
+              EcoShelf hjelper deg å holde styr på maten hjemme. Loop Marked er
+              et moderne, sikkert sted å handle og bytte — med egen virtuel valuta.
+            </p>
+          </div>
+
+          <div class="bento">
+            <article class="app-card eco">
+              <div class="app-icon" aria-hidden="true">🌱</div>
+              <h3>EcoShelf</h3>
+              <p>
+                Smart matskap: skann strekkoder, ta bilde av kjøleskap og fryser,
+                utløpsdatoer og handleliste. Mindre matkasting, bedre oversikt og
+                en roligere hverdag.
+              </p>
+              <div class="tag-row">
+                <span class="tag accent">Mat &amp; hjem</span>
+                <span class="tag">iOS</span>
+                <span class="tag">AI-hjelp</span>
+                <span class="tag">Offline-vennlig</span>
+              </div>
+              <div class="card-actions">
+                <a
+                  href="https://ecoshelf.app"
+                  class="btn btn-sm btn-eco"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >ecoshelf.app</a
+                >
+                <a
+                  href="https://www.ecoshelf.app/privacy"
+                  class="btn btn-sm btn-ghost"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Personvern</a
+                >
+              </div>
+            </article>
+
+            <article class="app-card loop">
+              <div class="app-icon" aria-hidden="true">🔐</div>
+              <h3>Loop Marked</h3>
+              <p>
+                Et personvern-først-marked med kryptert chat, sanntid og sterk
+                autentisering. Handelen skjer med <strong>Lumo</strong> —
+                plattformens <strong>virtuelle valuta</strong>, ikke ekte penger.
+                Trygt miljø for bytte og kjøp i appen.
+              </p>
+              <div class="tag-row">
+                <span class="tag accent">Lumo (in-app)</span>
+                <span class="tag">E2E-kryptering</span>
+                <span class="tag">22+ språk</span>
+                <span class="tag">iOS &amp; Android</span>
+              </div>
+              <div class="card-actions">
+                <a
+                  href="https://loopmarked.com/"
+                  class="btn btn-sm btn-loop"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >loopmarked.com</a
+                >
+                <a
+                  href="https://loopmarked.com/"
+                  class="btn btn-sm btn-ghost"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Les mer</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="om">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="section-label">Teknologi</p>
+            <h2>Bygget for hastighet og tillit</h2>
+            <p class="section-desc">
+              Samme moderne stack på tvers av produktene: ett Flutter-lag for
+              native følelse, Supabase for database, auth og sanntid der det trengs.
+            </p>
+          </div>
+          <div class="tech-strip">
+            <div class="tech-item"><strong>Flutter</strong> &nbsp;·&nbsp; UI</div>
+            <div class="tech-item"><strong>Supabase</strong> &nbsp;·&nbsp; Backend</div>
+            <div class="tech-item"><strong>Row Level Security</strong> &nbsp;·&nbsp; Data</div>
+            <div class="tech-item"><strong>Edge</strong> &nbsp;·&nbsp; Funksjoner</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="kontakt">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="section-label">Kontakt</p>
+            <h2>Samarbeid eller spørsmål?</h2>
+            <p class="section-desc">
+              For EcoShelf: <a href="mailto:support@ecoshelf.app">support@ecoshelf.app</a>.
+              For Loop Marked, bruk kontaktlenkene på
+              <a href="https://loopmarked.com/" target="_blank" rel="noopener noreferrer">loopmarked.com</a>.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer-grid">
+        <div class="footer-brand">
+          <div class="logo">Hazher</div>
+          <p>Apper og produkter utviklet av Hazher. Domene: hazher.no</p>
+        </div>
+        <div class="footer-meta">
+          <p>&copy; <span id="y"></span> Hazher. Alle rettigheter forbeholdt.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("y").textContent = new Date().getFullYear();
+      var t = document.getElementById("navToggle");
+      var l = document.getElementById("navLinks");
+      if (t && l) {
+        t.addEventListener("click", function () {
+          l.classList.toggle("is-open");
+        });
+        l.querySelectorAll("a").forEach(function (a) {
+          a.addEventListener("click", function () {
+            l.classList.remove("is-open");
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
