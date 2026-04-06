@@ -398,24 +398,20 @@ h4 {
   border-radius: 20px;
 }
 
-/* Same squircle treatment as .app-icon-tile — use for EcoShelf in .device-frame (hero / docs) */
+/* EcoShelf squircle wrap inside hero/docs device-frame — no white leaks */
 .device-frame .eco-app-icon-wrap {
   width: 100%;
   aspect-ratio: 1;
   border-radius: 24.5%;
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.2);
-  box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.08) inset,
-    0 0 0 1px rgba(255, 255, 255, 0.04);
+  background: #000;
 }
 
 .device-frame .eco-app-icon-wrap img {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  background: transparent;
+  object-fit: cover;
 }
 
 .device-label {
@@ -580,11 +576,8 @@ h4 {
   border-radius: 24.5%;
   overflow: hidden;
   flex-shrink: 0;
-  background: rgba(0, 0, 0, 0.2);
-  box-shadow:
-    0 24px 48px rgba(0, 0, 0, 0.45),
-    0 0 0 1px rgba(255, 255, 255, 0.1) inset,
-    0 0 0 1px rgba(255, 255, 255, 0.06);
+  background: #000;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
 }
 
 .app-icon-tile--loop {
@@ -602,8 +595,7 @@ h4 {
 }
 
 .app-icon-tile img[src*="ecoshelf-app-icon"] {
-  object-fit: contain;
-  background: transparent;
+  object-fit: cover;
 }
 
 .product-intro-title {
