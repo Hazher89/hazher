@@ -293,8 +293,13 @@ h4 {
   gap: 12px;
 }
 
-.hero-actions--second {
-  margin-top: 12px;
+/* Single block wraps all hero CTAs so row-gap applies between wrapped rows */
+.hero-actions-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  row-gap: 14px;
+  margin-top: 4px;
 }
 
 .section-more {
@@ -836,11 +841,15 @@ h4 {
   margin-bottom: 18px;
 }
 
-/* App icons (raster PNG) */
-.brand-lockup .logo-img,
-.device-frame img {
+/* App icons (raster PNG): no fill behind transparent corners (avoids “white wedges”) */
+.brand-lockup .logo-img {
   object-fit: contain;
   background: rgba(255, 255, 255, 0.04);
+}
+
+.device-frame img {
+  object-fit: contain;
+  background: transparent;
 }
 
 /* Nav after scroll */
