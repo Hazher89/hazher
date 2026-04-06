@@ -398,9 +398,25 @@ h4 {
   border-radius: 20px;
 }
 
-/* EcoShelf: iOS-style squircle clip (~22.37%) hides any fringe vs fixed px radius */
-.device-frame img[src*="ecoshelf-app-icon"] {
+/* Same squircle treatment as .app-icon-tile — use for EcoShelf in .device-frame (hero / docs) */
+.device-frame .eco-app-icon-wrap {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 24.5%;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.08) inset,
+    0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.device-frame .eco-app-icon-wrap img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   border-radius: 22.37%;
+  background: transparent;
 }
 
 .device-label {
