@@ -391,26 +391,18 @@ h4 {
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
 }
 
-.device-frame img {
+/* Direct child only — avoids forcing 20px radius onto nested EcoShelf imgs (was causing white wedges) */
+.device-frame > img {
   display: block;
   width: 100%;
   height: auto;
   border-radius: 20px;
 }
 
-/* EcoShelf squircle wrap inside hero/docs device-frame — no white leaks */
-.device-frame .eco-app-icon-wrap {
-  width: 100%;
-  aspect-ratio: 1;
-  border-radius: 24.5%;
-  overflow: hidden;
-  background: #000;
-}
-
-.device-frame .eco-app-icon-wrap img {
-  display: block;
-  width: 100%;
-  height: 100%;
+/* EcoShelf PNG has transparent squircle corners — match page bg, iOS-like radius (same as Loop: no extra wrapper) */
+.device-frame > img.eco-app-icon {
+  border-radius: 22.37%;
+  background-color: var(--bg0);
   object-fit: cover;
 }
 
@@ -594,8 +586,9 @@ h4 {
   object-fit: cover;
 }
 
-.app-icon-tile img[src*="ecoshelf-app-icon"] {
+.app-icon-tile img.eco-app-icon {
   object-fit: cover;
+  background-color: var(--bg0);
 }
 
 .product-intro-title {
@@ -864,9 +857,14 @@ h4 {
   background: rgba(255, 255, 255, 0.04);
 }
 
-.device-frame img {
+.device-frame > img {
   object-fit: contain;
   background: transparent;
+}
+
+.device-frame > img.eco-app-icon {
+  object-fit: cover;
+  background-color: var(--bg0);
 }
 
 /* Nav after scroll */
