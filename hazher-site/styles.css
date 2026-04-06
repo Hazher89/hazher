@@ -415,7 +415,6 @@ h4 {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  border-radius: 22.37%;
   background: transparent;
 }
 
@@ -604,7 +603,6 @@ h4 {
 
 .app-icon-tile img[src*="ecoshelf-app-icon"] {
   object-fit: contain;
-  border-radius: 22.37%;
   background: transparent;
 }
 
