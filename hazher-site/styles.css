@@ -399,7 +399,8 @@ h4 {
   margin-inline: auto;
   border-radius: 22.37%;
   overflow: hidden;
-  background: var(--bg0);
+  /* Must match flattened ecoshelf-app-icon.png corners (#050508 === --bg0) */
+  background: #050508;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
 }
 
