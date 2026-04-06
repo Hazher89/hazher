@@ -398,6 +398,11 @@ h4 {
   border-radius: 20px;
 }
 
+/* EcoShelf: iOS-style squircle clip (~22.37%) hides any fringe vs fixed px radius */
+.device-frame img[src*="ecoshelf-app-icon"] {
+  border-radius: 22.37%;
+}
+
 .device-label {
   text-align: center;
   font-size: 0.75rem;
@@ -579,6 +584,12 @@ h4 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.app-icon-tile img[src*="ecoshelf-app-icon"] {
+  object-fit: contain;
+  border-radius: 22.37%;
+  background: transparent;
 }
 
 .product-intro-title {
