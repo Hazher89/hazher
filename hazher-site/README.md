@@ -6,8 +6,9 @@ Undermapper (når **root** er `hazher-site`):
 
 - `ECOSHELF/` — dokumentasjon / produkt-hub for EcoShelf  
 - `ECOSHELF/Support/` — support og FAQ  
+- `ECOSHELF/Privacy/` — personvern for **appen** (kan brukes som Privacy Policy URL i App Store Connect)
 
-Offentlige URL-er: `https://hazher.no/ECOSHELF/` og `https://hazher.no/ECOSHELF/Support/`.
+Offentlige URL-er: `https://hazher.no/ECOSHELF/`, `https://hazher.no/ECOSHELF/Support/`, `https://hazher.no/ECOSHELF/Privacy/`.
 
 ## Hvit skjerm på hazher.no?
 
