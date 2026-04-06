@@ -79,5 +79,5 @@ Nettsidene i `hazher-site` bruker nå blant annet **ecoshelfsupport@hazher.no** 
 
 ## Ressurser i mappen
 
-- `images/ecoshelf-app-icon.png` — 1024×1024 appikon (samme som i app-pakken).
+- `images/ecoshelf-app-icon-v2.png` — 1024×1024 appikon (samme som i app-pakken).
 - `images/loop-marked-icon.png` — hentet fra produksjonssiden [loopmarked.com](https://loopmarked.com/) (`/images/app-icon.png`).
