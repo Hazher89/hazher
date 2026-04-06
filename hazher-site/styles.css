@@ -293,6 +293,26 @@ h4 {
   gap: 12px;
 }
 
+.hero-actions--second {
+  margin-top: 12px;
+}
+
+.section-more {
+  margin-top: 16px;
+  font-size: 0.95rem;
+}
+
+.section-more a {
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.section-more a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
