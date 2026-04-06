@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="nb">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EcoShelf Support — hjelp, feilsøking og kontakt | Hazher</title>
+    <meta
+      name="description"
+      content="Support for EcoShelf: vanlige spørsmål om innlogging, Pro-abonnement, synkronisering, skanner, oppskrifter og teknisk feilsøking. Kontakt support@ecoshelf.app."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../../ecoshelf-extra.css" />
+    <script src="../../main.js" defer></script>
+  </head>
+  <body>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <div class="bg-mesh" aria-hidden="true" data-parallax="0.03"></div>
+    <div class="bg-grid" aria-hidden="true" data-parallax="0.06"></div>
+
+    <header class="nav">
+      <div class="wrap nav-inner">
+        <a href="../../index.html" class="logo">Hazher</a>
+        <button type="button" class="nav-toggle" aria-label="Åpne meny" id="navToggle">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        <nav class="nav-links" id="navLinks" aria-label="Hovedmeny">
+          <a href="../../index.html">Forside</a>
+          <a href="../index.html">EcoShelf hub</a>
+          <a href="index.html" style="color: var(--text)">Support</a>
+          <a href="https://www.ecoshelf.app" target="_blank" rel="noopener noreferrer">ecoshelf.app</a>
+          <a href="mailto:support@ecoshelf.app" class="nav-cta">E-post</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="doc-page">
+      <section class="doc-hero">
+        <div class="wrap">
+          <div class="doc-badge-row">
+            <span class="doc-pill doc-pill--eco">Support</span>
+            <span class="doc-pill">EcoShelf</span>
+          </div>
+          <h1>EcoShelf — support og feilsøking</h1>
+          <p class="doc-lead">
+            Her finner du svar på vanlige spørsmål, en strukturert feilsøkingsguide og hvordan du når oss. For
+            juridiske dokumenter og personvern knyttet til <strong>produktet EcoShelf</strong>, se
+            <a href="https://www.ecoshelf.app" target="_blank" rel="noopener noreferrer">ecoshelf.app</a>.
+          </p>
+          <div class="hero-actions" style="margin-top: 24px">
+            <a href="../index.html" class="btn btn-ghost">← Til dokumentasjon</a>
+            <a href="mailto:support@ecoshelf.app" class="btn btn-primary">support@ecoshelf.app</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="wrap" style="padding-bottom: 48px">
+        <div class="support-grid" data-stagger>
+          <div class="support-card" data-reveal="up">
+            <h3>Kontakt</h3>
+            <p>
+              <strong>E-post (support):</strong>
+              <a href="mailto:support@ecoshelf.app">support@ecoshelf.app</a><br />
+              <strong>Utvikler / Hazher:</strong>
+              <a href="mailto:kontakt@hazher.no">kontakt@hazher.no</a> (generelle henvendelser om Hazher)
+            </p>
+            <p style="margin-top: 12px; font-size: 0.85rem; color: var(--faint)">
+              Inkluder gjerne app-versjon, telefonmodell og kort beskrivelse av hva du prøvde før feilen oppstod.
+            </p>
+          </div>
+          <div class="support-card" data-reveal="up">
+            <h3>Konto og innlogging</h3>
+            <p>
+              EcoShelf bruker sikker innlogging (f.eks. Apple eller Google). Du må være innlogget for at skydata
+              (matskap, delt lager, Pro-status) skal synkroniseres. Byttet du telefon, logg inn med samme
+              leverandør-konto som før.
+            </p>
+          </div>
+          <div class="support-card" data-reveal="up">
+            <h3>Pro og betaling</h3>
+            <p>
+              Abonnement kjøpes via App Store eller Google Play. Aktivering skjer automatisk etter vellykket kjøp.
+              Fungerer ikke Pro etter betaling, prøv «Gjenopprett kjøp» i appen og sjekk at du er innlogget på riktig
+              konto.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="section-label" style="margin-top: 28px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--faint); font-size: 0.75rem">Vanlige spørsmål</h2>
+        <div class="faq-list" style="max-width: 820px; margin-top: 16px" data-reveal="up">
+          <details>
+            <summary>Hvorfor stemmer ikke «har alt» på oppskriften med ingredienslisten?</summary>
+            <p>
+              Oppskriftsmotoren skiller mellom varer du har registrert, det du må kjøpe, og «basisvarer» (salt, olje,
+              hvitløk m.m.) som ofte antas hjemme. Hvis du ser avvik, oppdater appen — vi jobber kontinuerlig med å
+              synkronisere lister og detaljvisning.
+            </p>
+          </details>
+          <details>
+            <summary>Hvorfor viser noen varer «feil» eller generiske bilder?</summary>
+            <p>
+              Uten strekkode eller produktdata fra katalog kan appen bare vise illustrasjoner eller kategori-bilder.
+              Skann strekkode når det er mulig for best treff. Oppskriftsbilder kan hentes fra bilde-API (krever
+              konfigurerbar nøkkel i sky-prosjektet) eller faller tilbake til en enklere illustrasjonspool.
+            </p>
+          </details>
+          <details>
+            <summary>Hvorfor får jeg ikke sky-KI på oppskrifter?</summary>
+            <p>
+              Full oppskriftsopplevelse med sky-KI er en Pro-funksjon. Gratis nivå kan ha en begrenset prøve per måned.
+              Sjekk Pro-status i appen og at nett er tilgjengelig.
+            </p>
+          </details>
+          <details>
+            <summary>Delt matskap — ser ikke varene til andre?</summary>
+            <p>
+              Deling krever at du er invitert og akseptert. Synlighet styres av roller og medlemskap. Hvis noe mangler,
+              be begge parter å oppdatere appen og å logge inn på nytt. Ved vedvarende feil, send e-post med bruker-id
+              ikke i klartekst — beskriv heller tidspunkt og hva som ble forsøkt.
+            </p>
+          </details>
+          <details>
+            <summary>Appen krasjer eller er treg</summary>
+            <p>
+              Sørg for nyeste iOS/Android-versjon og oppdater EcoShelf fra butikken. Start appen på nytt. Hvis problemet
+              vedvarer, oppgi modell, OS-versjon og app-versjon i e-post til support.
+            </p>
+          </details>
+          <details>
+            <summary>Hvor finner jeg personvern og vilkår?</summary>
+            <p>
+              Offisielle dokumenter for EcoShelf ligger på
+              <a href="https://www.ecoshelf.app" target="_blank" rel="noopener noreferrer">ecoshelf.app</a>. Hazher.no har
+              egen personvernerklæring for nettstedet du leser nå.
+            </p>
+          </details>
+        </div>
+
+        <h2 class="section-label" style="margin-top: 48px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--faint); font-size: 0.75rem">Avansert feilsøking</h2>
+        <div class="panel eco-accent" style="margin-top: 16px" data-reveal="up">
+          <h3 style="margin-bottom: 12px; font-size: 1.05rem">Pro aktiveres ikke etter kjøp</h3>
+          <ol class="prose-block" style="color: var(--muted); padding-left: 1.2rem">
+            <li>Bekreft at du er innlogget (samme Apple/Google-konto som i butikken).</li>
+            <li>Åpne Pro-skjermen og velg «Gjenopprett kjøp».</li>
+            <li>Sjekk at telefonen har nett og at dato/klokke er korrekt.</li>
+            <li>Sjekk at sky-backend kjører (appen trenger kontakt med server for å verifisere kjøp).</li>
+            <li>Fungerer det fortsatt ikke: kontakt support med kvittering fra Apple/Google (uten sensitiv ekstra data du ikke vil dele).</li>
+          </ol>
+        </div>
+
+        <div class="panel" style="margin-top: 16px" data-reveal="up">
+          <h3 style="margin-bottom: 12px; font-size: 1.05rem">Synkronisering / «tom» matskap</h3>
+          <p>Prøv å logge ut og inn igjen. Sjekk at nett ikke blokkerer trafikk til autentiseringstjenesten. Hvis du nylig byttet e-post eller konto, kan data ligge på en annen konto.</p>
+        </div>
+
+        <div class="doc-footer-cta" style="margin-top: 28px" data-reveal="scale">
+          <h2>Mer teknisk dybde?</h2>
+          <p>Les hub-siden for arkitektur, dataflyt og Pro.</p>
+          <div class="doc-nav-mini">
+            <a href="../index.html" class="btn btn-primary">EcoShelf dokumentasjon</a>
+            <a href="../../index.html" class="btn btn-ghost">hazher.no</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer-grid">
+        <div class="footer-brand">
+          <div class="logo">Hazher</div>
+          <p>EcoShelf Support · hazher.no/ECOSHELF/Support</p>
+        </div>
+        <div class="footer-links">
+          <a href="../index.html">EcoShelf hub</a>
+          <a href="../../index.html">Forside</a>
+          <a href="https://www.ecoshelf.app" target="_blank" rel="noopener noreferrer">ecoshelf.app</a>
+          <a href="../../privacy.html">Personvern</a>
+        </div>
+        <div class="footer-meta">
+          <p>&copy; <span id="y"></span> Hazher.</p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Informasjonskapsler">
+      <div class="cookie-inner">
+        <p>
+          Vi bruker informasjonskapsler og lignende teknologi for at nettstedet skal fungere. Les mer i
+          <a href="../../privacy.html">personvernerklæringen</a>.
+        </p>
+        <button type="button" class="btn btn-primary" id="cookieAccept">Jeg forstår</button>
+      </div>
+    </div>
+  </body>
+</html>

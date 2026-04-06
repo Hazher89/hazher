@@ -2,6 +2,28 @@
 
 Moderne landingsside for Hazher med EcoShelf og Loop Marked.
 
+Undermapper (når **root** er `hazher-site`):
+
+- `ECOSHELF/` — dokumentasjon / produkt-hub for EcoShelf  
+- `ECOSHELF/Support/` — support og FAQ  
+
+Offentlige URL-er: `https://hazher.no/ECOSHELF/` og `https://hazher.no/ECOSHELF/Support/`.
+
+## Hvit skjerm på hazher.no?
+
+Det skjer når **Cloudflare Pages** bruker **feil mappe** i repoet.
+
+- Hvis GitHub-repoet ditt har **flere mapper** (f.eks. `ECOSHELF`, `hazher-site`, `ECOSHELF.xcodeproj` i roten), må du **ikke** la Pages bygge fra rot.
+- Gå til **Cloudflare Dashboard** → ditt **Pages-prosjekt** → **Settings** → **Builds & deployments** → **Build configuration**.
+- Sett **Root directory** til: **`hazher-site`** (nøyaktig dette navnet).
+- **Framework preset:** None  
+- **Build command:** (tom)  
+- **Build output directory:** `/` eller `.` (avhengig av hva dashbordet forventer for «samme mappe som rot» — ofte **`/`** når root allerede er `hazher-site`).
+
+Deretter **Save** og kjør **Retry deployment** / ny deploy.
+
+Du trenger **ikke** et eget repo kun med nettsiden — monorepo er OK så lenge **root directory** peker på `hazher-site`.
+
 ## GitHub
 
 Legg mappen i et repo (eget repo anbefales for ren Pages-oppsett), commit og push:
