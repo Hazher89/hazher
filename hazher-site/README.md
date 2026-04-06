@@ -61,7 +61,20 @@ Repo **Settings** → **Pages** → Source: branch `main`, folder `/root` (eller
 
 - Siden har **tykk, egen tekst**, tydelig navigasjon, **personvern** (`privacy.html`) som omtaler informasjonskapsler og annonser, **ads.txt**-mal og **informasjonskapsel-banner**.
 - Etter godkjenning i AdSense: lim inn publisher-script i `index.html` (se kommentar nederst i fila), legg inn **annonse-blokker** der `.ad-slot`-boksene står (eller bytt dem ut med `ins.adsbygoogle`), og oppdater **ads.txt** med ditt `pub-…`-ID.
-- Opprett faktisk e-post for **kontakt@hazher.no** og **personvern@hazher.no** (eller oppdater adressene i `index.html` og `privacy.html`).
+- **E-post på hazher.no uten Domeneshop-postboks:** Bruk **Cloudflare Email Routing** (gratis) når domenet bruker Cloudflare DNS. Da kan du opprette adresser som `kontakt@hazher.no`, `ecoshelfsupport@hazher.no`, `personvern@hazher.no` og videresende til en vanlig innboks (Gmail, Hotmail, osv.). Se avsnittet under.
+
+## E-post: Cloudflare Email Routing (anbefalt)
+
+Forutsetning: **hazher.no** er lagt til i Cloudflare og bruker Cloudflare-navneservere (som ofte allerede er tilfellet med Cloudflare Pages).
+
+1. I **Cloudflare Dashboard** → velg domenet **hazher.no** → **Email** → **Email Routing** → **Get started**.
+2. Legg til **Destination address** (din private e-post, f.eks. en `@hotmail.de`- eller Gmail-adresse) og bekreft den via lenken Cloudflare sender.
+3. Under **Routing rules** → **Create address**: opprett f.eks. `ecoshelfsupport@hazher.no` og `kontakt@hazher.no` (og evt. `personvern@hazher.no`) og sett handling til **Send to** destination-adressen.
+4. Cloudflare legger inn nødvendige **MX**- og **SPF**-relaterte rekorder i DNS (følg veiviseren).
+
+Da trenger du **ikke** e-postabonnement fra Domeneshop for å *motta* mail på disse adressene. **Utgående** mail «fra» hazher.no (SMTP) krever vanligvis egen postboks eller e-postleverandør — dette oppsettet er primært **videresending inn**.
+
+Nettsidene i `hazher-site` bruker nå blant annet **ecoshelfsupport@hazher.no** og **kontakt@hazher.no** i kontaktfelt.
 - For brukere i EØS kan Google kreve **samtykke** (Consent Mode / CMP) for personaliserte annonser; vurder offisielt CMP-verktøy når du skrur på målretting.
 
 ## Ressurser i mappen
