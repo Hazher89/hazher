@@ -382,30 +382,56 @@ h4 {
   justify-content: center;
 }
 
-.device-frame {
+/* App icons: one clip layer only (overflow + radius). No img border-radius, no light card behind PNG — avoids white wedges */
+.logo-showcase {
+  margin: 0;
   width: 200px;
-  border-radius: 28px;
-  border: 1px solid var(--border);
-  background: linear-gradient(165deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.02));
-  padding: 10px;
+  text-align: center;
+}
+
+.logo-showcase__label {
+  margin-top: 10px;
+  font-size: 0.75rem;
+  color: var(--faint);
+}
+
+.app-squircle {
+  margin-inline: auto;
+  border-radius: 22.37%;
+  overflow: hidden;
+  background: var(--bg0);
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
 }
 
-/* Direct child only — avoids forcing 20px radius onto nested EcoShelf imgs (was causing white wedges) */
-.device-frame > img {
+.app-squircle img {
   display: block;
   width: 100%;
-  height: auto;
-  border-radius: 20px;
-}
-
-/* EcoShelf PNG has transparent squircle corners — match page bg, iOS-like radius (same as Loop: no extra wrapper) */
-.device-frame > img.eco-app-icon {
-  border-radius: 22.37%;
-  background-color: var(--bg0);
+  height: 100%;
   object-fit: cover;
 }
 
+.app-squircle--hero {
+  width: 180px;
+  height: 180px;
+}
+
+.app-squircle--doc {
+  width: 160px;
+  height: 160px;
+}
+
+.app-squircle--tile {
+  width: 112px;
+  height: 112px;
+  flex-shrink: 0;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
+}
+
+.app-squircle--loop {
+  box-shadow: 0 24px 48px rgba(91, 33, 182, 0.3);
+}
+
+/* Legacy label used elsewhere */
 .device-label {
   text-align: center;
   font-size: 0.75rem;
@@ -562,35 +588,6 @@ h4 {
   border-bottom-color: rgba(167, 139, 250, 0.18);
 }
 
-.app-icon-tile {
-  width: 112px;
-  height: 112px;
-  border-radius: 24.5%;
-  overflow: hidden;
-  flex-shrink: 0;
-  background: #000;
-  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
-}
-
-.app-icon-tile--loop {
-  box-shadow:
-    0 24px 48px rgba(91, 33, 182, 0.25),
-    0 0 0 1px rgba(255, 255, 255, 0.1) inset,
-    0 0 0 1px rgba(167, 139, 250, 0.2);
-}
-
-.app-icon-tile img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.app-icon-tile img.eco-app-icon {
-  object-fit: cover;
-  background-color: var(--bg0);
-}
-
 .product-intro-title {
   font-size: clamp(1.5rem, 2.5vw, 1.85rem);
   margin: 0 0 6px;
@@ -634,7 +631,7 @@ h4 {
     text-align: left;
   }
 
-  .app-icon-tile {
+  .app-squircle--tile {
     width: 96px;
     height: 96px;
   }
@@ -857,16 +854,6 @@ h4 {
   background: rgba(255, 255, 255, 0.04);
 }
 
-.device-frame > img {
-  object-fit: contain;
-  background: transparent;
-}
-
-.device-frame > img.eco-app-icon {
-  object-fit: cover;
-  background-color: var(--bg0);
-}
-
 /* Nav after scroll */
 .nav-scrolled {
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
@@ -981,16 +968,16 @@ h4 {
   }
 }
 
-.hero-float .device-frame {
+.hero-float .logo-showcase {
   animation: heroFloat 5.5s ease-in-out infinite;
 }
 
-.hero-float .device-frame:nth-child(2) {
+.hero-float .logo-showcase:nth-child(2) {
   animation-delay: -2.75s;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-float .device-frame {
+  .hero-float .logo-showcase {
     animation: none;
   }
 }
