@@ -11,6 +11,8 @@
   --eco-bg: rgba(52, 211, 153, 0.12);
   --loop: #a78bfa;
   --loop-bg: rgba(167, 139, 250, 0.14);
+  --rapid: #ff7a3d;
+  --rapid-bg: rgba(255, 122, 61, 0.14);
   --accent: #38bdf8;
   --radius: 18px;
   --radius-lg: 26px;
@@ -35,7 +37,7 @@
   z-index: 201;
   transform: scaleX(0);
   transform-origin: 0 50%;
-  background: linear-gradient(90deg, var(--eco), var(--loop), var(--accent));
+  background: linear-gradient(90deg, var(--eco), var(--loop), var(--rapid), var(--accent));
   pointer-events: none;
   will-change: transform;
 }
@@ -75,6 +77,7 @@ body {
   background:
     radial-gradient(ellipse 90% 55% at 15% -5%, rgba(52, 211, 153, 0.1), transparent),
     radial-gradient(ellipse 70% 45% at 92% 8%, rgba(167, 139, 250, 0.12), transparent),
+    radial-gradient(ellipse 60% 45% at 60% 65%, rgba(255, 122, 61, 0.08), transparent),
     radial-gradient(ellipse 55% 50% at 50% 105%, rgba(56, 189, 248, 0.06), transparent),
     var(--bg0);
 }
@@ -1086,4 +1089,81 @@ h4 {
 
 .section-deep {
   padding-bottom: 8px;
+}
+
+/* ── Hurtighjelp accent (warm orange) ─────────────────────── */
+.btn-rapid {
+  background: var(--rapid-bg);
+  border: 1px solid rgba(255, 122, 61, 0.4);
+  color: #ffd1b8;
+}
+
+.btn-rapid:hover {
+  background: rgba(255, 122, 61, 0.22);
+  text-decoration: none;
+}
+
+.tag.hit-rapid {
+  background: var(--rapid-bg);
+  color: #ffd1b8;
+  border-color: rgba(255, 122, 61, 0.32);
+}
+
+.app-squircle--rapid {
+  box-shadow: 0 24px 48px rgba(255, 90, 30, 0.34);
+}
+
+.panel.rapid-accent {
+  border-color: rgba(255, 122, 61, 0.28);
+  box-shadow: 0 0 0 1px rgba(255, 122, 61, 0.06) inset;
+}
+
+.product-intro--rapid {
+  border-bottom-color: rgba(255, 122, 61, 0.18);
+}
+
+.doc-pill--rapid {
+  color: #ffd1b8;
+  border-color: rgba(255, 122, 61, 0.4);
+  background: var(--rapid-bg);
+}
+
+/* About / company info card */
+.company-card {
+  margin-top: 28px;
+  padding: 24px 26px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.015)
+  );
+}
+
+.company-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 14px;
+}
+
+.company-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.company-grid dt {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin-bottom: 4px;
+}
+
+.company-grid dd {
+  font-size: 0.95rem;
+  color: var(--text);
+  margin: 0;
 }

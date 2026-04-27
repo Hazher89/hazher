@@ -1,6 +1,6 @@
 # hazher.no (statisk site)
 
-Moderne landingsside for Hazher med EcoShelf og Loop Marked.
+Moderne landingsside for Hazher med EcoShelf, Loop Marked og Hurtighjelp.
 
 Undermapper (når **root** er `hazher-site`):
 
@@ -81,3 +81,4 @@ Nettsidene i `hazher-site` bruker nå blant annet **ecoshelfsupport@hazher.no** 
 
 - `images/ecoshelf-app-icon-v2.png` — 1024×1024 appikon (samme som i app-pakken).
 - `images/loop-marked-icon.png` — hentet fra produksjonssiden [loopmarked.com](https://loopmarked.com/) (`/images/app-icon.png`).
+- `images/hurtighjelp-app-icon.png` — 1024×1024 appikon hentet rett fra Hurtighjelp sin iOS-pakke (`AppIcon.appiconset/Icon-App-1024x1024@1x.png`).
