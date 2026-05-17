@@ -35,6 +35,7 @@
           <a href="ECOSHELF/">EcoShelf+</a>
           <a href="#loopmarked">Loop Marked</a>
           <a href="#hurtighjelp">Hurtighjelp</a>
+          <a href="HURTIGHJELP/">Hurtighjelp+</a>
           <a href="#tjenester">Apper for deg</a>
           <a href="#om">Om oss</a>
           <a href="privacy.html">Personvern</a>
@@ -274,12 +275,10 @@
             <p class="section-label">Produkt</p>
             <h2>Hurtighjelp — norsk markedsplass for tjenester</h2>
             <p class="section-desc">
-              Hurtighjelp er en hjemmebygd, norsk markedsplass-app der folk som trenger praktisk hjelp møter
-              kvalifiserte tjenestetilbydere — fra renhold og hundelufting til snømåking, flyttehjelp, hagearbeid,
-              rørlegger og elektriker. Appen er bygget i <strong>Flutter</strong> for både iOS og Android, har
-              <strong>Vipps</strong>, <strong>Apple Pay</strong>, <strong>Google Pay</strong> og kortbetaling
-              gjennom <strong>Stripe Connect</strong>, og bruker <strong>Supabase</strong> som sanntids backend
-              med Row Level Security i kjernen.
+              Hurtighjelp er en norsk markedsplass der du legger ut oppdrag eller tilbyr tjenester — med
+              <strong>privat chat per interessent</strong> på åpne annonser, <strong>taleanrop i appen</strong>
+              (CallKit på iPhone), <strong>live transport</strong> med Live Activity, og trygg betaling via
+              <strong>Vipps</strong> og <strong>Stripe Connect</strong>. Bygget i Flutter med Supabase og RLS.
             </p>
           </div>
 
@@ -291,21 +290,22 @@
               <div class="product-intro-main">
                 <h3 class="product-intro-title">Hurtighjelp</h3>
                 <p class="product-intro-tagline">
-                  Wolt og Foodora-nivå opplevelse — men for hverdagstjenester. Trygg betaling, sanntids chat og
-                  live posisjon.
+                  Markedsplass for hverdagstjenester med privat chat per interessent, taleanrop (CallKit),
+                  Live Activity på transport og utføring samlet i chat.
                 </p>
                 <div class="tag-row">
-                  <span class="tag hit-rapid">Vipps Login &amp; Pay</span>
+                  <span class="tag hit-rapid">Vipps</span>
                   <span class="tag">Stripe Connect</span>
-                  <span class="tag">Apple Pay &amp; Google Pay</span>
-                  <span class="tag">Sanntids chat</span>
-                  <span class="tag">Live tracking</span>
-                  <span class="tag">Vurderinger</span>
-                  <span class="tag">Søk &amp; filter</span>
+                  <span class="tag">Taleanrop</span>
+                  <span class="tag">Live Activity</span>
+                  <span class="tag">Privat chat</span>
+                  <span class="tag">Blokkering &amp; RLS</span>
+                  <span class="tag">Nb / En</span>
                 </div>
                 <div class="product-intro-actions">
-                  <a href="#hurtighjelp-detalj" class="btn btn-sm btn-rapid">Hva appen gjør</a>
-                  <a href="#kontakt" class="btn btn-sm btn-ghost">Spør om tilgang</a>
+                  <a href="#hurtighjelp-detalj" class="btn btn-sm btn-rapid">Alle funksjoner</a>
+                  <a href="HURTIGHJELP/Support/" class="btn btn-sm btn-ghost">Support</a>
+                  <a href="HURTIGHJELP/Privacy/" class="btn btn-sm btn-ghost">Personvern</a>
                 </div>
               </div>
             </div>
@@ -330,11 +330,11 @@
                 belastes to ganger.
               </p>
               <p>
-                Underveis i oppdraget kan kunde og tilbyder snakke direkte i en avansert chat med
-                <em>blå/grønn iMessage-aktige bobler</em>, lest-merker, multibilder med forhåndsvisning før
-                sending, slettefunksjon for egne meldinger, fullskjerms bildeviser og smart datoseparator.
-                Tilbyderen kan dele live posisjon på et lyst kart slik at kunden ser nøyaktig når hjelpen er
-                framme — perfekt for snømåking klokken seks om morgenen eller en flyttebil i bevegelse.
+                Underveis snakker dere i jobb-chat med bilder, skriving-indikator og lest-status. På åpne annonser
+                får hver interessent <strong>egen tråd</strong> med eieren — ikke én delt chat for alle. Du kan
+                <strong>ringe i appen</strong> (WebRTC + CallKit; motpartens navn på låst skjerm). Ved transport
+                deles live posisjon med <strong>Live Activity</strong> på låseskjermen. Utføring (bekreft, start,
+                lever, godkjenn) skjer i chat — én tydelig flyt.
                 Etter fullført oppdrag gir begge parter en stjernevurdering med en kort tekst, slik at
                 omdømmet bygger tillit i hele plattformen.
               </p>
@@ -380,12 +380,15 @@
                 </div>
                 <div class="flow-card">
                   <strong>Sanntids chat</strong>
-                  <span>Lest-merker, gradient-bobler, multibilder med forhåndsvisning, soft-delete og
-                    fullskjermsviser.</span>
+                  <span>Privat tråd per interessent, bilder, typing, blokkering og arkivert etter fullført jobb.</span>
                 </div>
                 <div class="flow-card">
-                  <strong>Live tracking</strong>
-                  <span>Tilbyderen deler posisjon på lyst kart med ETA og «framme»-varsel.</span>
+                  <strong>Taleanrop</strong>
+                  <span>CallKit på iPhone, ringelyd, WebRTC — ikke vanlig telefonnummer.</span>
+                </div>
+                <div class="flow-card">
+                  <strong>Live transport</strong>
+                  <span>GPS + Live Activity på låseskjerm under transport-oppdrag.</span>
                 </div>
                 <div class="flow-card">
                   <strong>Betaling</strong>
@@ -646,7 +649,10 @@
               </div>
               <div>
                 <dt>Hurtighjelp</dt>
-                <dd>I lukket testfase — kontakt for tilgang</dd>
+                <dd>
+                  <a href="HURTIGHJELP/Support/">Support</a> ·
+                  <a href="HURTIGHJELP/Privacy/">Personvern</a>
+                </dd>
               </div>
             </dl>
           </div>
@@ -694,6 +700,8 @@
           <a href="ads.txt">ads.txt</a>
           <a href="ECOSHELF/">EcoShelf hub</a>
           <a href="ECOSHELF/Privacy/">EcoShelf personvern</a>
+          <a href="HURTIGHJELP/Support/">Hurtighjelp support</a>
+          <a href="HURTIGHJELP/Privacy/">Hurtighjelp personvern</a>
           <a href="https://loopmarked.com/" target="_blank" rel="noopener noreferrer">Loop Marked</a>
           <a href="#hurtighjelp">Hurtighjelp</a>
         </div>
