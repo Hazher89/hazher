@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Hurtighjelp — dokumentasjon | Hazher</title>
+    <title>Hurtighjelp — norsk markedsplass for tjenester | Hazher</title>
     <meta
       name="description"
-      content="Dyptgående oversikt over EcoShelf: matskap, delt lager, skanner med KI, oppskrifter, Pro-abonnement, sikkerhet (Supabase RLS) og sky-funksjoner. Fra Hazher."
+      content="Hurtighjelp: markedsplass for hverdagstjenester med privat chat per interessent, taleanrop, live transport og trygg betaling med Vipps og Stripe Connect."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,14 +15,15 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../styles.css" />
-    <link rel="stylesheet" href="../hazher-pro.css" />
+    <link rel="stylesheet" href="../hazher-apple.css" />
     <link rel="stylesheet" href="../hurtighjelp-extra.css" />
     <script src="../main.js" defer></script>
+    <script src="../hazher-apple.js" defer></script>
   </head>
-  <body>
+  <body class="apple-site apple-product theme-rapid">
     <div class="scroll-progress" aria-hidden="true"></div>
-    <div class="bg-mesh" aria-hidden="true" data-parallax="0.03"></div>
-    <div class="bg-grid" aria-hidden="true" data-parallax="0.06"></div>
+    <div class="bg-mesh" aria-hidden="true" data-parallax="0.02"></div>
+    <div class="bg-grid" aria-hidden="true" data-parallax="0.04"></div>
 
     <header class="nav">
       <div class="wrap nav-inner">
@@ -34,262 +35,223 @@
         </button>
         <nav class="nav-links" id="navLinks" aria-label="Hovedmeny">
           <a href="../index.html">Forside</a>
-          <a href="index.html" style="color: var(--text)">Hurtighjelp hub</a>
-          <a href="Privacy/">Personvern</a>
-          <a href="Terms/">Bruksvilkår</a>
+          <a href="index.html">Hurtighjelp</a>
           <a href="Support/">Support</a>
+          <a href="Privacy/">Personvern</a>
           <a href="mailto:hurtighjelp@hazher.no" class="nav-cta">Kontakt</a>
         </nav>
       </div>
     </header>
 
-    <main class="doc-page">
-      <section class="doc-hero">
-        <div class="wrap doc-hero-grid">
-          <div data-reveal="left">
-            <div class="doc-badge-row">
-              <span class="doc-pill doc-pill--rapid">Produkt</span>
-              <span class="doc-pill">Flutter · Supabase · Edge</span>
-            </div>
-            <h1>Hurtighjelp — dokumentasjon</h1>
-            <p class="doc-lead">Norsk markedsplass for tjenester med privat chat per interessent, taleanrop, live transport og betaling via Vipps og Stripe Connect.</p>
-            <div class="hero-actions hero-actions-stack" style="margin-top: 24px">
-              <a href="Support/" class="btn btn-rapid-primary">Support og FAQ</a>
-              <a href="Privacy/" class="btn btn-ghost">Personvern</a>
-              <a href="Terms/" class="btn btn-ghost">Bruksvilkår</a>
+    <main>
+      <section class="apple-hero">
+        <div class="apple-hero__glow" aria-hidden="true"></div>
+        <div class="apple-hero__inner wrap">
+          <p class="apple-hero__eyebrow" data-reveal="up">Norsk markedsplass · iOS &amp; Android</p>
+          <h1 data-reveal="up">Hurtighjelp.</h1>
+          <p class="apple-hero__lead" data-reveal="up">
+            Finn hjelp — eller tilby tjenester — med privat chat per interessent, taleanrop i appen, live transport og
+            betaling du kan stole på.
+          </p>
+          <div class="apple-hero__actions" data-reveal="up">
+            <a href="Support/" class="btn btn-rapid-primary">Support og FAQ</a>
+            <a href="Privacy/" class="btn btn-ghost">Personvern</a>
+          </div>
+          <div class="apple-hero__icon" data-reveal="scale">
+            <div class="app-squircle app-squircle--rapid">
+              <img src="../images/hurtighjelp-app-icon.png" width="140" height="140" alt="Hurtighjelp app-ikon" />
             </div>
           </div>
-          <div class="hero-visual hero-float" data-reveal="scale" style="justify-self: end">
-            <figure class="logo-showcase">
-              <div class="app-squircle app-squircle--doc" aria-hidden="true">
-                <img
-                  src="../images/hurtighjelp-app-icon.png"
-                  width="160"
-                  height="160"
-                  alt=""
-                  loading="eager"
-                />
-              </div>
-              <figcaption class="logo-showcase__label">EcoShelf</figcaption>
-            </figure>
+        </div>
+        <span class="apple-scroll-hint" aria-hidden="true">Scroll</span>
+      </section>
+
+      <section class="apple-feature" id="marked" data-reveal="up">
+        <div class="apple-feature__grid">
+          <div>
+            <p class="apple-feature__label">Markedsplass</p>
+            <h2>Alt du trenger. På sekunder.</h2>
+            <p>
+              Legg ut oppdrag eller publiser tilbud med kategori, bilder, adresse og pris. Søk, filtrer og finn riktig
+              match i nærområdet — med tydelige kort og featured-annonser.
+            </p>
+          </div>
+          <div class="apple-feature__visual" data-stagger>
+            <div class="apple-stat-line">
+              <span class="apple-stat-line__dot" style="background: var(--rapid)"></span>
+              <div><strong>Åpne annonser &amp; tilbud</strong><span>Tydelig skill mellom «trenger hjelp» og «tilbyr tjeneste»</span></div>
+            </div>
+            <div class="apple-stat-line">
+              <span class="apple-stat-line__dot" style="background: #38bdf8"></span>
+              <div><strong>Kart og radius</strong><span>Se hva som skjer nær deg</span></div>
+            </div>
+            <div class="apple-stat-line">
+              <span class="apple-stat-line__dot" style="background: #a78bfa"></span>
+              <div><strong>Vurderinger</strong><span>Bygg tillit etter hvert fullførte oppdrag</span></div>
+            </div>
           </div>
         </div>
       </section>
 
-      <div class="wrap doc-layout">
-        <aside class="doc-toc" aria-label="Innholdsfortegnelse" data-reveal="up">
-          <div class="doc-toc-title">På denne siden</div>
-          <a href="#vision">Visjon og verdi</a>
-          <a href="#arkitektur">Arkitektur</a>
-          <a href="#data">Data og sikkerhet</a>
-          <a href="#matskap">Matskap og deling</a>
-          <a href="#skanner">Skanner og KI</a>
-          <a href="#oppskrifter">Oppskrifter (Pro)</a>
-          <a href="#bilder">Produkt- og oppskriftsbilder</a>
-          <a href="#pro">EcoShelf Pro</a>
-          <a href="#skala">Drift i stor skala</a>
-        </aside>
-
-        <article class="doc-main" data-reveal="up">
-          <section id="vision">
-            <h2>Visjon og brukerverdi</h2>
+      <section class="apple-feature" id="chat" data-reveal="up">
+        <div class="apple-feature__grid">
+          <div>
+            <p class="apple-feature__label">Kommunikasjon</p>
+            <h2>Privat chat. Én tråd per interessent.</h2>
             <p>
-              EcoShelf samler <strong>tjenester og oppdrag</strong> i nærområdet og relaterte varer i ett system: kjøl, tørr,
-              frys og valgfritt delt skap. Målet er tryggere hverdag, lavere handlekostnader og mindre friksjon i
-              hverdagen — med tydelige datoer, påminnelser og smarte verktøy når du vil handle eller lage mat.
+              På åpne annonser får hver person sin egen samtale med eieren — ikke én felles chat for alle. Bilder,
+              skriveindikator, lest-status og arkivert historikk når jobben er ferdig.
             </p>
-            <div class="flow-grid">
-              <div class="flow-card" data-reveal="up">
-                <span class="flow-num">1</span>
-                <strong>Registrer</strong>
-                <span>Skann strekkode, legg inn manuelt, eller bruk kvitterings- og skapbilder med KI der det er støttet.</span>
-              </div>
-              <div class="flow-card" data-reveal="up">
-                <span class="flow-num">2</span>
-                <strong>Oversikt</strong>
-                <span>Se hva som går ut på dato, hva du har mye av, og hva som mangler til middag.</span>
-              </div>
-              <div class="flow-card" data-reveal="up">
-                <span class="flow-num">3</span>
-                <strong>Handle og lag mat</strong>
-                <span>Handleliste koblet til behov; oppskrifter (Pro) som matcher lageret ditt.</span>
-              </div>
+          </div>
+          <div class="apple-feature__visual">
+            <div class="apple-stat-line">
+              <span class="apple-stat-line__dot" style="background: var(--rapid)"></span>
+              <div><strong>Taleanrop i appen</strong><span>WebRTC + CallKit på iPhone — navn på låst skjerm</span></div>
             </div>
-          </section>
-
-          <section id="arkitektur">
-            <h2>Arkitektur (appen + sky)</h2>
-            <p>
-              Klienten er bygget i <strong>Flutter</strong> (Dart) og leverer samme kodebase til iOS og Android. Bak
-              ligger <strong>Supabase</strong>: PostgreSQL-database, innebygd autentisering, lagring og
-              <strong>Edge Functions</strong> (Deno) for oppgaver som ikke bør ligge i appen — API-nøkler, betaling,
-              tredjeparts-KI-proxy og bildeoppslag.
-            </p>
-            <div class="diagram-box" aria-label="Forenklet arkitekturdiagram">
-┌─────────────┐     HTTPS / JWT      ┌──────────────────┐
-│ EcoShelf    │ ◄──────────────────► │ Supabase         │
-│ (Flutter)   │                      │ · Auth           │
-└─────────────┘                      │ · PostgreSQL+RLS │
-       │                             │ · Storage        │
-       │                             │ · Edge Functions │
-       ▼                             └────────┬─────────┘
-  Kamera / strekkode                          │
-                                              ▼
-                                     OpenAI / Apple / Google
-                                     (via proxy & IAP-verify)
-            </div>
-            <h3>Hvorfor Edge Functions?</h3>
-            <p>
-              Hemmeligheter (OpenAI-nøkkel, Apple shared secret, bilde-API-nøkler) ligger kun på serveren. Appen sender
-              en kortlivet bruker-token (JWT) og får tilbake resultat — ikke rå nøkler. Det er et standard mønster for
-              skalerbare forbrukerapper.
-            </p>
-          </section>
-
-          <section id="data">
-            <h2>Data, personvern og tilgangskontroll</h2>
-            <p>
-              Brukerdata ligger i databasen med <strong>Row Level Security (RLS)</strong>: hver rad knyttes til din
-              bruker-id, og policyene hindrer at andre kan lese eller endre dine varer. Delt matskap er modellert med
-              eksplisitte medlemskap og egne policyer slik at synlighet følger reglene — ikke «tilfeldig tilgang».
-            </p>
-            <p>
-              <strong>App Store / Google Play:</strong> Personvernerklæring for selve appen (kan lenkes i App Store
-              Connect) ligger på
-              <a href="Privacy/">hazher.no/HURTIGHJELP/Privacy/</a>. Nettstedet hazher.no har egen
-              <a href="../privacy.html">personvernerklæring</a> for besøk på siden.
-            </p>
-            <div class="callout">
-              <strong>Tips for nysgjerrige:</strong> Juridiske tekster (personvern, vilkår) for det offisielle
-              produktet ligger på <a href="https://www.ecoshelf.app" target="_blank" rel="noopener noreferrer">ecoshelf.app</a>.
-              Denne hub-siden forklarer produktet teknisk og er ment som støtte — ikke erstatning for juridiske dokumenter.
-            </div>
-          </section>
-
-          <section id="matskap">
-            <h2>Markedsplass og oppdrag</h2>
-            <p>
-              «Matskapet» er den sentrale varelisten. Varer kan ha kategori, lagringssted, utløpsdato og pris der det gir
-              mening. <strong>Delt inventory</strong> lar husstanden dele utvalgte varer eller skap med inviterte
-              medlemmer — nyttig for familier og kollektiv. Endringer synkroniseres via skyen slik at alle ser oppdatert
-              informasjon når nett er tilgjengelig.
-            </p>
-          </section>
-
-          <section id="skanner">
-            <h2>Chat, anrop og betaling</h2>
-            <p>
-              Skanneren støtter blant annet <strong>strekkode</strong> for å slå opp produktdata der kildene svarer (f.eks.
-              åpne produktdatabaser). For <strong>kvitteringer</strong> og <strong>skap-bilder</strong> brukes
-              sky-KI innenfor kvoter: gratis nivå har begrensninger, mens Pro gir høyere eller ubegrenset bruk avhengig
-              av innstilling — se appen for gjeldende grenser.
-            </p>
-            <p>
-              KI-kall går gjennom kontrollerte proxy-funksjoner; innholdet behandles i tråd med formålet (tolke tekst/bilde
-              for å foreslå varer), ikke for å selge tredjeparts reklame basert på kvitteringstekst.
-            </p>
-          </section>
-
-          <section id="oppskrifter">
-            <h2>Oppskrifter (EcoShelf Pro)</h2>
-            <p>
-              Oppskriftsfanen er en <strong>Pro-funksjon</strong>. Sky-KI foreslår retter basert på det du faktisk har
-              registrert, markerer det du eventuelt må kjøpe, og kan koble mot handlelisten. Motoren verifiserer ingredienser
-              mot matskapet med fuzzy matching og «basisvarer» (salt, olje, …) slik at «har alt» og detaljvisning ikke
-              motsier hverandre.
-            </p>
-          </section>
-
-          <section id="bilder">
-            <h2>Produktbilder og oppskriftsbilder</h2>
-            <p>
-              <strong>Varer i matskapet:</strong> Beste treff får du med <strong>strekkode</strong> mot produktdatabaser —
-              da kan vi vise faktiske produktfoto der katalogen har dem. Uten strekkode brukes kategori-baserte illustrasjoner
-              eller søk mot bilde-API — det er ment som visuell hjelp, ikke en garanti for riktig merke eller emballasje.
-            </p>
-            <p>
-              <strong>Oppskriftsbilder:</strong> Serveren kan søke etter relevante matfoto (f.eks. Unsplash/Pexels) ut fra
-              rettens navn, med filtrering mot åpenbart irrelevante treff. Det krever at API-nøkler er satt i sky-prosjektet.
-              Uten nøkkel faller appen tilbake til en enklere illustrasjonspool.
-            </p>
-          </section>
-
-          <section id="pro">
-            <h2>EcoShelf Pro og betaling</h2>
-            <p>
-              Pro aktiveres via <strong>App Store / Google Play</strong> (in-app-kjøp/abonnement). Kvitteringen verifiseres
-              på server (Edge Function) mot plattformens API-er, og kontoen din får oppdatert Pro-status i databasen.
-              Dette skal skje automatisk uten manuell behandling per bruker.
-            </p>
-            <table class="compare-table" aria-label="Forenklet sammenligning">
-              <thead>
-                <tr>
-                  <th>Område</th>
-                  <th>Gratis / basis</th>
-                  <th>Pro (indikativt)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Matskap, lister, mye grunnleggende</td>
-                  <td>Ja</td>
-                  <td>Ja</td>
-                </tr>
-                <tr>
-                  <td>Sky-KI oppskrifter + full flyt</td>
-                  <td>Nei / begrenset demo</td>
-                  <td>Ja</td>
-                </tr>
-                <tr>
-                  <td>Annonser</td>
-                  <td>Kan vises</td>
-                  <td>Ofte uten (se app og vilkår)</td>
-                </tr>
-              </tbody>
-            </table>
-            <p style="font-size: 0.85rem; color: var(--faint)">
-              Eksakt funksjonsliste endres med app-versjon; sjekk App Store-beskrivelse og innstillinger i appen.
-            </p>
-          </section>
-
-          <section id="skala">
-            <h2>Drift for mange brukere</h2>
-            <p>
-              Designet er «stateless» der det lønner seg: autentiserte API-kall, horisontalt skalerbar database, og
-              hemmeligheter sentralt. Bilde- og KI-kall bør caches der det er mulig for å spare kost og respektere
-              leverandørenes rate limits. Ved ekstrem vekst flyttes tyngdepunktet til caching, køer og eventuelt dedikert
-              bilde-CDN — uten at sluttbrukeren må «konfigurere noe».
-            </p>
-          </section>
-
-          <div class="doc-footer-cta" data-reveal="scale">
-            <h2>Trenger du hjelp?</h2>
-            <p>Gå til support-siden for vanlige spørsmål, feilsøking og kontakt.</p>
-            <div class="doc-nav-mini">
-              <a href="Privacy/" class="btn btn-rapid-primary">Personvern (App Store)</a>
-              <a href="Support/" class="btn btn-ghost">Support</a>
-              <a href="mailto:hurtighjelp@hazher.no" class="btn btn-ghost">hurtighjelp@hazher.no</a>
-              <a href="../index.html" class="btn btn-ghost">Tilbake til hazher.no</a>
+            <div class="apple-stat-line">
+              <span class="apple-stat-line__dot" style="background: #34d399"></span>
+              <div><strong>Blokkering</strong><span>Stopp uønsket kontakt på tvers av chat og anrop</span></div>
             </div>
           </div>
-        </article>
-      </div>
+        </div>
+      </section>
+
+      <section class="apple-feature" id="transport" data-reveal="up">
+        <div class="apple-feature__grid">
+          <div>
+            <p class="apple-feature__label">Live transport</p>
+            <h2>Følg oppdraget i sanntid.</h2>
+            <p>
+              Under transport deles posisjon når du tillater det. På iPhone kan Live Activity vise fremdrift på
+              låseskjermen — uten å måtte åpne appen hele tiden.
+            </p>
+          </div>
+          <div class="apple-feature__visual">
+            <div class="apple-stat-line">
+              <span class="apple-stat-line__dot" style="background: #38bdf8"></span>
+              <div><strong>Utføring i chat</strong><span>Bekreft, start, lever og godkjenn — én flyt</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="apple-feature" id="betaling" data-reveal="up">
+        <div class="apple-feature__grid">
+          <div>
+            <p class="apple-feature__label">Betaling</p>
+            <h2>Vipps. Kort. Trygg utbetaling.</h2>
+            <p>
+              Kunden betaler i appen via Vipps, Apple Pay, Google Pay eller kort gjennom Stripe Connect. Når oppdraget
+              er fullført, utbetales tilbyderens andel automatisk — med transparent status for begge parter.
+            </p>
+          </div>
+          <div class="apple-feature__visual">
+            <div class="apple-stat-line">
+              <span class="apple-stat-line__dot" style="background: #ff5c1a"></span>
+              <div><strong>Stripe Connect</strong><span>Marketplace med hold og utbetaling</span></div>
+            </div>
+            <div class="apple-stat-line">
+              <span class="apple-stat-line__dot" style="background: #5eead4"></span>
+              <div><strong>Vipps + BankID</strong><span>Stark innlogging for norske brukere</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="apple-bento" id="funksjoner" data-reveal="up">
+        <h2>Bygget for ekte oppdrag.</h2>
+        <div class="apple-bento__grid" data-stagger>
+          <article class="apple-bento__cell apple-bento__cell--wide">
+            <h3>Privat chat per interessent</h3>
+            <p>Åpne annonser får ikke én delt tråd — hver interessent snakker privat med eieren.</p>
+          </article>
+          <article class="apple-bento__cell">
+            <h3>Taleanrop</h3>
+            <p>Ring i appen med CallKit og tydelig visning på låst skjerm.</p>
+          </article>
+          <article class="apple-bento__cell">
+            <h3>Live Activity</h3>
+            <p>Transport på låseskjermen når det er aktuelt.</p>
+          </article>
+          <article class="apple-bento__cell apple-bento__cell--tall">
+            <h3>Stripe Connect + Vipps</h3>
+            <p>Betaling og utbetaling med serverside validering, idempotens og webhook-signaturer — ikke dobbelt trekk.</p>
+          </article>
+          <article class="apple-bento__cell">
+            <h3>RLS i Supabase</h3>
+            <p>Databasen håndhever hvem som ser chat, jobber og betaling.</p>
+          </article>
+          <article class="apple-bento__cell">
+            <h3>Varsler</h3>
+            <p>Push for meldinger, oppdrag og anrop — med kategorier du styrer.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="apple-arch" id="arkitektur" data-reveal="up">
+        <div class="wrap" style="text-align: center">
+          <p class="apple-feature__label">Teknologi</p>
+          <h2 style="font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 8px">Flutter. Supabase. Edge.</h2>
+          <p style="color: rgba(255,255,255,0.5); max-width: 42em; margin-inline: auto">
+            Én kodebase for iOS og Android. PostgreSQL med Row Level Security. Sensitive operasjoner i Edge Functions —
+            ikke i klienten.
+          </p>
+        </div>
+        <div class="apple-arch__grid">
+          <div class="apple-arch__node">
+            <strong>Flutter-app</strong>
+            <span>iOS &amp; Android · Riverpod · go_router</span>
+          </div>
+          <div class="apple-arch__node apple-arch__node--center">
+            <div class="apple-arch__node" style="border: none; background: transparent; padding: 0">
+              <strong>HTTPS + JWT</strong>
+              <span>Sikker kommunikasjon</span>
+            </div>
+            <span class="apple-arch__arrow" aria-hidden="true">→</span>
+            <div class="apple-arch__node">
+              <strong>Supabase</strong>
+              <span>Auth · PostgreSQL · Storage · Realtime</span>
+            </div>
+          </div>
+          <div class="apple-arch__node">
+            <strong>Stripe &amp; Vipps</strong>
+            <span>Betaling · Connect · webhooks</span>
+          </div>
+          <div class="apple-arch__node">
+            <strong>WebRTC</strong>
+            <span>Taleanrop · signaling</span>
+          </div>
+          <div class="apple-arch__node">
+            <strong>FCM</strong>
+            <span>Push-varsler</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="apple-cta-band" data-reveal="scale">
+        <h2>Klar for App Store?</h2>
+        <p>Support og personvern er klare for App Store Connect og Google Play.</p>
+        <div class="apple-cta-band__actions">
+          <a href="Support/" class="btn btn-rapid-primary">Support-URL</a>
+          <a href="Privacy/" class="btn btn-ghost">Personvern-URL</a>
+          <a href="mailto:hurtighjelp@hazher.no" class="btn btn-ghost">hurtighjelp@hazher.no</a>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
       <div class="wrap footer-grid">
         <div class="footer-brand">
           <div class="logo">Hazher</div>
-          <p>EcoShelf dokumentasjon · hazher.no/HURTIGHJELP</p>
+          <p>Hurtighjelp · hazher.no/HURTIGHJELP</p>
         </div>
         <div class="footer-links">
           <a href="../index.html">Forside</a>
-          <a href="Privacy/">Personvern (app)</a>
           <a href="Support/">Support</a>
-          <a href="../privacy.html">Personvern (hazher.no)</a>
+          <a href="Privacy/">Personvern</a>
         </div>
         <div class="footer-meta">
-          <p>&copy; <span id="y"></span> Hazher. Teknisk dokumentasjon kan oppdateres uten varsel.</p>
+          <p>&copy; <span id="y"></span> Hazher.</p>
         </div>
       </div>
     </footer>
@@ -297,8 +259,8 @@
     <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Informasjonskapsler">
       <div class="cookie-inner">
         <p>
-          Vi bruker informasjonskapsler og lignende teknologi for at nettstedet skal fungere og for analyse. Les mer i
-          <a href="../privacy.html">personvernerklæringen</a>.
+          Vi bruker informasjonskapsler der det trengs. Les
+          <a href="../privacy.html">personvernerklæringen for hazher.no</a>.
         </p>
         <button type="button" class="btn btn-rapid-primary" id="cookieAccept">Jeg forstår</button>
       </div>
