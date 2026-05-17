@@ -1,117 +1,119 @@
 <!DOCTYPE html>
 <html lang="nb">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>EcoShelf — smartere matskap | Hazher</title>
-    <meta name="description" content="Full kontroll på maten du har hjemme — utløp, handleliste, skanner og oppskrifter med sky og sikkerhet per konto." />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../styles.css" />
-    <link rel="stylesheet" href="../hazher-apple.css" />
-    <link rel="stylesheet" href="../ecoshelf-extra.css" />
-    <script src="../main.js" defer></script>
-    <script src="../hazher-apple.js" defer></script>
-  </head>
-  <body class="apple-site apple-product theme-eco">
-    <div class="scroll-progress" aria-hidden="true"></div>
-    <div class="bg-mesh" aria-hidden="true" data-parallax="0.02"></div>
-    <div class="bg-grid" aria-hidden="true" data-parallax="0.04"></div>
-    <header class="nav">
-      <div class="wrap nav-inner">
-        <a href="../index.html" class="logo">Hazher</a>
-        <button type="button" class="nav-toggle" aria-label="Åpne meny" id="navToggle">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-        </button>
-        <nav class="nav-links" id="navLinks">
-          <a href="../index.html">Forside</a>
-          <a href="index.html">EcoShelf</a>
-          <a href="Support/">Support</a>
-          <a href="Privacy/">Personvern</a>
-          <a href="mailto:ecoshelfsupport@hazher.no" class="nav-cta">Kontakt</a>
-        </nav>
-      </div>
-    </header>
-    <main>
-      <section class="apple-hero">
-        <div class="apple-hero__glow" aria-hidden="true"></div>
-        <div class="apple-hero__inner wrap">
-          <p class="apple-hero__eyebrow" data-reveal="up">Mat · hjem · mindre svinn</p>
-          <h1 data-reveal="up">EcoShelf.</h1>
-          <p class="apple-hero__lead" data-reveal="up">Full kontroll på maten du har hjemme — utløp, handleliste, skanner og oppskrifter med sky og sikkerhet per konto.</p>
-          <div class="apple-hero__actions" data-reveal="up">
-            <a href="Support/" class="btn btn-eco">Support</a>
-            <a href="Privacy/" class="btn btn-ghost">Personvern</a>
-          </div>
-          <div class="apple-hero__icon" data-reveal="scale">
-            <div class="app-squircle app-squircle--eco">
-              <img src="../images/ecoshelf-app-icon-v2.png" width="140" height="140" alt="" />
-            </div>
-          </div>
-        </div>
-        <span class="apple-scroll-hint" aria-hidden="true">Scroll</span>
-      </section>
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>EcoShelf — komplett produktguide | Hazher</title>
+<meta name="description" content="Matskap med kjøl, frys, tørr og dyr: strekkode, kvitterings-KI, delt lager, handleliste, EcoShelf Pro og hjemskjerm-widget."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../styles.css"/>
+<link rel="stylesheet" href="../hazher-apple.css"/>
+<link rel="stylesheet" href="../hazher-apple-ext.css"/>
+<link rel="stylesheet" href="../ecoshelf-extra.css"/>
+<script src="../main.js" defer></script>
+<script src="../hazher-apple.js" defer></script>
+</head>
+<body class="apple-site apple-product theme-eco">
+<div class="scroll-progress" aria-hidden="true"></div>
+<div class="bg-mesh" aria-hidden="true" data-parallax="0.02"></div>
+<div class="bg-grid" aria-hidden="true" data-parallax="0.04"></div>
+<header class="nav"><div class="wrap nav-inner">
+<a href="../index.html" class="logo">Hazher</a>
+<button type="button" class="nav-toggle" aria-label="Meny" id="navToggle"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+<nav class="nav-links" id="navLinks">
+<a href="../index.html">Forside</a>
+<a href="index.html">EcoShelf</a>
+<a href="Support/">Support</a>
+<a href="Privacy/">Personvern</a>
+<a href="mailto:kontakt@hazher.no" class="nav-cta">Kontakt</a>
+</nav></div></header>
+<main>
 
-      <section class="apple-feature" id="lager" data-reveal="up">
-        <div class="apple-feature__grid">
-          <div>
-            <p class="apple-feature__label">Matskap</p>
-            <h2>Se hva som går ut først.</h2>
-            <p>Registrer varer med dato og lagring. Gruppering, varsler og handleliste koblet til det du faktisk har.</p>
-          </div>
-          <div class="apple-feature__visual" data-stagger><div class="apple-stat-line"><span class="apple-stat-line__dot" style="background:#34d399"></span><div><strong>Strekkode & KI</strong><span>Rask innlegging</span></div><div class="apple-stat-line"><span class="apple-stat-line__dot" style="background:#38bdf8"></span><div><strong>Delt lager</strong><span>Familie og kollektiv</span></div>
-          </div>
-        </div>
-      </section>
-      <section class="apple-feature" id="oppskrifter" data-reveal="up">
-        <div class="apple-feature__grid">
-          <div>
-            <p class="apple-feature__label">Oppskrifter</p>
-            <h2>Mat basert på lageret.</h2>
-            <p>Pro gir sky-KI-oppskrifter som matcher det du har registrert — med tydelig hva du må kjøpe.</p>
-          </div>
-          <div class="apple-feature__visual" data-stagger><div class="apple-stat-line"><span class="apple-stat-line__dot" style="background:#6ee7b7"></span><div><strong>Pro</strong><span>App Store-abonnement</span></div><div class="apple-stat-line"><span class="apple-stat-line__dot" style="background:#a78bfa"></span><div><strong>Handleliste</strong><span>Koblet til behov</span></div>
-          </div>
-        </div>
-      </section>
-      <section class="apple-bento" data-reveal="up">
-        <h2>Alt på ett sted.</h2>
-        <div class="apple-bento__grid" data-stagger><article class="apple-bento__cell apple-bento__cell--wide"><h3>Strekkode & kvittering</h3><p>Slå opp produkter og fyll skapet raskere.</p></article><article class="apple-bento__cell"><h3>KI-skann av skap</h3><p>Foreslå varer fra bilder — du godkjenner.</p></article><article class="apple-bento__cell"><h3>Apple Sign In</h3><p>Sikker innlogging og sky-synk.</p></article><article class="apple-bento__cell apple-bento__cell--tall"><h3>RLS</h3><p>Bare du ser dine data.</p></article>
-        </div>
-      </section>
-      <section class="apple-arch" data-reveal="up">
-        <div class="wrap" style="text-align:center">
-          <p class="apple-feature__label">Teknologi</p>
-          <h2 style="font-size:clamp(1.5rem,3vw,2rem)">Bygget for skala.</h2>
-        </div>
-        <div class="apple-arch__grid"><div class="apple-arch__node"><strong>Flutter</strong><span>iOS & Android</span></div><div class="apple-arch__node"><strong>Supabase</strong><span>PostgreSQL · Auth</span></div><div class="apple-arch__node"><strong>Edge</strong><span>KI-proxy · IAP</span></div></div>
-      </section>
-      <section class="apple-cta-band" data-reveal="scale">
-        <h2>Trenger du hjelp?</h2>
-        <p>Support og personvern for appen finner du her.</p>
-        <div class="apple-cta-band__actions">
-          <a href="Support/" class="btn btn-eco">Support</a>
-          <a href="Privacy/" class="btn btn-ghost">Personvern</a>
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
-      <div class="wrap footer-grid">
-        <div class="footer-brand"><div class="logo">Hazher</div><p>EcoShelf · hazher.no/ECOSHELF</p></div>
-        <div class="footer-links">
-          <a href="../index.html">Forside</a>
-          <a href="Support/">Support</a>
-          <a href="Privacy/">Personvern</a>
-        </div>
-        <div class="footer-meta"><p>&copy; <span id="y"></span> Hazher.</p></div>
-      </div>
-    </footer>
-    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Informasjonskapsler">
-      <div class="cookie-inner">
-        <p>Vi bruker informasjonskapsler der det trengs. <a href="../privacy.html">Les mer</a>.</p>
-        <button type="button" class="btn btn-eco" id="cookieAccept">Jeg forstår</button>
-      </div>
-    </div>
-  </body>
-</html>
+<section class="apple-hero">
+<div class="apple-hero__glow" aria-hidden="true"></div>
+<div class="apple-hero__inner wrap">
+<p class="apple-hero__eyebrow" data-reveal="up">Mat · hjem · mindre svinn · v1.0.2</p>
+<h1 data-reveal="up">EcoShelf.</h1>
+<p class="apple-hero__lead" data-reveal="up">Fem faner for hverdagen: Matskap, Skanner, Oppskrifter (Pro), Handleliste og Profil. Registrer det du har, få varsler før utløp, del skap med familien — og la KI lese kvitteringer og skap-bilder før du godkjenner.</p>
+<div class="apple-hero__actions" data-reveal="up">
+<a href="Support/" class="btn btn-eco">Support</a>
+<a href="Privacy/" class="btn btn-ghost">Personvern</a>
+<a href="https://ecoshelf.app" class="btn btn-ghost" target="_blank" rel="noopener">ecoshelf.app</a>
+</div>
+<div class="apple-hero__icon" data-reveal="scale">
+<div class="app-squircle app-squircle--eco">
+<img src="../images/ecoshelf-app-icon-v2.png" width="140" height="140" alt=""/>
+</div></div></div>
+<span class="apple-scroll-hint" aria-hidden="true">Scroll</span>
+</section>
+
+<section class="apple-feature" id="matskap" data-reveal="up">
+<div class="apple-feature__grid">
+<div><p class="apple-feature__label">Matskap</p><h2>Fire soner. Én oversikt.</h2><p>Kjøleskap, fryser, tørrskap og kjæledyr. Grupper like varer, sorter på utløp, sveip for spist/kastet, hurtigtillegg fra katalog, og «Redd måltidet» for varer som haster.</p></div>
+<div class="apple-feature__visual" data-stagger><div class="apple-stat-line"><span class="apple-stat-line__dot" style="background:#34d399"></span><div><strong>Utløpsvarsler</strong><span>Per vare og globalt</span></div>
+<div class="apple-stat-line"><span class="apple-stat-line__dot" style="background:#38bdf8"></span><div><strong>Offline-kø</strong><span>Synker når nett er tilbake</span></div>
+<div class="apple-stat-line"><span class="apple-stat-line__dot" style="background:#a78bfa"></span><div><strong>Bilde-historikk</strong><span>Tidligere skap-snapshots</span></div>
+</div>
+</div></section>
+
+<section class="apple-feature" id="skanner" data-reveal="up">
+<div class="apple-feature__grid">
+<div><p class="apple-feature__label">Skanner</p><h2>Strekkode, kvittering og KI.</h2><p>Én hub: skann strekkode (Kassal.app, Open Food Facts m.m.), les kvittering med OCR + sky-KI, eller ta bilde av kjøl/frys/tørr/dyr — du godkjenner alltid listen før lagring.</p></div>
+<div class="apple-feature__visual" data-stagger><div class="apple-stat-line"><span class="apple-stat-line__dot" style="background:#6ee7b7"></span><div><strong>Kvittering</strong><span>review_receipt_screen</span></div>
+<div class="apple-stat-line"><span class="apple-stat-line__dot" style="background:#fbbf24"></span><div><strong>Skap-KI</strong><span>3 gratis/mnd, ubegrenset Pro</span></div>
+<div class="apple-stat-line"><span class="apple-stat-line__dot" style="background:#818cf8"></span><div><strong>Produktbilder</strong><span>Fra katalog i sky</span></div>
+</div>
+</div></section>
+
+<section class="apple-feature" id="oppskrifter" data-reveal="up">
+<div class="apple-feature__grid">
+<div><p class="apple-feature__label">Oppskrifter Pro</p><h2>Middag fra lageret.</h2><p>Sky-KI foreslår retter basert på registrerte varer. Filter: alle, snart utløpt, klar nå. Ingredienser med «mangler» — legg på handleliste med ett trykk. Hero-bilder fra bilde-API eller fallback.</p></div>
+<div class="apple-feature__visual" data-stagger><div class="apple-stat-line"><span class="apple-stat-line__dot" style="background:#34d399"></span><div><strong>Pro</strong><span>App Store måned/år</span></div>
+<div class="apple-stat-line"><span class="apple-stat-line__dot" style="background:#f472b6"></span><div><strong>Basisvarer</strong><span>Salt, olje m.m. håndteres smart</span></div>
+<div class="apple-stat-line"><span class="apple-stat-line__dot" style="background:#38bdf8"></span><div><strong>Gratis demo</strong><span>Begrenset sky-KI-prøve</span></div>
+</div>
+</div></section>
+
+<section class="apple-feature" id="delt" data-reveal="up">
+<div class="apple-feature__grid">
+<div><p class="apple-feature__label">Delt matskap</p><h2>Familie og kollektiv.</h2><p>Opprett delt skap med 8-tegns kode, sanntid for alle medlemmer, valgfrie push når andre endrer lager, flytt personlige varer inn i delt skap.</p></div>
+<div class="apple-feature__visual" data-stagger><div class="apple-stat-line"><span class="apple-stat-line__dot" style="background:#6ee7b7"></span><div><strong>Realtime</strong><span>Supabase subscriptions</span></div>
+<div class="apple-stat-line"><span class="apple-stat-line__dot" style="background:#a78bfa"></span><div><strong>Felles handleliste</strong><span>Knyttet til delt skap</span></div>
+<div class="apple-stat-line"><span class="apple-stat-line__dot" style="background:#fbbf24"></span><div><strong>Invitasjon</strong><span>Eier styrer medlemmer</span></div>
+</div>
+</div></section>
+
+<section class="apple-feature" id="widget" data-reveal="up">
+<div class="apple-feature__grid">
+<div><p class="apple-feature__label">Widget & profil</p><h2>Fra hjemskjermen.</h2><p>iOS og Android-widget: kombinert, oversikt, hurtigskann, utløp først. CSV-eksport av lager, statistikk (spart, kastet, puls), språk nb/en, slett konto.</p></div>
+<div class="apple-feature__visual" data-stagger><div class="apple-stat-line"><span class="apple-stat-line__dot" style="background:#34d399"></span><div><strong>App Group</strong><span>group.com.ecoshelf.app</span></div>
+<div class="apple-stat-line"><span class="apple-stat-line__dot" style="background:#38bdf8"></span><div><strong>Apple & Google</strong><span>Innlogging</span></div>
+<div class="apple-stat-line"><span class="apple-stat-line__dot" style="background:#818cf8"></span><div><strong>AdMob</strong><span>Gratis nivå (ikke Pro)</span></div>
+</div>
+</div></section>
+<section class="apple-bento" data-reveal="up"><h2>EcoShelf i tall og detaljer</h2><div class="apple-bento__grid" data-stagger><article class="apple-bento__cell apple-bento__cell--wide"><h3>Strekkode-kilder</h3><p>Kassal.app, Open Food Facts, UPCItemDB, brukerbidrag i products-tabell.</p></article><article class="apple-bento__cell"><h3>Redd måltidet</h3><p>Lokale forslag for alle; full sky-KI med Pro.</p></article><article class="apple-bento__cell"><h3>Handleliste</h3><p>Arkiv, kategorier, «legg i skap» ved kjøp.</p></article><article class="apple-bento__cell apple-bento__cell--tall"><h3>Sikkerhet</h3><p>RLS, Edge Functions for OpenAI-nøkler, IAP-verify.</p></article><article class="apple-bento__cell"><h3>Push</h3><p>APNs + FCM, delt skap, shopping-intent.</p></article><article class="apple-bento__cell"><h3>Support</h3><p>kontakt@hazher.no</p></article></div></section>
+<section class="apple-spec-section"><div class="wrap">
+<h2>Alle hovedfunksjoner</h2>
+<p class="apple-spec-intro">EcoShelf er utviklet av Hazher med Supabase-backend og Flutter-klient.</p>
+<div class="apple-spec-grid" data-stagger><div class="apple-spec-card"><h3>Matskap-fanen</h3><ul><li>Gruppering av partier</li><li>Tøm skap per sone</li><li>Scope: mitt / kombinert / delt</li><li>Markering spist/kastet med statistikk</li></ul></div><div class="apple-spec-card"><h3>Skanner-fanen</h3><ul><li>Strekkode</li><li>Kvittering (AI)</li><li>Kjøl/frys/tørr/dyr bilde-KI</li><li>Gjennomgang før lagring</li></ul></div><div class="apple-spec-card"><h3>EcoShelf Pro</h3><ul><li>Ubegrenset skap-KI</li><li>Ubegrenset kvitterings-KI</li><li>Full oppskriftsfane</li><li>Uten AdMob</li></ul></div><div class="apple-spec-card"><h3>Backend</h3><ul><li>openai-proxy</li><li>recipe-hero-image</li><li>shared-inventory-notify</li><li>iap-verify</li><li>delete_user_complete RPC</li></ul></div></div>
+</div></section>
+
+<div class="apple-compare"><table>
+<thead><tr><th>Funksjon</th><th>Gratis</th><th>Pro</th></tr></thead>
+<tbody><tr><td>AI skap per måned</td><td>3</td><td>Ubegrenset</td></tr><tr><td>Kvitterings-KI</td><td>1 demo/mnd</td><td>Ubegrenset</td></tr><tr><td>Oppskriftsfane</td><td>Paywall</td><td>Full tilgang</td></tr><tr><td>Annonser</td><td>Ja</td><td>Nei</td></tr></tbody></table></div>
+<section class="apple-cta-band"><h2>Last ned EcoShelf</h2><p>Juridisk: hazher.no/ECOSHELF og ecoshelf.app</p><div class="apple-cta-band__actions"><a href="Support/" class="btn btn-eco">Support</a><a href="Privacy/" class="btn btn-ghost">Personvern</a></div></section>
+</main>
+<footer class="footer"><div class="wrap footer-grid">
+<div class="footer-brand"><div class="logo">Hazher</div><p>EcoShelf · hazher.no</p></div>
+<div class="footer-links">
+<a href="../index.html">Forside</a><a href="Support/">Support</a><a href="Privacy/">Personvern</a>
+</div>
+<div class="footer-meta"><p>&copy; <span id="y"></span> Hazher · <a href="mailto:kontakt@hazher.no">kontakt@hazher.no</a></p></div>
+</div></footer>
+<div class="cookie-banner" id="cookieBanner" role="dialog"><div class="cookie-inner">
+<p>Informasjonskapsler i tråd med <a href="../privacy.html">personvernerklæringen</a>.</p>
+<button type="button" class="btn btn-primary" id="cookieAccept">Jeg forstår</button>
+</div></div>
+</body></html>
