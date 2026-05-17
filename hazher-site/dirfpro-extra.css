@@ -1,0 +1,22 @@
+/* DirfPro — accent på dokumentasjon og produktseksjoner */
+
+.btn-dirf-primary {
+  background: linear-gradient(135deg, #4f46e5, #2563eb);
+  color: #fff;
+  border: none;
+  font-weight: 700;
+}
+
+.btn-dirf-primary:hover {
+  filter: brightness(1.08);
+}
+
+.doc-pill--dirf {
+  background: rgba(99, 102, 241, 0.2);
+  color: #c7d2fe;
+  border-color: rgba(99, 102, 241, 0.35);
+}
+
+.app-squircle--dirf {
+  box-shadow: 0 20px 40px rgba(79, 70, 229, 0.35);
+}

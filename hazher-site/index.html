@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Hazher — apputvikling, EcoShelf, Loop Marked &amp; Hurtighjelp</title>
+    <title>Hazher — EcoShelf, Loop Marked, Hurtighjelp &amp; DirfPro</title>
     <meta
       name="description"
-      content="Hazher utvikler profesjonelle apper med Flutter og Supabase. EcoShelf: smartere matskap og mindre matsvinn. Loop Marked: personvern-først-marked med Lumo. Hurtighjelp: norsk markedsplass for tjenester med Vipps, Apple Pay og Stripe Connect. Vi kan også bygge app for din bedrift."
+      content="Hazher utvikler profesjonelle apper med Flutter og Supabase: EcoShelf, Loop Marked, Hurtighjelp og DirfPro. Utforsk produktene våre eller få hjelp til å bygge din egen app."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,6 +15,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="hazher-pro.css" />
     <script src="main.js" defer></script>
   </head>
   <body>
@@ -32,13 +33,11 @@
         </button>
         <nav class="nav-links" id="navLinks" aria-label="Hovedmeny">
           <a href="#ecoshelf">EcoShelf</a>
-          <a href="ECOSHELF/">EcoShelf+</a>
           <a href="#loopmarked">Loop Marked</a>
           <a href="#hurtighjelp">Hurtighjelp</a>
-          <a href="HURTIGHJELP/">Hurtighjelp+</a>
+          <a href="#dirfpro">DirfPro</a>
           <a href="#tjenester">Apper for deg</a>
           <a href="#om">Om oss</a>
-          <a href="privacy.html">Personvern</a>
           <a href="#kontakt" class="nav-cta">Kontakt</a>
         </nav>
       </div>
@@ -55,15 +54,13 @@
             <h1>Profesjonelle apper fra folk som lever i koden</h1>
             <p class="hero-lead">
               Hazher designer, bygger og vedlikeholder mobilapper med moderne verktøy, tydelig brukeropplevelse og
-              sikkerhet i ryggmargen. Vi står bak <strong>EcoShelf</strong> (mat og hjem),
-              <strong>Loop Marked</strong> (marked med virtuell valuta og sterk kryptering) og
-              <strong>Hurtighjelp</strong> (norsk markedsplass for tjenester med Vipps og kortbetaling). Vi tar
-              også oppdrag: din idé, vår gjennomføringsevne.
+              sikkerhet i ryggmargen. Vi står bak <strong>EcoShelf</strong>, <strong>Loop Marked</strong>,
+              <strong>Hurtighjelp</strong> og <strong>DirfPro</strong> — og tar også oppdrag der din idé møter
+              vår gjennomføringsevne.
             </p>
             <p class="hero-lead hero-lead-tight">
-              Appikonene er hentet fra hver app sin offisielle pakke: EcoShelf og Hurtighjelp som
-              høyoppløselig PNG, Loop Marked fra
-              <a href="https://loopmarked.com/" target="_blank" rel="noopener noreferrer">loopmarked.com</a>.
+              Trykk på et produkt i menyen for å hoppe til kort beskrivelse. Nederst i hver seksjon finner du
+              <strong>Les mer</strong> med full dokumentasjon, support og personvern per app.
             </p>
             <div class="hero-actions hero-actions-stack">
               <a href="#ecoshelf" class="btn btn-eco">EcoShelf</a>
@@ -74,6 +71,7 @@
                 rel="noopener noreferrer"
                 >Loop Marked</a>
               <a href="#hurtighjelp" class="btn btn-rapid">Hurtighjelp</a>
+              <a href="#dirfpro" class="btn btn-dirf">DirfPro</a>
               <a href="#tjenester" class="btn btn-ghost">Vi bygger for deg</a>
             </div>
           </div>
@@ -112,6 +110,17 @@
                 </div>
                 <figcaption class="logo-showcase__label">Hurtighjelp</figcaption>
               </figure>
+              <figure class="logo-showcase">
+                <div class="app-squircle app-squircle--hero app-squircle--dirf" aria-hidden="true">
+                  <img
+                    src="images/dirfpro-app-icon.png"
+                    width="180"
+                    height="180"
+                    alt=""
+                  />
+                </div>
+                <figcaption class="logo-showcase__label">DirfPro</figcaption>
+              </figure>
             </div>
           </div>
         </div>
@@ -137,9 +146,6 @@
               som gjemmer seg bakerst i kjøleskapet. Appen er bygget i Flutter med Apple-innlogging, skybakgrunn
               (Supabase) og funksjoner som er tilpasset hverdagen i norske og internasjonale hjem.
             </p>
-            <p class="section-more">
-              <a href="ECOSHELF/">Les mer om EcoShelf — dokumentasjon og hvordan appen fungerer</a>
-            </p>
           </div>
 
           <div class="panel eco-accent" data-reveal="up">
@@ -158,42 +164,20 @@
                   <span class="tag">Oppskrifter</span>
                   <span class="tag">Varsler</span>
                 </div>
-                <div class="product-intro-actions">
-                  <a href="ECOSHELF/" class="btn btn-sm btn-eco">Les mer om EcoShelf</a>
-                  <a href="ECOSHELF/Support/" class="btn btn-sm btn-ghost">Support</a>
-                  <a href="ECOSHELF/Privacy/" class="btn btn-sm btn-ghost">Personvern (app)</a>
-                </div>
+                <div class="product-intro-actions" aria-hidden="true"></div>
               </div>
             </div>
 
-            <div class="prose-block product-prose" style="max-width: none; margin-top: 32px">
-              <h4>Hva EcoShelf gjør i praksis</h4>
+            <div class="prose-block product-prose product-prose--compact" style="max-width: none; margin-top: 28px">
               <p>
-                Du legger inn varer med utløpsdato og lagringssted (kjøleskap, fryser eller tørrskap). Alt vises i en
-                oversikt som grupperer like varer og sorterer etter dato, slik at du ser først det som bør brukes snart.
-                Du kan skanne strekkoder for rask registrering, bruke hurtigtillegg med søk i katalog, og ta bilde av
-                kjøleskap, fryser eller tørrskap slik at kunstig intelligens foreslår varer du kan legge inn (før du
-                godkjenner listen). Kvitteringsskanning hjelper deg å få med hele handleturen i ett steg.
+                Registrer varer med utløpsdato, skann strekkoder eller la KI foreslå innhold fra bilder av skapet ditt.
+                Handleliste, oppskrifter og varsler er koblet til det du faktisk har hjemme.
               </p>
-              <p>
-                Handlelisten er knyttet til hverdagen: når du markerer noe som spist eller kastet, kan appen foreslå å
-                legge varen på listen igjen hvis du ikke har flere partier igjen. Du får også oversikt over tidligere
-                bilder av «skapene» dine med dato og klokkeslett, og kan slette historikk du ikke trenger.
-              </p>
-              <p>
-                EcoShelf støtter norsk og engelsk, fungerer med Apple Sign In, og bruker Row Level Security i databasen
-                slik at bare du ser dine egne data. Push-varsler kan settes opp for påminnelser (med brukerens
-                tillatelse). Alt er tenkt for trygg drift: personvern og vilkår finner du blant annet på
-                <a href="ECOSHELF/Privacy/">hazher.no/ECOSHELF/Privacy</a>.
-              </p>
+            </div>
 
-              <h4>Hvorfor dette er «profft» utført</h4>
-              <ul>
-                <li>Én felles kodebase i Flutter gir konsistent UI og rask utvikling på tvers av plattformer.</li>
-                <li>Supabase gir database, autentisering og funksjoner som kan skaleres uten å eie egen serverpark.</li>
-                <li>Vi tenker sikkerhet tidlig: brukerdata isoleres per konto, og sensitive operasjoner går gjennom kontrollerte API-er.</li>
-                <li>Vi itererer basert på reell bruk: mat i hjemmet er et problem alle kjenner på; appen er bygget for konkrete oppgaver, ikke bare «features».</li>
-              </ul>
+            <div class="section-cta">
+              <p>Full produktdokumentasjon, support og personvern for EcoShelf ligger på egne sider.</p>
+              <a href="ECOSHELF/" class="btn btn-eco">Les mer om EcoShelf</a>
             </div>
           </div>
         </div>
@@ -209,10 +193,6 @@
               og et grensesnitt som føles moderne på både iOS og Android. Handel og belønninger i appen skjer med
               <strong>Lumo</strong>, som er en <strong>virtuell valuta</strong> — ikke ekte penger — slik at brukere kan
               handle og bytte i et kontrollert miljø uten å blande inn bankkonto eller kort i den samme flyten.
-            </p>
-            <p class="section-more">
-              <a href="https://loopmarked.com/" target="_blank" rel="noopener noreferrer"
-                >Les mer om Loop Marked — produktnettsted og nedlasting</a>
             </p>
           </div>
 
@@ -238,32 +218,15 @@
               </div>
             </div>
 
-            <div class="prose-block product-prose" style="max-width: none; margin-top: 32px">
-              <h4>Opplevelsen for brukeren</h4>
+            <div class="prose-block product-prose product-prose--compact" style="max-width: none; margin-top: 28px">
               <p>
-                Brukere oppretter profil med Apple eller Google, utforsker annonser med filtre for kategori, pris (i Lumo),
-                avstand og kart, og kan lagre søk med varsler når nye treff dukker opp. Chat mellom kjøper og selger er
-                bygget for konfidensialitet, med støtte for bilder, stemme og deling av posisjon i tråd med produktets
-                design. Tilbudssystemet strukturerer forhandling: bud, motbud, aksept og avslag med sporbarhet.
+                Utforsk annonser med kart og filtre, forhandle med strukturerte tilbud og chat med fokus på personvern.
+                Handel skjer med Lumo — plattformens virtuelle valuta.
               </p>
-              <p>
-                Lumo er tydelig markert som plattformens interne valuta: den brukes til å prise varer, fullføre handler
-                i appen og drive økonomien i økosystemet (for eksempel belønninger og spillifisering som badges), uten at
-                det er snakk om tradisjonell bankoverføring inne i den samme logikken. Det reduserer risiko og forenkler
-                etterlevelse sammenlignet med å håndtere ekte fiat i en umoden markedsplass.
-              </p>
-              <p>
-                Appen er oversatt til mange språk, inkludert støtte for RTL, og er laget for et globalt publikum samtidig
-                som den beholder et tydelig visuelt uttrykk. Mer informasjon, juridiske sider og nedlasting finner du på
-                <a href="https://loopmarked.com/" target="_blank" rel="noopener noreferrer">loopmarked.com</a>.
-              </p>
-
-              <h4>Teknisk og produktmessig styrke</h4>
-              <ul>
-                <li>Flutter gir jevn ytelse og ett team som leverer til både App Store og Google Play.</li>
-                <li>Supabase brukes som sanntids- og sikkerhetsorientert backend med policies på radnivå.</li>
-                <li>Personvern er en del av merkevaren, ikke et tillegg — det gjenspeiles i arkitektur og kommunikasjon.</li>
-              </ul>
+            </div>
+            <div class="section-cta">
+              <p>Produktnettsted, nedlasting og juridiske sider for Loop Marked.</p>
+              <a href="https://loopmarked.com/" class="btn btn-loop" target="_blank" rel="noopener noreferrer">Les mer om Loop Marked</a>
             </div>
           </div>
         </div>
@@ -302,129 +265,67 @@
                   <span class="tag">Blokkering &amp; RLS</span>
                   <span class="tag">Nb / En</span>
                 </div>
-                <div class="product-intro-actions">
-                  <a href="#hurtighjelp-detalj" class="btn btn-sm btn-rapid">Alle funksjoner</a>
-                  <a href="HURTIGHJELP/Support/" class="btn btn-sm btn-ghost">Support</a>
-                  <a href="HURTIGHJELP/Privacy/" class="btn btn-sm btn-ghost">Personvern</a>
-                </div>
+                <div class="product-intro-actions" aria-hidden="true"></div>
               </div>
             </div>
 
-            <div class="prose-block product-prose" id="hurtighjelp-detalj" style="max-width: none; margin-top: 32px">
-              <h4>Hva Hurtighjelp gjør i praksis</h4>
+            <div class="prose-block product-prose product-prose--compact" style="max-width: none; margin-top: 28px">
               <p>
-                Brukere logger inn med <strong>Vipps</strong> (BankID-nivå-verifisering), <strong>Apple Sign In</strong>
-                eller <strong>Google</strong>, og lander rett i en moderne markedsplass. Trenger du hjelp? Legg ut
-                en annonse med kategori, beskrivelse, bilder, adresse, tidspunkt og pris i kroner. Tilbyr du
-                tjenester selv? Publiser et tilbud, så blir du synlig for nærområdet ditt. Markedsplassen lar deg
-                søke, sortere og filtrere — med visuelle kategorifliser, hurtigfiltere og en featured-karusell —
-                slik at riktig oppdrag dukker opp på sekunder.
+                Legg ut oppdrag eller tilby tjenester i nærområdet. Privat chat per interessent, taleanrop, live transport
+                og betaling med Vipps og Stripe Connect — med RLS og blokkering innebygd.
               </p>
-              <p>
-                Når en avtale inngås, går betalingen gjennom <strong>Stripe Connect Marketplace</strong>: kunden
-                betaler i appen (Vipps, Apple Pay, Google Pay eller kort), pengene holdes trygt på en
-                plattform-konto, og når oppdraget er fullført utbetales tjenestetilbyderens andel automatisk til
-                deres registrerte bankkonto. Hurtighjelp tar en transparent plattformprovisjon på 10–15 % som
-                dekker betaling, sikkerhet og drift. Hele flyten er verifisert serverside i Supabase Edge
-                Functions med idempotens-nøkler og webhook-signaturkontroll, slik at samme transaksjon aldri kan
-                belastes to ganger.
-              </p>
-              <p>
-                Underveis snakker dere i jobb-chat med bilder, skriving-indikator og lest-status. På åpne annonser
-                får hver interessent <strong>egen tråd</strong> med eieren — ikke én delt chat for alle. Du kan
-                <strong>ringe i appen</strong> (WebRTC + CallKit; motpartens navn på låst skjerm). Ved transport
-                deles live posisjon med <strong>Live Activity</strong> på låseskjermen. Utføring (bekreft, start,
-                lever, godkjenn) skjer i chat — én tydelig flyt.
-                Etter fullført oppdrag gir begge parter en stjernevurdering med en kort tekst, slik at
-                omdømmet bygger tillit i hele plattformen.
-              </p>
-              <p>
-                Appen er bygget rundt iOS-native tillatelser: bilder og lokasjon spørres bare når funksjonen
-                faktisk brukes, varsler tilbys etter at intro-flyten er ferdig, og <em>App Tracking Transparency</em>
-                er på plass for fremtidige annonser. Hver tillatelse har en tydelig norsk forklaring i
-                <code>Info.plist</code>, og kan slås av og på i iPhone-innstillinger som forventet. Designet er
-                gjennomført i <strong>lys mode</strong> med et premium-følgende uttrykk: myke skygger, hvite
-                kort, varm lilla-blå primærfarge og store luftige kort.
-              </p>
-
-              <h4>Hvorfor Hurtighjelp er trygt og «bank-standard»</h4>
-              <ul>
-                <li><strong>PCI DSS Level 1</strong> via Stripe — kortdata berører aldri Hurtighjelp sine
-                  servere.</li>
-                <li><strong>Vipps OIDC + BankID</strong> for sterk identitetsbekreftelse av norske brukere.</li>
-                <li><strong>RLS i Supabase</strong> sikrer at kun deltakerne i en samtale kan lese meldingene.</li>
-                <li><strong>Server-validert pris</strong> og idempotens-nøkler hindrer dobbel-belastning og
-                  manipulasjon.</li>
-                <li><strong>Webhook-signaturkontroll</strong> for hver Stripe-event som oppdaterer status i
-                  databasen.</li>
-                <li><strong>Transparent betalingsstatus</strong> i chat og varslingssenter — alle parter ser
-                  hva som har skjedd og når.</li>
-              </ul>
-
-              <h4>Funksjonsoversikt</h4>
-              <div class="flow-grid">
-                <div class="flow-card">
-                  <strong>Markedsplass</strong>
-                  <span>Hero-header, søk, hurtigfiltere, kategorifliser, featured-karusell og kort med
-                    bildestripe.</span>
-                </div>
-                <div class="flow-card">
-                  <strong>Annonse / tilbud</strong>
-                  <span>Skill mellom «trenger hjelp» og «tilbyr tjeneste». Multi-bildeopplasting, adresse,
-                    tidspunkt og pris.</span>
-                </div>
-                <div class="flow-card">
-                  <strong>Annonse-detalj</strong>
-                  <span>Hero-bildekarusell, eier-kort, beskrivelse, kart, vurderinger og dynamisk
-                    handlings-knapp.</span>
-                </div>
-                <div class="flow-card">
-                  <strong>Sanntids chat</strong>
-                  <span>Privat tråd per interessent, bilder, typing, blokkering og arkivert etter fullført jobb.</span>
-                </div>
-                <div class="flow-card">
-                  <strong>Taleanrop</strong>
-                  <span>CallKit på iPhone, ringelyd, WebRTC — ikke vanlig telefonnummer.</span>
-                </div>
-                <div class="flow-card">
-                  <strong>Live transport</strong>
-                  <span>GPS + Live Activity på låseskjerm under transport-oppdrag.</span>
-                </div>
-                <div class="flow-card">
-                  <strong>Betaling</strong>
-                  <span>Vipps, Apple Pay, Google Pay og kort via Stripe Connect — med automatisk utbetaling
-                    til tilbyder.</span>
-                </div>
-                <div class="flow-card">
-                  <strong>Vurderinger</strong>
-                  <span>Stjernevurdering og kommentar etter hvert oppdrag — bygger tillit over tid.</span>
-                </div>
-                <div class="flow-card">
-                  <strong>Profil &amp; varsler</strong>
-                  <span>Offentlig profil med rating, betalingsmetoder, varslingssenter og iOS-native
-                    permissions.</span>
-                </div>
-              </div>
-
-              <h4>Teknisk og produktmessig styrke</h4>
-              <ul>
-                <li>Flutter med <code>flutter_riverpod</code>, <code>go_router</code> og en gjenbrukbar
-                  designsystem-pakke (lys mode, glassmorphism, soft-shadows).</li>
-                <li>Supabase med PostgreSQL-enums (<code>job_kind</code>, <code>job_status</code>,
-                  <code>payment_status</code>), triggere for ratings og chat-previews, og RLS i kjernen.</li>
-                <li>Edge Functions for serverside Stripe-flyt: <code>create-payment-intent</code>,
-                  <code>connect-onboarding</code> og signerte webhooks.</li>
-                <li><code>flutter_map</code> + <code>geolocator</code> for posisjon og lyse CartoDB Voyager-fliser.</li>
-                <li><code>app_tracking_transparency</code> og iOS-native primere for hver tillatelse.</li>
-                <li><code>image_picker</code> for multi-bildeopplasting til <code>job_images</code> og
-                  <code>chat_images</code> Supabase Storage-buckets.</li>
-              </ul>
+            </div>
+            <div class="section-cta">
+              <p>Support, personvern og full produktdokumentasjon for Hurtighjelp.</p>
+              <a href="HURTIGHJELP/" class="btn btn-rapid">Les mer om Hurtighjelp</a>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section section-deep" aria-labelledby="deep-heading">
+      <section class="section" id="dirfpro">
+        <div class="wrap">
+          <div class="section-head" data-reveal="up">
+            <p class="section-label">Produkt</p>
+            <h2>DirfPro — profesjonelt verktøy i felt</h2>
+            <p class="section-desc">
+              DirfPro er Hazhers app for fagfolk som trenger oversikt over oppdrag, dokumentasjon og kundedialog —
+              bygget i Flutter med Supabase, tydelig UI og sikkerhet i kjernen.
+            </p>
+          </div>
+          <div class="panel dirf-accent" data-reveal="up">
+            <div class="product-intro product-intro--dirf">
+              <div class="app-squircle app-squircle--tile app-squircle--dirf" aria-hidden="true">
+                <img src="images/dirfpro-app-icon.png" width="128" height="128" alt="" />
+              </div>
+              <div class="product-intro-main">
+                <h3 class="product-intro-title">DirfPro</h3>
+                <p class="product-intro-tagline">Oppdrag, dokumenter og dialog — samlet for deg som jobber ute.</p>
+                <div class="tag-row">
+                  <span class="tag hit-dirf">Oppdragsliste</span>
+                  <span class="tag">Dokumentasjon</span>
+                  <span class="tag">Kundekontakt</span>
+                  <span class="tag">Sky &amp; RLS</span>
+                  <span class="tag">iOS &amp; Android</span>
+                </div>
+                <div class="product-intro-actions" aria-hidden="true"></div>
+              </div>
+            </div>
+            <div class="prose-block product-prose product-prose--compact" style="max-width: none; margin-top: 28px">
+              <p>
+                Hold styr på aktive og fullførte oppdrag, last opp notater og bilder knyttet til jobben, og kommuniser
+                med kunder uten å miste tråden. Data synkroniseres sikkert i skyen med tilgangskontroll per bruker.
+              </p>
+            </div>
+            <div class="section-cta">
+              <p>Full produktdokumentasjon, support og personvern for DirfPro.</p>
+              <a href="DIRFPRO/" class="btn btn-dirf">Les mer om DirfPro</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<section class="section section-deep" aria-labelledby="deep-heading">
         <div class="wrap">
           <div class="section-head" data-reveal="up">
             <p class="section-label">Arkitektur</p>
@@ -581,8 +482,7 @@
               Hazher er et norskregistrert enkeltmannsforetak drevet av <strong>Hama Hazher</strong> som bygger
               produkter folk faktisk bruker. Vi står bak <strong>EcoShelf</strong> (mat og hjem),
               <strong>Loop Marked</strong> (personvern-først-marked med virtuell valuta) og
-              <strong>Hurtighjelp</strong> (norsk markedsplass for tjenester med Vipps, Apple Pay og Stripe
-              Connect). Det betyr at vi forstår hele løpet: idé, design, kode, sikkerhet, butikk-utgivelse,
+              <strong>Hurtighjelp</strong> (norsk markedsplass) og <strong>DirfPro</strong> (feltverktøy). Det betyr at vi forstår hele løpet: idé, design, kode, sikkerhet, butikk-utgivelse,
               betaling, juridisk rammeverk og drift over tid.
             </p>
           </div>
@@ -680,6 +580,8 @@
               <a href="https://loopmarked.com/" target="_blank" rel="noopener noreferrer">loopmarked.com</a><br />
               <strong>Hurtighjelp:</strong>
               <a href="mailto:hurtighjelp@hazher.no">hurtighjelp@hazher.no</a><br />
+              <strong>DirfPro:</strong>
+              <a href="mailto:dirfpro@hazher.no">dirfpro@hazher.no</a><br />
               <strong>Hazher / nye prosjekter:</strong>
               <a href="mailto:kontakt@hazher.no">kontakt@hazher.no</a>
             </p>
@@ -702,6 +604,7 @@
           <a href="ECOSHELF/Privacy/">EcoShelf personvern</a>
           <a href="HURTIGHJELP/Support/">Hurtighjelp support</a>
           <a href="HURTIGHJELP/Privacy/">Hurtighjelp personvern</a>
+          <a href="DIRFPRO/">DirfPro hub</a>
           <a href="https://loopmarked.com/" target="_blank" rel="noopener noreferrer">Loop Marked</a>
           <a href="#hurtighjelp">Hurtighjelp</a>
         </div>
