@@ -6,134 +6,205 @@
     <title>Personvern — Hurtighjelp (app) | Hazher</title>
     <meta
       name="description"
-      content="Personvernerklæring for mobilappen Hurtighjelp: hvilke data som behandles, formål, tredjeparter (bl.a. innlogging, sky, KI), betaling via App Store/Google Play og dine rettigheter."
+      content="Personvernerklæring for mobilappen Hurtighjelp: data, formål, tredjeparter, annonser, rettigheter og kontakt. Privacy Policy URL for App Store."
     />
+    <link rel="canonical" href="https://www.hazher.no/HURTIGHJELP/Privacy/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../../styles.css" />
     <link rel="stylesheet" href="../../hazher-apple.css" />
-    <link rel="stylesheet" href="../../hazher-pro.css" />
+    <link rel="stylesheet" href="../../hazher-apple-ext.css" />
     <link rel="stylesheet" href="../../hurtighjelp-extra.css" />
     <script src="../../main.js" defer></script>
     <script src="../../hazher-apple.js" defer></script>
+    <script src="../../hurtighjelp-pages.js" defer></script>
   </head>
-  <body class="apple-site">
+  <body class="apple-site theme-rapid">
     <div class="scroll-progress" aria-hidden="true"></div>
     <div class="bg-mesh" aria-hidden="true" data-parallax="0.03"></div>
-    <div class="bg-grid" aria-hidden="true" data-parallax="0.06"></div>
+    <div class="bg-grid" aria-hidden="true" data-parallax="0.05"></div>
 
-    <header class="nav">
+    <header class="nav hj-nav">
       <div class="wrap nav-inner">
-        <a href="../../index.html" class="logo">Hazher</a>
+        <a href="../index.html" class="logo hj-logo">
+          <img src="../../images/hurtighjelp-app-icon.png" width="28" height="28" alt="" />
+          Hurtighjelp
+        </a>
         <button type="button" class="nav-toggle" aria-label="Åpne meny" id="navToggle">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
-        <nav class="nav-links" id="navLinks" aria-label="Hovedmeny">
-          <a href="../../index.html">Forside</a>
-          <a href="../index.html">Hurtighjelp hub</a>
-          <a href="index.html" style="color: var(--text)">Personvern</a>
-          <a href="../Terms/">Bruksvilkår</a>
+        <nav class="nav-links hj-subnav" id="navLinks" aria-label="Hurtighjelp">
+          <a href="../index.html">Produkt</a>
           <a href="../Support/">Support</a>
-          <a href="mailto:kontakt@hazher.no" class="nav-cta">Kontakt</a>
+          <a href="index.html" class="is-active">Personvern</a>
+          <a href="../../index.html">Hazher</a>
+          <a href="mailto:kontakt@hazher.no?subject=Personvern%20%E2%80%93%20Hurtighjelp" class="nav-cta">Kontakt</a>
         </nav>
       </div>
     </header>
 
-    <main class="legal-main apple-legal">
-      <div class="wrap prose">
-        <div> class="wrap" style="padding-top:100px"><div class="app-store-strip"><span>Privacy Policy URL</span><code>https://hazher.no/HURTIGHJELP/Privacy/</code></div></div>
-        <h1 class="legal-title">Personvern — Hurtighjelp (mobilapp)</h1>
-        <p class="legal-updated">
-          Sist oppdatert: 17. mai 2026. Gjelder appen <strong>Hurtighjelp</strong> på iOS og Android. Denne siden kan brukes
-          som <strong>Privacy Policy URL</strong> i App Store Connect og Google Play Console. Utfyllende eller oppdaterte
-          juridiske tekster kan også publiseres på
-          <a href="https://www.hazher.no/HURTIGHJELP/Privacy" target="_blank" rel="noopener noreferrer">hazher.no/HURTIGHJELP/Privacy</a> — ved motstrid
-          gjelder den nyeste publiserte app-rettede erklæringen der, med mindre annet er avtalt skriftlig.
-        </p>
-
-        <div class="callout" style="margin-bottom: 28px">
-          <strong>Nettsted vs. app:</strong> Personvern for nettstedet <strong>hazher.no</strong> (informasjonskapsler,
-          annonser på siden) er beskrevet i
-          <a href="../../privacy.html">personvernerklæringen for hazher.no</a>. Denne siden handler om
-          <strong>appen Hurtighjelp</strong>.
-        </div>
-
-        <h2>1. Behandlingsansvar</h2>
-        <p>
-          Appen Hurtighjelp leveres av Hazher / det selskapet som står oppført som utgiver i App Store og Google Play. For
-          personvernhenvendelser knyttet til appen: <a href="mailto:kontakt@hazher.no">kontakt@hazher.no</a>.
-        </p>
-
-        <h2>2. Hvilke opplysninger appen kan behandle</h2>
-        <p>Avhengig av bruk kan følgende behandles:</p>
-        <ul>
-          <li><strong>Konto:</strong> Navn, profilbilde, e-post/identifikator fra Vipps, Apple eller Google, språkvalg og personverninnstillinger (f.eks. tillat taleanrop).</li>
-          <li><strong>Oppdrag og markedsplass:</strong> Tittel, beskrivelse, kategori, bilder, adresse/område, tid, pris og status på jobber du oppretter eller tar.</li>
-          <li><strong>Chat:</strong> Meldingstekst, bilder du sender, lese-/skrivestatus og metadata om samtaler knyttet til oppdrag.</li>
-          <li><strong>Taleanrop:</strong> Signaler for å etablere samtale (WebRTC), tekniske logger og varsler — ikke innholdet i samtalen lagres som lyd på våre servere utover det som er nødvendig for signaling.</li>
-          <li><strong>Posisjon:</strong> Når du bruker kart, live transport eller deler posisjon under oppdrag, behandles GPS-koordinater i den grad du tillater det.</li>
-          <li><strong>Betaling:</strong> Stripe og Vipps behandler betaling; vi lagrer ikke fullt kortnummer. Vi kan lagre betalingsstatus, beløp og referanser knyttet til oppdrag.</li>
-          <li><strong>Varsler:</strong> Push-token og varselpreferanser (meldinger, oppdrag, taleanrop, nye jobber) dersom du aktiverer dette.</li>
-          <li><strong>Blokkering og sikkerhet:</strong> Informasjon om blokkerte brukere, rapporter og tekniske logger for å hindre misbruk.</li>
-        </ul>
-
-        <h2>3. Formål</h2>
-        <ul>
-          <li>Drive markedsplassen (publisering, matching, chat, utføring og vurderinger).</li>
-          <li>Facilitere betaling og utbetaling via autoriserte betalingsleverandører.</li>
-          <li>Levere taleanrop og live transport der du har aktivert funksjonene.</li>
-          <li>Sende varsler du har samtykket til.</li>
-          <li>Forebygge svindel, håndheve blokkeringer og overholde lovpålagte krav.</li>
-        </ul>
-
-        <h2>4. Tredjeparter</h2>
-        <p>Vi bruker bl.a. Supabase (database og auth), Stripe og Vipps (betaling), push-leverandører og kart/tjenester for posisjon. Taleanrop bruker signaling — ikke lagring av samtaleinnhold som standard.</p>
-        <h2>5. Oppbevaring og sletting</h2>
-        <p>
-          Data lagres så lenge kontoen er aktiv og det er nødvendig for formålet. Du kan be om sletting av konto eller
-          opplysninger i tråd med gjeldende rett ved å kontakte
-          <a href="mailto:kontakt@hazher.no">kontakt@hazher.no</a>. Enkelte opplysninger kan måtte beholdes kortere
-          eller lengre der loven krever det (f.eks. regnskaps- eller bokføringskrav der det treffer).
-        </p>
-
-        <h2>6. Dine rettigheter (GDPR m.fl.)</h2>
-        <p>
-          Der GDPR gjelder, har du blant annet rett til innsyn, retting, sletting, begrensning av behandling, dataportabilitet
-          og å protestere mot visse typer behandling. Du kan også klage til tilsynsmyndighet (i Norge: Datatilsynet).
-        </p>
-
-        <h2>7. Barn</h2>
-        <p>
-          Hurtighjelp er ikke rettet mot barn under 16 år uten foreldres samtykke rettet mot barn under den alderen som krever samtykke etter gjeldende lov. Oppfordrer til å
-          bruke foreldres konto der det er nødvendig.
-        </p>
-
-        <h2>8. Endringer</h2>
-        <p>
-          Vi kan oppdatere denne erklæringen når appen eller loven endres. Vesentlige endringer bør kommuniseres i appen
-          eller på nettstedet. Fortsatt bruk etter oppdatering kan innebære at du aksepterer de nye vilkårene der loven
-          tillater det.
-        </p>
-
-        <h2>9. Kontakt</h2>
-        <p>
-          <a href="mailto:kontakt@hazher.no">kontakt@hazher.no</a><br />
-          Generelle henvendelser om Hazher: <a href="mailto:kontakt@hazher.no">kontakt@hazher.no</a>
-        </p>
-
-        <div class="doc-footer-cta" style="margin-top: 40px">
-          <h2>Mer om EcoShelf</h2>
-          <p>Dokumentasjon, support og produktnettsted.</p>
-          <div class="doc-nav-mini">
-            <a href="../index.html" class="btn btn-primary">Hurtighjelp hub</a>
-            <a href="../Support/" class="btn btn-ghost">Support</a>
+    <main>
+      <section class="hj-page-hero">
+        <div class="wrap">
+          <div class="hj-badge-row">
+            <span class="doc-pill doc-pill--rapid">Personvern</span>
+            <span class="doc-pill">GDPR</span>
           </div>
+          <h1>Personvern for Hurtighjelp-appen.</h1>
+          <p class="hj-lead">
+            Denne erklæringen gjelder mobilappen <strong>Hurtighjelp</strong> på iOS og Android. Bruk denne URL-en som
+            <strong>Privacy Policy URL</strong> i App Store Connect og Google Play Console.
+          </p>
+          <div class="hj-url-strip">
+            <span>Privacy Policy URL</span>
+            <code>https://www.hazher.no/HURTIGHJELP/Privacy/</code>
+            <button type="button" data-copy-url>Kopier URL</button>
+          </div>
+          <p style="margin-top: 20px; font-size: 0.85rem; color: var(--faint)">
+            Sist oppdatert: <time datetime="2026-05-31">31. mai 2026</time> · Utfyllende vilkår finnes også i appen under Profil → Konto.
+          </p>
+        </div>
+      </section>
+
+      <div class="wrap hj-privacy-layout">
+        <aside class="hj-privacy-toc" aria-label="Innholdsfortegnelse">
+          <h2>Innhold</h2>
+          <ol>
+            <li><a href="#s1">Behandlingsansvar</a></li>
+            <li><a href="#s2">Hvilke data</a></li>
+            <li><a href="#s3">Formål</a></li>
+            <li><a href="#s4">Tredjeparter</a></li>
+            <li><a href="#s5">Annonser &amp; sporing</a></li>
+            <li><a href="#s6">Lagring &amp; sletting</a></li>
+            <li><a href="#s7">Dine rettigheter</a></li>
+            <li><a href="#s8">Barn</a></li>
+            <li><a href="#s9">Kontakt</a></li>
+          </ol>
+        </aside>
+
+        <div class="hj-privacy-content">
+          <div class="hj-callout">
+            <strong>Nettsted vs. app:</strong> Informasjonskapsler og annonser på <strong>www.hazher.no</strong> (dette
+            nettstedet) beskrives i
+            <a href="../../privacy.html">personvernerklæringen for hazher.no</a>. Denne siden gjelder
+            <strong>appen Hurtighjelp</strong>.
+          </div>
+
+          <section id="s1">
+            <h2><span class="hj-section-num">1.</span>Behandlingsansvar</h2>
+            <p>
+              Appen Hurtighjelp leveres av <strong>Haz.HER Abdullah</strong> (org.nr. 837 568 382), Norge. For
+              personvernhenvendelser:
+              <a href="mailto:kontakt@hazher.no">kontakt@hazher.no</a> med emne «Personvern – Hurtighjelp».
+            </p>
+          </section>
+
+          <section id="s2">
+            <h2><span class="hj-section-num">2.</span>Hvilke opplysninger vi kan behandle</h2>
+            <p>Avhengig av hvordan du bruker appen:</p>
+            <ul>
+              <li><strong>Konto:</strong> Navn, profilbilde, e-post/ID fra Vipps, Apple eller Google, språk, personvernvalg (f.eks. taleanrop, synlighet av følgerlister).</li>
+              <li><strong>Markedsplass:</strong> Tittel, beskrivelse, kategori, bilder, adresse/område, tid, pris og status på jobber du oppretter eller tar.</li>
+              <li><strong>Chat:</strong> Meldinger, bilder, lese-/skrivestatus og metadata knyttet til oppdrag.</li>
+              <li><strong>Taleanrop:</strong> Signaler for WebRTC og tekniske logger — samtaleinnhold lagres ikke som lyd på våre servere utover det signaling krever.</li>
+              <li><strong>Posisjon:</strong> GPS når du bruker kart, live transport eller deler posisjon under oppdrag (med ditt samtykke).</li>
+              <li><strong>Betaling:</strong> Oppdrag betales mellom parter utenfor butikken; <strong>Hurtighjelp Pro</strong> kjøpes via App Store/Google Play. Vi lagrer ikke fullt kortnummer.</li>
+              <li><strong>Varsler:</strong> Push-token og preferanser når du aktiverer varsler.</li>
+              <li><strong>Trygghet:</strong> Blokkeringer, rapporter og tekniske logger ved misbruk.</li>
+            </ul>
+          </section>
+
+          <section id="s3">
+            <h2><span class="hj-section-num">3.</span>Formål</h2>
+            <ul>
+              <li>Drive markedsplassen (publisering, matching, chat, utføring, vurderinger).</li>
+              <li>Facilitere kommunikasjon (chat, taleanrop, live transport).</li>
+              <li>Sende varsler du har samtykket til.</li>
+              <li>Administrere Hurtighjelp Pro og appfunksjoner.</li>
+              <li>Forebygge svindel, håndheve blokkeringer og overholde lovkrav.</li>
+              <li>Vise annonser (for ikke-Pro-brukere) der du har gitt nødvendig samtykke.</li>
+            </ul>
+          </section>
+
+          <section id="s4">
+            <h2><span class="hj-section-num">4.</span>Tredjeparter</h2>
+            <p>Vi bruker bl.a.:</p>
+            <ul>
+              <li><strong>Supabase</strong> — database, autentisering og lagring.</li>
+              <li><strong>Vipps / Apple / Google</strong> — innlogging.</li>
+              <li><strong>Firebase</strong> — push-varsler (der aktivert).</li>
+              <li><strong>Google AdMob</strong> — annonser (med samtykke der påkrevd).</li>
+              <li><strong>Karttjenester</strong> — visning av posisjon og ruter.</li>
+              <li><strong>Meta (valgfritt)</strong> — anonymiserte app-hendelser; på iOS med App Tracking Transparency der aktuelt.</li>
+            </ul>
+            <p>Underleverandører behandles etter personvernforordningens krav der det er påkrevd.</p>
+          </section>
+
+          <section id="s5">
+            <h2><span class="hj-section-num">5.</span>Annonser og sporing</h2>
+            <p>
+              Gratis brukere kan se annonser levert av Google AdMob. I EØA m.m. kan du bli bedt om samtykke via Googles
+              meldingsplattform (UMP). På iOS kan du styre sporing under Innstillinger → Personvern → Sporing, og i appen
+              under Konto. Pro-abonnenter og visse roller kan være uten reklame.
+            </p>
+          </section>
+
+          <section id="s6">
+            <h2><span class="hj-section-num">6.</span>Lagring og sletting</h2>
+            <p>
+              Data lagres så lenge kontoen er aktiv og det er nødvendig for formålet. Slett konto under
+              <strong>Profil → Konto og personvern</strong>, eller kontakt
+              <a href="mailto:kontakt@hazher.no">kontakt@hazher.no</a>. Enkelte data kan beholdes der loven krever det
+              (f.eks. regnskap).
+            </p>
+          </section>
+
+          <section id="s7">
+            <h2><span class="hj-section-num">7.</span>Dine rettigheter</h2>
+            <p>Der GDPR gjelder, har du bl.a. rett til:</p>
+            <div class="hj-rights-grid">
+              <span>Innsyn</span>
+              <span>Retting</span>
+              <span>Sletting</span>
+              <span>Begrensning</span>
+              <span>Dataportabilitet</span>
+              <span>Protest</span>
+            </div>
+            <p style="margin-top: 16px">
+              Du kan klage til <a href="https://www.datatilsynet.no" target="_blank" rel="noopener noreferrer">Datatilsynet</a>.
+              Eksporter data i appen under Konto.
+            </p>
+          </section>
+
+          <section id="s8">
+            <h2><span class="hj-section-num">8.</span>Barn</h2>
+            <p>
+              Hurtighjelp er ikke rettet mot barn under 16 år uten foreldres samtykke der loven krever det. Kontakt oss
+              ved spørsmål om barns bruk.
+            </p>
+          </section>
+
+          <section id="s9">
+            <h2><span class="hj-section-num">9.</span>Kontakt og endringer</h2>
+            <p>
+              <a href="mailto:kontakt@hazher.no">kontakt@hazher.no</a> · Support:
+              <a href="../Support/">www.hazher.no/HURTIGHJELP/Support</a>
+            </p>
+            <p>
+              Vi kan oppdatere denne siden ved endringer i app eller lov. Vesentlige endringer kommuniseres i appen eller
+              her.
+            </p>
+            <div class="doc-nav-mini" style="margin-top: 24px">
+              <a href="../index.html" class="btn btn-rapid-primary">Hurtighjelp hub</a>
+              <a href="../Support/" class="btn btn-ghost">Support</a>
+            </div>
+          </section>
         </div>
       </div>
     </main>
@@ -141,29 +212,25 @@
     <footer class="footer">
       <div class="wrap footer-grid">
         <div class="footer-brand">
-          <div class="logo">Hazher</div>
-          <p>Hurtighjelp personvern · hazher.no/HURTIGHJELP/Privacy</p>
+          <div class="logo">Hurtighjelp</div>
+          <p>Personvern · www.hazher.no/HURTIGHJELP/Privacy</p>
         </div>
         <div class="footer-links">
-          <a href="../index.html">Hurtighjelp hub</a>
-          <a href="../Terms/">Bruksvilkår</a>
+          <a href="../index.html">Hub</a>
           <a href="../Support/">Support</a>
-          <a href="../../index.html">Forside</a>
-          <a href="../../privacy.html">Personvern (hazher.no)</a>
+          <a href="../../index.html">Hazher</a>
+          <a href="../../privacy.html">hazher.no personvern</a>
         </div>
         <div class="footer-meta">
-          <p>&copy; <span id="y"></span> Hazher.</p>
+          <p>&copy; <span id="y"></span> Haz.HER Abdullah</p>
         </div>
       </div>
     </footer>
 
     <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Informasjonskapsler">
       <div class="cookie-inner">
-        <p>
-          Vi bruker informasjonskapsler der det trengs for at siden skal fungere. Les mer i
-          <a href="../../privacy.html">personvernerklæringen for hazher.no</a>.
-        </p>
-        <button type="button" class="btn btn-primary" id="cookieAccept">Jeg forstår</button>
+        <p>Informasjonskapsler i tråd med <a href="../../privacy.html">personvernerklæringen for hazher.no</a>.</p>
+        <button type="button" class="btn btn-rapid-primary" id="cookieAccept">Jeg forstår</button>
       </div>
     </div>
   </body>

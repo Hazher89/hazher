@@ -12,22 +12,24 @@
 <link rel="stylesheet" href="../hazher-apple.css"/>
 <link rel="stylesheet" href="../hazher-apple-ext.css"/>
 <link rel="stylesheet" href="../hurtighjelp-extra.css"/>
+<link rel="canonical" href="https://www.hazher.no/HURTIGHJELP/"/>
 <script src="../main.js" defer></script>
 <script src="../hazher-apple.js" defer></script>
+<script src="../hurtighjelp-pages.js" defer></script>
 </head>
 <body class="apple-site apple-product theme-rapid">
 <div class="scroll-progress" aria-hidden="true"></div>
 <div class="bg-mesh" aria-hidden="true" data-parallax="0.02"></div>
 <div class="bg-grid" aria-hidden="true" data-parallax="0.04"></div>
-<header class="nav"><div class="wrap nav-inner">
-<a href="../index.html" class="logo">Hazher</a>
+<header class="nav hj-nav"><div class="wrap nav-inner">
+<a href="index.html" class="logo hj-logo"><img src="../images/hurtighjelp-app-icon.png" width="28" height="28" alt=""/> Hurtighjelp</a>
 <button type="button" class="nav-toggle" aria-label="Meny" id="navToggle"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
-<nav class="nav-links" id="navLinks">
-<a href="../index.html">Forside</a>
-<a href="index.html">Hurtighjelp</a>
+<nav class="nav-links hj-subnav" id="navLinks">
+<a href="index.html" class="is-active">Produkt</a>
 <a href="Support/">Support</a>
 <a href="Privacy/">Personvern</a>
-<a href="mailto:kontakt@hazher.no" class="nav-cta">Kontakt</a>
+<a href="../index.html">Hazher</a>
+<a href="mailto:kontakt@hazher.no?subject=Hurtighjelp" class="nav-cta">Kontakt</a>
 </nav></div></header>
 <main>
 
@@ -40,13 +42,27 @@
 <div class="apple-hero__actions" data-reveal="up">
 <a href="Support/" class="btn btn-rapid-primary">Support</a>
 <a href="Privacy/" class="btn btn-ghost">Personvern</a>
-
+</div>
+<div class="wrap hj-quick-grid" data-reveal="up" style="margin-top:48px;padding-bottom:24px">
+<a href="Support/" class="hj-quick-card"><span class="hj-quick-card__icon">💬</span><h3>Support</h3><p>FAQ, feilsøking og kontakt — offisiell Support URL for App Store.</p><span class="hj-quick-card__arrow">Åpne support →</span></a>
+<a href="Privacy/" class="hj-quick-card"><span class="hj-quick-card__icon">🛡️</span><h3>Personvern</h3><p>Personvernerklæring for appen — Privacy Policy URL for butikkene.</p><span class="hj-quick-card__arrow">Les personvern →</span></a>
+<a href="mailto:kontakt@hazher.no?subject=Hurtighjelp" class="hj-quick-card"><span class="hj-quick-card__icon">✉️</span><h3>Kontakt</h3><p>kontakt@hazher.no — spørsmål om appen, samarbeid eller press.</p><span class="hj-quick-card__arrow">Send e-post →</span></a>
 </div>
 <div class="apple-hero__icon" data-reveal="scale">
 <div class="app-squircle app-squircle--rapid">
 <img src="../images/hurtighjelp-app-icon.png" width="140" height="140" alt=""/>
 </div></div></div>
 <span class="apple-scroll-hint" aria-hidden="true">Scroll</span>
+</section>
+
+<section class="hj-journey wrap" data-reveal="up">
+<h2>Så enkelt fungerer det</h2>
+<div class="hj-journey__track">
+<div class="hj-journey__step"><div class="hj-journey__num">1</div><h3>Publiser</h3><p>Trenger hjelp eller tilbyr tjeneste — med kart og kategori.</p></div>
+<div class="hj-journey__step"><div class="hj-journey__num">2</div><h3>Match</h3><p>Chat, ring og avtal pris — én tråd per interessent.</p></div>
+<div class="hj-journey__step"><div class="hj-journey__num">3</div><h3>Utfør</h3><p>Wolt-inspirert flyt med faser, bilder og live transport.</p></div>
+<div class="hj-journey__step"><div class="hj-journey__num">4</div><h3>Fullfør</h3><p>Vurdering, kvittering PDF og trygg avslutning.</p></div>
+</div>
 </section>
 
 <section class="apple-feature" id="marked" data-reveal="up">
@@ -113,21 +129,31 @@
 <thead><tr><th>Funksjon</th><th>Gratis</th><th>Pro</th></tr></thead>
 <tbody><tr><td>Publiserte tilbud</td><td>3</td><td>Ubegrenset</td></tr><tr><td>Fullførte «ta oppdrag»</td><td>3</td><td>Ubegrenset</td></tr><tr><td>4. interessent på request</td><td>Stopp</td><td>—</td></tr><tr><td>4.+ henvendelse på tilbud</td><td>Begrenset 20 min</td><td>Full tilgang</td></tr></tbody></table></div>
 
-<section class="apple-cta-band" data-reveal="scale">
-<h2>Support og App Store</h2>
-<p>Offisielle URL-er for Apple og Google Play.</p>
+<section class="apple-cta-band wrap" data-reveal="scale" style="max-width:980px;margin-inline:auto">
+<h2>App Store og Google Play</h2>
+<p>Offisielle URL-er — lim inn i App Store Connect og Play Console.</p>
+<div class="hj-url-strip" style="margin:20px auto 24px;max-width:720px">
+<span>Support URL</span>
+<code>https://www.hazher.no/HURTIGHJELP/Support/</code>
+<button type="button" data-copy-url>Kopier</button>
+</div>
+<div class="hj-url-strip" style="margin:0 auto 28px;max-width:720px">
+<span>Privacy Policy URL</span>
+<code>https://www.hazher.no/HURTIGHJELP/Privacy/</code>
+<button type="button" data-copy-url>Kopier</button>
+</div>
 <div class="apple-cta-band__actions">
-<a href="Support/" class="btn btn-rapid-primary">hazher.no/HURTIGHJELP/Support/</a>
+<a href="Support/" class="btn btn-rapid-primary">Support-siden</a>
 <a href="Privacy/" class="btn btn-ghost">Personvern</a>
 </div></section>
 
 </main>
 <footer class="footer"><div class="wrap footer-grid">
-<div class="footer-brand"><div class="logo">Hazher</div><p>Hurtighjelp · hazher.no</p></div>
+<div class="footer-brand"><div class="logo">Hurtighjelp</div><p>www.hazher.no/HURTIGHJELP</p></div>
 <div class="footer-links">
-<a href="../index.html">Forside</a><a href="Support/">Support</a><a href="Privacy/">Personvern</a>
+<a href="../index.html">Hazher</a><a href="Support/">Support</a><a href="Privacy/">Personvern</a>
 </div>
-<div class="footer-meta"><p>&copy; <span id="y"></span> Hazher · <a href="mailto:kontakt@hazher.no">kontakt@hazher.no</a></p></div>
+<div class="footer-meta"><p>&copy; <span id="y"></span> Haz.HER Abdullah · <a href="mailto:kontakt@hazher.no">kontakt@hazher.no</a></p></div>
 </div></footer>
 <div class="cookie-banner" id="cookieBanner" role="dialog"><div class="cookie-inner">
 <p>Informasjonskapsler i tråd med <a href="../privacy.html">personvernerklæringen</a>.</p>

@@ -6,172 +6,229 @@
     <title>Hurtighjelp Support — hjelp, feilsøking og kontakt | Hazher</title>
     <meta
       name="description"
-      content="Offisiell support for Hurtighjelp: vanlige spørsmål om innlogging, Pro-abonnement, synkronisering, skanner, oppskrifter og teknisk feilsøking. Kontakt kontakt@hazher.no."
+      content="Offisiell support for Hurtighjelp: innlogging, markedsplass, chat, taleanrop, live transport, Hurtighjelp Pro og kontakt kontakt@hazher.no."
     />
+    <link rel="canonical" href="https://www.hazher.no/HURTIGHJELP/Support/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../../styles.css" />
     <link rel="stylesheet" href="../../hazher-apple.css" />
-    <link rel="stylesheet" href="../../hazher-pro.css" />
+    <link rel="stylesheet" href="../../hazher-apple-ext.css" />
     <link rel="stylesheet" href="../../hurtighjelp-extra.css" />
     <script src="../../main.js" defer></script>
     <script src="../../hazher-apple.js" defer></script>
+    <script src="../../hurtighjelp-pages.js" defer></script>
   </head>
-  <body class="apple-site">
+  <body class="apple-site theme-rapid">
     <div class="scroll-progress" aria-hidden="true"></div>
     <div class="bg-mesh" aria-hidden="true" data-parallax="0.03"></div>
-    <div class="bg-grid" aria-hidden="true" data-parallax="0.06"></div>
+    <div class="bg-grid" aria-hidden="true" data-parallax="0.05"></div>
 
-    <header class="nav">
+    <header class="nav hj-nav">
       <div class="wrap nav-inner">
-        <a href="../../index.html" class="logo">Hazher</a>
+        <a href="../index.html" class="logo hj-logo">
+          <img src="../../images/hurtighjelp-app-icon.png" width="28" height="28" alt="" />
+          Hurtighjelp
+        </a>
         <button type="button" class="nav-toggle" aria-label="Åpne meny" id="navToggle">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
-        <nav class="nav-links" id="navLinks" aria-label="Hovedmeny">
-          <a href="../../index.html">Forside</a>
-          <a href="../index.html">Hurtighjelp hub</a>
+        <nav class="nav-links hj-subnav" id="navLinks" aria-label="Hurtighjelp">
+          <a href="../index.html">Produkt</a>
+          <a href="index.html" class="is-active">Support</a>
           <a href="../Privacy/">Personvern</a>
-          <a href="../Privacy/">Bruksvilkår</a>
-          <a href="index.html" style="color: var(--text)">Support</a>
-          <a href="mailto:kontakt@hazher.no" class="nav-cta">E-post</a>
+          <a href="../../index.html">Hazher</a>
+          <a href="mailto:kontakt@hazher.no?subject=Support%20%E2%80%93%20Hurtighjelp" class="nav-cta">E-post</a>
         </nav>
       </div>
     </header>
 
-    <main class="doc-page doc-page--pro apple-site">
-      <section class="doc-hero doc-hero--pro rapid">
+    <main>
+      <section class="hj-page-hero">
         <div class="wrap">
-          <div class="doc-badge-row">
+          <div class="hj-badge-row">
             <span class="doc-pill doc-pill--rapid">Support</span>
-            <span class="doc-pill">EcoShelf</span>
+            <span class="doc-pill">iOS &amp; Android</span>
           </div>
-          <h1>Hurtighjelp — support og feilsøking</h1>
-          <p class="doc-lead">
-            Her finner du svar på vanlige spørsmål, en strukturert feilsøkingsguide og hvordan du når oss. For
-            juridiske dokumenter og personvern knyttet til <strong>appen Hurtighjelp</strong>, se
-            <a href="https://hazher.no/HURTIGHJELP/" target="_blank" rel="noopener noreferrer">ecoshelf.app</a>.
+          <h1>Hjelp når du trenger det.</h1>
+          <p class="hj-lead">
+            Offisiell support for <strong>Hurtighjelp</strong> — norsk markedsplass for tjenester. Finn svar under, eller
+            skriv til oss. Inkluder gjerne app-versjon, telefonmodell og hva du prøvde før feilen oppstod.
           </p>
-          <div class="app-store-strip"><span>Support URL</span><code>https://hazher.no/HURTIGHJELP/Support/</code></div>
-          <div class="hero-actions" style="margin-top: 24px">
-            <a href="../index.html" class="btn btn-ghost">← Til dokumentasjon</a>
-            <a href="mailto:kontakt@hazher.no" class="btn btn-rapid-primary">kontakt@hazher.no</a>
+          <div class="hj-url-strip" data-reveal="up">
+            <span>Support URL (App Store)</span>
+            <code>https://www.hazher.no/HURTIGHJELP/Support/</code>
+            <button type="button" data-copy-url>Kopier URL</button>
+          </div>
+          <div class="apple-hero__actions" style="margin-top: 24px">
+            <a href="mailto:kontakt@hazher.no?subject=Support%20%E2%80%93%20Hurtighjelp" class="btn btn-rapid-primary">kontakt@hazher.no</a>
+            <a href="../Privacy/" class="btn btn-ghost">Personvern</a>
           </div>
         </div>
       </section>
 
-      <div class="wrap" style="padding-bottom: 48px">
-        <div class="support-grid" data-stagger>
-          <div class="support-card" data-reveal="up">
-            <h3>Kontakt</h3>
-            <p>
-              <strong>E-post (support):</strong>
+      <div class="wrap hj-support-layout">
+        <aside class="hj-support-sidebar" aria-label="Innhold">
+          <nav>
+            <a href="#kontakt" class="is-active">Kontakt</a>
+            <a href="#faq">Vanlige spørsmål</a>
+            <a href="#pro">Hurtighjelp Pro</a>
+            <a href="#feilsoking">Feilsøking</a>
+            <a href="#app">Support i appen</a>
+          </nav>
+          <div class="hj-contact-card">
+            <h3>Direkte kontakt</h3>
+            <p style="margin: 0; font-size: 0.85rem; color: var(--muted)">
               <a href="mailto:kontakt@hazher.no">kontakt@hazher.no</a><br />
-              <strong>Generelt / Hazher:</strong>
-              <a href="mailto:kontakt@hazher.no">kontakt@hazher.no</a>
-            </p>
-            <p style="margin-top: 12px; font-size: 0.85rem; color: var(--faint)">
-              Inkluder gjerne app-versjon, telefonmodell og kort beskrivelse av hva du prøvde før feilen oppstod.
+              Emne: <em>Support – Hurtighjelp</em>
             </p>
           </div>
-          <div class="support-card" data-reveal="up">
-            <h3>Konto og innlogging</h3>
-            <p>
-              EcoShelf bruker sikker innlogging (f.eks. Apple eller Google). Du må være innlogget for at skydata
-              (matskap, delt lager, Pro-status) skal synkroniseres. Byttet du telefon, logg inn med samme
-              leverandør-konto som før.
-            </p>
-          </div>
-          <div class="support-card" data-reveal="up">
-            <h3>Pro og betaling</h3>
-            <p>
-              Abonnement kjøpes via App Store eller Google Play. Aktivering skjer automatisk etter vellykket kjøp.
-              Fungerer ikke Pro etter betaling, prøv «Gjenopprett kjøp» i appen og sjekk at du er innlogget på riktig
-              konto.
-            </p>
-          </div>
-        </div>
+        </aside>
 
-        <h2 class="section-label" style="margin-top: 28px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--faint); font-size: 0.75rem">Vanlige spørsmål</h2>
-        <div class="faq-list" style="max-width: 820px; margin-top: 16px" data-reveal="up">
-          <details>
-            <summary>Privat chat per interessent på åpne annonser på oppskriften med ingredienslisten?</summary>
-            <p>
-              Hver interessent har egen tråd med eieren — ikke én felles chat. mellom varer du har registrert, det du må kjøpe, og «basisvarer» (salt, olje,
-              hvitløk m.m.) som ofte antas hjemme. Hvis du ser avvik, oppdater appen — vi jobber kontinuerlig med å
-              synkronisere lister og detaljvisning.
-            </p>
-          </details>
-          <details>
-            <summary>Taleanrop fungerer ikke «feil» eller generiske bilder?</summary>
-            <p>
-              Sjekk mikrofon, nettverk og at du ikke er blokkert. Anrop bruker WebRTC. fra katalog kan appen bare vise illustrasjoner eller kategori-bilder.
-              Skann strekkode når det er mulig for best treff. Oppskriftsbilder kan hentes fra bilde-API (krever
-              konfigurerbar nøkkel i sky-prosjektet) eller faller tilbake til en enklere illustrasjonspool.
-            </p>
-          </details>
-          <details>
-            <summary>Betaling og utbetaling på oppskrifter?</summary>
-            <p>
-              Tilbyder må fullføre Stripe Connect. Kunde betaler i app med Vipps/kort. med sky-KI er en Pro-funksjon. Gratis nivå kan ha en begrenset prøve per måned.
-              Sjekk Pro-status i appen og at nett er tilgjengelig.
-            </p>
-          </details>
-          <details>
-            <summary>Push-varsler — ser ikke varene til andre?</summary>
-            <p>
-              Aktiver varsler i app og systeminnstillinger. og akseptert. Synlighet styres av roller og medlemskap. Hvis noe mangler,
-              be begge parter å oppdatere appen og å logge inn på nytt. Ved vedvarende feil, send e-post med bruker-id
-              ikke i klartekst — beskriv heller tidspunkt og hva som ble forsøkt.
-            </p>
-          </details>
-          <details>
-            <summary>Live transport eller er treg</summary>
-            <p>
-              Krever posisjonstillatelse og støttet iOS for Live Activity./Android-versjon og oppdater EcoShelf fra butikken. Start appen på nytt. Hvis problemet
-              vedvarer, oppgi modell, OS-versjon og app-versjon i e-post til support.
-            </p>
-          </details>
-          <details>
-            <summary>Blokkering og vilkår?</summary>
-            <p>
-              Du kan blokkere brukere fra profil eller chat. Se også ligger på
-              <a href="https://hazher.no/HURTIGHJELP/" target="_blank" rel="noopener noreferrer">ecoshelf.app</a>. Hazher.no har
-              egen personvernerklæring for nettstedet du leser nå.
-            </p>
-          </details>
-        </div>
+        <div>
+          <section id="kontakt" class="support-grid" data-stagger style="margin-bottom: 40px">
+            <article class="support-card support-card--highlight" data-reveal="up">
+              <h3>📧 E-post</h3>
+              <p>
+                <a href="mailto:kontakt@hazher.no">kontakt@hazher.no</a> — vi svarer så raskt vi kan på hverdager.
+              </p>
+            </article>
+            <article class="support-card" data-reveal="up">
+              <h3>🔐 Innlogging</h3>
+              <p>
+                Logg inn med <strong>Vipps</strong>, <strong>Apple</strong> eller <strong>Google</strong>. Bruk samme
+                leverandør etter bytte av telefon. Gjest kan bla markedet uten konto.
+              </p>
+            </article>
+            <article class="support-card" data-reveal="up">
+              <h3>💳 Betaling mellom parter</h3>
+              <p>
+                Oppdrag betales <strong>direkte mellom kunde og hjelper</strong> (f.eks. Vipps) etter avtale i chat —
+                ikke via App Store. <strong>Hurtighjelp Pro</strong> er et abonnement i butikken for utvidet kapasitet.
+              </p>
+            </article>
+          </section>
 
-        <h2 class="section-label" style="margin-top: 48px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--faint); font-size: 0.75rem">Avansert feilsøking</h2>
-        <div class="panel rapid-accent" style="margin-top: 16px" data-reveal="up">
-          <h3 style="margin-bottom: 12px; font-size: 1.05rem">Pro aktiveres ikke etter kjøp</h3>
-          <ol class="prose-block" style="color: var(--muted); padding-left: 1.2rem">
-            <li>Bekreft at du er innlogget (samme Apple/Google-konto som i butikken).</li>
-            <li>Åpne Pro-skjermen og velg «Gjenopprett kjøp».</li>
-            <li>Sjekk at telefonen har nett og at dato/klokke er korrekt.</li>
-            <li>Sjekk at sky-backend kjører (appen trenger kontakt med server for å verifisere kjøp).</li>
-            <li>Fungerer det fortsatt ikke: kontakt support med kvittering fra Apple/Google (uten sensitiv ekstra data du ikke vil dele).</li>
-          </ol>
-        </div>
+          <section id="faq">
+            <h2 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 8px">Vanlige spørsmål</h2>
+            <p style="color: var(--muted); margin-bottom: 16px; font-size: 0.9rem">Søk i listen eller åpne et spørsmål.</p>
+            <input
+              type="search"
+              id="hjFaqSearch"
+              class="hj-faq-search"
+              placeholder="Søk i spørsmål…"
+              aria-label="Søk i vanlige spørsmål"
+            />
+            <div class="hj-faq" data-reveal="up">
+              <details>
+                <summary>Hvordan publiserer jeg et oppdrag eller tilbud?</summary>
+                <p>
+                  Trykk <strong>+</strong> i appen, velg om du <strong>trenger hjelp</strong> eller <strong>tilbyr
+                  tjeneste</strong>, fyll inn tittel, beskrivelse, kategori, pris og sted. Nye annonser kan godkjennes av
+                  moderering før de vises for alle.
+                </p>
+              </details>
+              <details>
+                <summary>Hvorfor ser jeg ikke meldinger fra alle på én annonse?</summary>
+                <p>
+                  På åpne annonser får <strong>hver interessent egen chat</strong> med eieren — ikke én felles tråd. Som
+                  eier ser du alle henvendelser i innboksen din.
+                </p>
+              </details>
+              <details>
+                <summary>Taleanrop fungerer ikke — hva sjekker jeg?</summary>
+                <p>
+                  Gi mikrofon-tillatelse, sjekk nett (Wi‑Fi/mobil), at du ikke er blokkert, og at appen er oppdatert.
+                  Anrop bruker WebRTC; på iPhone støttes også CallKit. Start appen på nytt om nødvendig.
+                </p>
+              </details>
+              <details>
+                <summary>Live transport / kart oppdateres ikke</summary>
+                <p>
+                  Krever posisjonstillatelse (også «alltid» under levering for hjelper), at oppdraget er i transport-fase,
+                  og at batterioptimalisering ikke stopper GPS. På iOS kan du bruke <strong>Live Activity</strong>; åpne
+                  kart i chat med <code>?liveMap=1</code> via varsel.
+                </p>
+              </details>
+              <details id="pro">
+                <summary>Hurtighjelp Pro aktiveres ikke etter kjøp</summary>
+                <p>
+                  Gå til Pro i appen → <strong>Gjenopprett kjøp</strong>. Bekreft at du er innlogget med samme Apple/Google-konto
+                  som i butikken, at nett fungerer, og at klokke/dato er riktig. Vedvarende feil: send kvittering fra
+                  butikken til support (uten unødvendige personopplysninger).
+                </p>
+              </details>
+              <details>
+                <summary>Push-varsler kommer ikke</summary>
+                <p>
+                  Aktiver varsler i systeminnstillinger og i appen under Profil. Sjekk at du ikke har slått av kategorier
+                  (meldinger, oppdrag, live tracking). På Android: tillat bakgrunnsaktivitet for appen.
+                </p>
+              </details>
+              <details>
+                <summary>Hvordan sletter jeg kontoen min?</summary>
+                <p>
+                  <strong>Profil → Konto og personvern → Slett konto permanent</strong> (bekreft med SLETT). Alternativt:
+                  e-post <a href="mailto:kontakt@hazher.no">kontakt@hazher.no</a> med emne «Slett konto – Hurtighjelp» og
+                  bruker-ID fra innstillinger.
+                </p>
+              </details>
+              <details>
+                <summary>Blokkering og rapportering</summary>
+                <p>
+                  Blokker brukere fra profil eller chat. Rapporter upassende annonser eller brukere i appen. Les mer under
+                  <a href="../Privacy/">personvern</a> og vilkår i appen (Profil → Konto).
+                </p>
+              </details>
+            </div>
+          </section>
 
-        <div class="panel" style="margin-top: 16px" data-reveal="up">
-          <h3 style="margin-bottom: 12px; font-size: 1.05rem">Synkronisering / «tom» matskap</h3>
-          <p>Prøv å logge ut og inn igjen. Sjekk at nett ikke blokkerer trafikk til autentiseringstjenesten. Hvis du nylig byttet e-post eller konto, kan data ligge på en annen konto.</p>
-        </div>
+          <section id="feilsoking" style="margin-top: 48px">
+            <h2 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 16px">Strukturert feilsøking</h2>
+            <div class="hj-panel hj-panel--accent" data-reveal="up">
+              <h3>Pro / abonnement</h3>
+              <ol class="hj-steps">
+                <li>Bekreft innlogging (samme konto som i App Store / Google Play).</li>
+                <li>Åpne Pro-skjermen → «Gjenopprett kjøp».</li>
+                <li>Sjekk nett og korrekt dato/klokke på enheten.</li>
+                <li>Oppdater appen til nyeste versjon fra butikken.</li>
+                <li>Kontakt support med kvittering hvis det fortsatt feiler.</li>
+              </ol>
+            </div>
+            <div class="hj-panel" data-reveal="up">
+              <h3>Chat / synkronisering</h3>
+              <ol class="hj-steps">
+                <li>Logg ut og inn igjen.</li>
+                <li>Sjekk at du ikke er blokkert av motparten.</li>
+                <li>Force-quit appen og åpne på nytt med stabil nettforbindelse.</li>
+                <li>Oppgi tidspunkt og skjermbilde (uten sensitiv info) i support-e-post.</li>
+              </ol>
+            </div>
+          </section>
 
-        <div class="doc-footer-cta" style="margin-top: 28px" data-reveal="scale">
-          <h2>Mer teknisk dybde?</h2>
-          <p>Les hub-siden for arkitektur, dataflyt og Pro.</p>
-          <div class="doc-nav-mini">
-            <a href="../index.html" class="btn btn-rapid-primary">Hurtighjelp hub</a>
-            <a href="../../index.html" class="btn btn-ghost">hazher.no</a>
-          </div>
+          <section id="app" style="margin-top: 48px" data-reveal="up">
+            <div class="hj-panel">
+              <h3>Support-saker i appen</h3>
+              <p style="margin: 0; color: var(--muted); line-height: 1.55">
+                Du kan også opprette en <strong>support-sak i appen</strong> med tråd og bilder (Profil → Support). Det
+                hjelper oss å finne oppdrag og bruker raskere.
+              </p>
+            </div>
+            <div class="doc-footer-cta" style="margin-top: 32px">
+              <h2>Mer om produktet</h2>
+              <p>Full produktguide, funksjoner og App Store-URL-er.</p>
+              <div class="doc-nav-mini">
+                <a href="../index.html" class="btn btn-rapid-primary">Hurtighjelp hub</a>
+                <a href="../Privacy/" class="btn btn-ghost">Personvern</a>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </main>
@@ -179,27 +236,23 @@
     <footer class="footer">
       <div class="wrap footer-grid">
         <div class="footer-brand">
-          <div class="logo">Hazher</div>
-          <p>Hurtighjelp Support · hazher.no/HURTIGHJELP/Support</p>
+          <div class="logo">Hurtighjelp</div>
+          <p>Support · www.hazher.no/HURTIGHJELP/Support</p>
         </div>
         <div class="footer-links">
-          <a href="../index.html">Hurtighjelp hub</a>
-          <a href="../../index.html">Forside</a>
-          <a href="../Privacy/">Personvern (app)</a>
-          <a href="../../privacy.html">Personvern (hazher.no)</a>
+          <a href="../index.html">Hub</a>
+          <a href="../Privacy/">Personvern</a>
+          <a href="../../index.html">Hazher</a>
         </div>
         <div class="footer-meta">
-          <p>&copy; <span id="y"></span> Hazher.</p>
+          <p>&copy; <span id="y"></span> Haz.HER Abdullah · <a href="mailto:kontakt@hazher.no">kontakt@hazher.no</a></p>
         </div>
       </div>
     </footer>
 
     <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Informasjonskapsler">
       <div class="cookie-inner">
-        <p>
-          Vi bruker informasjonskapsler og lignende teknologi for at nettstedet skal fungere. Les mer i
-          <a href="../../privacy.html">personvernerklæringen</a>.
-        </p>
+        <p>Informasjonskapsler i tråd med <a href="../../privacy.html">personvernerklæringen for hazher.no</a>.</p>
         <button type="button" class="btn btn-rapid-primary" id="cookieAccept">Jeg forstår</button>
       </div>
     </div>
