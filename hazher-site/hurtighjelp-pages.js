@@ -56,9 +56,10 @@
 
   const supportNav = document.querySelectorAll(".hj-support-sidebar a[href^='#']");
   supportNav.forEach((a) => {
-    a.addEventListener("click", (e) => {
+    a.addEventListener("click", () => {
       supportNav.forEach((n) => n.classList.remove("is-active"));
       a.classList.add("is-active");
     });
   });
+
 })();

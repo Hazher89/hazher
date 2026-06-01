@@ -17,7 +17,7 @@
 <script src="../hazher-apple.js" defer></script>
 <script src="../hurtighjelp-pages.js" defer></script>
 </head>
-<body class="apple-site apple-product theme-rapid">
+<body class="apple-site apple-product theme-rapid hj-site">
 <div class="scroll-progress" aria-hidden="true"></div>
 <div class="bg-mesh" aria-hidden="true" data-parallax="0.02"></div>
 <div class="bg-grid" aria-hidden="true" data-parallax="0.04"></div>
@@ -39,20 +39,45 @@
 <p class="apple-hero__eyebrow" data-reveal="up">Norsk markedsplass · iOS & Android</p>
 <h1 data-reveal="up">Hurtighjelp.</h1>
 <p class="apple-hero__lead" data-reveal="up">Finn hjelp i nabolaget — eller tilby det du er god til. Fra snømåking og hundelufting til transport, håndverk og IT. Chat, ring og følg oppdraget live — med kvalitetssjekk før publisering og tydelig fullføringsflyt.</p>
+<div class="apple-hero__icon" data-reveal="scale">
+<div class="app-squircle app-squircle--rapid">
+<img src="../images/hurtighjelp-app-icon.png" width="140" height="140" alt=""/>
+</div></div>
 <div class="apple-hero__actions" data-reveal="up">
 <a href="Support/" class="btn btn-rapid-primary">Support</a>
 <a href="Privacy/" class="btn btn-ghost">Personvern</a>
 </div>
-<div class="wrap hj-quick-grid" data-reveal="up" style="margin-top:48px;padding-bottom:24px">
-<a href="Support/" class="hj-quick-card"><span class="hj-quick-card__icon">💬</span><h3>Support</h3><p>FAQ, feilsøking og kontakt — offisiell Support URL for App Store.</p><span class="hj-quick-card__arrow">Åpne support →</span></a>
-<a href="Privacy/" class="hj-quick-card"><span class="hj-quick-card__icon">🛡️</span><h3>Personvern</h3><p>Personvernerklæring for appen — Privacy Policy URL for butikkene.</p><span class="hj-quick-card__arrow">Les personvern →</span></a>
-<a href="mailto:kontakt@hazher.no?subject=Hurtighjelp" class="hj-quick-card"><span class="hj-quick-card__icon">✉️</span><h3>Kontakt</h3><p>kontakt@hazher.no — spørsmål om appen, samarbeid eller press.</p><span class="hj-quick-card__arrow">Send e-post →</span></a>
 </div>
-<div class="apple-hero__icon" data-reveal="scale">
-<div class="app-squircle app-squircle--rapid">
-<img src="../images/hurtighjelp-app-icon.png" width="140" height="140" alt=""/>
-</div></div></div>
 <span class="apple-scroll-hint" aria-hidden="true">Scroll</span>
+</section>
+
+<section class="hj-portals" aria-label="Dokumentasjon">
+<div class="wrap">
+<div class="hj-portals__head" data-reveal="up">
+<p class="hj-portals__label">Offisielt</p>
+<h2 class="hj-portals__title">Support. Personvern. Kontakt.</h2>
+</div>
+<div class="hj-portals__grid" data-stagger>
+<a href="Support/" class="hj-glass-card">
+<span class="hj-glass-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.86 9.86 0 01-4-.8L3 20l1.8-4.2A8.8 8.8 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg></span>
+<h3>Support</h3>
+<p>FAQ, feilsøking og kontakt — for brukere og App Store.</p>
+<span class="hj-glass-card__cta">Åpne support <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+</a>
+<a href="Privacy/" class="hj-glass-card">
+<span class="hj-glass-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 3l8 4v6c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7l8-4z"/></svg></span>
+<h3>Personvern</h3>
+<p>Personvernerklæring for appen — Privacy Policy URL.</p>
+<span class="hj-glass-card__cta">Les personvern <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+</a>
+<a href="mailto:kontakt@hazher.no?subject=Hurtighjelp" class="hj-glass-card">
+<span class="hj-glass-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M4 6h16v12H4V6zm0 0l8 7 8-7"/></svg></span>
+<h3>Kontakt</h3>
+<p>kontakt@hazher.no — spørsmål om appen eller samarbeid.</p>
+<span class="hj-glass-card__cta">Send e-post <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+</a>
+</div>
+</div>
 </section>
 
 <section class="hj-journey wrap" data-reveal="up">
@@ -60,7 +85,7 @@
 <div class="hj-journey__track">
 <div class="hj-journey__step"><div class="hj-journey__num">1</div><h3>Publiser</h3><p>Trenger hjelp eller tilbyr tjeneste — med kart og kategori.</p></div>
 <div class="hj-journey__step"><div class="hj-journey__num">2</div><h3>Match</h3><p>Chat, ring og avtal pris — én tråd per interessent.</p></div>
-<div class="hj-journey__step"><div class="hj-journey__num">3</div><h3>Utfør</h3><p>Wolt-inspirert flyt med faser, bilder og live transport.</p></div>
+<div class="hj-journey__step"><div class="hj-journey__num">3</div><h3>Utfør</h3><p>Tydelige faser i chat — bilder, status og live transport.</p></div>
 <div class="hj-journey__step"><div class="hj-journey__num">4</div><h3>Fullfør</h3><p>Vurdering, kvittering PDF og trygg avslutning.</p></div>
 </div>
 </section>
@@ -69,7 +94,7 @@
 <div class="apple-feature__grid">
 <div><p class="apple-feature__label">Markedsplass</p><h2>To måter å bruke plattformen.</h2><p>Publiser enten at du <strong>trenger hjelp</strong> (etterspørsel) eller <strong>tilbyr en tjeneste</strong> (tilbud). Feed med kart, smart søk, filtre på kategori og pris, utvalgte annonser, lagrede favoritter og deling av annonser.</p></div>
 <div class="apple-feature__visual" data-stagger><div class="apple-stat-line"><span class="apple-stat-line__dot" style="background:var(--rapid)"></span><div><strong>Trenger hjelp / Tilbyr hjelp</strong><span>request og offer</span></div>
-<div class="apple-stat-line"><span class="apple-stat-line__dot" style="background:#38bdf8"></span><div><strong>Kart & radius</strong><span>flutter_map med klynger</span></div>
+<div class="apple-stat-line"><span class="apple-stat-line__dot" style="background:#38bdf8"></span><div><strong>Kart & radius</strong><span>Finn oppdrag i nærheten</span></div>
 <div class="apple-stat-line"><span class="apple-stat-line__dot" style="background:#a78bfa"></span><div><strong>Moderering</strong><span>Nye annonser godkjennes av admin</span></div>
 </div>
 </div></section>
@@ -94,7 +119,7 @@
 
 <section class="apple-feature" id="utføring" data-reveal="up">
 <div class="apple-feature__grid">
-<div><p class="apple-feature__label">Utføring</p><h2>Wolt-inspirert flyt i chat.</h2><p>Eier bekrefter oppstart → utfører starter → faser (på vei, ankommet, jobber) med push → utfører leverer med bilder og notat → bestiller godkjenner. Gjensidig vurdering og PDF-kvittering etterpå.</p></div>
+<div><p class="apple-feature__label">Utføring</p><h2>Tydelig flyt i chat.</h2><p>Eier bekrefter oppstart → utfører starter → faser (på vei, ankommet, jobber) med varsler → levering med bilder og notat → bestiller godkjenner. Gjensidig vurdering og PDF-kvittering etterpå.</p></div>
 <div class="apple-feature__visual" data-stagger><div class="apple-stat-line"><span class="apple-stat-line__dot" style="background:#fbbf24"></span><div><strong>20 min frist</strong><span>For valgt hjelper på request</span></div>
 <div class="apple-stat-line"><span class="apple-stat-line__dot" style="background:#a78bfa"></span><div><strong>Tvist</strong><span>Registrering ved uenighet</span></div>
 <div class="apple-stat-line"><span class="apple-stat-line__dot" style="background:#6ee7b7"></span><div><strong>Kvittering PDF</strong><span>For begge parter</span></div>
@@ -105,7 +130,7 @@
 <div class="apple-feature__grid">
 <div><p class="apple-feature__label">Live transport</p><h2>Følg leveransen på kartet.</h2><p>For kategorien Transport & levering: henteadresse, leveringsadresse, pakkeinfo, rute på kart, live GPS fra tildelt hjelper, fullskjerm kart i chat, Live Activity på iOS og forgrunnsvarsel på Android.</p></div>
 <div class="apple-feature__visual" data-stagger><div class="apple-stat-line"><span class="apple-stat-line__dot" style="background:#38bdf8"></span><div><strong>Kun tildelt hjelper</strong><span>Sender posisjon under oppdrag</span></div>
-<div class="apple-stat-line"><span class="apple-stat-line__dot" style="background:#818cf8"></span><div><strong>Åpne i Maps</strong><span>Apple eller Google Maps</span></div>
+<div class="apple-stat-line"><span class="apple-stat-line__dot" style="background:#818cf8"></span><div><strong>Åpne i kart</strong><span>Naviger til adressen</span></div>
 <div class="apple-stat-line"><span class="apple-stat-line__dot" style="background:#34d399"></span><div><strong>Varsler</strong><span>Når sporing starter/stopper</span></div>
 </div>
 </div></section>
@@ -120,9 +145,9 @@
 </div></section>
 <section class="apple-bento" data-reveal="up"><h2>Alt innebygd i én app.</h2><div class="apple-bento__grid" data-stagger><article class="apple-bento__cell apple-bento__cell--wide"><h3>Profiler & omdømme</h3><p>Avatar, cover, bio, snittvurdering, følgere, favoritthjelpere, offentlig profil.</p></article><article class="apple-bento__cell"><h3>Innlogging</h3><p>Vipps, Apple, Google — gjest kan bla markedet.</p></article><article class="apple-bento__cell"><h3>Varsler</h3><p>Meldinger, oppdrag, taleanrop, live tracking, moderering — med kategorier.</p></article><article class="apple-bento__cell apple-bento__cell--tall"><h3>Tilgjengelighet</h3><p>Høy kontrast, større tekst, redusert animasjon.</p></article><article class="apple-bento__cell"><h3>Support</h3><p>Saker i app med tråd og bilder.</p></article><article class="apple-bento__cell"><h3>Superadmin</h3><p>Godkjenning, brukere, push, rapporter (internt).</p></article><article class="apple-bento__cell"><h3>Språk</h3><p>Norsk og engelsk.</p></article><article class="apple-bento__cell"><h3>Deep links</h3><p>Del annonse og profil.</p></article></div></section>
 <section class="apple-spec-section"><div class="wrap">
-<h2>Funksjonsliste — Hurtighjelp</h2>
-<p class="apple-spec-intro">Dette er en utvidet oversikt basert på appen slik den er bygget (Flutter + Supabase, mai 2026).</p>
-<div class="apple-spec-grid" data-stagger><div class="apple-spec-card"><h3>Opprett & publiser</h3><ul><li>Tittel, beskrivelse, pris i NOK, flere bilder, adresse med autocomplete</li><li>ASAP eller planlagt tidspunkt</li><li>Valgfri live sporing (standard for transport)</li><li>Redigering utløser ny moderering</li></ul></div><div class="apple-spec-card"><h3>Chat & anrop</h3><ul><li>Sanntidsmeldinger, bilder, systemmeldinger</li><li>Avtaleforslag begge må godta</li><li>WebRTC taleanrop, CallKit, ringetone</li><li>Modereringstråd ved avslått annonse</li></ul></div><div class="apple-spec-card"><h3>Trygghet</h3><ul><li>Rapporter bruker/annonse, blokkering</li><li>RLS på jobs, messages, tracking, payments</li><li>Konto utestengt og slett konto (GDPR)</li><li>Eksporter mine data</li></ul></div><div class="apple-spec-card"><h3>Teknisk</h3><ul><li>Riverpod + go_router</li><li>120+ SQL-migrasjoner</li><li>Edge Functions: push-fcm, apple-verify-helper-subscription</li><li>Facebook app events (valgfritt, ATT på iOS)</li></ul></div></div>
+<h2>Bygget for trygghet og oversikt</h2>
+<p class="apple-spec-intro">Alt du trenger for å publisere, samarbeide og fullføre oppdrag — i én norsk app.</p>
+<div class="apple-spec-grid" data-stagger><div class="apple-spec-card"><h3>Opprett & publiser</h3><ul><li>Tittel, beskrivelse, pris i NOK, flere bilder og adresse</li><li>ASAP eller planlagt tidspunkt</li><li>Live sporing for transport</li><li>Kvalitetssjekk før publisering</li></ul></div><div class="apple-spec-card"><h3>Chat & anrop</h3><ul><li>Sanntidsmeldinger og bilder</li><li>Avtaler begge må godta</li><li>Taleanrop i appen</li><li>Én privat tråd per interessent</li></ul></div><div class="apple-spec-card"><h3>Trygghet</h3><ul><li>Rapporter og blokkering</li><li>Slett konto og eksporter data</li><li>Moderering av nye annonser</li><li>Vurderinger etter fullført oppdrag</li></ul></div><div class="apple-spec-card"><h3>For deg</h3><ul><li>Norsk og engelsk</li><li>Varsler du styrer selv</li><li>Profil med omdømme</li><li>Hurtighjelp Pro for aktive hjelpere</li></ul></div></div>
 </div></section>
 
 <div class="apple-compare"><table>
@@ -157,6 +182,6 @@
 </div></footer>
 <div class="cookie-banner" id="cookieBanner" role="dialog"><div class="cookie-inner">
 <p>Informasjonskapsler i tråd med <a href="../privacy.html">personvernerklæringen</a>.</p>
-<button type="button" class="btn btn-primary" id="cookieAccept">Jeg forstår</button>
+<button type="button" class="btn btn-rapid-primary" id="cookieAccept">Jeg forstår</button>
 </div></div>
 </body></html>
