@@ -36,8 +36,8 @@
     });
   }
 
-  const tocLinks = document.querySelectorAll(".hj-privacy-toc a[href^='#']");
-  const sections = document.querySelectorAll(".hj-privacy-content section[id]");
+  const tocLinks = document.querySelectorAll(".hj-doc-nav a[href^='#'], .hj-privacy-toc a[href^='#']");
+  const sections = document.querySelectorAll(".hj-privacy-content section[id], .hj-doc-content section[id]");
   if (tocLinks.length && sections.length) {
     const obs = new IntersectionObserver(
       (entries) => {
@@ -54,10 +54,9 @@
     sections.forEach((s) => obs.observe(s));
   }
 
-  const supportNav = document.querySelectorAll(".hj-support-sidebar a[href^='#']");
-  supportNav.forEach((a) => {
+  document.querySelectorAll(".hj-doc-nav a[href^='#']").forEach((a) => {
     a.addEventListener("click", () => {
-      supportNav.forEach((n) => n.classList.remove("is-active"));
+      document.querySelectorAll(".hj-doc-nav a").forEach((n) => n.classList.remove("is-active"));
       a.classList.add("is-active");
     });
   });

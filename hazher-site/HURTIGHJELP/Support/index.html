@@ -49,75 +49,72 @@
       </div>
     </header>
 
-    <main>
-      <section class="hj-page-hero">
-        <div class="wrap">
-          <div class="hj-badge-row">
-            <span class="doc-pill doc-pill--rapid">Support</span>
-            <span class="doc-pill">iOS &amp; Android</span>
-          </div>
-          <h1>Hjelp når du trenger det.</h1>
-          <p class="hj-lead">
-            Offisiell support for <strong>Hurtighjelp</strong> — norsk markedsplass for tjenester. Finn svar under, eller
-            skriv til oss. Inkluder gjerne app-versjon, telefonmodell og hva du prøvde før feilen oppstod.
-          </p>
-          <div class="hj-url-strip" data-reveal="up">
-            <span>Support URL (App Store)</span>
-            <code>https://www.hazher.no/HURTIGHJELP/Support/</code>
-            <button type="button" data-copy-url>Kopier URL</button>
-          </div>
-          <div class="apple-hero__actions" style="margin-top: 24px">
-            <a href="mailto:kontakt@hazher.no?subject=Support%20%E2%80%93%20Hurtighjelp" class="btn btn-rapid-primary">kontakt@hazher.no</a>
-            <a href="../Privacy/" class="btn btn-ghost">Personvern</a>
-          </div>
+    <main class="hj-doc">
+      <header class="hj-doc-header wrap">
+        <div class="hj-badge-row">
+          <span class="doc-pill doc-pill--rapid">Support</span>
+          <span class="doc-pill">iOS &amp; Android</span>
         </div>
-      </section>
+        <h1>Hjelp når du trenger det</h1>
+        <p class="hj-lead">
+          Offisiell support for <strong>Hurtighjelp</strong>. Finn svar under, eller skriv til oss. Inkluder gjerne
+          app-versjon, telefonmodell og hva du prøvde før feilen oppstod.
+        </p>
+        <div class="hj-url-strip">
+          <span>Support URL (App Store)</span>
+          <code>https://www.hazher.no/HURTIGHJELP/Support/</code>
+          <button type="button" data-copy-url>Kopier URL</button>
+        </div>
+        <div class="apple-hero__actions">
+          <a href="mailto:kontakt@hazher.no?subject=Support%20%E2%80%93%20Hurtighjelp" class="btn btn-rapid-primary">kontakt@hazher.no</a>
+          <a href="../Privacy/" class="btn btn-ghost">Personvern</a>
+        </div>
+        <nav class="hj-doc-nav" aria-label="Hopp til seksjon">
+          <a href="#kontakt">Kontakt</a>
+          <a href="#faq">Vanlige spørsmål</a>
+          <a href="#feilsoking">Feilsøking</a>
+          <a href="#app">Support i appen</a>
+        </nav>
+      </header>
 
-      <div class="wrap hj-support-layout">
-        <aside class="hj-support-sidebar" aria-label="Innhold">
-          <nav>
-            <a href="#kontakt" class="is-active">Kontakt</a>
-            <a href="#faq">Vanlige spørsmål</a>
-            <a href="#pro">Hurtighjelp Pro</a>
-            <a href="#feilsoking">Feilsøking</a>
-            <a href="#app">Support i appen</a>
-          </nav>
-          <div class="hj-contact-card">
-            <h3>Direkte kontakt</h3>
-            <p style="margin: 0; font-size: 0.85rem; color: var(--muted)">
-              <a href="mailto:kontakt@hazher.no">kontakt@hazher.no</a><br />
-              Emne: <em>Support – Hurtighjelp</em>
-            </p>
-          </div>
-        </aside>
+      <div class="hj-doc-content">
+        <div class="hj-contact-banner">
+          <p>
+            <strong>Direkte kontakt:</strong>
+            <a href="mailto:kontakt@hazher.no">kontakt@hazher.no</a>
+            · emne «Support – Hurtighjelp»
+          </p>
+        </div>
 
-        <div>
-          <section id="kontakt" class="support-grid" data-stagger style="margin-bottom: 40px">
-            <article class="support-card support-card--highlight" data-reveal="up">
+        <section id="kontakt">
+          <h2 class="hj-section-title">Kontakt og konto</h2>
+          <div class="support-grid">
+            <article class="support-card support-card--highlight">
               <h3>E-post</h3>
               <p>
                 <a href="mailto:kontakt@hazher.no">kontakt@hazher.no</a> — vi svarer så raskt vi kan på hverdager.
               </p>
             </article>
-            <article class="support-card" data-reveal="up">
+            <article class="support-card">
               <h3>Innlogging</h3>
               <p>
                 Logg inn med <strong>Vipps</strong>, <strong>Apple</strong> eller <strong>Google</strong>. Bruk samme
                 leverandør etter bytte av telefon. Gjest kan bla markedet uten konto.
               </p>
             </article>
-            <article class="support-card" data-reveal="up">
+            <article class="support-card">
               <h3>Betaling mellom parter</h3>
               <p>
                 Oppdrag betales <strong>direkte mellom kunde og hjelper</strong> (f.eks. Vipps) etter avtale i chat —
                 ikke via App Store. <strong>Hurtighjelp Pro</strong> er et abonnement i butikken for utvidet kapasitet.
               </p>
             </article>
-          </section>
+          </div>
+        </section>
 
-          <section id="faq">
-            <h2 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 8px">Vanlige spørsmål</h2>
-            <p style="color: var(--muted); margin-bottom: 16px; font-size: 0.9rem">Søk i listen eller åpne et spørsmål.</p>
+        <section id="faq">
+          <h2 class="hj-section-title">Vanlige spørsmål</h2>
+          <p class="hj-section-intro">Søk i listen eller åpne et spørsmål.</p>
             <input
               type="search"
               id="hjFaqSearch"
@@ -125,7 +122,7 @@
               placeholder="Søk i spørsmål…"
               aria-label="Søk i vanlige spørsmål"
             />
-            <div class="hj-faq" data-reveal="up">
+            <div class="hj-faq">
               <details>
                 <summary>Hvordan publiserer jeg et oppdrag eller tilbud?</summary>
                 <p>
@@ -187,11 +184,11 @@
                 </p>
               </details>
             </div>
-          </section>
+        </section>
 
-          <section id="feilsoking" style="margin-top: 48px">
-            <h2 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 16px">Strukturert feilsøking</h2>
-            <div class="hj-panel hj-panel--accent" data-reveal="up">
+        <section id="feilsoking">
+          <h2 class="hj-section-title">Strukturert feilsøking</h2>
+          <div class="hj-panel hj-panel--accent" id="pro">
               <h3>Pro / abonnement</h3>
               <ol class="hj-steps">
                 <li>Bekreft innlogging (samme konto som i App Store / Google Play).</li>
@@ -201,7 +198,7 @@
                 <li>Kontakt support med kvittering hvis det fortsatt feiler.</li>
               </ol>
             </div>
-            <div class="hj-panel" data-reveal="up">
+          <div class="hj-panel">
               <h3>Chat / synkronisering</h3>
               <ol class="hj-steps">
                 <li>Logg ut og inn igjen.</li>
@@ -210,12 +207,12 @@
                 <li>Oppgi tidspunkt og skjermbilde (uten sensitiv info) i support-e-post.</li>
               </ol>
             </div>
-          </section>
+        </section>
 
-          <section id="app" style="margin-top: 48px" data-reveal="up">
+        <section id="app">
             <div class="hj-panel">
               <h3>Support-saker i appen</h3>
-              <p style="margin: 0; color: var(--muted); line-height: 1.55">
+              <p style="margin: 0; line-height: 1.55">
                 Du kan også opprette en <strong>support-sak i appen</strong> med tråd og bilder (Profil → Support). Det
                 hjelper oss å finne oppdrag og bruker raskere.
               </p>
@@ -228,8 +225,7 @@
                 <a href="../Privacy/" class="btn btn-ghost">Personvern</a>
               </div>
             </div>
-          </section>
-        </div>
+        </section>
       </div>
     </main>
 
