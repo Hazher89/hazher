@@ -18,7 +18,9 @@
 }
 
 .doc-hero--pro.barber {
-  background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(212, 175, 55, 0.14), transparent 55%);
+  background:
+    radial-gradient(ellipse 80% 60% at 15% 0%, rgba(212, 175, 55, 0.14), transparent),
+    radial-gradient(ellipse 50% 45% at 95% 30%, rgba(255, 255, 255, 0.05), transparent);
 }
 
 .app-squircle--barber {
