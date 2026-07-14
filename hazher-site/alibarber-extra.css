@@ -1,0 +1,26 @@
+/* Ali Barber — gold accent on dokumentasjon og produktseksjoner */
+
+.btn-barber-primary {
+  background: linear-gradient(135deg, #c9a227, #d4af37);
+  color: #0b0b0b;
+  border: none;
+  font-weight: 700;
+}
+
+.btn-barber-primary:hover {
+  filter: brightness(1.08);
+}
+
+.doc-pill--barber {
+  background: rgba(212, 175, 55, 0.18);
+  color: #f5e6a8;
+  border-color: rgba(212, 175, 55, 0.38);
+}
+
+.doc-hero--pro.barber {
+  background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(212, 175, 55, 0.14), transparent 55%);
+}
+
+.app-squircle--barber {
+  box-shadow: 0 20px 40px rgba(212, 175, 55, 0.32);
+}

@@ -80,6 +80,10 @@
   background: #6366f1;
 }
 
+.theme-barber .apple-spec-card li::before {
+  background: var(--barber);
+}
+
 .theme-loop .apple-spec-card li::before {
   background: var(--loop);
 }

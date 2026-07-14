@@ -13,6 +13,8 @@
   --loop-bg: rgba(167, 139, 250, 0.14);
   --rapid: #ff7a3d;
   --rapid-bg: rgba(255, 122, 61, 0.14);
+  --barber: #d4af37;
+  --barber-bg: rgba(212, 175, 55, 0.14);
   --accent: #38bdf8;
   --radius: 18px;
   --radius-lg: 26px;
@@ -37,7 +39,7 @@
   z-index: 201;
   transform: scaleX(0);
   transform-origin: 0 50%;
-  background: linear-gradient(90deg, var(--eco), var(--loop), var(--rapid), var(--accent));
+  background: linear-gradient(90deg, var(--eco), var(--loop), var(--rapid), var(--barber), var(--accent));
   pointer-events: none;
   will-change: transform;
 }
@@ -1126,6 +1128,56 @@ h4 {
   color: #ffd1b8;
   border-color: rgba(255, 122, 61, 0.4);
   background: var(--rapid-bg);
+}
+
+.btn-barber {
+  background: var(--barber-bg);
+  color: #f5e6a8;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  font-weight: 600;
+}
+
+.btn-barber:hover {
+  background: rgba(212, 175, 55, 0.22);
+  text-decoration: none;
+}
+
+.tag.hit-barber {
+  background: var(--barber-bg);
+  color: #f5e6a8;
+  border-color: rgba(212, 175, 55, 0.32);
+}
+
+.app-squircle--barber {
+  box-shadow: 0 24px 48px rgba(212, 175, 55, 0.32);
+}
+
+.panel.barber-accent {
+  border-color: rgba(212, 175, 55, 0.28);
+  box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.06) inset;
+}
+
+.product-intro--barber {
+  border-bottom-color: rgba(212, 175, 55, 0.18);
+}
+
+.doc-pill--barber {
+  color: #f5e6a8;
+  border-color: rgba(212, 175, 55, 0.4);
+  background: var(--barber-bg);
+}
+
+.mockup-row--apps {
+  max-width: 680px;
+}
+
+.mockup-row--apps .logo-showcase {
+  width: 148px;
+}
+
+.mockup-row--apps .app-squircle--hero {
+  width: 140px;
+  height: 140px;
 }
 
 /* About / company info card */
