@@ -1,11 +1,224 @@
 <!DOCTYPE html>
 <html lang="nb">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="refresh" content="0; url=../../DRIFTPRO/Privacy/" />
-  <link rel="canonical" href="https://hazher.no/DRIFTPRO/Privacy/" />
-  <title>Redirecting to privacy…</title>
-  <script>location.replace("../../DRIFTPRO/Privacy/");</script>
-</head>
-<body><p><a href="../../DRIFTPRO/Privacy/">Privacy — DriftPro</a></p></body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Personvern — DriftPro (app) | Hazher</title>
+    <meta
+      name="description"
+      content="Personvernerklæring for DriftPro (bedriftsapp for HMS, HR og logistikk). Privacy Policy URL for App Store Connect."
+    />
+    <link rel="canonical" href="https://hazher.no/DRIFTPRO/Privacy/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../../hazher-apple.css" />
+    <link rel="stylesheet" href="../../hazher-apple-ext.css" />
+    <link rel="stylesheet" href="../../driftpro-extra.css" />
+    <script src="../../main.js" defer></script>
+    <script src="../../hazher-apple.js" defer></script>
+  </head>
+  <body class="apple-site">
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <div class="bg-mesh" aria-hidden="true" data-parallax="0.03"></div>
+    <div class="bg-grid" aria-hidden="true" data-parallax="0.06"></div>
+
+    <header class="nav">
+      <div class="wrap nav-inner">
+        <a href="../../index.html" class="logo">Hazher</a>
+        <button type="button" class="nav-toggle" aria-label="Åpne meny" id="navToggle">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        <nav class="nav-links" id="navLinks" aria-label="Hovedmeny">
+          <a href="../../index.html">Forside</a>
+          <a href="../index.html">DriftPro hub</a>
+          <a href="index.html" style="color: var(--text)">Personvern</a>
+          <a href="../Support/">Support</a>
+          <a href="mailto:kontakt@hazher.no" class="nav-cta">Kontakt</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="legal-main apple-legal">
+      <div class="wrap prose">
+        <div class="wrap" style="padding-top: 100px">
+          <div class="app-store-strip">
+            <span>Privacy Policy URL</span><code>https://hazher.no/DRIFTPRO/Privacy/</code>
+          </div>
+        </div>
+        <h1 class="legal-title">Personvern — DriftPro (mobilapp)</h1>
+        <p class="legal-updated">
+          Sist oppdatert: 17. juli 2026. Gjelder appen <strong>DriftPro</strong> (Enterprise ERP, HMS, HR og
+          logistikk) på iOS, Android og web. Denne siden kan brukes som
+          <strong>Privacy Policy URL</strong> i App Store Connect og Google Play Console.
+        </p>
+
+        <div class="callout" style="margin-bottom: 28px">
+          <strong>Bedriftsapp:</strong> DriftPro er en lukket arbeidsplattform for ansatte og samarbeidspartnere hos
+          kundebedriften (f.eks. Mavi Logistikk AS). Konti opprettes og administreres av bedriftens administrator —
+          det finnes ikke offentlig selvregistrering.
+        </div>
+
+        <div class="callout" style="margin-bottom: 28px">
+          <strong>Nettsted vs. app:</strong> Informasjonskapsler på <strong>hazher.no</strong> er beskrevet i
+          <a href="../../privacy.html">personvernerklæringen for nettstedet</a>. Denne siden gjelder
+          <strong>appen DriftPro</strong>.
+        </div>
+
+        <h2>1. Behandlingsansvar</h2>
+        <p>
+          DriftPro leveres av Hazher / HAZ.HER ABDULLAH (org.nr. 837 568 382). Kundebedriften (arbeidsgiver) er
+          behandlingsansvarlig for personopplysninger om egne ansatte og partnere. Hazher behandler data som
+          databehandler der det er avtalt. Personvernhenvendelser:
+          <a href="mailto:kontakt@hazher.no">kontakt@hazher.no</a>
+          eller
+          <a href="mailto:hazher@mavilogistikk.no">hazher@mavilogistikk.no</a>.
+        </p>
+
+        <h2>2. Hvilke opplysninger appen kan behandle</h2>
+        <ul>
+          <li>
+            <strong>Konto og autentisering:</strong> Ansattnummer, navn, e-post, telefon, bedrift, avdeling, rolle,
+            tilgangsnøkler og tekniske sesjonsdata (Supabase Auth).
+          </li>
+          <li>
+            <strong>HR / fravær:</strong> Fraværstype, datoer, kommentarer, godkjenningsstatus, feriekvoter og
+            tilhørende dokumentasjon.
+          </li>
+          <li>
+            <strong>HMS / avvik:</strong> Beskrivelse, kategori, alvorlighetsgrad, bilder, valgfri GPS ved
+            innrapportering, SJA, ROS, vernerunder, utstyr og kompetansebevis.
+          </li>
+          <li>
+            <strong>Logistikk / partnere:</strong> Partnerbedrift, kjøretøy, ruter, SMS-varsler, bilutleiedokumentasjon
+            (bilder av bil, drivstoff, km) og portalbruk for eier/sjåfør.
+          </li>
+          <li>
+            <strong>Dokumenter (DMS / personalmappe):</strong> Filer, mapper, metadata og tilgangsstyring.
+          </li>
+          <li>
+            <strong>Stempling:</strong> Stempelinnslag og tilhørende arbeidsdagdata der modulen er aktivert.
+          </li>
+          <li>
+            <strong>Varsler:</strong> Push-token (Firebase Cloud Messaging) og preferanser dersom aktivert.
+          </li>
+          <li>
+            <strong>Teknisk:</strong> Logger for drift, sikkerhet og feilsøking (begrenset omfang).
+          </li>
+        </ul>
+
+        <h2>3. Formål</h2>
+        <ul>
+          <li>Levere HMS-, HR- og driftsfunksjoner for bedriften.</li>
+          <li>Administrere brukere, roller, godkjenninger og partnerportaler.</li>
+          <li>Sende nødvendige varsler (SMS/e-post/push) knyttet til arbeidsoppgaver.</li>
+          <li>Overholde lovpålagte krav (f.eks. arbeidsmiljø) og forebygge misbruk.</li>
+        </ul>
+
+        <h2>4. Rettslig grunnlag</h2>
+        <p>
+          Behandlingen skjer primært på grunnlag av arbeidsavtale / berettiget interesse for drift og HMS, og der det
+          er aktuelt for å oppfylle lovpålagte plikter. Sensitive opplysninger (f.eks. helse i sykmelding) begrenses
+          til nødvendige roller.
+        </p>
+
+        <h2>5. Tredjeparter (databehandlere)</h2>
+        <ul>
+          <li><strong>Supabase</strong> — database, autentisering, storage og edge functions (EU-region).</li>
+          <li><strong>Firebase Cloud Messaging</strong> — push-varsler der dette er aktivert.</li>
+          <li><strong>Dropbox</strong> — fillagring når bedriften har koblet lagring.</li>
+          <li><strong>SMS-gateway (f.eks. Sveve)</strong> — varsler der bedriften har konfigurert dette.</li>
+          <li><strong>Resend</strong> — system-e-post (f.eks. ruteinnboks).</li>
+          <li><strong>Apple / Google</strong> — plattformtjenester for appdistribusjon og enhetsvarsler.</li>
+        </ul>
+        <p>Data deles kun i den grad det er nødvendig for å levere funksjonen.</p>
+
+        <h2>6. Lagring og sletting</h2>
+        <p>
+          Data lagres så lenge arbeidsforholdet / kundeforholdet består og det er nødvendig for formålet. HMS- og
+          fraværsdata kan ha lengre oppbevaring etter lov og bedriftens rutiner. Ved avsluttet kundeforhold slettes
+          eller anonymiseres data etter avtale.
+        </p>
+
+        <h2 id="slett-konto">7. Konto og sletting (App Store)</h2>
+        <p>
+          DriftPro er en <strong>bedriftskonto</strong>. Brukere kan ikke opprette konto selv i App Store-forstand;
+          konto tildeles av administrator. For å be om sletting av konto og tilknyttede personopplysninger:
+        </p>
+        <ol>
+          <li>Kontakt din leder / administrator i bedriften, eller</li>
+          <li>
+            Send e-post til
+            <a href="mailto:kontakt@hazher.no?subject=DriftPro%20%E2%80%94%20slett%20konto"
+              >kontakt@hazher.no</a
+            >
+            med emne «DriftPro — slett konto», og oppgi navn, ansattnummer/e-post og bedrift.
+          </li>
+        </ol>
+        <p>
+          Vi (eller kundebedriften) bekrefter forespørselen og sletter eller deaktiverer kontoen innen rimelig tid,
+          med forbehold for lovpålagt oppbevaring (f.eks. HMS-historikk).
+        </p>
+
+        <h2>8. Dine rettigheter (GDPR)</h2>
+        <p>
+          Du kan be om innsyn, retting, begrensning, dataportabilitet eller sletting der det er rettslig grunnlag.
+          Kontakt
+          <a href="mailto:kontakt@hazher.no">kontakt@hazher.no</a>. Du kan også klage til
+          <a href="https://www.datatilsynet.no" target="_blank" rel="noopener noreferrer">Datatilsynet</a>.
+        </p>
+
+        <h2>9. Barn</h2>
+        <p>DriftPro er en arbeidsplattform og er ikke rettet mot barn under 16 år.</p>
+
+        <h2>10. Kontakt</h2>
+        <p>
+          <a href="mailto:kontakt@hazher.no">kontakt@hazher.no</a> ·
+          <a href="mailto:hazher@mavilogistikk.no">hazher@mavilogistikk.no</a> ·
+          <a href="../Support/">Support-side</a>
+        </p>
+
+        <div class="doc-footer-cta" style="margin-top: 40px">
+          <h2>Mer om DriftPro</h2>
+          <div class="doc-nav-mini">
+            <a href="../index.html" class="btn btn-dirf-primary">DriftPro hub</a>
+            <a href="../Support/" class="btn btn-ghost">Support</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer-grid">
+        <div class="footer-brand">
+          <div class="logo">Hazher</div>
+          <p>DriftPro personvern · kontakt@hazher.no</p>
+        </div>
+        <div class="footer-links">
+          <a href="../index.html">DriftPro hub</a>
+          <a href="../Support/">Support</a>
+          <a href="../../index.html">Forside</a>
+        </div>
+        <div class="footer-meta">
+          <p>&copy; <span id="y"></span> Hazher.</p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Informasjonskapsler">
+      <div class="cookie-inner">
+        <p>
+          Informasjonskapsler på nettstedet:
+          <a href="../../privacy.html">personvernerklæring hazher.no</a>.
+        </p>
+        <button type="button" class="btn btn-dirf-primary" id="cookieAccept">Jeg forstår</button>
+      </div>
+    </div>
+  </body>
 </html>
