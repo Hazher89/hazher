@@ -5,7 +5,8 @@
       "namespace": "android_app",
       "package_name": "no.hurtighjelp.hurtighjelp_app",
       "sha256_cert_fingerprints": [
-        "A7:67:4B:BD:10:68:98:9F:C9:A0:02:75:89:F3:A5:5A:23:6F:A3:0D:77:29:4A:22:95:BB:5C:02:65:94:ED:AE"
+        "A7:67:4B:BD:10:68:98:9F:C9:A0:02:75:89:F3:A5:5A:23:6F:A3:0D:77:29:4A:22:95:BB:5C:02:65:94:ED:AE",
+        "03:20:C3:F8:B1:2E:AA:A7:19:4C:CF:73:46:E4:41:53:28:D6:7A:D0:AC:08:18:A0:D4:91:ED:EF:98:A7:C6:F2"
       ]
     }
   }
