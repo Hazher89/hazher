@@ -192,42 +192,24 @@
   }
 
   function trackScan() {
-    try {
-      var body = {
-        p_platform: platform,
-        p_campaign: campaign,
-        p_user_agent: (ua || '').slice(0, 512),
-        p_session_id: sessionId()
-      };
-      var url = SUPABASE_URL + '/rest/v1/rpc/record_poster_qr_scan';
-      var payload = JSON.stringify(body);
-      // Prefer sendBeacon so redirect to App Store / Play does not cancel the request.
-      var sent = false;
-      try {
-        if (navigator.sendBeacon) {
-          sent = navigator.sendBeacon(
-            url + '?apikey=' + encodeURIComponent(SUPABASE_ANON),
-            new Blob([payload], { type: 'application/json' })
-          );
-        }
-      } catch (_) {}
-      if (!sent) {
-        fetch(url, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'apikey': SUPABASE_ANON,
-            'Authorization': 'Bearer ' + SUPABASE_ANON
-          },
-          body: payload,
-          keepalive: true,
-          mode: 'cors'
-        }).catch(function () {});
-      }
-    } catch (_) {}
+    var body = {
+      p_platform: platform,
+      p_campaign: campaign,
+      p_user_agent: (ua || '').slice(0, 512),
+      p_session_id: sessionId()
+    };
+    return fetch(SUPABASE_URL + '/rest/v1/rpc/record_poster_qr_scan', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': SUPABASE_ANON,
+        'Authorization': 'Bearer ' + SUPABASE_ANON
+      },
+      body: JSON.stringify(body),
+      keepalive: true,
+      mode: 'cors'
+    }).catch(function () {});
   }
-
-  trackScan();
 
   window.__HJ_STORES__ = {
     apple: APPLE,
@@ -238,8 +220,15 @@
     platform: platform
   };
 
+  // Wait briefly so the scan is saved before App Store / Play redirect.
+  var trackPromise = trackScan();
   if (target && force !== 'stay') {
-    location.replace(target);
+    Promise.race([
+      trackPromise,
+      new Promise(function (resolve) { setTimeout(resolve, 900); })
+    ]).then(function () {
+      location.replace(target);
+    });
   }
 })();
 </script>
