@@ -11,7 +11,3 @@
 /driftpro/terms/ /DRIFTPRO/Terms/ 301
 /driftpro/support /DRIFTPRO/Support/ 301
 /driftpro/support/ /DRIFTPRO/Support/ 301
-
-# Hurtighjelp job share (OG + smart open) → Supabase Edge Function
-/j/:id  https://rueqwgcxmcukmvjdrnfc.supabase.co/functions/v1/job-share/:id  200
-/HURTIGHJELP/j/:id  https://rueqwgcxmcukmvjdrnfc.supabase.co/functions/v1/job-share/:id  200
