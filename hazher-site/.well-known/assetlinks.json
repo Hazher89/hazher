@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "no.hurtighjelp.hurtighjelp_app",
+      "sha256_cert_fingerprints": [
+        "A7:67:4B:BD:10:68:98:9F:C9:A0:02:75:89:F3:A5:5A:23:6F:A3:0D:77:29:4A:22:95:BB:5C:02:65:94:ED:AE"
+      ]
+    }
+  }
+]

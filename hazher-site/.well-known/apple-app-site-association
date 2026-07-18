@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "644LC648DB.no.hurtighjelp.hurtighjelpApp",
+        "paths": [ "/j/*", "/HURTIGHJELP/j/*", "/job/*" ]
+      }
+    ]
+  }
+}
