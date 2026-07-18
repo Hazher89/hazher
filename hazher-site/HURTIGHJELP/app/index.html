@@ -191,12 +191,45 @@
     }
   }
 
-  function trackScan() {
+  function withTimeout(promise, ms) {
+    return Promise.race([
+      promise,
+      new Promise(function (resolve) { setTimeout(function () { resolve(null); }, ms); })
+    ]);
+  }
+
+  // Approximate location via IP (no GPS permission). City/region/country only.
+  function fetchGeo() {
+    return withTimeout(
+      fetch('https://ipwho.is/', { method: 'GET', mode: 'cors' })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (d) {
+          if (!d || d.success === false) return null;
+          return {
+            country: d.country_code || d.country || null,
+            region: d.region || null,
+            city: d.city || null,
+            latitude: typeof d.latitude === 'number' ? d.latitude : null,
+            longitude: typeof d.longitude === 'number' ? d.longitude : null
+          };
+        })
+        .catch(function () { return null; }),
+      700
+    );
+  }
+
+  function trackScan(geo) {
     var body = {
       p_platform: platform,
       p_campaign: campaign,
       p_user_agent: (ua || '').slice(0, 512),
-      p_session_id: sessionId()
+      p_session_id: sessionId(),
+      p_country: geo && geo.country ? String(geo.country).slice(0, 8) : null,
+      p_region: geo && geo.region ? String(geo.region).slice(0, 80) : null,
+      p_city: geo && geo.city ? String(geo.city).slice(0, 80) : null,
+      p_latitude: geo && geo.latitude != null ? geo.latitude : null,
+      p_longitude: geo && geo.longitude != null ? geo.longitude : null,
+      p_is_test: false
     };
     return fetch(SUPABASE_URL + '/rest/v1/rpc/record_poster_qr_scan', {
       method: 'POST',
@@ -220,15 +253,19 @@
     platform: platform
   };
 
-  // Wait briefly so the scan is saved before App Store / Play redirect.
-  var trackPromise = trackScan();
+  // Resolve geo quickly, save scan, then redirect to store.
+  var trackPromise = fetchGeo().then(function (geo) {
+    return trackScan(geo || null);
+  });
   if (target && force !== 'stay') {
     Promise.race([
       trackPromise,
-      new Promise(function (resolve) { setTimeout(resolve, 900); })
+      new Promise(function (resolve) { setTimeout(resolve, 1200); })
     ]).then(function () {
       location.replace(target);
     });
+  } else {
+    trackPromise;
   }
 })();
 </script>
