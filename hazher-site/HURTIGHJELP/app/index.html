@@ -158,11 +158,17 @@
 (function () {
   var APPLE = 'https://apps.apple.com/no/app/hurtighjelp/id6768033731';
   var PLAY = 'https://play.google.com/store/apps/details?id=no.hurtighjelp.hurtighjelp_app&hl=no';
+  var SUPABASE_URL = 'https://rueqwgcxmcukmvjdrnfc.supabase.co';
+  var SUPABASE_ANON =
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ1ZXF3Z2N4bWN1a212amRybmZjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY3NzE1MTgsImV4cCI6MjA5MjM0NzUxOH0.yKCGS98kbujl1gnaDdGCqc8Yy-GU-7eOSi1DArj_xf4';
+
   var ua = navigator.userAgent || '';
   var isAndroid = /Android/i.test(ua);
   var isIOS = /iPhone|iPad|iPod/i.test(ua);
+  var platform = isIOS ? 'ios' : (isAndroid ? 'android' : 'other');
   var q = new URLSearchParams(location.search);
   var force = q.get('store'); // apple | play | stay
+  var campaign = (q.get('src') || q.get('campaign') || 'poster').slice(0, 64);
   var target = null;
   if (force === 'apple') target = APPLE;
   else if (force === 'play') target = PLAY;
@@ -170,7 +176,54 @@
   else if (isIOS) target = APPLE;
   else if (isAndroid) target = PLAY;
 
-  window.__HJ_STORES__ = { apple: APPLE, play: PLAY, target: target, isIOS: isIOS, isAndroid: isAndroid };
+  function sessionId() {
+    try {
+      var k = 'hj_qr_sid';
+      var v = localStorage.getItem(k);
+      if (!v) {
+        v = (crypto.randomUUID && crypto.randomUUID()) ||
+          (Date.now().toString(36) + Math.random().toString(36).slice(2, 12));
+        localStorage.setItem(k, v);
+      }
+      return String(v).slice(0, 64);
+    } catch (_) {
+      return null;
+    }
+  }
+
+  function trackScan() {
+    try {
+      var body = {
+        p_platform: platform,
+        p_campaign: campaign,
+        p_user_agent: (ua || '').slice(0, 512),
+        p_session_id: sessionId()
+      };
+      // fire-and-forget; do not block store redirect
+      fetch(SUPABASE_URL + '/rest/v1/rpc/record_poster_qr_scan', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': SUPABASE_ANON,
+          'Authorization': 'Bearer ' + SUPABASE_ANON
+        },
+        body: JSON.stringify(body),
+        keepalive: true,
+        mode: 'cors'
+      }).catch(function () {});
+    } catch (_) {}
+  }
+
+  trackScan();
+
+  window.__HJ_STORES__ = {
+    apple: APPLE,
+    play: PLAY,
+    target: target,
+    isIOS: isIOS,
+    isAndroid: isAndroid,
+    platform: platform
+  };
 
   if (target && force !== 'stay') {
     location.replace(target);
