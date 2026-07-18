@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Hurtighjelp Plakat-studio</title>
+<meta name="robots" content="noindex"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Fraunces:wght@700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+  :root {
+    --ink: #0f2744;
+    --bg: #eef2f7;
+    --panel: #ffffff;
+    --line: #d5dee8;
+    --accent: #1a4f8b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+  }
+  .app {
+    display: grid;
+    grid-template-columns: minmax(300px, 380px) 1fr;
+    min-height: 100vh;
+  }
+  @media (max-width: 980px) {
+    .app { grid-template-columns: 1fr; }
+  }
+  .sidebar {
+    background: var(--panel);
+    border-right: 1px solid var(--line);
+    padding: 18px 16px 28px;
+    overflow: auto;
+    max-height: 100vh;
+  }
+  .sidebar h1 {
+    margin: 0 0 4px;
+    font-size: 1.15rem;
+    font-weight: 800;
+  }
+  .sidebar .sub {
+    margin: 0 0 16px;
+    color: #5a6b7d;
+    font-size: 0.88rem;
+  }
+  label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #5a6b7d;
+    margin: 12px 0 6px;
+  }
+  input[type="text"], textarea, select {
+    width: 100%;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 10px 12px;
+    font: inherit;
+    background: #fff;
+  }
+  textarea { min-height: 64px; resize: vertical; }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .btns { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  button, .btn {
+    appearance: none;
+    border: 0;
+    border-radius: 10px;
+    padding: 10px 12px;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .btn-primary { background: var(--ink); color: #fff; }
+  .btn-accent { background: var(--accent); color: #fff; }
+  .btn-soft { background: #e8eef6; color: var(--ink); }
+  .hint {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #5a6b7d;
+    line-height: 1.4;
+  }
+  .stage {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .stage-bar {
+    width: min(100%, 520px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+  .stage-bar strong { font-size: 0.92rem; }
+  .sheet-wrap {
+    background: #cfd8e3;
+    padding: 18px;
+    border-radius: 16px;
+    box-shadow: inset 0 0 0 1px rgba(15,39,68,0.06);
+  }
+  /* A4 preview ~ 1/2.5 of print */
+  #sheet {
+    width: 340px;
+    height: 481px;
+    background: #fff;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 18px 50px rgba(15,39,68,0.18);
+  }
+  #sheet .bg {
+    position: absolute; inset: 0;
+    pointer-events: none;
+  }
+  #sheet .content {
+    position: absolute; inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 22px 18px 0;
+    text-align: center;
+    z-index: 2;
+  }
+  #sheet .logo {
+    width: 52px; height: 52px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 6px 16px rgba(15,39,68,0.16);
+  }
+  #sheet .title {
+    margin: 10px 0 0;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+  }
+  #sheet .tag { margin: 6px 0 0; opacity: 0.75; font-weight: 500; }
+  #sheet .storeline {
+    margin-top: 8px;
+    font-size: 8px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.75);
+    border: 1px solid rgba(15,39,68,0.12);
+  }
+  #sheet .pills {
+    display: flex; gap: 6px; margin-top: 6px;
+  }
+  #sheet .pill {
+    font-size: 7.5px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 999px;
+    border: 1px solid currentColor;
+    background: #fff;
+  }
+  #sheet .divider {
+    width: 62%;
+    height: 1px;
+    margin: 10px auto 8px;
+    background: rgba(15,39,68,0.18);
+    position: relative;
+  }
+  #sheet .divider::after {
+    content: "";
+    position: absolute;
+    left: 50%; top: 50%;
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    background: currentColor;
+  }
+  #qrBox {
+    width: 138px; height: 138px;
+    background: #fff;
+    border-radius: 12px;
+    border: 1.5px solid currentColor;
+    display: grid;
+    place-items: center;
+    padding: 8px;
+  }
+  #qrBox img, #qrBox canvas { width: 100% !important; height: 100% !important; }
+  #sheet .cta {
+    margin-top: 8px;
+    font-size: 9px;
+    font-weight: 700;
+  }
+  #sheet .footer {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    color: #fff;
+    z-index: 3;
+    text-align: center;
+    padding: 18px 14px 14px;
+  }
+  #sheet .footer .slogan {
+    font-weight: 800;
+    font-size: 11px;
+    line-height: 1.25;
+    margin: 0;
+  }
+  #sheet .icons-layer {
+    position: absolute; inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .icon-float {
+    position: absolute;
+    opacity: 0.28;
+    font-size: 18px;
+    line-height: 1;
+    user-select: none;
+  }
+
+  /* Print: real A4 */
+  @media print {
+    body { background: #fff; }
+    .sidebar, .stage-bar, .no-print { display: none !important; }
+    .app { display: block; }
+    .stage, .sheet-wrap { padding: 0; background: none; box-shadow: none; }
+    #sheet {
+      width: 210mm !important;
+      height: 297mm !important;
+      box-shadow: none;
+      border-radius: 0;
+    }
+    #sheet .logo { width: 28mm; height: 28mm; border-radius: 6mm; }
+    #sheet .title { font-size: 28pt !important; }
+    #sheet .tag { font-size: 11pt !important; }
+    #sheet .storeline { font-size: 9pt !important; padding: 5px 14px; }
+    #sheet .pill { font-size: 8pt !important; padding: 4px 12px; }
+    #sheet .cta { font-size: 11pt !important; }
+    #sheet .footer .slogan { font-size: 14pt !important; }
+    #qrBox { width: 78mm; height: 78mm; border-width: 2px; padding: 4mm; }
+    .icon-float { font-size: 28px; opacity: 0.22; }
+  }
+  @page { size: A4; margin: 0; }
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar no-print">
+    <h1>Plakat-studio</h1>
+    <p class="sub">Design Hurtighjelp-plakat · A4 · printklar. Over 10&nbsp;000 kombinasjoner.</p>
+
+    <label>Design-nummer (1–11520)</label>
+    <div class="row">
+      <input id="seed" type="text" value="1289" inputmode="numeric"/>
+      <button class="btn-soft" type="button" id="btnRandom">Tilfeldig</button>
+    </div>
+
+    <label>Mal / stil</label>
+    <select id="preset">
+      <option value="">— Bruk design-nummer —</option>
+      <option value="classic">Klassisk navy</option>
+      <option value="ocean">Ocean soft</option>
+      <option value="midnight">Midnight bold</option>
+      <option value="forest">Forest calm</option>
+      <option value="sunset">Sunset warm</option>
+      <option value="mono">Mono magazine</option>
+      <option value="sky">Sky light</option>
+      <option value="ink">Ink editorial</option>
+    </select>
+
+    <label>App-navn</label>
+    <input id="title" type="text" value="Hurtighjelp"/>
+
+    <label>Undertekst</label>
+    <input id="tagline" type="text" value="Markedsplassen for lokal hjelp"/>
+
+    <label>Nedlastingslinje</label>
+    <input id="storeLine" type="text" value="Last ned gratis nå"/>
+
+    <label>CTA under QR</label>
+    <input id="cta" type="text" value="Skann og last ned — iPhone & Android"/>
+
+    <label>Slagord (bunn)</label>
+    <textarea id="slogan">Trenger du en hånd,
+eller har du en å gi?</textarea>
+
+    <label>QR-mål (URL)</label>
+    <input id="qrUrl" type="text" value="https://www.hazher.no/HURTIGHJELP/app/?src=poster"/>
+
+    <label>Vis App Store / Google Play-pills</label>
+    <select id="showPills">
+      <option value="1">Ja</option>
+      <option value="0">Nei</option>
+    </select>
+
+    <label>Ekstra tekst (valgfritt)</label>
+    <input id="extra" type="text" value="" placeholder="F.eks. Finn hjelp i nærheten"/>
+
+    <div class="btns">
+      <button class="btn-primary" type="button" id="btnPrint">Skriv ut / lagre PDF</button>
+      <a class="btn-accent" href="../hurtighjelp_plakat_a4.pdf" target="_blank" rel="noopener">Offisiell PDF</a>
+      <a class="btn-soft" href="../../app/?store=stay" target="_blank" rel="noopener">Nedlastingsside</a>
+    </div>
+    <p class="hint">Tips: I utskriftsdialogen velg «Lagre som PDF», papirstørrelse A4, marginer «Ingen».</p>
+  </aside>
+
+  <main class="stage">
+    <div class="stage-bar no-print">
+      <strong id="designLabel">Design #1289</strong>
+      <span style="color:#5a6b7d;font-size:0.85rem">A4 forhåndsvisning</span>
+    </div>
+    <div class="sheet-wrap">
+      <div id="sheet">
+        <div class="bg" id="bg"></div>
+        <div class="icons-layer" id="icons"></div>
+        <div class="content">
+          <img class="logo" src="/images/hurtighjelp-app-icon.png" alt=""/>
+          <div class="title" id="vTitle">Hurtighjelp</div>
+          <div class="tag" id="vTag">Markedsplassen for lokal hjelp</div>
+          <div class="storeline" id="vStore">Last ned gratis nå</div>
+          <div class="pills" id="vPills">
+            <span class="pill">App Store</span>
+            <span class="pill">Google Play</span>
+          </div>
+          <div class="extra" id="vExtra" style="display:none;margin-top:6px;font-size:8px;font-weight:700;opacity:0.85"></div>
+          <div class="divider" id="vDiv"></div>
+          <div id="qrBox"></div>
+          <div class="cta" id="vCta">Skann og last ned — iPhone & Android</div>
+        </div>
+        <div class="footer" id="footer">
+          <p class="slogan" id="vSlogan">Trenger du en hånd,<br/>eller har du en å gi?</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script>
+(function () {
+  var PALETTES = [
+    { name: 'navy', ink: '#0f2744', muted: '#5a6b7d', accent: '#1a4f8b', bg1: '#f7fafc', bg2: '#e3eef8', foot: '#0f2744', icon: '#7aa0c4' },
+    { name: 'ocean', ink: '#0b3d4a', muted: '#4d6b73', accent: '#1f7a8c', bg1: '#f3fbfc', bg2: '#d7f0f4', foot: '#0b3d4a', icon: '#6 Panb8c4'.replace(' Pan','') },
+    { name: 'midnight', ink: '#101828', muted: '#667085', accent: '#3538cd', bg1: '#f8f9fc', bg2: '#e4e7ff', foot: '#101828', icon: '#98a2ff' },
+    { name: 'forest', ink: '#143528', muted: '#4f6a5b', accent: '#1f7a4d', bg1: '#f5faf6', bg2: '#dcefe3', foot: '#143528', icon: '#7bb892' },
+    { name: 'sunset', ink: '#3b1d12', muted: '#7a5648', accent: '#c2410c', bg1: '#fff8f3', bg2: '#ffe4d4', foot: '#3b1d12', icon: '#e8a078' },
+    { name: 'mono', ink: '#111111', muted: '#666666', accent: '#222222', bg1: '#ffffff', bg2: '#eeeeee', foot: '#111111', icon: '#999999' },
+    { name: 'sky', ink: '#12355b', muted: '#5b7390', accent: '#2563eb', bg1: '#f5f9ff', bg2: '#dbeafe', foot: '#12355b', icon: '#93c5fd' },
+    { name: 'ink', ink: '#1c1917', muted: '#78716c', accent: '#44403c', bg1: '#fafaf9', bg2: '#e7e5e4', foot: '#1c1917', icon: '#a8a29e' },
+    { name: 'berry', ink: '#3b0764', muted: '#6b7280', accent: '#7e22ce', bg1: '#faf5ff', bg2: '#efe6ff', foot: '#3b0764', icon: '#c4b5fd' },
+    { name: 'teal', ink: '#134e4a', muted: '#5b7874', accent: '#0f766e', bg1: '#f0fdfa', bg2: '#ccfbf1', foot: '#134e4a', icon: '#5eead4' },
+    { name: 'slate', ink: '#0f172a', muted: '#64748b', accent: '#334155', bg1: '#f8fafc', bg2: '#e2e8f0', foot: '#0f172a', icon: '#94a3b8' },
+    { name: 'rose', ink: '#4c0519', muted: '#7f1d1d', accent: '#be123c', bg1: '#fff1f2', bg2: '#fecdd3', foot: '#4c0519', icon: '#fb7185' }
+  ];
+  // fix ocean icon typo if any
+  PALETTES[1].icon = '#6bb8c4';
+
+  var FONTS = [
+    '"Plus Jakarta Sans", system-ui, sans-serif',
+    '"Space Grotesk", system-ui, sans-serif',
+    '"Fraunces", Georgia, serif',
+    '"Plus Jakarta Sans", system-ui, sans-serif'
+  ];
+  var LAYOUTS = ['classic', 'compact', 'airy', 'bold', 'magazine', 'centered-soft', 'wave-high', 'minimal'];
+  var FOOTERS = ['wave', 'block', 'slant', 'curve', 'flat'];
+  var ICON_SETS = [
+    ['🔨', '🔧', '🏠', '💡', '🎨', '🤝', '📍', '💬', '🚚', '⭐'],
+    ['🛠️', '🏡', '🔑', '📦', '🪴', '🧽', '🧰', '🪛', '🪚', '✨'],
+    ['❄️', '🐕', '💻', '🚗', '🧹', '🪜', '🪟', '🛋️', '🔩', '🌟'],
+    ['📌', '🛒', '🚲', '📱', '🪴', '🧺', '🧯', '🪛', '🏠', '💫']
+  ];
+
+  var PRESETS = {
+    classic: 1289,
+    ocean: 2144,
+    midnight: 3501,
+    forest: 4810,
+    sunset: 6122,
+    mono: 7003,
+    sky: 8455,
+    ink: 9901
+  };
+
+  function mulberry32(a) {
+    return function () {
+      var t = (a += 0x6d2b79f5);
+      t = Math.imul(t ^ (t >>> 15), t | 1);
+      t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  }
+
+  function clampSeed(n) {
+    n = parseInt(n, 10);
+    if (!isFinite(n) || n < 1) n = 1;
+    if (n > 11520) n = ((n - 1) % 11520) + 1;
+    return n;
+  }
+
+  function designFromSeed(seed) {
+    var rnd = mulberry32(seed * 9973);
+    return {
+      palette: PALETTES[Math.floor(rnd() * PALETTES.length)],
+      font: FONTS[Math.floor(rnd() * FONTS.length)],
+      layout: LAYOUTS[Math.floor(rnd() * LAYOUTS.length)],
+      footer: FOOTERS[Math.floor(rnd() * FOOTERS.length)],
+      icons: ICON_SETS[Math.floor(rnd() * ICON_SETS.length)],
+      iconCount: 8 + Math.floor(rnd() * 10),
+      titleSize: 22 + Math.floor(rnd() * 8),
+      orbA: 18 + Math.floor(rnd() * 40),
+      orbB: 12 + Math.floor(rnd() * 30),
+      rotate: Math.floor(rnd() * 24) - 12
+    };
+  }
+
+  var qr;
+  function renderQr(url) {
+    var box = document.getElementById('qrBox');
+    box.innerHTML = '';
+    qr = new QRCode(box, {
+      text: url || 'https://www.hazher.no/HURTIGHJELP/app/?src=poster',
+      width: 220,
+      height: 220,
+      colorDark: '#0f2744',
+      colorLight: '#ffffff',
+      correctLevel: QRCode.CorrectLevel.H
+    });
+  }
+
+  function footerPath(kind, color) {
+    if (kind === 'block') {
+      return 'polygon(0 68%, 100% 68%, 100% 100%, 0 100%)';
+    }
+    if (kind === 'slant') {
+      return 'polygon(0 72%, 100% 58%, 100% 100%, 0 100%)';
+    }
+    if (kind === 'flat') {
+      return 'polygon(0 78%, 100% 78%, 100% 100%, 0 100%)';
+    }
+    if (kind === 'curve') {
+      return 'ellipse(120% 70% at 50% 100%)';
+    }
+    // wave approx via ellipse
+    return 'ellipse(135% 85% at 50% 100%)';
+  }
+
+  function placeIcons(design) {
+    var layer = document.getElementById('icons');
+    layer.innerHTML = '';
+    var rnd = mulberry32(design.palette.name.length * 1000 + design.iconCount * 17);
+    for (var i = 0; i < design.iconCount; i++) {
+      var el = document.createElement('div');
+      el.className = 'icon-float';
+      el.textContent = design.icons[i % design.icons.length];
+      var left = (i % 2 === 0)
+        ? (4 + rnd() * 18)
+        : (78 + rnd() * 16);
+      var top = 16 + rnd() * 58;
+      // keep center clear for QR
+      if (top > 38 && top < 68 && left > 28 && left < 72) {
+        left = i % 2 === 0 ? 6 + rnd() * 12 : 82 + rnd() * 10;
+      }
+      el.style.left = left + '%';
+      el.style.top = top + '%';
+      el.style.transform = 'rotate(' + (rnd() * 40 - 20) + 'deg) scale(' + (0.85 + rnd() * 0.6) + ')';
+      el.style.opacity = String(0.18 + rnd() * 0.2);
+      layer.appendChild(el);
+    }
+  }
+
+  function apply() {
+    var seed = clampSeed(document.getElementById('seed').value);
+    document.getElementById('seed').value = String(seed);
+    var design = designFromSeed(seed);
+    var p = design.palette;
+    var sheet = document.getElementById('sheet');
+    var bg = document.getElementById('bg');
+    var footer = document.getElementById('footer');
+
+    document.getElementById('designLabel').textContent =
+      'Design #' + seed + ' · ' + p.name + ' · ' + design.layout;
+
+    sheet.style.color = p.ink;
+    sheet.style.fontFamily = design.font;
+    bg.style.background =
+      'radial-gradient(900px 420px at 20% 0%, ' + p.bg2 + ' 0%, transparent 55%),' +
+      'radial-gradient(800px 380px at 90% 10%, ' + p.bg2 + ' 0%, transparent 50%),' +
+      'linear-gradient(180deg, ' + p.bg1 + ' 0%, #ffffff 45%, ' + p.bg1 + ' 100%)';
+
+    footer.style.background = p.foot;
+    footer.style.clipPath = footerPath(design.footer);
+    if (design.footer === 'curve' || design.footer === 'wave') {
+      footer.style.clipPath = footerPath(design.footer);
+    }
+
+    var title = document.getElementById('vTitle');
+    title.textContent = document.getElementById('title').value || 'Hurtighjelp';
+    title.style.fontSize = design.titleSize + 'px';
+    title.style.color = p.ink;
+
+    document.getElementById('vTag').textContent = document.getElementById('tagline').value;
+    document.getElementById('vTag').style.color = p.muted;
+
+    document.getElementById('vStore').textContent = document.getElementById('storeLine').value;
+    document.getElementById('vStore').style.color = p.accent;
+    document.getElementById('vStore').style.borderColor = p.bg2;
+
+    var showPills = document.getElementById('showPills').value === '1';
+    document.getElementById('vPills').style.display = showPills ? 'flex' : 'none';
+    document.getElementById('vPills').style.color = p.ink;
+
+    var extra = (document.getElementById('extra').value || '').trim();
+    var vExtra = document.getElementById('vExtra');
+    if (extra) {
+      vExtra.style.display = 'block';
+      vExtra.textContent = extra;
+      vExtra.style.color = p.accent;
+    } else {
+      vExtra.style.display = 'none';
+    }
+
+    document.getElementById('vCta').textContent = document.getElementById('cta').value;
+    document.getElementById('vCta').style.color = p.ink;
+    document.getElementById('vDiv').style.color = p.accent;
+
+    var slogan = (document.getElementById('slogan').value || '').trim().replace(/\n/g, '<br/>');
+    document.getElementById('vSlogan').innerHTML = slogan || 'Trenger du en hånd,<br/>eller har du en å gi?';
+
+    // layout tweaks
+    var content = sheet.querySelector('.content');
+    content.style.paddingTop = design.layout === 'airy' ? '28px' : (design.layout === 'compact' ? '14px' : '22px');
+    if (design.layout === 'bold') title.style.fontSize = (design.titleSize + 4) + 'px';
+    if (design.layout === 'minimal') {
+      document.getElementById('vStore').style.display = 'none';
+    } else {
+      document.getElementById('vStore').style.display = 'inline-block';
+    }
+
+    placeIcons(design);
+    renderQr(document.getElementById('qrUrl').value.trim());
+
+    // tint QR dark color after render
+    setTimeout(function () {
+      var img = document.querySelector('#qrBox img');
+      var canvas = document.querySelector('#qrBox canvas');
+      // qrcode.js uses ink via colorDark already; force border
+      document.getElementById('qrBox').style.borderColor = p.ink;
+      document.getElementById('qrBox').style.color = p.ink;
+    }, 30);
+  }
+
+  document.getElementById('btnRandom').addEventListener('click', function () {
+    document.getElementById('seed').value = String(1 + Math.floor(Math.random() * 11520));
+    document.getElementById('preset').value = '';
+    apply();
+  });
+  document.getElementById('preset').addEventListener('change', function () {
+    var v = this.value;
+    if (PRESETS[v]) {
+      document.getElementById('seed').value = String(PRESETS[v]);
+      apply();
+    }
+  });
+  document.getElementById('btnPrint').addEventListener('click', function () {
+    apply();
+    setTimeout(function () { window.print(); }, 120);
+  });
+
+  ['seed','title','tagline','storeLine','cta','slogan','qrUrl','showPills','extra'].forEach(function (id) {
+    document.getElementById(id).addEventListener('input', apply);
+    document.getElementById(id).addEventListener('change', apply);
+  });
+
+  apply();
+})();
+</script>
+</body>
+</html>
