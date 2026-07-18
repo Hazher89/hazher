@@ -9,10 +9,15 @@ export async function onRequest(context: PagesContext): Promise<Response> {
   if (!id || !/^[0-9a-f-]{36}$/i.test(id)) {
     return new Response('Not found', { status: 404 });
   }
+  const host = new URL(context.request.url).host;
   const target =
     `https://rueqwgcxmcukmvjdrnfc.supabase.co/functions/v1/job-share/${id}`;
   const upstream = await fetch(target, {
-    headers: { Accept: 'text/html' },
+    headers: {
+      Accept: 'text/html',
+      'x-share-host': host,
+      'x-forwarded-host': host,
+    },
     redirect: 'follow',
   });
   const body = await upstream.text();

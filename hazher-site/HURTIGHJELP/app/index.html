@@ -6,12 +6,26 @@
 <title>Last ned Hurtighjelp</title>
 <meta name="description" content="Last ned Hurtighjelp for iPhone eller Android — markedsplassen for lokal hjelp."/>
 <meta name="theme-color" content="#0f2744"/>
-<link rel="canonical" href="https://www.hazher.no/HURTIGHJELP/app/"/>
+<link rel="canonical" id="hj-canonical" href="https://hurtighjelpapp.no/HURTIGHJELP/app/"/>
 <meta property="og:title" content="Last ned Hurtighjelp"/>
 <meta property="og:description" content="Markedsplassen for lokal hjelp — iOS og Android."/>
-<meta property="og:url" content="https://www.hazher.no/HURTIGHJELP/app/"/>
-<meta property="og:image" content="https://www.hazher.no/images/hurtighjelp-app-icon.png"/>
+<meta property="og:url" id="hj-og-url" content="https://hurtighjelpapp.no/HURTIGHJELP/app/"/>
+<meta property="og:image" id="hj-og-image" content="https://hurtighjelpapp.no/images/hurtighjelp-app-icon.png"/>
 <link rel="icon" type="image/png" href="/images/hurtighjelp-app-icon.png"/>
+<script>
+(function () {
+  try {
+    var origin = location.origin;
+    var path = '/HURTIGHJELP/app/';
+    var c = document.getElementById('hj-canonical');
+    var u = document.getElementById('hj-og-url');
+    var i = document.getElementById('hj-og-image');
+    if (c) c.href = origin + path;
+    if (u) u.setAttribute('content', origin + path);
+    if (i) i.setAttribute('content', origin + '/images/hurtighjelp-app-icon.png');
+  } catch (e) {}
+})();
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet"/>
@@ -286,7 +300,7 @@
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 2.2c-.4.2-.6.6-.6 1.1v17.4c0 .5.2.9.6 1.1l10.1-9.8L3.6 2.2zm12.2 7.1L13.1 7.7 4.8 2.8l9.5 9.2 1.5-2.7zm.7 1.3-1.8 1.7 1.8 1.7 2.5-1.4c.5-.3.5-.9 0-1.2l-2.5-.8zM4.8 21.2l8.3-4.9 2.7-2.6-11 7.5z"/></svg>
         Google Play
       </a>
-      <a class="btn btn-ghost" href="https://www.hazher.no/HURTIGHJELP/">Mer om Hurtighjelp</a>
+      <a class="btn btn-ghost" href="/HURTIGHJELP/">Mer om Hurtighjelp</a>
       <p class="hint">Skannet du plakaten? iPhone åpner App Store, Android åpner Google Play automatisk.</p>
     </main>
   </div>
