@@ -25,6 +25,9 @@
 /kapre/terms/ /KAPRE/Terms/ 301
 /kapre/support /KAPRE/Support/ 301
 /kapre/support/ /KAPRE/Support/ 301
+/listing/* /KAPRE/?id=:splat 302
+/l/* /KAPRE/?id=:splat 302
+/KAPRE/l/* /KAPRE/?id=:splat 302
 
 # Ali Barber — account deletion (Google Play / App Store)
 /alibarber/delete /ALIBARBER/Delete/ 301
