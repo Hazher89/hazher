@@ -12,6 +12,20 @@
 /driftpro/support /DRIFTPRO/Support/ 301
 /driftpro/support/ /DRIFTPRO/Support/ 301
 
+# KAPRE — Apple / lowercase aliases
+/kapre /KAPRE/ 301
+/kapre/ /KAPRE/ 301
+/kapre/personvern /KAPRE/Privacy/ 301
+/kapre/personvern/ /KAPRE/Privacy/ 301
+/kapre/privacy /KAPRE/Privacy/ 301
+/kapre/privacy/ /KAPRE/Privacy/ 301
+/kapre/vilkar /KAPRE/Terms/ 301
+/kapre/vilkar/ /KAPRE/Terms/ 301
+/kapre/terms /KAPRE/Terms/ 301
+/kapre/terms/ /KAPRE/Terms/ 301
+/kapre/support /KAPRE/Support/ 301
+/kapre/support/ /KAPRE/Support/ 301
+
 # Ali Barber — account deletion (Google Play / App Store)
 /alibarber/delete /ALIBARBER/Delete/ 301
 /alibarber/delete/ /ALIBARBER/Delete/ 301

@@ -1,14 +1,18 @@
 # hazher.no (statisk site)
 
-Moderne landingsside for Hazher med EcoShelf, Loop Marked og Hurtighjelp.
+Moderne landingsside for Hazher med EcoShelf, Loop Marked, Hurtighjelp, DriftPro, Ali Barber og KAPRE.
 
 Undermapper (når **root** er `hazher-site`):
 
 - `ECOSHELF/` — dokumentasjon / produkt-hub for EcoShelf  
 - `ECOSHELF/Support/` — support og FAQ  
 - `ECOSHELF/Privacy/` — personvern for **appen** (kan brukes som Privacy Policy URL i App Store Connect)
+- `KAPRE/` — produkt-hub for KAPRE (kapitalvarer)
+- `KAPRE/Support/` — Support URL for App Store
+- `KAPRE/Privacy/` — Privacy Policy URL
+- `KAPRE/Terms/` — Terms of Use URL
 
-Offentlige URL-er: `https://hazher.no/ECOSHELF/`, `https://hazher.no/ECOSHELF/Support/`, `https://hazher.no/ECOSHELF/Privacy/`.
+Offentlige URL-er: `https://hazher.no/ECOSHELF/`, `https://hazher.no/ECOSHELF/Support/`, `https://hazher.no/ECOSHELF/Privacy/`, `https://hazher.no/KAPRE/`, `https://hazher.no/KAPRE/Support/`, `https://hazher.no/KAPRE/Privacy/`, `https://hazher.no/KAPRE/Terms/`.
 
 ## Hvit skjerm på hazher.no?
 

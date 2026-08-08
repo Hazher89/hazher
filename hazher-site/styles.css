@@ -15,6 +15,8 @@
   --rapid-bg: rgba(255, 122, 61, 0.14);
   --barber: #d4af37;
   --barber-bg: rgba(212, 175, 55, 0.14);
+  --kapre: #c9a227;
+  --kapre-bg: rgba(201, 162, 39, 0.14);
   --accent: #38bdf8;
   --radius: 18px;
   --radius-lg: 26px;
@@ -1165,6 +1167,43 @@ h4 {
   color: #f5e6a8;
   border-color: rgba(212, 175, 55, 0.4);
   background: var(--barber-bg);
+}
+
+.btn-kapre {
+  background: var(--kapre-bg);
+  color: #f5e6a8;
+  border: 1px solid rgba(201, 162, 39, 0.35);
+  font-weight: 600;
+}
+
+.btn-kapre:hover {
+  background: rgba(201, 162, 39, 0.22);
+  text-decoration: none;
+}
+
+.tag.hit-kapre {
+  background: var(--kapre-bg);
+  color: #f5e6a8;
+  border-color: rgba(201, 162, 39, 0.32);
+}
+
+.app-squircle--kapre {
+  box-shadow: 0 24px 48px rgba(201, 162, 39, 0.32);
+}
+
+.panel.kapre-accent {
+  border-color: rgba(201, 162, 39, 0.28);
+  box-shadow: 0 0 0 1px rgba(201, 162, 39, 0.06) inset;
+}
+
+.product-intro--kapre {
+  border-bottom-color: rgba(201, 162, 39, 0.18);
+}
+
+.doc-pill--kapre {
+  color: #f5e6a8;
+  border-color: rgba(201, 162, 39, 0.4);
+  background: var(--kapre-bg);
 }
 
 .mockup-row--apps {
