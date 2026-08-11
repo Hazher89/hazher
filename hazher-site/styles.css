@@ -17,6 +17,8 @@
   --barber-bg: rgba(212, 175, 55, 0.14);
   --kapre: #c9a227;
   --kapre-bg: rgba(201, 162, 39, 0.14);
+  --delelader: #0f9f6e;
+  --delelader-bg: rgba(15, 159, 110, 0.14);
   --accent: #38bdf8;
   --radius: 18px;
   --radius-lg: 26px;
@@ -1204,6 +1206,43 @@ h4 {
   color: #f5e6a8;
   border-color: rgba(201, 162, 39, 0.4);
   background: var(--kapre-bg);
+}
+
+.btn-delelader {
+  background: var(--delelader-bg);
+  color: #9aefc8;
+  border: 1px solid rgba(15, 159, 110, 0.35);
+  font-weight: 600;
+}
+
+.btn-delelader:hover {
+  background: rgba(15, 159, 110, 0.22);
+  text-decoration: none;
+}
+
+.tag.hit-delelader {
+  background: var(--delelader-bg);
+  color: #9aefc8;
+  border-color: rgba(15, 159, 110, 0.32);
+}
+
+.app-squircle--delelader {
+  box-shadow: 0 24px 48px rgba(15, 159, 110, 0.32);
+}
+
+.panel.delelader-accent {
+  border-color: rgba(15, 159, 110, 0.28);
+  box-shadow: 0 0 0 1px rgba(15, 159, 110, 0.06) inset;
+}
+
+.product-intro--delelader {
+  border-bottom-color: rgba(15, 159, 110, 0.18);
+}
+
+.doc-pill--delelader {
+  color: #9aefc8;
+  border-color: rgba(15, 159, 110, 0.4);
+  background: var(--delelader-bg);
 }
 
 .mockup-row--apps {

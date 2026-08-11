@@ -1,0 +1,73 @@
+/* Delelader — grønn EV-accent */
+
+:root {
+  --delelader: #0f9f6e;
+  --delelader-bright: #14c985;
+  --delelader-bg: rgba(15, 159, 110, 0.14);
+  --delelader-dim: #0b7a54;
+}
+
+.theme-delelader .apple-hero__glow {
+  background: radial-gradient(
+    ellipse 70% 55% at 50% 0%,
+    rgba(15, 159, 110, 0.32),
+    transparent 70%
+  );
+}
+
+.theme-delelader .apple-feature__label {
+  color: var(--delelader-bright);
+}
+
+.btn-delelader,
+.btn-delelader-primary {
+  background: linear-gradient(135deg, #0b7a54, #14c985);
+  color: #fff !important;
+  border: none;
+  font-weight: 700;
+}
+
+.btn-delelader:hover,
+.btn-delelader-primary:hover {
+  filter: brightness(1.06);
+  text-decoration: none;
+}
+
+.btn-delelader.btn-ghost-outline {
+  background: var(--delelader-bg);
+  color: #9aefc8 !important;
+  border: 1px solid rgba(15, 159, 110, 0.35);
+}
+
+.doc-pill--delelader {
+  background: var(--delelader-bg);
+  color: #9aefc8;
+  border-color: rgba(15, 159, 110, 0.4);
+}
+
+.app-squircle--delelader {
+  box-shadow: 0 24px 48px rgba(15, 159, 110, 0.32);
+}
+
+.product-intro--delelader {
+  border-bottom-color: rgba(15, 159, 110, 0.18);
+}
+
+.panel.delelader-accent {
+  border-color: rgba(15, 159, 110, 0.28);
+  box-shadow: 0 0 0 1px rgba(15, 159, 110, 0.06) inset;
+}
+
+.tag.hit-delelader {
+  background: var(--delelader-bg);
+  color: #9aefc8;
+  border-color: rgba(15, 159, 110, 0.32);
+}
+
+.theme-delelader .hj-tile:hover {
+  border-color: rgba(15, 159, 110, 0.45);
+}
+
+.theme-delelader .hj-url-strip code {
+  color: var(--delelader-bright);
+}
