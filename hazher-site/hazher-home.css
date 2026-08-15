@@ -424,3 +424,171 @@
 .hz-home .footer-links a {
   font-size: 0.85rem;
 }
+
+/* Homepage v2 — more advanced */
+.hz-marquee {
+  overflow: hidden;
+  border-block: 1px solid rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.02);
+  padding: 18px 0;
+  margin: 0;
+}
+.hz-marquee__track {
+  display: flex;
+  gap: 48px;
+  width: max-content;
+  animation: hz-marquee 42s linear infinite;
+}
+.hz-marquee__track span {
+  font-size: 0.85rem;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+}
+.hz-marquee__track span em {
+  font-style: normal;
+  color: rgba(255,255,255,0.7);
+}
+@keyframes hz-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hz-marquee__track { animation: none; }
+}
+
+.hz-spotlight {
+  padding: clamp(72px, 12vw, 120px) 0;
+}
+.hz-spotlight__grid {
+  display: grid;
+  gap: 40px;
+  align-items: center;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+@media (min-width: 900px) {
+  .hz-spotlight__grid { grid-template-columns: 1.1fr 0.9fr; gap: 56px; }
+}
+.hz-spotlight__visual {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 320px;
+}
+.hz-spotlight__ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.08);
+  animation: hz-spin 48s linear infinite;
+}
+.hz-spotlight__ring--1 { width: 280px; height: 280px; }
+.hz-spotlight__ring--2 { width: 360px; height: 360px; animation-direction: reverse; animation-duration: 64s; opacity: 0.6; }
+.hz-spotlight__ring--3 { width: 440px; height: 440px; animation-duration: 80s; opacity: 0.35; }
+@keyframes hz-spin { to { transform: rotate(360deg); } }
+.hz-spotlight__icon {
+  width: 140px;
+  height: 140px;
+  border-radius: 22.5%;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(99,102,241,0.35), 0 0 0 1px rgba(255,255,255,0.1);
+  position: relative;
+  z-index: 1;
+  animation: hz-float-y 6s ease-in-out infinite;
+}
+.hz-spotlight__icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hz-spotlight__copy h2 {
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  letter-spacing: -0.045em;
+  line-height: 1.05;
+  color: #fff;
+  margin: 0 0 16px;
+}
+.hz-spotlight__copy p {
+  color: rgba(255,255,255,0.55);
+  font-size: 1.08rem;
+  line-height: 1.6;
+  margin: 0 0 14px;
+  max-width: 36rem;
+}
+.hz-spotlight__copy ul {
+  margin: 18px 0 28px;
+  padding-left: 1.1rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.6;
+}
+.hz-spotlight__copy li { margin-bottom: 6px; }
+
+.hz-manifesto {
+  text-align: center;
+  padding: clamp(80px, 14vw, 140px) 24px;
+  position: relative;
+}
+.hz-manifesto__line {
+  font-size: clamp(1.8rem, 5vw, 3.6rem);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 1.15;
+  color: #fff;
+  max-width: 16ch;
+  margin: 0 auto 20px;
+}
+.hz-manifesto__sub {
+  max-width: 36rem;
+  margin: 0 auto;
+  color: rgba(255,255,255,0.5);
+  font-size: 1.1rem;
+  line-height: 1.55;
+}
+
+.hz-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.hz-stack span {
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.09);
+}
+
+.hz-hero__orb2 {
+  position: absolute;
+  width: min(420px, 60vw);
+  height: min(420px, 60vw);
+  border-radius: 50%;
+  bottom: 5%;
+  right: 5%;
+  background: radial-gradient(circle, rgba(45,106,79,0.25), transparent 70%);
+  filter: blur(50px);
+  pointer-events: none;
+  animation: hz-orb 12s ease-in-out infinite alternate-reverse;
+}
+.hz-hero__orb3 {
+  position: absolute;
+  width: min(360px, 50vw);
+  height: min(360px, 50vw);
+  border-radius: 50%;
+  top: 20%;
+  left: 0;
+  background: radial-gradient(circle, rgba(255,122,61,0.12), transparent 70%);
+  filter: blur(45px);
+  pointer-events: none;
+  animation: hz-orb 9s ease-in-out infinite alternate;
+}
+.hz-float {
+  height: 240px !important;
+  width: min(820px, 100%) !important;
+}
+@media (max-width: 700px) {
+  .hz-float { height: 180px !important; }
+}

@@ -96,81 +96,90 @@ Korte, menneskelige adressekoder for Kurdistan-regionen — fra GPS til koder so
 
 
 
+
+
+
 <!-- LONGFORM -->
 <section class="lf longform" id="dybde">
 <div class="lf-wrap">
-<p class="lf-kicker" data-reveal="up">Dybde</p>
-<h2 class="lf-title" data-reveal="up">Navnishan i dybden</h2>
-<p class="lf-lead" data-reveal="up">B2B-adresseinfrastruktur for Kurdistan — GPS til korte koder med trust og API.</p>
-
+<p class="lf-kicker" data-reveal="up">Komplett dokumentasjon</p>
+<h2 class="lf-title" data-reveal="up">Navnishan — komplett produkt</h2>
+<p class="lf-lead" data-reveal="up">B2B-adresseinfrastruktur for Kurdistan-regionen: GPS til korte koder, trust/claim, fire språk, support tickets og partner-API. Estimert verdi 700k–1,0 mill. NOK.</p>
 <div class="lf-bento" data-stagger>
-<article class="lf-card">
-<span class="lf-card__glow" style="background:rgba(45,106,79,0.5)" aria-hidden="true"></span>
-<div class="lf-card__icon" aria-hidden="true">P</div>
-<h3>Geohash-koder</h3>
-<p>Korte, delbare adresser som ERB-A4F2.</p>
-</article>
-<article class="lf-card">
-<span class="lf-card__glow" style="background:rgba(255,215,0,0.25)" aria-hidden="true"></span>
-<div class="lf-card__icon" aria-hidden="true">✓</div>
-<h3>Trust</h3>
-<p>GPS-claim ≤ 60 m, rapport og revoke.</p>
-</article>
-<article class="lf-card">
-<span class="lf-card__glow" style="background:rgba(45,106,79,0.4)" aria-hidden="true"></span>
-<div class="lf-card__icon" aria-hidden="true">K</div>
-<h3>Dekning</h3>
-<p>48 huber + KRI-polygon for landsbyer.</p>
-</article>
-<article class="lf-card lf-bento__wide">
-<span class="lf-card__glow" style="background:rgba(125,206,160,0.35)" aria-hidden="true"></span>
-<div class="lf-card__icon" aria-hidden="true">API</div>
-<h3>B2B API</h3>
-<p>Partner-dashboard og monetisering.</p>
-</article>
+<article class="lf-card"><span class="lf-card__glow" style="background:rgba(45,106,79,0.5)" aria-hidden="true"></span>
+<div class="lf-card__icon" aria-hidden="true">GH</div><h3>Geohash</h3><p>Koder som ERB-A4F2 fra hub + posisjon.</p></article>
+<article class="lf-card"><span class="lf-card__glow" style="background:rgba(255,215,0,0.25)" aria-hidden="true"></span>
+<div class="lf-card__icon" aria-hidden="true">TR</div><h3>Trust</h3><p>GPS-claim ≤60 m, rapport, revoke.</p></article>
+<article class="lf-card"><span class="lf-card__glow" style="background:rgba(45,106,79,0.4)" aria-hidden="true"></span>
+<div class="lf-card__icon" aria-hidden="true">CV</div><h3>Dekning</h3><p>48 huber + KRI-polygon.</p></article>
+<article class="lf-card"><span class="lf-card__glow" style="background:rgba(125,206,160,0.35)" aria-hidden="true"></span>
+<div class="lf-card__icon" aria-hidden="true">API</div><h3>B2B</h3><p>Partner-dashboard og API-monetisering.</p></article>
+</div>
+<div class="lf-chips" data-reveal="up"><span class="lf-chip">Geohash</span><span class="lf-chip">Trust</span><span class="lf-chip">API</span><span class="lf-chip">4 språk</span><span class="lf-chip">Supabase</span></div>
+<div class="lf-band" data-reveal="up"><div class="lf-band__copy"><p class="lf-band__label">Infrastruktur</p><h2>Når «ved porten» ikke holder.</h2><p>Mange steder mangler formelle postadresser. Levering og feltarbeid blir improvisert. Navnishan etablerer stabile, delbare koder.</p><p>Sorani, badini, arabisk og engelsk er førstelinje i appen — ikke etterslep.</p></div><div class="lf-band__visual"><div class="lf-stat"><span class="lf-stat__dot" style="background:#2d6a4f;color:#2d6a4f"></span><div><strong>4 språk</strong><span>Førstelinje</span></div></div><div class="lf-stat"><span class="lf-stat__dot" style="background:#ffd700;color:#ffd700"></span><div><strong>Claim</strong><span>GPS-verifisert</span></div></div><div class="lf-stat"><span class="lf-stat__dot" style="background:#95d5b2;color:#95d5b2"></span><div><strong>Support</strong><span>Tickets</span></div></div></div></div>
+<div class="lf-section-head" data-reveal="up"><h2>Slik fungerer det</h2><p>Fra første trykk til ferdig flyt.</p></div>
+<div class="lf-steps"><div class="lf-step"><div class="lf-step__num">1</div><h3>Kart</h3><p>Generer kode</p></div><div class="lf-step"><div class="lf-step__num">2</div><h3>Claim</h3><p>Verifiser GPS</p></div><div class="lf-step"><div class="lf-step__num">3</div><h3>Del</h3><p>Send til mottaker</p></div><div class="lf-step"><div class="lf-step__num">4</div><h3>Integrer</h3><p>Partner-API</p></div></div>
+<div class="lf-article" data-reveal="up"><h2>Hvordan Navnishan fungerer</h2>
+<h3>Kart og koder</h3>
+<p>Åpne kart, generer kode, søk og del. Posisjon stilles når kartet trengs. Dekning: 48 distriktshuber pluss polygon-fallback for landsbyer og gårder inne i Kurdistan Region.</p>
+<h3>Claim og tillit</h3>
+<p>Claim krever at du er nær nok (ca. 60 m) for GPS-verifisering. Trust-nivåer: unverified, gps_verified, strong, disputed, revoked. Rapporter kan eskalere til tvist. Admin kan revoke. Kvoter begrenser misbruk.</p>
+<h3>Hjem og flytting</h3>
+<p>Sett primær/hjemmeadresse. «Jeg har flyttet» arkiverer og starter på nytt — uten å ødelegge historikk unødvendig.</p>
+<h3>Support og B2B</h3>
+<p>Support tickets med tråd og push. Partnere får dashboard og API for å integrere adressekoder i egne systemer. Auth via Apple/Google og Supabase. RLS beskytter data.</p>
+<h3>Hvorfor det er verdt så mye</h3>
+<p>Adresse er infrastruktur. Trust er valuta. API gjør Navnishan til en plattform — ikke bare en forbrukerapp. Det er vanskelig å kopiere overfladisk.</p>
 </div>
 
-<div class="lf-chips" data-reveal="up"><span class="lf-chip">Geohash</span><span class="lf-chip">Trust</span><span class="lf-chip">API</span><span class="lf-chip">Supabase</span></div>
-
-<div class="lf-band" data-reveal="up">
-<div class="lf-band__copy">
-<p class="lf-band__label">Infrastruktur</p>
-<h2>Når «ved porten» ikke holder.</h2>
-<p>Kurerer, butikker og feltteam trenger samme stabile referanse.</p><p>Sorani, badini, arabisk og engelsk i appen.</p>
-</div>
-<div class="lf-band__visual" style="--g:rgba(255,255,255,0.15)"><div class="lf-stat"><span class="lf-stat__dot" style="background:#2d6a4f;color:#2d6a4f"></span><div><strong>4 språk</strong><span>Førstelinje</span></div></div><div class="lf-stat"><span class="lf-stat__dot" style="background:#ffd700;color:#ffd700"></span><div><strong>Claim</strong><span>GPS-verifisert</span></div></div><div class="lf-stat"><span class="lf-stat__dot" style="background:#95d5b2;color:#95d5b2"></span><div><strong>Support</strong><span>Tickets + push</span></div></div></div>
+<div class="lf-article" data-reveal="up">
+<h2>Dybde: infrastruktur, språk og anti-abuse</h2>
+<p>En god adressekode er kort nok til å diktere, stabil nok til å gjenbruke, og forankret nok til å unngå kollisjoner. Navnishan kombinerer hub-prefiks med geohash-segment for å treffe den balansen. Når noen sier koden i telefonen, skal mottaker finne samme punkt på kartet.</p>
+<p>Uten trust blir koder bare tekst. Med GPS-claim, kvoter, rapport og revoke blir kodene et system. Det er hardere å bygge — og vanskeligere å kopiere overfladisk. For B2B-partnere er det også det som gjør API verdifullt: de integrerer ikke bare koordinater, de integrerer en tillitsmodell.</p>
+<p>Språkvalg er respekt og strategi. At sorani og badini er førstelinje signaliserer hvem produktet er laget for. Overfladiske kopier glemmer språk og tillit, og faller sammen i felt. Estimert verdi 700k–1,0 mill. NOK.</p>
 </div>
 
-<div data-reveal="up">
-<p class="lf-kicker" style="margin-top:48px">Flyt</p>
-<h2 class="lf-title" style="font-size:clamp(1.5rem,3vw,2.1rem);max-width:22ch">Slik oppleves produktet</h2>
-<div class="lf-steps">
-<div class="lf-step"><div class="lf-step__num">1</div><h3>Kart</h3><p>Generer kode</p></div>
-<div class="lf-step"><div class="lf-step__num">2</div><h3>Claim</h3><p>Verifiser GPS</p></div>
-<div class="lf-step"><div class="lf-step__num">3</div><h3>Del</h3><p>Send kode</p></div>
-<div class="lf-step"><div class="lf-step__num">4</div><h3>Integrer</h3><p>Partner-API</p></div>
+
+<div class="lf-article" data-reveal="up">
+<h2>Funksjonskart — Navnishan</h2>
+<p>Navnishan er mer enn et kart. Det er en tillitsmodell rundt adressekoder, pluss et B2B-lag for partnere.</p>
+<div class="lf-inventory">
+<div class="lf-inventory__item"><strong>Kodegenerering</strong><span>Hub + geohash</span></div>
+<div class="lf-inventory__item"><strong>48 huber</strong><span>Distriktsdekning</span></div>
+<div class="lf-inventory__item"><strong>KRI-polygon</strong><span>Landsbyer &amp; gårder</span></div>
+<div class="lf-inventory__item"><strong>GPS-claim</strong><span>≤ 60 meter</span></div>
+<div class="lf-inventory__item"><strong>Trust-nivåer</strong><span>Fra unverified til strong</span></div>
+<div class="lf-inventory__item"><strong>Rapport / tvist</strong><span>Eskalering og revoke</span></div>
+<div class="lf-inventory__item"><strong>Kvoter</strong><span>Anti-abuse</span></div>
+<div class="lf-inventory__item"><strong>Hjem / flyttet</strong><span>Livsløp for adresse</span></div>
+<div class="lf-inventory__item"><strong>4 språk</strong><span>Sorani, badini, AR, EN</span></div>
+<div class="lf-inventory__item"><strong>Support tickets</strong><span>Tråd + push</span></div>
+<div class="lf-inventory__item"><strong>Partner-API</strong><span>Dashboard &amp; monetisering</span></div>
+<div class="lf-inventory__item"><strong>Auth</strong><span>Apple &amp; Google</span></div>
 </div>
+<p>Estimert verdi 700k–1,0 mill. NOK. Support/Privacy/Terms: hazher.no/NAVNISHAN/</p>
 </div>
 
-<blockquote class="lf-quote" data-reveal="up">
-<p>Adresse er infrastruktur. Trust er valutaen.</p>
-<footer>— Hazher produktdesign</footer>
-</blockquote>
 
-<div class="lf-tech" data-reveal="up"><span>Flutter</span><span>Supabase</span><span>Apple/Google Auth</span><span>RLS</span></div>
+<div class="lf-article" data-reveal="up">
+<h2>Fra GPS til leveringsklar kode</h2>
+<p>En kurer mottar koden ERB-A4F2. På kartet lander nålen på riktig punkt. Trust-badge viser at adressen er GPS-verifisert. Hvis noen forsøker å claime langt unna, avvises claim. Hvis tre rapporter kommer inn, eskaleres til tvist. Admin kan revoke ved misbruk.</p>
+<p>For en butikk som leverer i Erbil, Sulaymaniyah eller Duhok betyr dette færre feilleveringer. For en partner som bygger egen app, betyr API at de ikke trenger å finne opp adresseinfrastruktur selv. For sluttbrukeren betyr fire språk at produktet snakker deres språk — bokstavelig talt.</p>
+<p>Navnishan er B2B-klar adresseinfrastruktur. Estimert verdi 700k–1,0 mill. NOK. Support og personvern ligger på hazher.no for App Store-utgivelse.</p>
+</div>
 
+<blockquote class="lf-quote" data-reveal="up"><p>Adresse er infrastruktur. Trust er valutaen.</p><footer>— Hazher</footer></blockquote>
+<div class="lf-tech" data-reveal="up"><span>Flutter</span><span>Supabase</span><span>Apple/Google</span><span>RLS</span></div>
 <div class="lf-cta" data-reveal="scale">
-<h2>Klar for mer?</h2>
-<p>Support, personvern og kontakt — alltid tilgjengelig.</p>
+<h2>Support og personvern</h2>
+<p>Offisielle URL-er for App Store og Google Play.</p>
 <div class="lf-cta__actions">
 <a href="Support/" class="btn btn-navni-primary">Support</a>
 <a href="Privacy/" class="btn btn-ghost">Personvern</a>
 <a href="mailto:kontakt@hazher.no" class="btn btn-ghost">kontakt@hazher.no</a>
 <a href="../index.html" class="btn btn-ghost">← Hazher</a>
-</div>
-</div>
-</div>
-</section>
+</div></div>
+</div></section>
 <!-- /LONGFORM -->
 
 </main>

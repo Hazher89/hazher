@@ -354,3 +354,81 @@
   .lf-card { transition: none; }
   .lf-card:hover { transform: none; }
 }
+
+/* Deep prose panels inside visual longform */
+.lf-article {
+  max-width: 720px;
+  margin: clamp(36px, 6vw, 56px) auto;
+  padding: clamp(28px, 4vw, 40px);
+  border-radius: 28px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.lf-article h2 {
+  font-size: clamp(1.45rem, 2.8vw, 1.95rem);
+  letter-spacing: -0.035em;
+  color: #fff;
+  margin: 0 0 16px;
+}
+.lf-article h3 {
+  font-size: 1.1rem;
+  color: #fff;
+  margin: 28px 0 10px;
+  letter-spacing: -0.02em;
+}
+.lf-article p {
+  margin: 0 0 14px;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.62);
+}
+.lf-article ul {
+  margin: 0 0 18px;
+  padding-left: 1.15rem;
+  color: rgba(255,255,255,0.58);
+  line-height: 1.65;
+}
+.lf-article li { margin-bottom: 8px; }
+.lf-inventory {
+  display: grid;
+  gap: 12px;
+  margin: 32px 0;
+}
+@media (min-width: 720px) {
+  .lf-inventory { grid-template-columns: 1fr 1fr; }
+}
+.lf-inventory__item {
+  padding: 18px 16px;
+  border-radius: 18px;
+  background: rgba(0,0,0,0.28);
+  border: 1px solid rgba(255,255,255,0.07);
+}
+.lf-inventory__item strong {
+  display: block;
+  color: #fff;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+}
+.lf-inventory__item span {
+  font-size: 0.86rem;
+  line-height: 1.45;
+  color: rgba(255,255,255,0.48);
+}
+.lf-section-head {
+  text-align: center;
+  margin: clamp(48px, 8vw, 80px) auto 28px;
+  max-width: 40rem;
+}
+.lf-section-head h2 {
+  font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+  letter-spacing: -0.04em;
+  color: #fff;
+  margin: 0 0 12px;
+}
+.lf-section-head p {
+  margin: 0;
+  color: rgba(255,255,255,0.5);
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
