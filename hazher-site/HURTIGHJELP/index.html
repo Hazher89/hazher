@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="../styles.css"/>
 <link rel="stylesheet" href="../hazher-pro.css"/>
+<link rel="stylesheet" href="../hazher-longform.css"/>
 <link rel="stylesheet" href="../hazher-apple.css"/>
 <link rel="stylesheet" href="../hazher-apple-ext.css"/>
 <link rel="stylesheet" href="../hurtighjelp-extra.css"/>
@@ -176,77 +177,85 @@
 
 
 
+
+
 <!-- LONGFORM -->
-<section class="longform" id="dybde" data-reveal="up">
+<section class="lf longform" id="dybde">
+<div class="lf-wrap">
+<p class="lf-kicker" data-reveal="up">Dybde</p>
+<h2 class="lf-title" data-reveal="up">Hurtighjelp i dybden</h2>
+<p class="lf-lead" data-reveal="up">Tosidig norsk markedsplass for tjenester — chat, tale, live transport og trygg fullføringsflyt.</p>
 
-<h2>Komplett produktbeskrivelse — Hurtighjelp</h2>
-<p class="longform-lead">Hurtighjelp er en norsk tosidig markedsplass for hverdagstjenester. Du publiserer at du trenger hjelp — eller at du tilbyr hjelp — matcher via kart og kategori, chatter og ringer i appen, følger transport live, og fullfører med vurdering og kvittering.</p>
-<div class="longform-visual">
-<div class="longform-visual__cell"><strong>Tosidig marked</strong><span>Behov og tilbud</span></div>
-<div class="longform-visual__cell"><strong>Sanntid</strong><span>Chat · tale · live</span></div>
-<div class="longform-visual__cell"><strong>Betaling</strong><span>Vipps · Stripe Connect</span></div>
-<div class="longform-visual__cell"><strong>Kvalitet</strong><span>Moderering · support</span></div>
+<div class="lf-bento" data-stagger>
+<article class="lf-card">
+<span class="lf-card__glow" style="background:rgba(255,122,61,0.45)" aria-hidden="true"></span>
+<div class="lf-card__icon" aria-hidden="true">M</div>
+<h3>Tosidig</h3>
+<p>Trenger hjelp eller tilbyr hjelp — samme app.</p>
+</article>
+<article class="lf-card">
+<span class="lf-card__glow" style="background:rgba(56,189,248,0.35)" aria-hidden="true"></span>
+<div class="lf-card__icon" aria-hidden="true">C</div>
+<h3>Privat chat</h3>
+<p>Én tråd per interessent. Taleanrop innebygd.</p>
+</article>
+<article class="lf-card">
+<span class="lf-card__glow" style="background:rgba(167,139,250,0.35)" aria-hidden="true"></span>
+<div class="lf-card__icon" aria-hidden="true">P</div>
+<h3>Live</h3>
+<p>Kart, radius og live transport med Live Activity.</p>
+</article>
+<article class="lf-card lf-bento__wide">
+<span class="lf-card__glow" style="background:rgba(255,122,61,0.35)" aria-hidden="true"></span>
+<div class="lf-card__icon" aria-hidden="true">✓</div>
+<h3>Kvalitet</h3>
+<p>Moderering, Pro-lag, admin og support.</p>
+</article>
 </div>
-<h2>Hvorfor en lokal markedsplass må være mer enn en feed</h2>
-<p>Lokale tjenester har alltid eksistert i grupper og meldinger. Problemet er struktur: hvem ser annonsen, hvordan skiltes private dialoger, hvordan ringer man uten å dele nummer for tidlig, hvordan følger man en transport, og hvordan avsluttes et oppdrag uten krangel om «var det egentlig ferdig?».</p>
-<p>Hurtighjelp er bygget for den fulle løkken. Annonser godkjennes før de blir synlige når moderering krever det. Hver interessent får egen privat tråd. Taleanrop (inkl. CallKit) holder samtalen i produktet. Live transport og Live Activity gir status. Fullføringsflyt med bilder, vurdering og PDF-kvittering skaper avslutning.</p>
-<p>Estimert verdi 1,2–1,8 mill. NOK speiler at dette er en komplett marketplace-arkitektur: auth, kart, chat, anrop, admin, support og betalingsintegrasjoner — ikke en enkel liste-app.</p>
-<h2>Markedsplass, kategorier og oppdagelse</h2>
-<p>Brukere kan publisere etterspørsel eller tilbud. Kategorier dekker typiske norske hverdagsbehov: snø, dyr, flytting, håndverk, IT, transport og mer. Feed, kart, radius, filtre, favoritter og deling gjør oppdagelse praktisk.</p>
-<p>Utvalgte annonser og smart søk hjelper synlighet. Begrensninger i gratis versus Pro beskytter plattformen mot spam samtidig som seriøse tilbydere kan skalere.</p>
-<h2>Kommunikasjon: chat, tale og utføring</h2>
-<p>Privat chat per interessent er et bevisst valg: åpne tråder skaper støy og lekkasje. I Hurtighjelp forhandler du med én part om gangen i en tydelig kontekst.</p>
-<p>Taleanrop reduserer friksjon når tekst ikke strekker til. Utføringsfaser i chat — avtalt, underveis, fullført — gjør status eksplisitt. Bilder dokumenterer leveranse. Live transport reduserer usikkerhet når noen er på vei.</p>
-<h2>Betaling, tillit og Pro</h2>
-<p>Oppgjør kan avtales mellom partene, med Vipps som naturlig norsk valg, og Stripe Connect der plattformen skal støtte utbetalingsflyt til tilbyder. Hurtighjelp Pro utvider grenser for publisering og henvendelser.</p>
-<p>Tillit bygges også av moderering, vurderinger og support. Når noe går galt, finnes det en kanal — ikke bare en App Store-klage.</p>
-<h2>Admin, support og butikkkrav</h2>
-<p>Adminpanel lar teamet moderere innhold, følge brukere og styre kvalitet. Support-sider på hazher.no er offisielle URL-er for App Store Connect og Google Play. Personvernerklæringen beskriver data, formål og rettigheter.</p>
-<p>Teknisk stack: Flutter, Supabase med RLS og Realtime, push, Vipps Auth der relevant, Stripe Connect. Produktet er bygget for å tåle ekte norsk bruk — ikke bare en demo i Oslo-sentrum.</p>
-<h2>Typiske bruksscenarier</h2>
-<ul><li>En familie trenger snømåking i nabolaget samme kveld</li><li>En student tilbyr hundelufting i en radius rundt hjemmet</li><li>En håndverker tar småjobber uten tung CRM</li><li>En privatperson trenger hjelp til å frakte noe — med live status</li></ul>
-<h2>Hva som gjør Hurtighjelp verdifullt som IP</h2>
-<p>Tosidige markeder er vanskelige: du må løse kylling-og-egg, tillit, misbruk, betaling og support samtidig. Hurtighjelp har allerede disse lagene i produktet. Det er derfor verdsettelsen ligger i millionklassen — og derfor «Les mer» må forklare mer enn tre bullet points.</p>
-<p>I produksjon handler kvalitet om det som skjer etter lansering: feil som dukker opp på én telefonmodell, nettverk som dropper midt i en sync, og brukere som finner geniale — eller destruktive — snarveier. Hazher bygger derfor med observabilitet i bakhodet: logger som ikke lekker persondata, tydelige feilmeldinger, og adminflater som lar oss hjelpe uten å be brukeren «prøv igjen» i blinde.</p>
-<p>Personvern er ikke en side nederst i menyen. Det er valg om hva som lagres, hvor lenge, hvem som ser det, og hvordan sletting faktisk fungerer. Hver app på hazher.no har dedikerte Support- og Privacy-URL-er fordi butikkene krever det — og fordi brukerne fortjener det.</p>
-<p>Når vi beskriver «tusenvis av detaljer», mener vi arbeidsflyter: hvem trykker hva, hvilken status går til hvilken rolle, hva skjer ved avbrudd, hva skjer ved konflikt. Det er der ekte produkter skilles fra demoskjermer.</p>
 
+<div class="lf-chips" data-reveal="up"><span class="lf-chip">Chat</span><span class="lf-chip">CallKit</span><span class="lf-chip">Kart</span><span class="lf-chip">Pro</span><span class="lf-chip">Support</span></div>
 
-<h2>Eksempel: fra behov til fullført oppdrag</h2>
-<p>En bruker publiserer «trenger hjelp» med kategori, sted og tidsrom. Annonsen godkjennes. Tilbydere i radius ser den. Én interessent starter privat chat. De avtaler pris. De ringer for å avklare detaljer. Tilbyder er underveis — live status reduserer usikkerhet. Oppdraget markeres fullført. Vurdering og kvittering lukker løkken.</p>
-<p>Samme plattform fungerer motsatt vei: en tilbyder publiserer kapasitet, mottar henvendelser, filtrerer, og tar jobber uten å bygge egen app. Pro-laget gir mer rom når volumet vokser.</p>
-<h2>Risikoer i tosidige markeder — og hvordan produktet svarer</h2>
-<p>Spam, no-show, utrygg dialog, uklar betaling og dårlige anmeldelser dreper markedsplasser. Hurtighjelp svarer med moderering, private tråder, tydelig fullføring, supportkanaler og betalingsvalg tilpasset Norge. Det er ikke glamorous — det er det som avgjør om folk kommer tilbake.</p>
+<div class="lf-band" data-reveal="up">
+<div class="lf-band__copy">
+<p class="lf-band__label">Marked</p>
+<h2>Fra behov til fullført.</h2>
+<p>Publiser, match, forhandle, utfør og avslutt med vurdering og kvittering.</p><p>Vipps og Stripe Connect der oppgjørsflyt krever det.</p>
+</div>
+<div class="lf-band__visual" style="--g:rgba(255,255,255,0.15)"><div class="lf-stat"><span class="lf-stat__dot" style="background:#ff7a3d;color:#ff7a3d"></span><div><strong>Vipps Auth</strong><span>Norsk innlogging</span></div></div><div class="lf-stat"><span class="lf-stat__dot" style="background:#38bdf8;color:#38bdf8"></span><div><strong>Stripe Connect</strong><span>Utbetaling</span></div></div><div class="lf-stat"><span class="lf-stat__dot" style="background:#a78bfa;color:#a78bfa"></span><div><strong>Admin</strong><span>Moderering</span></div></div></div>
+</div>
 
+<div data-reveal="up">
+<p class="lf-kicker" style="margin-top:48px">Flyt</p>
+<h2 class="lf-title" style="font-size:clamp(1.5rem,3vw,2.1rem);max-width:22ch">Slik oppleves produktet</h2>
+<div class="lf-steps">
+<div class="lf-step"><div class="lf-step__num">1</div><h3>Publiser</h3><p>Behov eller tilbud</p></div>
+<div class="lf-step"><div class="lf-step__num">2</div><h3>Match</h3><p>Kart & chat</p></div>
+<div class="lf-step"><div class="lf-step__num">3</div><h3>Utfør</h3><p>Live status</p></div>
+<div class="lf-step"><div class="lf-step__num">4</div><h3>Fullfør</h3><p>Vurdering</p></div>
+</div>
+</div>
 
-<h2>Produktkvalitet, drift og hva «ferdig» betyr</h2>
-<p>Et produkt er ikke ferdig når den første skjermen ser pen ut. Det er ferdig når en fremmed bruker klarer flyten uten opplæring, når feil ikke ødelegger data, når admin kan hjelpe uten database-hacking, og når personvern-URL-en faktisk matcher det appen gjør. Hazher bygger med den listen som sjekkliste — fordi vi utgir egne apper i butikk, ikke bare leverer zip-filer.</p>
-<p>Vi velger Flutter fordi én kodebase reduserer avvik mellom iOS og Android. Vi velger Supabase fordi PostgreSQL, Auth, Realtime og Row Level Security gir oss et solid fundament. Vi dokumenterer Support og Privacy på hazher.no fordi Apple og Google krever det — og fordi brukere fortjener å finne hjelp uten å lete i mørket.</p>
-<p>Når du åpner en produktside her, skal du forstå mer enn tagline. Du skal forstå problemet, løsningen, modulene, teknologien, og hvem produktet er for. Forsiden holder det kort og jevnt. Dybden ligger bak «Les mer». Det er bevisst informasjonsarkitektur: ryddig førstinntrykk, komplett dokumentasjon ett klikk unna.</p>
-<p>Porteføljeverdiene på forsiden er veiledende estimater basert på IP, adminpaneler, API-er og enterprise-arkitektur. De er ikke bud. De er en måte å synliggjøre at dette ikke er hobbyprosjekter, men systemer med reell byggekost og reell gjenbruksverdi.</p>
-<p>Hvis du vurderer samarbeid, white-label, integrasjon eller et helt nytt produkt, start med en e-post til kontakt@hazher.no. Fortell hvilket problem du løser, hvem brukerne er, og hvilke plattformer du trenger. Vi svarer med konkrete spørsmål — ikke med generisk salgstekst.</p>
-<h2>Sikkerhet og tillit som produktkrav</h2>
-<p>Tillit bygges av små, kjedsommelige valg: minste privilege i tilganger, eksplisitt samtykke til posisjon, tydelig sletting av konto, logger uten unødvendig persondata, og feilmeldinger som ikke lekker interne detaljer. I markedsplasser betyr tillit også moderering og mulighet til å rapportere. I enterprise betyr tillit at RLS faktisk håndheves i databasen, ikke bare i UI.</p>
-<p>Hazher tar disse kravene inn i første arkitekturtegning. Det er dyrere tidlig — og billigere enn å «legge til sikkerhet senere». Det er også derfor produktene våre kan stå i porteføljeverdier i millionklassen: verdien sitter i det som er vanskelig å kopiere raskt.</p>
-<h2>Veien videre</h2>
-<p>Hvert produkt har et veikart. Noen får nye portaler. Noen får dypere API. Noen får flere språk. Noen får tyngre admin. Felles er at vi prioriterer det som reduserer operasjonell friksjon for ekte brukere. Hvis du er kunde, partner eller nysgjerrig leser: bruk Support-sidene for hjelp, Privacy for rettigheter, og produktsidene for å forstå hva systemet faktisk kan.</p>
+<blockquote class="lf-quote" data-reveal="up">
+<p>Tillit bygges av private tråder, synlig status og en tydelig avslutning.</p>
+<footer>— Hazher produktdesign</footer>
+</blockquote>
 
+<div class="lf-tech" data-reveal="up"><span>Flutter</span><span>Supabase</span><span>Vipps</span><span>Stripe</span><span>Realtime</span></div>
 
-<h2>Detaljer som skiller et ekte system fra en demo</h2>
-<p>Demoer skjuler kanttilfeller. Ekte systemer må svare på: Hva skjer når nettverket forsvinner midt i lagring? Hva skjer når to brukere redigerer samtidig? Hva skjer når en fil er for stor? Hva skjer når en rolle mister tilgang midt i en flyt? Hazher-produktene er bygget med slike spørsmål i bakhodet — fordi vi drifter dem selv.</p>
-<p>Vi skriver også for mennesker som skal beslutte: ledere, partnere, investorer og nysgjerrige brukere. Derfor finner du både overordnet verdi og operativ detalj på produktsidene. Forsiden er bevisst kort og jevn. Her går vi i dybden.</p>
-<p>Dokumentasjon på hazher.no er en del av produktet. Support-URL og Privacy-URL er ikke «juridisk utfylling» — de er innganger til hjelp og rettigheter. Når du kontakter oss, hjelper det å oppgi app-versjon, enhet og hva du allerede prøvde. Det gjør feilsøking raskere for alle.</p>
-<h2>Designspråk og bevegelse</h2>
-<p>Visuelt prioriterer vi hierarki fremfor støy. Mørk flate, tydelig typografi, kontrollerte fargeaccenter per produkt, og bevegelse som forklarer — ikke distraherer. Reduced motion respekteres. I appene brukes native mønstre; på web brukes lette reveal-animasjoner når elementer kommer inn i viewport.</p>
-<p>Grafikk på produktsidene — statistikklinjer, bento-ruter og visuelle celler — er ment å gjøre komplekse systemer skannbare. Du skal kunne skrolle raskt og likevel forstå modulene, deretter lese prosaen for dybde.</p>
-<h2>Integrasjoner og økosystem</h2>
-<p>Moderne apper lever sjelden alene. Auth-leverandører, kart, push, betaling, SMS, Brreg, e-post og lagring er typiske knytninger. Hver integrasjon utvider verdien — og ansvaret. Vi dokumenterer tredjepartsforhold i personvernerklæringer og designer fallbacks når en tjeneste er nede.</p>
-<p>For B2B-produkter er API og admin like viktige som mobil-UI. En partner skal kunne integrere. En admin skal kunne styre. En sluttbruker skal slippe å bry seg om infrastrukturen. Den trekanten er et gjennomgangstema i Hazher-porteføljen.</p>
-<h2>Oppsummering</h2>
-<p>Denne siden er den lange forklaringen. Hvis du bare trenger hjelp, gå til Support. Hvis du trenger rettigheter og databehandling, gå til Personvern. Hvis du vil samarbeide, skriv til kontakt@hazher.no. Hvis du vil forstå verdien av hele porteføljen, gå tilbake til forsiden og porteføljeverdi-tabellen — der står estimatene samlet, ryddig og uten støy.</p>
-
+<div class="lf-cta" data-reveal="scale">
+<h2>Klar for mer?</h2>
+<p>Support, personvern og kontakt — alltid tilgjengelig.</p>
+<div class="lf-cta__actions">
+<a href="Support/" class="btn btn-rapid-primary">Support</a>
+<a href="Privacy/" class="btn btn-ghost">Personvern</a>
+<a href="mailto:kontakt@hazher.no" class="btn btn-ghost">kontakt@hazher.no</a>
+<a href="../index.html" class="btn btn-ghost">← Hazher</a>
+</div>
+</div>
+</div>
 </section>
 <!-- /LONGFORM -->
+
 </main>
 <footer class="footer"><div class="wrap footer-grid">
 <div class="footer-brand"><div class="logo">Hurtighjelp</div><p>www.hazher.no/HURTIGHJELP</p></div>

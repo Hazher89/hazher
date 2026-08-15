@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="../hazher-apple.css"/>
 <link rel="stylesheet" href="../hazher-apple-ext.css"/>
 <link rel="stylesheet" href="../hazher-pro.css"/>
+<link rel="stylesheet" href="../hazher-longform.css"/>
 <script src="../main.js" defer></script>
 <script src="../hazher-apple.js" defer></script>
 </head>
@@ -93,75 +94,85 @@ Korte, menneskelige adressekoder for Kurdistan-regionen — fra GPS til koder so
 
 
 
+
+
 <!-- LONGFORM -->
-<section class="longform" id="dybde" data-reveal="up">
+<section class="lf longform" id="dybde">
+<div class="lf-wrap">
+<p class="lf-kicker" data-reveal="up">Dybde</p>
+<h2 class="lf-title" data-reveal="up">Navnishan i dybden</h2>
+<p class="lf-lead" data-reveal="up">B2B-adresseinfrastruktur for Kurdistan — GPS til korte koder med trust og API.</p>
 
-<h2>Komplett produktbeskrivelse — Navnishan</h2>
-<p class="longform-lead">Navnishan er B2B-adresseinfrastruktur for Kurdistan-regionen. Appen gjør GPS om til korte, delbare koder — med trust, claim, flerspråklig UI, support tickets og partner-API.</p>
-<div class="longform-visual">
-<div class="longform-visual__cell"><strong>Koder</strong><span>F.eks. ERB-A4F2</span></div>
-<div class="longform-visual__cell"><strong>Trust</strong><span>GPS-claim ≤ 60 m</span></div>
-<div class="longform-visual__cell"><strong>Dekning</strong><span>48 huber + KRI-polygon</span></div>
-<div class="longform-visual__cell"><strong>B2B</strong><span>API & partner-dashboard</span></div>
+<div class="lf-bento" data-stagger>
+<article class="lf-card">
+<span class="lf-card__glow" style="background:rgba(45,106,79,0.5)" aria-hidden="true"></span>
+<div class="lf-card__icon" aria-hidden="true">P</div>
+<h3>Geohash-koder</h3>
+<p>Korte, delbare adresser som ERB-A4F2.</p>
+</article>
+<article class="lf-card">
+<span class="lf-card__glow" style="background:rgba(255,215,0,0.25)" aria-hidden="true"></span>
+<div class="lf-card__icon" aria-hidden="true">✓</div>
+<h3>Trust</h3>
+<p>GPS-claim ≤ 60 m, rapport og revoke.</p>
+</article>
+<article class="lf-card">
+<span class="lf-card__glow" style="background:rgba(45,106,79,0.4)" aria-hidden="true"></span>
+<div class="lf-card__icon" aria-hidden="true">K</div>
+<h3>Dekning</h3>
+<p>48 huber + KRI-polygon for landsbyer.</p>
+</article>
+<article class="lf-card lf-bento__wide">
+<span class="lf-card__glow" style="background:rgba(125,206,160,0.35)" aria-hidden="true"></span>
+<div class="lf-card__icon" aria-hidden="true">API</div>
+<h3>B2B API</h3>
+<p>Partner-dashboard og monetisering.</p>
+</article>
 </div>
-<h2>Adresser som infrastruktur</h2>
-<p>Der formelle postadresser mangler, blir levering og feltarbeid improvisert. «Ved den grønne porten» fungerer til du bytter sjåfør. Navnishan etablerer en stabil referanse: en kort kode forankret i geohash og distriktshub.</p>
-<p>Dekningen er bygget for regionen: 48 hub-er pluss polygon-fallback slik at landsbyer og gårder inne i Kurdistan Region fortsatt får nærmeste hub-kode. Estimert verdi 700k–1,0 mill. NOK speiler at dette er infrastruktur + API, ikke bare en kart-app.</p>
-<h2>Kart, generering, søk og deling</h2>
-<p>Brukeren åpner kart, genererer kode, søker eksisterende adresser og deler dem. Språkene sorani, badini, arabisk og engelsk er tilgjengelige i appen. Posisjonstillatelse spørres når kartet trengs — ikke som unødvendig onboarding-støy.</p>
-<h2>Claim, trust, rapport og misbrukskontroll</h2>
-<p>Å claime en adresse krever at du er nær nok (ca. 60 meter) for GPS-verifisering. Trust-nivåer kommuniserer usikkerhet: unverified, gps_verified, strong, disputed, revoked. Rapporter kan eskalere til tvist. Admin kan revoke.</p>
-<p>Kvoter (daglig og aktive claims) begrenser misbruk. Primær/hjemmeadresse og «jeg har flyttet» (arkiv) støtter ekte livshendelser. Dette er anti-abuse design — kritisk for at kodebasen forblir troverdig.</p>
-<h2>Support og B2B-API</h2>
-<p>Support tickets med tråd, admin-svar og push gjør at brukere får hjelp inne i produktet. For partnere finnes dashboard og API-monetisering: bedrifter kan integrere adressekoder i egne leverings- eller feltløsninger.</p>
-<p>Auth skjer via Apple og Google gjennom Supabase. RLS beskytter data. Offisielle Support-, Privacy- og Terms-URL-er ligger på hazher.no for App Store Connect.</p>
-<h2>Hvorfor Navnishan betyr noe</h2>
-<p>Når en kurer, en butikk og en kunde kan referere samme kode, synker feilraten. Når trust er synlig, synker konfliktnivået. Når API finnes, blir Navnishan en plattform — ikke bare en forbrukerflate. Det er produktstrategien.</p>
-<p>I produksjon handler kvalitet om det som skjer etter lansering: feil som dukker opp på én telefonmodell, nettverk som dropper midt i en sync, og brukere som finner geniale — eller destruktive — snarveier. Hazher bygger derfor med observabilitet i bakhodet: logger som ikke lekker persondata, tydelige feilmeldinger, og adminflater som lar oss hjelpe uten å be brukeren «prøv igjen» i blinde.</p>
-<p>Personvern er ikke en side nederst i menyen. Det er valg om hva som lagres, hvor lenge, hvem som ser det, og hvordan sletting faktisk fungerer. Hver app på hazher.no har dedikerte Support- og Privacy-URL-er fordi butikkene krever det — og fordi brukerne fortjener det.</p>
-<p>Når vi beskriver «tusenvis av detaljer», mener vi arbeidsflyter: hvem trykker hva, hvilken status går til hvilken rolle, hva skjer ved avbrudd, hva skjer ved konflikt. Det er der ekte produkter skilles fra demoskjermer.</p>
 
+<div class="lf-chips" data-reveal="up"><span class="lf-chip">Geohash</span><span class="lf-chip">Trust</span><span class="lf-chip">API</span><span class="lf-chip">Supabase</span></div>
 
-<h2>Fra GPS til kode folk kan si høyt</h2>
-<p>En god adressekode er kort nok til å diktere, stabil nok til å gjenbruke, og forankret nok til å unngå kollisjoner. Navnishan kombinerer hub-prefiks med geohash-segment for å treffe den balansen. Når noen sier koden i telefonen, skal mottaker finne samme punkt på kartet.</p>
-<h2>Trust er produktets valuta</h2>
-<p>Uten trust blir koder bare tekst. Med GPS-claim, kvoter, rapport og revoke blir kodene et system. Det er hardere å bygge — og vanskeligere å kopiere overfladisk. For B2B-partnere er det også det som gjør API verdifullt: de integrerer ikke bare koordinater, de integrerer en tillitsmodell.</p>
+<div class="lf-band" data-reveal="up">
+<div class="lf-band__copy">
+<p class="lf-band__label">Infrastruktur</p>
+<h2>Når «ved porten» ikke holder.</h2>
+<p>Kurerer, butikker og feltteam trenger samme stabile referanse.</p><p>Sorani, badini, arabisk og engelsk i appen.</p>
+</div>
+<div class="lf-band__visual" style="--g:rgba(255,255,255,0.15)"><div class="lf-stat"><span class="lf-stat__dot" style="background:#2d6a4f;color:#2d6a4f"></span><div><strong>4 språk</strong><span>Førstelinje</span></div></div><div class="lf-stat"><span class="lf-stat__dot" style="background:#ffd700;color:#ffd700"></span><div><strong>Claim</strong><span>GPS-verifisert</span></div></div><div class="lf-stat"><span class="lf-stat__dot" style="background:#95d5b2;color:#95d5b2"></span><div><strong>Support</strong><span>Tickets + push</span></div></div></div>
+</div>
 
+<div data-reveal="up">
+<p class="lf-kicker" style="margin-top:48px">Flyt</p>
+<h2 class="lf-title" style="font-size:clamp(1.5rem,3vw,2.1rem);max-width:22ch">Slik oppleves produktet</h2>
+<div class="lf-steps">
+<div class="lf-step"><div class="lf-step__num">1</div><h3>Kart</h3><p>Generer kode</p></div>
+<div class="lf-step"><div class="lf-step__num">2</div><h3>Claim</h3><p>Verifiser GPS</p></div>
+<div class="lf-step"><div class="lf-step__num">3</div><h3>Del</h3><p>Send kode</p></div>
+<div class="lf-step"><div class="lf-step__num">4</div><h3>Integrer</h3><p>Partner-API</p></div>
+</div>
+</div>
 
-<h2>Produktkvalitet, drift og hva «ferdig» betyr</h2>
-<p>Et produkt er ikke ferdig når den første skjermen ser pen ut. Det er ferdig når en fremmed bruker klarer flyten uten opplæring, når feil ikke ødelegger data, når admin kan hjelpe uten database-hacking, og når personvern-URL-en faktisk matcher det appen gjør. Hazher bygger med den listen som sjekkliste — fordi vi utgir egne apper i butikk, ikke bare leverer zip-filer.</p>
-<p>Vi velger Flutter fordi én kodebase reduserer avvik mellom iOS og Android. Vi velger Supabase fordi PostgreSQL, Auth, Realtime og Row Level Security gir oss et solid fundament. Vi dokumenterer Support og Privacy på hazher.no fordi Apple og Google krever det — og fordi brukere fortjener å finne hjelp uten å lete i mørket.</p>
-<p>Når du åpner en produktside her, skal du forstå mer enn tagline. Du skal forstå problemet, løsningen, modulene, teknologien, og hvem produktet er for. Forsiden holder det kort og jevnt. Dybden ligger bak «Les mer». Det er bevisst informasjonsarkitektur: ryddig førstinntrykk, komplett dokumentasjon ett klikk unna.</p>
-<p>Porteføljeverdiene på forsiden er veiledende estimater basert på IP, adminpaneler, API-er og enterprise-arkitektur. De er ikke bud. De er en måte å synliggjøre at dette ikke er hobbyprosjekter, men systemer med reell byggekost og reell gjenbruksverdi.</p>
-<p>Hvis du vurderer samarbeid, white-label, integrasjon eller et helt nytt produkt, start med en e-post til kontakt@hazher.no. Fortell hvilket problem du løser, hvem brukerne er, og hvilke plattformer du trenger. Vi svarer med konkrete spørsmål — ikke med generisk salgstekst.</p>
-<h2>Sikkerhet og tillit som produktkrav</h2>
-<p>Tillit bygges av små, kjedsommelige valg: minste privilege i tilganger, eksplisitt samtykke til posisjon, tydelig sletting av konto, logger uten unødvendig persondata, og feilmeldinger som ikke lekker interne detaljer. I markedsplasser betyr tillit også moderering og mulighet til å rapportere. I enterprise betyr tillit at RLS faktisk håndheves i databasen, ikke bare i UI.</p>
-<p>Hazher tar disse kravene inn i første arkitekturtegning. Det er dyrere tidlig — og billigere enn å «legge til sikkerhet senere». Det er også derfor produktene våre kan stå i porteføljeverdier i millionklassen: verdien sitter i det som er vanskelig å kopiere raskt.</p>
-<h2>Veien videre</h2>
-<p>Hvert produkt har et veikart. Noen får nye portaler. Noen får dypere API. Noen får flere språk. Noen får tyngre admin. Felles er at vi prioriterer det som reduserer operasjonell friksjon for ekte brukere. Hvis du er kunde, partner eller nysgjerrig leser: bruk Support-sidene for hjelp, Privacy for rettigheter, og produktsidene for å forstå hva systemet faktisk kan.</p>
+<blockquote class="lf-quote" data-reveal="up">
+<p>Adresse er infrastruktur. Trust er valutaen.</p>
+<footer>— Hazher produktdesign</footer>
+</blockquote>
 
+<div class="lf-tech" data-reveal="up"><span>Flutter</span><span>Supabase</span><span>Apple/Google Auth</span><span>RLS</span></div>
 
-<h2>Detaljer som skiller et ekte system fra en demo</h2>
-<p>Demoer skjuler kanttilfeller. Ekte systemer må svare på: Hva skjer når nettverket forsvinner midt i lagring? Hva skjer når to brukere redigerer samtidig? Hva skjer når en fil er for stor? Hva skjer når en rolle mister tilgang midt i en flyt? Hazher-produktene er bygget med slike spørsmål i bakhodet — fordi vi drifter dem selv.</p>
-<p>Vi skriver også for mennesker som skal beslutte: ledere, partnere, investorer og nysgjerrige brukere. Derfor finner du både overordnet verdi og operativ detalj på produktsidene. Forsiden er bevisst kort og jevn. Her går vi i dybden.</p>
-<p>Dokumentasjon på hazher.no er en del av produktet. Support-URL og Privacy-URL er ikke «juridisk utfylling» — de er innganger til hjelp og rettigheter. Når du kontakter oss, hjelper det å oppgi app-versjon, enhet og hva du allerede prøvde. Det gjør feilsøking raskere for alle.</p>
-<h2>Designspråk og bevegelse</h2>
-<p>Visuelt prioriterer vi hierarki fremfor støy. Mørk flate, tydelig typografi, kontrollerte fargeaccenter per produkt, og bevegelse som forklarer — ikke distraherer. Reduced motion respekteres. I appene brukes native mønstre; på web brukes lette reveal-animasjoner når elementer kommer inn i viewport.</p>
-<p>Grafikk på produktsidene — statistikklinjer, bento-ruter og visuelle celler — er ment å gjøre komplekse systemer skannbare. Du skal kunne skrolle raskt og likevel forstå modulene, deretter lese prosaen for dybde.</p>
-<h2>Integrasjoner og økosystem</h2>
-<p>Moderne apper lever sjelden alene. Auth-leverandører, kart, push, betaling, SMS, Brreg, e-post og lagring er typiske knytninger. Hver integrasjon utvider verdien — og ansvaret. Vi dokumenterer tredjepartsforhold i personvernerklæringer og designer fallbacks når en tjeneste er nede.</p>
-<p>For B2B-produkter er API og admin like viktige som mobil-UI. En partner skal kunne integrere. En admin skal kunne styre. En sluttbruker skal slippe å bry seg om infrastrukturen. Den trekanten er et gjennomgangstema i Hazher-porteføljen.</p>
-<h2>Oppsummering</h2>
-<p>Denne siden er den lange forklaringen. Hvis du bare trenger hjelp, gå til Support. Hvis du trenger rettigheter og databehandling, gå til Personvern. Hvis du vil samarbeide, skriv til kontakt@hazher.no. Hvis du vil forstå verdien av hele porteføljen, gå tilbake til forsiden og porteføljeverdi-tabellen — der står estimatene samlet, ryddig og uten støy.</p>
-
-
-<h2>Leveringsfeil er adressefeil</h2>
-<p>I regioner uten robust adresseinfrastruktur betaler alle prisen: kurerer, butikker, helseaktører, feltteam og familier. Navnishan angriper rotårsaken ved å standardisere referansen til et punkt.</p>
-<p>En kode uten trust er svak. En trust-modell uten anti-abuse er naiv. En app uten API er en øy. Navnishan tar alle tre på alvor: geohash-koder, GPS-claim med kvoter og tvist, og B2B-API for partnere som vil bygge oppå infrastrukturen.</p>
-<p>Flerspråk er ikke «nice to have» her. Det er tilgjengelighet. Når sorani og badini er førstelinje, signaliserer produktet hvem det er laget for. Det er også en strategisk barriere: overfladiske kopier glemmer språk og tillit, og faller sammen i felt.</p>
-
+<div class="lf-cta" data-reveal="scale">
+<h2>Klar for mer?</h2>
+<p>Support, personvern og kontakt — alltid tilgjengelig.</p>
+<div class="lf-cta__actions">
+<a href="Support/" class="btn btn-navni-primary">Support</a>
+<a href="Privacy/" class="btn btn-ghost">Personvern</a>
+<a href="mailto:kontakt@hazher.no" class="btn btn-ghost">kontakt@hazher.no</a>
+<a href="../index.html" class="btn btn-ghost">← Hazher</a>
+</div>
+</div>
+</div>
 </section>
 <!-- /LONGFORM -->
+
 </main>
 
 <footer class="footer">
