@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Hazher — Enterprise-apper med egenutviklet IP</title>
+    <title>Hazher</title>
     <meta
       name="description"
       content="Hazher bygger DriftPro, Hurtighjelp, Loop Marked, Navnishan, Ali Barber, KAPRE og Delelader. Estimert porteføljeverdi ~6,6–9,6 mill. NOK."
@@ -11,19 +11,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="hazher-pro.css" />
+    <link rel="stylesheet" href="hazher-home.css" />
     <script src="main.js" defer></script>
+    <script src="hazher-home.js" defer></script>
   </head>
-  <body>
+  <body class="hz-home apple-site">
     <div class="scroll-progress" aria-hidden="true"></div>
-    <div class="bg-mesh" aria-hidden="true" data-parallax="0.03"></div>
-    <div class="bg-grid" aria-hidden="true" data-parallax="0.06"></div>
+    <div class="bg-mesh" aria-hidden="true"></div>
+    <div class="bg-grid" aria-hidden="true"></div>
 
-    <header class="nav home-nav-slim">
+    <header class="nav">
       <div class="wrap nav-inner">
         <a href="index.html" class="logo">Hazher</a>
         <button type="button" class="nav-toggle" aria-label="Åpne meny" id="navToggle">
@@ -33,284 +35,195 @@
         </button>
         <nav class="nav-links" id="navLinks" aria-label="Hovedmeny">
           <a href="#produkter">Produkter</a>
-          <a href="#portefoljeverdi">Verdi</a>
+          <a href="#verdi">Verdi</a>
           <a href="#tjenester">Tjenester</a>
-          <a href="#om">Om</a>
           <a href="#kontakt" class="nav-cta">Kontakt</a>
         </nav>
       </div>
     </header>
 
     <main>
-      <section class="pride-hero" id="top">
-        <div class="pride-hero__atmosphere" aria-hidden="true"></div>
-        <div class="wrap hero-grid">
-          <div data-reveal="left">
-            <p class="pride-kicker">Norsk apphus · Flutter · Supabase</p>
-            <h1 class="pride-brand">Hazher</h1>
-            <p class="pride-lead">
-              Vi designer og bygger komplette produkter — fra enterprise-logistikk til markedsplasser og B2B-infrastruktur.
-              Hver app har egen dybdeside med full funksjonsbeskrivelse.
-            </p>
-            <div class="hero-actions">
-              <a href="#produkter" class="btn btn-primary">Se produktene</a>
-              <a href="#portefoljeverdi" class="btn btn-ghost">Porteføljeverdi</a>
-              <a href="#kontakt" class="btn btn-ghost">Kontakt</a>
+      <section class="hz-hero" id="top">
+        <div class="hz-hero__orb" aria-hidden="true"></div>
+        <p class="hz-hero__kicker" data-reveal="up">Norsk apphus</p>
+        <h1 class="hz-hero__title" data-reveal="up">Hazher</h1>
+        <p class="hz-hero__lead" data-reveal="up">
+          Produkter bygget for ekte drift — enterprise-logistikk, markedsplasser og B2B-infrastruktur.
+        </p>
+        <div class="hz-hero__cta" data-reveal="up">
+          <a href="#produkter" class="hz-btn hz-btn--white">Utforsk produktene</a>
+          <a href="#kontakt" class="hz-btn hz-btn--ghost">Kontakt</a>
+        </div>
+
+        <div class="hz-float" id="hzFloat" aria-label="Produkter" data-reveal="scale">
+          <a class="hz-float__item" href="DRIFTPRO/" title="DriftPro"><img src="images/driftpro-app-icon.png" width="80" height="80" alt="DriftPro" /></a>
+          <a class="hz-float__item" href="HURTIGHJELP/" title="Hurtighjelp"><img src="images/hurtighjelp-app-icon.png" width="64" height="64" alt="Hurtighjelp" /></a>
+          <a class="hz-float__item" href="LOOPMARKED/" title="Loop Marked"><img src="images/loop-marked-icon.png" width="72" height="72" alt="Loop Marked" /></a>
+          <a class="hz-float__item" href="NAVNISHAN/" title="Navnishan"><img src="images/navnishan-app-icon.png" width="80" height="80" alt="Navnishan" /></a>
+          <a class="hz-float__item" href="ALIBARBER/" title="Ali Barber"><img src="images/ali-barber-app-icon.png" width="64" height="64" alt="Ali Barber" /></a>
+          <a class="hz-float__item" href="KAPRE/" title="KAPRE"><img src="images/kapre-app-icon.png" width="72" height="72" alt="KAPRE" /></a>
+          <a class="hz-float__item" href="DELELADER/" title="Delelader"><img src="images/delelader-app-icon.png" width="60" height="60" alt="Delelader" /></a>
+        </div>
+        <p class="hz-scroll" aria-hidden="true">Scroll</p>
+      </section>
+
+      <section class="hz-section" id="produkter">
+        <div class="wrap">
+          <p class="hz-section__label" data-reveal="up">Produkter</p>
+          <h2 class="hz-section__title" data-reveal="up">Syv systemer. Én standard.</h2>
+          <p class="hz-section__desc" data-reveal="up">
+            Kort oversikt. Åpne et produkt for full funksjonsbeskrivelse, arkitektur, support og personvern.
+          </p>
+
+          <div class="hz-products" data-stagger>
+            <a class="hz-product" href="DRIFTPRO/">
+              <div class="hz-product__icon"><img src="images/driftpro-app-icon.png" width="56" height="56" alt="" /></div>
+              <div class="hz-product__text">
+                <h3>DriftPro</h3>
+                <p>HMS, HR, stempling, partnere, ruter og last-mile — enterprise for moderne drift.</p>
+              </div>
+              <span class="hz-product__meta">3,5–5,0 mill.</span>
+              <span class="hz-product__arrow" aria-hidden="true">→</span>
+            </a>
+
+            <a class="hz-product" href="HURTIGHJELP/">
+              <div class="hz-product__icon"><img src="images/hurtighjelp-app-icon.png" width="56" height="56" alt="" /></div>
+              <div class="hz-product__text">
+                <h3>Hurtighjelp</h3>
+                <p>Norsk markedsplass for tjenester med chat, tale, live transport og trygg oppgjørsflyt.</p>
+              </div>
+              <span class="hz-product__meta">1,2–1,8 mill.</span>
+              <span class="hz-product__arrow" aria-hidden="true">→</span>
+            </a>
+
+            <a class="hz-product" href="LOOPMARKED/">
+              <div class="hz-product__icon"><img src="images/loop-marked-icon.png" width="56" height="56" alt="" /></div>
+              <div class="hz-product__text">
+                <h3>Loop Marked</h3>
+                <p>Sirkulær markedsplass med Lumo, kryptert chat og flerspråklig opplevelse.</p>
+              </div>
+              <span class="hz-product__meta">800k–1,2 mill.</span>
+              <span class="hz-product__arrow" aria-hidden="true">→</span>
+            </a>
+
+            <a class="hz-product" href="NAVNISHAN/">
+              <div class="hz-product__icon"><img src="images/navnishan-app-icon.png" width="56" height="56" alt="" /></div>
+              <div class="hz-product__text">
+                <h3>Navnishan</h3>
+                <p>Adresseinfrastruktur for Kurdistan — geohash-koder, trust og B2B API.</p>
+              </div>
+              <span class="hz-product__meta">700k–1,0 mill.</span>
+              <span class="hz-product__arrow" aria-hidden="true">→</span>
+            </a>
+
+            <a class="hz-product" href="ALIBARBER/">
+              <div class="hz-product__icon"><img src="images/ali-barber-app-icon.png" width="56" height="56" alt="" /></div>
+              <div class="hz-product__text">
+                <h3>Ali Barber</h3>
+                <p>Premium salon-booking med smart kapasitet og Command Center.</p>
+              </div>
+              <span class="hz-product__meta">400–600k</span>
+              <span class="hz-product__arrow" aria-hidden="true">→</span>
+            </a>
+
+            <a class="hz-product" href="KAPRE/">
+              <div class="hz-product__icon"><img src="images/kapre-app-icon.png" width="56" height="56" alt="" /></div>
+              <div class="hz-product__text">
+                <h3>KAPRE</h3>
+                <p>Kapitalvarer — bil, bolig, båt, MC og hytte — med kart, chat og visninger.</p>
+              </div>
+              <span class="hz-product__meta">Kapitalvarer</span>
+              <span class="hz-product__arrow" aria-hidden="true">→</span>
+            </a>
+
+            <a class="hz-product" href="DELELADER/">
+              <div class="hz-product__icon"><img src="images/delelader-app-icon.png" width="56" height="56" alt="" /></div>
+              <div class="hz-product__text">
+                <h3>Delelader</h3>
+                <p>Del hjemmelader trygt — annonser, booking og chat mellom naboer.</p>
+              </div>
+              <span class="hz-product__meta">Deling</span>
+              <span class="hz-product__arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="hz-section" id="verdi">
+        <div class="wrap">
+          <p class="hz-section__label" data-reveal="up">Porteføljeverdi</p>
+          <h2 class="hz-section__title" data-reveal="up">Estimert IP-verdi</h2>
+          <p class="hz-section__desc" data-reveal="up">
+            Veiledende estimater basert på egenutviklet IP, adminpaneler, API-er og enterprise-arkitektur — ikke et bud.
+          </p>
+
+          <div class="hz-value" data-reveal="up">
+            <div class="hz-value__total">
+              <strong>~6,6 – 9,6 mill. NOK</strong>
+              <span>Samlet estimert porteføljeverdi</span>
+            </div>
+            <div class="hz-value__row">
+              <b>DriftPro</b>
+              <em>3,5 – 5,0 mill.</em>
+              <span>Enterprise B2B-logistikk, admin, live ruting, lager, avvik, support</span>
+            </div>
+            <div class="hz-value__row">
+              <b>Hurtighjelp</b>
+              <em>1,2 – 1,8 mill.</em>
+              <span>Tosidig markedsplass, Vipps, Stripe Connect, chat/kart, admin</span>
+            </div>
+            <div class="hz-value__row">
+              <b>Loop Marked</b>
+              <em>800k – 1,2 mill.</em>
+              <span>Sirkulærøkonomi, Lumo, admin, tvistehåndtering</span>
+            </div>
+            <div class="hz-value__row">
+              <b>Navnishan</b>
+              <em>700k – 1,0 mill.</em>
+              <span>B2B-adresseinfrastruktur, geohash, partner-API</span>
+            </div>
+            <div class="hz-value__row">
+              <b>Ali Barber</b>
+              <em>400 – 600k</em>
+              <span>Salon-SaaS med kalender og administrasjon</span>
             </div>
           </div>
-          <div class="hero-visual" data-reveal="scale" aria-label="Appikoner">
-            <div class="mockup-row mockup-row--apps">
-              <figure class="logo-showcase">
-                <div class="app-squircle app-squircle--hero app-squircle--dirf"><img src="images/driftpro-app-icon.png" width="120" height="120" alt="DriftPro" /></div>
-                <figcaption class="logo-showcase__label">DriftPro</figcaption>
-              </figure>
-              <figure class="logo-showcase">
-                <div class="app-squircle app-squircle--hero app-squircle--rapid"><img src="images/hurtighjelp-app-icon.png" width="120" height="120" alt="Hurtighjelp" /></div>
-                <figcaption class="logo-showcase__label">Hurtighjelp</figcaption>
-              </figure>
-              <figure class="logo-showcase">
-                <div class="app-squircle app-squircle--hero"><img src="images/loop-marked-icon.png" width="120" height="120" alt="Loop Marked" /></div>
-                <figcaption class="logo-showcase__label">Loop Marked</figcaption>
-              </figure>
-              <figure class="logo-showcase">
-                <div class="app-squircle app-squircle--hero app-squircle--navni"><img src="images/navnishan-app-icon.png" width="120" height="120" alt="Navnishan" /></div>
-                <figcaption class="logo-showcase__label">Navnishan</figcaption>
-              </figure>
-              <figure class="logo-showcase">
-                <div class="app-squircle app-squircle--hero app-squircle--barber"><img src="images/ali-barber-app-icon.png" width="120" height="120" alt="Ali Barber" /></div>
-                <figcaption class="logo-showcase__label">Ali Barber</figcaption>
-              </figure>
-              <figure class="logo-showcase">
-                <div class="app-squircle app-squircle--hero app-squircle--kapre"><img src="images/kapre-app-icon.png" width="120" height="120" alt="KAPRE" /></div>
-                <figcaption class="logo-showcase__label">KAPRE</figcaption>
-              </figure>
-              <figure class="logo-showcase">
-                <div class="app-squircle app-squircle--hero app-squircle--delelader"><img src="images/delelader-app-icon.png" width="120" height="120" alt="Delelader" /></div>
-                <figcaption class="logo-showcase__label">Delelader</figcaption>
-              </figure>
-            </div>
+          <p class="hz-note">Full funksjonskatalog for DriftPro: <a href="DRIFTPRO/#katalog">hazher.no/DRIFTPRO</a></p>
+        </div>
+      </section>
+
+      <section class="hz-section" id="tjenester">
+        <div class="wrap">
+          <p class="hz-section__label" data-reveal="up">Tjenester</p>
+          <h2 class="hz-section__title" data-reveal="up">Vi bygger for deg</h2>
+          <p class="hz-section__desc" data-reveal="up">
+            Samme kvalitet som egne produkter — fra idé til App Store.
+          </p>
+          <div class="hz-grid3" data-stagger>
+            <div class="hz-tile"><strong>Produkt &amp; design</strong><span>MVP, flyt og merkevare som føles native.</span></div>
+            <div class="hz-tile"><strong>Flutter &amp; sky</strong><span>iOS, Android, Supabase, RLS og sanntid.</span></div>
+            <div class="hz-tile"><strong>Utgivelse &amp; drift</strong><span>Butikkkrav, personvern og videreutvikling.</span></div>
           </div>
         </div>
       </section>
 
-      <section class="section" id="produkter">
+      <section class="hz-section" id="om">
         <div class="wrap">
-          <div class="section-head" data-reveal="up">
-            <p class="section-label">Produkter</p>
-            <h2>Samme standard. Ulikt domene.</h2>
-            <p class="section-desc">
-              Kort oversikt her. Trykk <strong>Les mer</strong> for full dokumentasjon, funksjoner, arkitektur og support.
-            </p>
-          </div>
-
-          <div class="product-equal" data-stagger>
-
-            <article class="product-equal__card dirf-accent">
-              <div class="product-equal__top">
-                <div class="app-squircle app-squircle--dirf"><img src="images/driftpro-app-icon.png" width="56" height="56" alt="" /></div>
-                <div><h3>DriftPro</h3><p>3,5–5,0 mill. NOK · Enterprise</p></div>
-              </div>
-              <p>HMS, HR, stempling, partnere, rute-PDF, Dispatch og last-mile — én plattform for moderne drift.</p>
-              <ul>
-                <li>Avvik, ROS, SJA, vernerunder, DMS</li>
-                <li>Fravær med Lovdata-regler</li>
-                <li>Sjåfør-/eierportal og flåte</li>
-                <li>Adminpanel, RLS, support-tickets</li>
-              </ul>
-              <a href="DRIFTPRO/" class="btn btn-dirf">Les mer</a>
-            </article>
-
-            <article class="product-equal__card rapid-accent">
-              <div class="product-equal__top">
-                <div class="app-squircle app-squircle--rapid"><img src="images/hurtighjelp-app-icon.png" width="56" height="56" alt="" /></div>
-                <div><h3>Hurtighjelp</h3><p>1,2–1,8 mill. NOK · Markedsplass</p></div>
-              </div>
-              <p>Norsk tosidig markedsplass for tjenester med chat, taleanrop, live transport og trygg oppgjørsflyt.</p>
-              <ul>
-                <li>Vipps Auth og Stripe Connect</li>
-                <li>Privat chat per interessent</li>
-                <li>Live Activity og kart</li>
-                <li>Adminpanel og support</li>
-              </ul>
-              <a href="HURTIGHJELP/" class="btn btn-rapid">Les mer</a>
-            </article>
-
-            <article class="product-equal__card loop-accent">
-              <div class="product-equal__top">
-                <div class="app-squircle app-squircle--loop"><img src="images/loop-marked-icon.png" width="56" height="56" alt="" /></div>
-                <div><h3>Loop Marked</h3><p>800k–1,2 mill. NOK · Sirkulær</p></div>
-              </div>
-              <p>Personvern-først markedsplass med Lumo-poengøkonomi, kryptert chat og flerspråklig opplevelse.</p>
-              <ul>
-                <li>E2E-kryptert chat</li>
-                <li>Lumo virtuell valuta</li>
-                <li>Kart, radius og tilbud</li>
-                <li>Admin og tvistehåndtering</li>
-              </ul>
-              <a href="LOOPMARKED/" class="btn btn-loop">Les mer</a>
-            </article>
-
-            <article class="product-equal__card navni-accent">
-              <div class="product-equal__top">
-                <div class="app-squircle app-squircle--navni"><img src="images/navnishan-app-icon.png" width="56" height="56" alt="" /></div>
-                <div><h3>Navnishan</h3><p>700k–1,0 mill. NOK · B2B adresse</p></div>
-              </div>
-              <p>Adresseinfrastruktur for Kurdistan: GPS til korte koder, trust/claim og partner-API.</p>
-              <ul>
-                <li>Geohash og distriktshuber</li>
-                <li>GPS-verifisert claim</li>
-                <li>Fire språk i appen</li>
-                <li>Support tickets og B2B API</li>
-              </ul>
-              <a href="NAVNISHAN/" class="btn btn-navni">Les mer</a>
-            </article>
-
-            <article class="product-equal__card barber-accent">
-              <div class="product-equal__top">
-                <div class="app-squircle app-squircle--barber"><img src="images/ali-barber-app-icon.png" width="56" height="56" alt="" /></div>
-                <div><h3>Ali Barber</h3><p>400k–600k NOK · Salon SaaS</p></div>
-              </div>
-              <p>Premium booking for salong: kundeapp, kalender, smart kapasitet og Command Center for admin.</p>
-              <ul>
-                <li>Timebestilling og stylistvalg</li>
-                <li>Sanntids åpningstider</li>
-                <li>Push og roller</li>
-                <li>Apple/Google Sign-In</li>
-              </ul>
-              <a href="ALIBARBER/" class="btn btn-barber">Les mer</a>
-            </article>
-
-            <article class="product-equal__card kapre-accent">
-              <div class="product-equal__top">
-                <div class="app-squircle app-squircle--kapre"><img src="images/kapre-app-icon.png" width="56" height="56" alt="" /></div>
-                <div><h3>KAPRE</h3><p>Kapitalvarer · Marked</p></div>
-              </div>
-              <p>Markedsplass for bil, bolig, båt, MC og hytte — kontaktformidling med kart, chat og bookinger.</p>
-              <ul>
-                <li>Avanserte filtre og kart</li>
-                <li>Privat chat og visninger</li>
-                <li>Vurderinger og support</li>
-                <li>RLS og moderering</li>
-              </ul>
-              <a href="KAPRE/" class="btn btn-kapre">Les mer</a>
-            </article>
-
-            <article class="product-equal__card delelader-accent">
-              <div class="product-equal__top">
-                <div class="app-squircle app-squircle--delelader"><img src="images/delelader-app-icon.png" width="56" height="56" alt="" /></div>
-                <div><h3>Delelader</h3><p>Hjemmelader · Deling</p></div>
-              </div>
-              <p>Del hjemmelader trygt: annonser, booking, chat og oppgjør mellom privatpersoner — uten App Store-betaling.</p>
-              <ul>
-                <li>Annonser og godkjenning</li>
-                <li>Booking og chat</li>
-                <li>Kart og tilgjengelighet</li>
-                <li>Support og personvern</li>
-              </ul>
-              <a href="DELELADER/" class="btn btn-delelader">Les mer</a>
-            </article>
-
-          </div>
+          <p class="hz-section__label" data-reveal="up">Om</p>
+          <h2 class="hz-section__title" data-reveal="up">Bygget i Norge.</h2>
+          <p class="hz-section__desc" data-reveal="up">
+            Hazher drives av Hama Hazher (Haz.HER Abdullah, org.nr. 837 568 382). Vi står bak DriftPro, Hurtighjelp,
+            Loop Marked, Navnishan, Ali Barber, KAPRE og Delelader — produkter i produksjon med admin, API og support.
+          </p>
         </div>
       </section>
 
-      <section class="section" id="portefoljeverdi">
+      <section class="hz-section" id="kontakt">
         <div class="wrap">
-          <div class="section-head" data-reveal="up">
-            <p class="section-label">Porteføljeverdi</p>
-            <h2>Estimert verdi av IP-en</h2>
-            <p class="section-desc">
-              Veiledende estimater basert på egenutviklet IP, adminpaneler, B2B-API-er og ferdig enterprise-arkitektur.
-              Dette er ikke et bud eller et tilbud.
-            </p>
-          </div>
-          <div class="valuation-table-wrap" data-reveal="up">
-            <table class="valuation-table">
-              <thead>
-                <tr><th>App</th><th>Estimert verdi</th><th>Begrunnelse</th></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>DriftPro</strong></td>
-                  <td>3,5 – 5,0 mill. NOK</td>
-                  <td>Enterprise B2B-logistikk, Next.js-admin, Supabase/Cloudflare, live ruting, lager, avvik og support.</td>
-                </tr>
-                <tr>
-                  <td><strong>Hurtighjelp</strong></td>
-                  <td>1,2 – 1,8 mill. NOK</td>
-                  <td>Tosidig markedsplass med Vipps Auth, Stripe Connect, sanntidschat/kart, admin og support.</td>
-                </tr>
-                <tr>
-                  <td><strong>Loop Marked</strong></td>
-                  <td>800k – 1,2 mill. NOK</td>
-                  <td>Sirkulærøkonomi med Lumo, admin-dashboard og tvistehåndtering.</td>
-                </tr>
-                <tr>
-                  <td><strong>Navnishan</strong></td>
-                  <td>700k – 1,0 mill. NOK</td>
-                  <td>B2B-adresseinfrastruktur for Kurdistan, geohash, partner-dashboard og API.</td>
-                </tr>
-                <tr>
-                  <td><strong>Ali Barber</strong></td>
-                  <td>400k – 600k NOK</td>
-                  <td>Salon-SaaS med kalendersynk og administrasjonsgrensesnitt.</td>
-                </tr>
-              </tbody>
-              <tfoot>
-                <tr>
-                  <td>Totalt</td>
-                  <td>~6,6 – 9,6 mill. NOK</td>
-                  <td>Egenutviklet IP, B2B API-er, komplette adminpaneler og nøkkelferdig arkitektur.</td>
-                </tr>
-              </tfoot>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="tjenester">
-        <div class="wrap">
-          <div class="section-head" data-reveal="up">
-            <p class="section-label">Tjenester</p>
-            <h2>Vi kan bygge appen din</h2>
-            <p class="section-desc">
-              Fra idé til App Store: produkt, design, Flutter, Supabase, personvern og utrulling — samme standard som egne produkter.
-            </p>
-          </div>
-          <div class="feature-grid" data-stagger>
-            <div class="feature-card"><strong>Produkt &amp; MVP</strong><span>Avgrensning, prioritering og tydelige suksesskriterier.</span></div>
-            <div class="feature-card"><strong>Design</strong><span>Native følelse, tydelig hierarki og merkevare.</span></div>
-            <div class="feature-card"><strong>Flutter</strong><span>Én kodebase for iOS og Android.</span></div>
-            <div class="feature-card"><strong>Backend</strong><span>Supabase, RLS, Edge Functions og sanntid.</span></div>
-            <div class="feature-card"><strong>Utgivelse</strong><span>Butikkkrav, personvern-URL-er og metadata.</span></div>
-            <div class="feature-card"><strong>Drift</strong><span>Feilretting, versjoner og videreutvikling.</span></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="om">
-        <div class="wrap">
-          <div class="section-head" data-reveal="up">
-            <p class="section-label">Om Hazher</p>
-            <h2>Bygget i Norge. Levert i produksjon.</h2>
-            <p class="section-desc">
-              Hazher drives av <strong>Hama Hazher</strong> (Haz.HER Abdullah, org.nr. 837 568 382).
-              Vi står bak DriftPro, Hurtighjelp, Loop Marked, Navnishan, Ali Barber, KAPRE og Delelader —
-              produkter med ekte brukere, adminpaneler og sikkerhetskrav.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="kontakt">
-        <div class="wrap">
-          <div class="cta-box" data-reveal="scale">
-            <h2>Ta kontakt</h2>
-            <p>Spørsmål om produkter, samarbeid eller support — send en e-post.</p>
-            <p style="margin-top: 16px">
-              <a href="mailto:kontakt@hazher.no" class="btn btn-primary">kontakt@hazher.no</a>
-              <a href="privacy.html" class="btn btn-ghost">Personvern</a>
-            </p>
+          <div class="hz-cta" data-reveal="scale">
+            <h2>La oss snakke</h2>
+            <p>Produkter, samarbeid eller support — én e-post er nok.</p>
+            <a href="mailto:kontakt@hazher.no" class="hz-btn hz-btn--white">kontakt@hazher.no</a>
           </div>
         </div>
       </section>
@@ -320,12 +233,12 @@
       <div class="wrap footer-grid">
         <div class="footer-brand">
           <div class="logo">Hazher</div>
-          <p>Enterprise-apper og egenutviklet IP · hazher.no</p>
+          <p>Enterprise-apper · hazher.no</p>
         </div>
         <div class="footer-links">
           <a href="DRIFTPRO/">DriftPro</a>
           <a href="HURTIGHJELP/">Hurtighjelp</a>
-          <a href="LOOPMARKED/">Loop Marked</a>
+          <a href="LOOPMARKED/">Loop</a>
           <a href="NAVNISHAN/">Navnishan</a>
           <a href="ALIBARBER/">Ali Barber</a>
           <a href="KAPRE/">KAPRE</a>
