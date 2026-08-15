@@ -22,7 +22,9 @@
   --accent: #38bdf8;
   --radius: 18px;
   --radius-lg: 26px;
-  --font: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: Syne, "Plus Jakarta Sans", system-ui, sans-serif;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --prose-width: 68ch;
 }
 
@@ -120,20 +122,20 @@ button:focus-visible {
   margin-inline: auto;
 }
 
-/* Headings: same font family, normal width */
+/* Headings: Syne display */
 h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font);
+  font-family: var(--font-display);
   font-stretch: 100%;
   font-weight: 700;
-  letter-spacing: -0.025em;
-  line-height: 1.2;
+  letter-spacing: -0.035em;
+  line-height: 1.15;
   color: var(--text);
 }
 
-/* Nav */
+/* Nav — glass pill (sitewide) */
 .nav {
   position: fixed;
   top: 0;
@@ -141,10 +143,16 @@ h4 {
   right: 0;
   z-index: 200;
   padding: 14px 0;
-  background: rgba(5, 5, 8, 0.72);
-  backdrop-filter: blur(18px);
-  border-bottom: 1px solid var(--border);
-  transition: box-shadow 0.35s ease, background 0.35s ease;
+  background: transparent;
+  backdrop-filter: none;
+  border-bottom: none;
+  transition: box-shadow 0.35s ease, background 0.35s ease, border-color 0.35s ease;
+}
+
+.nav.nav-scrolled {
+  background: rgba(5, 5, 8, 0.55);
+  backdrop-filter: saturate(180%) blur(22px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .nav-inner {
@@ -152,18 +160,34 @@ h4 {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  max-width: 980px;
+  width: calc(100% - 28px);
+  margin-inline: auto;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(22, 22, 28, 0.58);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: saturate(180%) blur(24px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.35);
+  transition: background 0.35s ease, box-shadow 0.35s ease;
+}
+
+.nav.nav-scrolled .nav-inner {
+  background: rgba(28, 28, 34, 0.88);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
 }
 
 .logo {
   display: inline-flex;
   align-items: center;
-  font-family: var(--font);
+  font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.2rem;
   letter-spacing: -0.03em;
   color: var(--text);
   text-decoration: none;
   line-height: 0;
+  transition: transform 0.4s var(--ease-out), opacity 0.25s ease;
 }
 
 .logo .logo-img {
@@ -181,6 +205,7 @@ h4 {
   text-decoration: none;
   color: #fff;
   opacity: 0.92;
+  transform: scale(1.04);
 }
 
 .nav-links {
@@ -194,28 +219,42 @@ h4 {
 .nav-links a {
   padding: 9px 14px;
   border-radius: 999px;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 500;
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
+  transition: color 0.25s ease, background 0.25s ease, transform 0.35s var(--ease-out);
 }
 
 .nav-links a:hover {
-  color: var(--text);
-  background: var(--surface);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
   text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.nav-links a.is-active {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .nav-cta {
-  background: var(--surface2) !important;
-  border: 1px solid var(--border);
-  color: var(--text) !important;
+  background: #fff !important;
+  border: none !important;
+  color: #0a0a0f !important;
+  font-weight: 600 !important;
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.12);
+}
+
+.nav-cta:hover {
+  background: #f4f4f5 !important;
+  transform: translateY(-1px) scale(1.02);
 }
 
 .nav-toggle {
   display: none;
-  background: var(--surface2);
-  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   color: var(--text);
   width: 44px;
   height: 44px;
@@ -231,7 +270,7 @@ h4 {
   }
   .nav-links {
     position: fixed;
-    top: 70px;
+    top: 84px;
     left: 20px;
     right: 20px;
     flex-direction: column;

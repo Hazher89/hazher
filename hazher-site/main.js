@@ -147,6 +147,22 @@
     }
   }
 
+  function initMagneticCta() {
+    if (reduceMotion) return;
+    if (!window.matchMedia("(pointer: fine)").matches) return;
+    document.querySelectorAll(".nav-cta, .btn").forEach(function (btn) {
+      btn.addEventListener("pointermove", function (e) {
+        var r = btn.getBoundingClientRect();
+        var dx = e.clientX - (r.left + r.width / 2);
+        var dy = e.clientY - (r.top + r.height / 2);
+        btn.style.transform = "translate(" + dx * 0.12 + "px," + dy * 0.14 + "px)";
+      });
+      btn.addEventListener("pointerleave", function () {
+        btn.style.transform = "";
+      });
+    });
+  }
+
   initNav();
   initReveal();
   initStaggerParents();
@@ -155,4 +171,5 @@
   initMobileNav();
   initYear();
   initCookies();
+  initMagneticCta();
 })();
