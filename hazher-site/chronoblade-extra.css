@@ -1,0 +1,75 @@
+/* Chrono Blade product theme — emerald / gold clockwork */
+.theme-chrono .apple-hero__glow {
+  background:
+    radial-gradient(ellipse 55% 45% at 50% 30%, rgba(34, 197, 94, 0.28), transparent 70%),
+    radial-gradient(ellipse 40% 35% at 70% 60%, rgba(212, 175, 55, 0.18), transparent 65%);
+}
+
+.theme-chrono .apple-hero__eyebrow {
+  color: rgba(134, 239, 172, 0.85);
+}
+
+.theme-chrono .apple-hero__icon .app-squircle {
+  box-shadow:
+    0 0 0 1px rgba(34, 197, 94, 0.35),
+    0 24px 60px rgba(0, 0, 0, 0.55),
+    0 0 80px rgba(34, 197, 94, 0.22);
+}
+
+.theme-chrono .apple-feature__label {
+  color: #4ade80;
+}
+
+.btn-chrono-primary {
+  background: linear-gradient(135deg, #22c55e, #16a34a) !important;
+  color: #04140a !important;
+  border: none !important;
+  font-weight: 700;
+}
+
+.btn-chrono-primary:hover {
+  filter: brightness(1.08);
+}
+
+.app-squircle--chrono {
+  border-radius: 28%;
+  overflow: hidden;
+  background: #0a0e12;
+}
+
+.theme-chrono .chrono-graphics {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.theme-chrono .chrono-graphics p {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 0 0 1.1rem;
+}
+
+.theme-chrono .chrono-graphics h3 {
+  margin: 2rem 0 0.75rem;
+  font-size: 1.35rem;
+  color: #fff;
+}
+
+.theme-chrono .chrono-map-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+  margin: 1.25rem 0 2rem;
+}
+
+.theme-chrono .chrono-map-grid span {
+  display: block;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(34, 197, 94, 0.18);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.88);
+  text-align: center;
+}

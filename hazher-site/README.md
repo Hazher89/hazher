@@ -1,21 +1,22 @@
 # hazher.no (statisk site)
 
-Landingsside for Hazher med **DriftPro**, Hurtighjelp, Loop Marked, **Navnishan**, Ali Barber, KAPRE og Delelader.
+Landingsside for Hazher med **DriftPro**, **Chrono Blade**, Hurtighjelp, Loop Marked, **Navnishan**, Ali Barber, KAPRE og Delelader.
 EcoShelf er fjernet fra forsiden (redirect til `/`).
 
 Undermapper (når **root** er `hazher-site`):
 
 - `DRIFTPRO/` — full funksjonskatalog, Support, Privacy, Terms  
+- `CHRONOBLADE/` — 3D zombie co-op TPS, Support / Privacy / Terms (App Store URL-er)  
 - `NAVNISHAN/` — produkt + Support / Privacy / Terms (App Store URL-er)  
 - `HURTIGHJELP/`, `LOOPMARKED/`, `ALIBARBER/`, `KAPRE/`, `DELELADER/` — produkt-hubs  
 - `ECOSHELF/` — retired (redirect)
 
-Offentlige URL-er (Navnishan / App Store):
+Offentlige URL-er (Chrono Blade / App Store):
 
-- Support: `https://hazher.no/NAVNISHAN/Support/`
-- Privacy: `https://hazher.no/NAVNISHAN/Privacy/`
-- Terms: `https://hazher.no/NAVNISHAN/Terms/`
-- Hub: `https://hazher.no/NAVNISHAN/`
+- Hub: `https://hazher.no/CHRONOBLADE/`
+- Support: `https://hazher.no/CHRONOBLADE/Support/`
+- Privacy: `https://hazher.no/CHRONOBLADE/Privacy/`
+- Terms: `https://hazher.no/CHRONOBLADE/Terms/`
 
 DriftPro funksjonskatalog: `https://hazher.no/DRIFTPRO/#katalog`
 
