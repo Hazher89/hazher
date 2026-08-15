@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Delelader — del hjemmelader for elbil | Hazher</title>
-<meta name="description" content="Delelader er den norske appen for å dele hjemmelader: kart, booking i chat, Vipps/kontant mellom parter, moderering av annonser og trygg support — bygget av Hazher."/>
+<meta name="description" content="Delelader: del hjemmelader med kart, booking, Vipps, admin-hub, support-tickets og native Apple CarPlay. Estimert IP-verdi 1,0–1,5 mill. NOK — Hazher."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
@@ -41,9 +41,9 @@
 <section class="apple-hero">
 <div class="apple-hero__glow" aria-hidden="true"></div>
 <div class="apple-hero__inner wrap">
-<p class="apple-hero__eyebrow" data-reveal="up">Elbil · Norge · iOS &amp; Android</p>
+<p class="apple-hero__eyebrow" data-reveal="up">Elbil · Norge · CarPlay · Estimert verdi 1,0–1,5 mill. NOK</p>
 <h1 data-reveal="up">Delelader.</h1>
-<p class="apple-hero__lead" data-reveal="up">Del hjemmeladeren din — eller finn en ledig lader i nabolaget. Kart, kalender, booking i chat og betaling direkte mellom dere (Vipps eller kontant). Annonser godkjennes før de blir synlige. Bygget i Flutter med Supabase av Hazher.</p>
+<p class="apple-hero__lead" data-reveal="up">Del hjemmeladeren din — eller finn en ledig lader i nabolaget. Kart, kalender, booking i chat og Vipps/kontant mellom dere. Annonser godkjennes før de blir synlige. Bak kulissene: superadmin-kontrollrom, support-ticket-system med tråder — og native <strong>Apple CarPlay</strong> slik at sjåfører finner ladere uten å ta opp telefonen. Bygget i Flutter med Supabase av Hazher.</p>
 <div class="apple-hero__actions" data-reveal="up">
 <a href="Support/" class="btn btn-delelader-primary">Support</a>
 <a href="Privacy/" class="btn btn-ghost">Personvern</a>
@@ -94,6 +94,50 @@
 </div>
 </section>
 
+<section class="apple-feature" id="carplay" data-reveal="up">
+<div class="apple-feature__grid">
+<div>
+<p class="apple-feature__label">CarPlay · unik IP</p>
+<h2>Lading i bilen — ikke bare i lomma.</h2>
+<p>Delelader har native Apple CarPlay-integrasjon (Swift CarPlay-scene + Flutter-bridge). Sjåfører kan se ladere i bilgrensesnittet mens de kjører — et lag de fleste delingsapper aldri bygger. CarPlay er sjelden, kostbart å gjøre riktig, og hever produktet fra «nok en kart-app» til mobilitets-IP.</p>
+</div>
+<div class="apple-feature__visual" data-stagger>
+<div class="apple-stat-line"><span class="apple-stat-line__dot" style="background:var(--delelader)"></span><div><strong>Native CarPlay</strong><span>iOS scene + bridge</span></div></div>
+<div class="apple-stat-line"><span class="apple-stat-line__dot" style="background:#38bdf8"></span><div><strong>Charger store</strong><span>Data til bil-UI</span></div></div>
+<div class="apple-stat-line"><span class="apple-stat-line__dot" style="background:#fbbf24"></span><div><strong>Hands-on-wheel</strong><span>Tryggere søk underveis</span></div></div>
+</div>
+</div>
+</section>
+
+<section class="apple-feature" id="admin-dl" data-reveal="up">
+<div class="apple-feature__grid">
+<div>
+<p class="apple-feature__label">Admin &amp; support</p>
+<h2>Kontrollrom + tickets — ikke «send e-post».</h2>
+<p>Superadmin får hub med KPI (åpne support-tickets, pending ladere, chatter, rapporter), moderasjonskø for nye laderannonser, brukerstyring, chat-lås og support-inbox. Brukere åpner support-saker i appen med tråd (liste → ny sak → samtale). Det er samme ops-standard som øvrige Hazher-plattformer — kritisk for App Store-troverdighet og faktisk drift.</p>
+</div>
+<div class="apple-feature__visual" data-stagger>
+<div class="apple-stat-line"><span class="apple-stat-line__dot" style="background:#818cf8"></span><div><strong>Support-tickets</strong><span>Trådede saker i app</span></div></div>
+<div class="apple-stat-line"><span class="apple-stat-line__dot" style="background:var(--delelader)"></span><div><strong>Pending-kø</strong><span>Godkjenn ladere først</span></div></div>
+<div class="apple-stat-line"><span class="apple-stat-line__dot" style="background:#fb7185"></span><div><strong>Hub KPI</strong><span>Tickets · chatter · reports</span></div></div>
+</div>
+</div>
+</section>
+
+<section class="section" id="verdi-delelader">
+<div class="wrap">
+<div class="section-head" data-reveal="up">
+<p class="section-label">Porteføljeverdi</p>
+<h2>Hvorfor Delelader ligger på 1,0–1,5 mill.</h2>
+</div>
+<div class="home-product-rich" data-reveal="up">
+<p>Delelader er smalt i <em>domenet</em> (hjemmelading) — men dypt i <em>plattformen</em>: tosidig marked (vert/sjåfør), kart med Kartverket, kalenderbooking i chat, moderering før synlighet, push, RLS, fullt admin-kontrollrom, support-ticket-system — og native CarPlay. CarPlay alene er et sjeldent lag i norsk app-IP.</p>
+<p>Å prise dette som «en liten delingsapp til under 600k» ignorerer både ops-stacken og bil-integrasjonen. Mer realistisk er nivået under Hurtighjelp, men over rene enkeltvertikal-SaaS-er.</p>
+<p><strong>Veiledende IP-verdi: 1,0 – 1,5 mill. NOK.</strong></p>
+</div>
+</div>
+</section>
+
 <section class="apple-feature" id="kart" data-reveal="up">
 <div class="apple-feature__grid">
 <div><p class="apple-feature__label">Kart</p><h2>Finn ladere i nærheten.</h2><p>Kart med status (ledig, opptatt, offline), søk og sortering, og detaljer om merke, effekt og pris. Bruk GPS for egen posisjon, eller søk i offisielle adresser via Kartverket.</p></div>
@@ -129,8 +173,8 @@
 <article class="apple-bento__cell"><h3>Innlogging</h3><p>Apple og Google — samme konto på ny telefon.</p></article>
 <article class="apple-bento__cell"><h3>Varsler</h3><p>Booking, chat, moderering og support.</p></article>
 <article class="apple-bento__cell"><h3>Personvern</h3><p>RLS, EU-lagring via Supabase.</p></article>
-<article class="apple-bento__cell"><h3>Demo</h3><p>Utforsk kart uten konto.</p></article>
-<article class="apple-bento__cell"><h3>Superadmin</h3><p>Godkjenning og kontrollrom (internt).</p></article>
+<article class="apple-bento__cell"><h3>CarPlay</h3><p>Native bil-UI for ladere underveis.</p></article>
+<article class="apple-bento__cell"><h3>Superadmin</h3><p>Hub, pending-kø, tickets, chat-lås.</p></article>
 </div></section>
 
 <section class="apple-spec-section"><div class="wrap">
@@ -140,7 +184,7 @@
 <div class="apple-spec-card"><h3>Publiser</h3><ul><li>Merke, kW og påslag</li><li>Adresse / GPS</li><li>Kalender for ledighet</li><li>Venter på godkjenning</li></ul></div>
 <div class="apple-spec-card"><h3>Book</h3><ul><li>Be om tid i chat</li><li>Vipps eller kontant</li><li>Godkjenn / avvis</li><li>Push til begge parter</li></ul></div>
 <div class="apple-spec-card"><h3>Trygghet</h3><ul><li>Moderering av annonser</li><li>Support og rapporter</li><li>Blokkering</li><li>Slett konto</li></ul></div>
-<div class="apple-spec-card"><h3>Teknologi</h3><ul><li>Flutter · iOS &amp; Android</li><li>Supabase · RLS</li><li>Kartverket-adresser</li><li>APNs / push</li></ul></div>
+<div class="apple-spec-card"><h3>Teknologi</h3><ul><li>Flutter · iOS &amp; Android</li><li>Supabase · RLS</li><li>Kartverket-adresser</li><li>Native CarPlay</li><li>APNs / push</li><li>Admin-hub + tickets</li></ul></div>
 </div>
 </div></section>
 
@@ -178,7 +222,7 @@
 <article class="lf-card"><span class="lf-card__glow" style="background:rgba(15,159,110,0.35)" aria-hidden="true"></span>
 <div class="lf-card__icon" aria-hidden="true">OP</div><h3>Oppgjør</h3><p>Vipps eller kontant mellom dere.</p></article>
 </div>
-<div class="lf-chips" data-reveal="up"><span class="lf-chip">Kart</span><span class="lf-chip">Chat</span><span class="lf-chip">Moderering</span><span class="lf-chip">Vipps</span><span class="lf-chip">Flutter</span></div>
+<div class="lf-chips" data-reveal="up"><span class="lf-chip">Kart</span><span class="lf-chip">Chat</span><span class="lf-chip">Moderering</span><span class="lf-chip">CarPlay</span><span class="lf-chip">Admin</span><span class="lf-chip">Support</span><span class="lf-chip">Vipps</span><span class="lf-chip">Flutter</span></div>
 <div class="lf-band" data-reveal="up"><div class="lf-band__copy"><p class="lf-band__label">Idé</p><h2>Ledig strøm. Tydelige forventninger.</h2><p>Elbilvekst skaper etterspørsel. Hjemmeladere står ofte stille. Delelader gjør kapasitet synlig og bookbar.</p><p>Plattformen er limet — ikke banken. Det er bevisst.</p></div><div class="lf-band__visual"><div class="lf-stat"><span class="lf-stat__dot" style="background:#0f9f6e;color:#0f9f6e"></span><div><strong>Synlighet</strong><span>På kart</span></div></div><div class="lf-stat"><span class="lf-stat__dot" style="background:#38bdf8;color:#38bdf8"></span><div><strong>Tillit</strong><span>Moderering</span></div></div><div class="lf-stat"><span class="lf-stat__dot" style="background:#fbbf24;color:#fbbf24"></span><div><strong>Enkelhet</strong><span>Direkte oppgjør</span></div></div></div></div>
 <div class="lf-section-head" data-reveal="up"><h2>Slik fungerer det</h2><p>Fra første trykk til ferdig flyt.</p></div>
 <div class="lf-steps"><div class="lf-step"><div class="lf-step__num">1</div><h3>Finn / legg ut</h3><p>Kart eller annonse</p></div><div class="lf-step"><div class="lf-step__num">2</div><h3>Godkjenn</h3><p>Moderering</p></div><div class="lf-step"><div class="lf-step__num">3</div><h3>Book</h3><p>Tid i chat</p></div><div class="lf-step"><div class="lf-step__num">4</div><h3>Oppgjør</h3><p>Vipps/kontant</p></div></div>
@@ -206,6 +250,9 @@
 <div class="lf-article" data-reveal="up">
 <h2>Funksjonskart — Delelader</h2>
 <div class="lf-inventory">
+<div class="lf-inventory__item"><strong>CarPlay</strong><span>Native bil-integrasjon</span></div>
+<div class="lf-inventory__item"><strong>Admin-hub</strong><span>KPI · pending · tickets</span></div>
+<div class="lf-inventory__item"><strong>Support-tickets</strong><span>Trådede saker i app</span></div>
 <div class="lf-inventory__item"><strong>Publiser lader</strong><span>Merke, effekt, pris, tider</span></div>
 <div class="lf-inventory__item"><strong>Moderering</strong><span>Godkjenning før synlighet</span></div>
 <div class="lf-inventory__item"><strong>Kart</strong><span>Ledig / opptatt / offline</span></div>
@@ -222,7 +269,7 @@
 <div class="lf-article" data-reveal="up">
 <h2>Fra annonse til ladestart</h2>
 <p>Vert publiserer Easee-lader med effekt og ledige kvelder. Annonsen godkjennes. Sjåfør finner den på kartet, ber om 19:00–21:00 i chat. Vert godkjenner. De avtaler nøkkelboks. Sjåfør lader. Vipps sendes direkte. Ingen App Store-betaling. Ingen uklar midling.</p>
-<p>Det er hele produktet — og det er nok. Delelader er bevisst smalt fordi smale produkter som fungerer slår brede produkter som halter. Support og personvern er på plass for butikkutgivelse.</p>
+<p>Det er hele produktet — og det er mer enn «smalt»: CarPlay, admin-hub og support-tickets gjør Delelader til en driftsklar plattform, ikke bare en kartdemo. Support og personvern er på plass for butikkutgivelse.</p>
 </div>
 
 <blockquote class="lf-quote" data-reveal="up"><p>Plattformen er limet — ikke banken.</p><footer>— Hazher</footer></blockquote>
@@ -245,7 +292,7 @@
 <div class="wrap footer-grid">
 <div class="footer-brand">
 <div class="logo" aria-label="Hazher"><img src="../images/hazher-logo-transparent.png" width="140" height="140" alt="Hazher" class="logo-img" /></div>
-<p>Del hjemmelader · hazher.no/DELELADER</p>
+<p>Del hjemmelader · CarPlay · 1,0–1,5 mill. · hazher.no/DELELADER</p>
 </div>
 <div class="footer-links">
 <a href="Support/">Support</a>
