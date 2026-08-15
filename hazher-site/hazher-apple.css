@@ -64,6 +64,14 @@
   letter-spacing: -0.04em;
 }
 
+.apple-site .logo .logo-img {
+  height: 34px;
+}
+
+.apple-site .footer-brand .logo .logo-img {
+  height: 80px;
+}
+
 .apple-site .nav-links a {
   font-size: 0.8125rem;
   font-weight: 500;

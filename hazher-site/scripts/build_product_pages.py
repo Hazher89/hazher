@@ -21,6 +21,8 @@ def page_head(title, description, theme, extra_css, depth, nav_name, email):
 <link rel="stylesheet" href="{p}hazher-apple.css"/>
 <link rel="stylesheet" href="{p}hazher-apple-ext.css"/>
 <link rel="stylesheet" href="{p}{extra_css}"/>
+<link rel="icon" type="image/png" sizes="32x32" href="{p}images/favicon-32.png"/>
+<link rel="apple-touch-icon" href="{p}images/apple-touch-icon.png"/>
 <script src="{p}main.js" defer></script>
 <script src="{p}hazher-apple.js" defer></script>
 </head>
@@ -29,7 +31,7 @@ def page_head(title, description, theme, extra_css, depth, nav_name, email):
 <div class="bg-mesh" aria-hidden="true" data-parallax="0.02"></div>
 <div class="bg-grid" aria-hidden="true" data-parallax="0.04"></div>
 <header class="nav"><div class="wrap nav-inner">
-<a href="{p}index.html" class="logo">Hazher</a>
+<a href="{p}index.html" class="logo" aria-label="Hazher"><img src="{p}images/hazher-mark.png" width="48" height="48" alt="Hazher" class="logo-img" /></a>
 <button type="button" class="nav-toggle" aria-label="Meny" id="navToggle"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
 <nav class="nav-links" id="navLinks">
 <a href="{p}index.html">Forside</a>
@@ -114,7 +116,7 @@ def footer_page(p, name, email):
     return f"""
 </main>
 <footer class="footer"><div class="wrap footer-grid">
-<div class="footer-brand"><div class="logo">Hazher</div><p>{name} · hazher.no</p></div>
+<div class="footer-brand"><div class="logo" aria-label="Hazher"><img src="{p}images/hazher-logo-transparent.png" width="140" height="140" alt="Hazher" class="logo-img" /></div><p>{name} · hazher.no</p></div>
 <div class="footer-links">
 <a href="{p}index.html">Forside</a><a href="Support/">Support</a><a href="Privacy/">Personvern</a>
 </div>

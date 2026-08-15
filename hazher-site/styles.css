@@ -155,17 +155,32 @@ h4 {
 }
 
 .logo {
+  display: inline-flex;
+  align-items: center;
   font-family: var(--font);
   font-weight: 700;
   font-size: 1.2rem;
   letter-spacing: -0.03em;
   color: var(--text);
   text-decoration: none;
+  line-height: 0;
+}
+
+.logo .logo-img {
+  display: block;
+  width: auto;
+  height: 36px;
+  object-fit: contain;
+}
+
+.footer-brand .logo .logo-img {
+  height: 88px;
 }
 
 .logo:hover {
   text-decoration: none;
   color: #fff;
+  opacity: 0.92;
 }
 
 .nav-links {
