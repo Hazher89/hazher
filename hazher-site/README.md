@@ -1,29 +1,24 @@
 # hazher.no (statisk site)
 
-Moderne landingsside for Hazher med EcoShelf, Loop Marked, Hurtighjelp, DriftPro, Ali Barber, KAPRE og Delelader.
+Landingsside for Hazher med **DriftPro**, Hurtighjelp, Loop Marked, **Navnishan**, Ali Barber, KAPRE og Delelader.
+EcoShelf er fjernet fra forsiden (redirect til `/`).
 
 Undermapper (når **root** er `hazher-site`):
 
-- `ECOSHELF/` — dokumentasjon / produkt-hub for EcoShelf  
-- `ECOSHELF/Support/` — support og FAQ  
-- `ECOSHELF/Privacy/` — personvern for **appen** (kan brukes som Privacy Policy URL i App Store Connect)
-- `KAPRE/` — produkt-hub for KAPRE (kapitalvarer)
-- `KAPRE/Support/` — Support URL for App Store
-- `KAPRE/Privacy/` — Privacy Policy URL
-- `KAPRE/Terms/` — Terms of Use URL
-- `DELELADER/` — produkt-hub for Delelader (deling av hjemmelader)
-- `DELELADER/Support/` — Support URL for App Store
-- `DELELADER/Privacy/` — Privacy Policy URL
-- `DELELADER/Terms/` — Terms of Use URL
+- `DRIFTPRO/` — full funksjonskatalog, Support, Privacy, Terms  
+- `NAVNISHAN/` — produkt + Support / Privacy / Terms (App Store URL-er)  
+- `HURTIGHJELP/`, `LOOPMARKED/`, `ALIBARBER/`, `KAPRE/`, `DELELADER/` — produkt-hubs  
+- `ECOSHELF/` — retired (redirect)
 
-Offentlige URL-er (App Store Connect):
+Offentlige URL-er (Navnishan / App Store):
 
-- Support: `https://www.hazher.no/DELELADER/Support/`
-- Privacy: `https://www.hazher.no/DELELADER/Privacy/`
-- Terms: `https://www.hazher.no/DELELADER/Terms/`
-- Hub: `https://www.hazher.no/DELELADER/`
+- Support: `https://hazher.no/NAVNISHAN/Support/`
+- Privacy: `https://hazher.no/NAVNISHAN/Privacy/`
+- Terms: `https://hazher.no/NAVNISHAN/Terms/`
+- Hub: `https://hazher.no/NAVNISHAN/`
 
-Øvrige: `https://hazher.no/ECOSHELF/`, `https://hazher.no/KAPRE/`, osv.
+DriftPro funksjonskatalog: `https://hazher.no/DRIFTPRO/#katalog`
+
 
 ## Hvit skjerm på hazher.no?
 

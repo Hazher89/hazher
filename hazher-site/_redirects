@@ -34,3 +34,23 @@
 /alibarber/delete/ /ALIBARBER/Delete/ 301
 /ALIBARBER/delete /ALIBARBER/Delete/ 301
 /ALIBARBER/delete/ /ALIBARBER/Delete/ 301
+
+# Ecoshelf retired from public site
+/ECOSHELF / 301
+/ECOSHELF/ / 301
+/ecoshelf / 301
+/ecoshelf/ / 301
+
+# Navnishan
+/navnishan /NAVNISHAN/ 301
+/navnishan/ /NAVNISHAN/ 301
+/navnishan/personvern /NAVNISHAN/Privacy/ 301
+/navnishan/personvern/ /NAVNISHAN/Privacy/ 301
+/navnishan/privacy /NAVNISHAN/Privacy/ 301
+/navnishan/privacy/ /NAVNISHAN/Privacy/ 301
+/navnishan/support /NAVNISHAN/Support/ 301
+/navnishan/support/ /NAVNISHAN/Support/ 301
+/navnishan/vilkar /NAVNISHAN/Terms/ 301
+/navnishan/vilkar/ /NAVNISHAN/Terms/ 301
+/navnishan/terms /NAVNISHAN/Terms/ 301
+/navnishan/terms/ /NAVNISHAN/Terms/ 301
