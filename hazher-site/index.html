@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -21,9 +21,11 @@
     <script src="hazher-home.js" defer></script>
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
-</head>
+  </head>
   <body class="hz-home apple-site">
     <div class="scroll-progress" aria-hidden="true"></div>
+    <div class="hz-cursor" id="hzCursor" aria-hidden="true"></div>
+    <canvas class="hz-noise" id="hzNoise" aria-hidden="true"></canvas>
     <div class="bg-mesh" aria-hidden="true"></div>
     <div class="bg-grid" aria-hidden="true"></div>
 
@@ -36,7 +38,7 @@
           </svg>
         </button>
         <nav class="nav-links" id="navLinks" aria-label="Hovedmeny">
-          <a href="#spotlight">DriftPro</a>
+          <a href="#stage">Portefølje</a>
           <a href="#produkter">Produkter</a>
           <a href="#verdi">Verdi</a>
           <a href="#kontakt" class="nav-cta">Kontakt</a>
@@ -46,37 +48,34 @@
 
     <main>
       <section class="hz-hero" id="top">
-        <div class="hz-hero__orb" aria-hidden="true"></div>
-        <div class="hz-hero__orb2" aria-hidden="true"></div>
-        <div class="hz-hero__orb3" aria-hidden="true"></div>
-        <p class="hz-hero__kicker" data-reveal="up">Egenutviklet IP · Norge</p>
-        <h1 class="hz-hero__title" data-reveal="up"><img src="images/hazher-logo-transparent.png" width="420" height="420" alt="Hazher" class="hz-hero__logo" /></h1>
-        <p class="hz-hero__lead" data-reveal="up">
-          Vi bygger komplette systemer for drift, marked og infrastruktur — med admin, API og support i produksjon.
-        </p>
-        <div class="hz-hero__cta" data-reveal="up">
-          <a href="#produkter" class="hz-btn hz-btn--white">Utforsk produktene</a>
-          <a href="#verdi" class="hz-btn hz-btn--ghost">Porteføljeverdi</a>
+        <div class="hz-hero__field" aria-hidden="true">
+          <div class="hz-hero__ring hz-hero__ring--a"></div>
+          <div class="hz-hero__ring hz-hero__ring--b"></div>
+          <div class="hz-hero__ring hz-hero__ring--c"></div>
+          <div class="hz-hero__beam"></div>
         </div>
-
-        <div class="hz-float" id="hzFloat" aria-label="Produkter" data-reveal="scale">
-          <a class="hz-float__item" href="DRIFTPRO/" title="DriftPro"><img src="images/driftpro-app-icon.png" width="80" height="80" alt="DriftPro" /></a>
-          <a class="hz-float__item" href="CHRONOBLADE/" title="Chrono Blade"><img src="images/chronoblade-app-icon.png" width="72" height="72" alt="Chrono Blade" /></a>
-          <a class="hz-float__item" href="HURTIGHJELP/" title="Hurtighjelp"><img src="images/hurtighjelp-app-icon.png" width="64" height="64" alt="Hurtighjelp" /></a>
-          <a class="hz-float__item" href="LOOPMARKED/" title="Loop Marked"><img src="images/loop-marked-icon.png" width="72" height="72" alt="Loop Marked" /></a>
-          <a class="hz-float__item" href="NAVNISHAN/" title="Navnishan"><img src="images/navnishan-app-icon.png" width="80" height="80" alt="Navnishan" /></a>
-          <a class="hz-float__item" href="ALIBARBER/" title="Ali Barber"><img src="images/ali-barber-app-icon.png" width="64" height="64" alt="Ali Barber" /></a>
-          <a class="hz-float__item" href="KAPRE/" title="KAPRE"><img src="images/kapre-app-icon.png" width="72" height="72" alt="KAPRE" /></a>
-          <a class="hz-float__item" href="DELELADER/" title="Delelader"><img src="images/delelader-app-icon.png" width="60" height="60" alt="Delelader" /></a>
+        <div class="hz-hero__inner">
+          <h1 class="hz-hero__title" data-reveal="scale">
+            <img src="images/hazher-logo-transparent.png" width="480" height="480" alt="Hazher" class="hz-hero__logo" id="hzHeroLogo" />
+          </h1>
+          <p class="hz-hero__lead" data-reveal="up">
+            Åtte egenutviklede systemer — enterprise, spill og markedsplasser i produksjon.
+          </p>
+          <div class="hz-hero__cta" data-reveal="up">
+            <a href="#stage" class="hz-btn hz-btn--white" data-magnetic>Utforsk porteføljen</a>
+            <a href="#verdi" class="hz-btn hz-btn--ghost" data-magnetic>~11–15 mill. IP</a>
+          </div>
         </div>
-        <p class="hz-scroll" aria-hidden="true">Scroll</p>
+        <button type="button" class="hz-scroll" id="hzScrollHint" aria-label="Scroll videre">
+          <span></span>
+        </button>
       </section>
 
       <section class="hz-stage" id="stage" aria-label="Produkter i bevegelse">
         <div class="hz-stage__glow" aria-hidden="true"></div>
         <div class="hz-stage__floor" aria-hidden="true"></div>
         <p class="hz-stage__label" data-reveal="up">Porteføljen</p>
-        <h2 class="hz-stage__title" data-reveal="up">Åtte systemer. Én bevegelse.</h2>
+        <h2 class="hz-stage__title" data-reveal="up">Åtte systemer.<br />Én bevegelse.</h2>
         <div class="hz-rail" id="hzRail">
           <div class="hz-rail__track" id="hzRailTrack">
             <a class="hz-tile3d" href="DRIFTPRO/" data-accent="#6366f1">
@@ -100,6 +99,20 @@
               <strong>Hurtighjelp</strong>
               <span>Markedsplass</span>
             </a>
+            <a class="hz-tile3d" href="KAPRE/" data-accent="#c9a227">
+              <div class="hz-tile3d__orb" aria-hidden="true"></div>
+              <div class="hz-tile3d__icon"><img src="images/kapre-app-icon.png" width="160" height="160" alt="" /></div>
+              <div class="hz-tile3d__shine" aria-hidden="true"></div>
+              <strong>KAPRE</strong>
+              <span>Kapitalvarer · admin</span>
+            </a>
+            <a class="hz-tile3d" href="DELELADER/" data-accent="#0f9f6e">
+              <div class="hz-tile3d__orb" aria-hidden="true"></div>
+              <div class="hz-tile3d__icon"><img src="images/delelader-app-icon.png" width="160" height="160" alt="" /></div>
+              <div class="hz-tile3d__shine" aria-hidden="true"></div>
+              <strong>Delelader</strong>
+              <span>CarPlay · lading</span>
+            </a>
             <a class="hz-tile3d" href="LOOPMARKED/" data-accent="#a78bfa">
               <div class="hz-tile3d__orb" aria-hidden="true"></div>
               <div class="hz-tile3d__icon"><img src="images/loop-marked-icon.png" width="160" height="160" alt="" /></div>
@@ -121,23 +134,9 @@
               <strong>Ali Barber</strong>
               <span>Salon SaaS</span>
             </a>
-            <a class="hz-tile3d" href="KAPRE/" data-accent="#c9a227">
-              <div class="hz-tile3d__orb" aria-hidden="true"></div>
-              <div class="hz-tile3d__icon"><img src="images/kapre-app-icon.png" width="160" height="160" alt="" /></div>
-              <div class="hz-tile3d__shine" aria-hidden="true"></div>
-              <strong>KAPRE</strong>
-              <span>Kapitalvarer · admin</span>
-            </a>
-            <a class="hz-tile3d" href="DELELADER/" data-accent="#0f9f6e">
-              <div class="hz-tile3d__orb" aria-hidden="true"></div>
-              <div class="hz-tile3d__icon"><img src="images/delelader-app-icon.png" width="160" height="160" alt="" /></div>
-              <div class="hz-tile3d__shine" aria-hidden="true"></div>
-              <strong>Delelader</strong>
-              <span>CarPlay · lading</span>
-            </a>
           </div>
         </div>
-        <p class="hz-stage__hint">Dra eller scroll sidelengs · klikk for å åpne</p>
+        <p class="hz-stage__hint">Dra · scroll · klikk</p>
       </section>
 
       <section class="hz-spotlight" id="spotlight">
@@ -155,7 +154,7 @@
             <h2>DriftPro er tyngdepunktet.</h2>
             <p>
               HMS, HR, stempling, partnere, rute-PDF, Dispatch og last-mile — én enterprise-plattform med granulær
-              tilgangsstyring og RLS. Dette er ikke en «avviks-app». Det er et komplett driftssystem.
+              tilgangsstyring og RLS.
             </p>
             <ul>
               <li>Avvik, ROS, SJA, vernerunder, DMS og anonym varsling</li>
@@ -163,25 +162,24 @@
               <li>Sjåfør-/eierportal, SAP-innboks, flåte og desktop Dispatch</li>
               <li>Next.js-admin, Supabase/Cloudflare, support-tickets</li>
             </ul>
-            <a href="DRIFTPRO/" class="hz-btn hz-btn--white">Les mer om DriftPro</a>
+            <a href="DRIFTPRO/" class="hz-btn hz-btn--white" data-magnetic>Les mer om DriftPro</a>
           </div>
         </div>
       </section>
 
       <section class="hz-manifesto">
-        <p class="hz-manifesto__line" data-reveal="up">Bygget for feltet. Ikke for pitchdecks.</p>
+        <p class="hz-manifesto__line" data-reveal="up" data-split>Bygget for feltet. Ikke for pitchdecks.</p>
         <p class="hz-manifesto__sub" data-reveal="up">
-          Hvert produkt har egen dybdeside med funksjoner, flyt, teknologi, support og personvern.
-          Forsiden er oversikt. «Les mer» er hele historien.
+          Hvert produkt har egen dybdeside. Forsiden er oversikt. «Les mer» er hele historien.
         </p>
       </section>
 
       <section class="hz-section" id="produkter">
         <div class="wrap">
           <p class="hz-section__label" data-reveal="up">Portefølje</p>
-          <h2 class="hz-section__title" data-reveal="up">Åtte produkter. Full dybde bak hvert klikk.</h2>
+          <h2 class="hz-section__title" data-reveal="up">Åtte produkter. Full dybde.</h2>
           <p class="hz-section__desc" data-reveal="up">
-            Lik struktur. Ulikt domene. Trykk inn for komplett dokumentasjon — ikke bare tre setninger.
+            Trykk inn for komplett dokumentasjon — admin, support, personvern og stack.
           </p>
 
           <div class="hz-products" data-stagger>
@@ -212,6 +210,24 @@
               <span class="hz-product__meta">1,2–1,8 mill.</span>
               <span class="hz-product__arrow" aria-hidden="true">→</span>
             </a>
+            <a class="hz-product" href="KAPRE/">
+              <div class="hz-product__icon"><img src="images/kapre-app-icon.png" width="56" height="56" alt="" /></div>
+              <div class="hz-product__text">
+                <h3>KAPRE</h3>
+                <p>Kapitalvarer-markedsplass med 100-punkts admin-kontrollrom, support-tickets og IAP.</p>
+              </div>
+              <span class="hz-product__meta">1,4–2,0 mill.</span>
+              <span class="hz-product__arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="hz-product" href="DELELADER/">
+              <div class="hz-product__icon"><img src="images/delelader-app-icon.png" width="56" height="56" alt="" /></div>
+              <div class="hz-product__text">
+                <h3>Delelader</h3>
+                <p>Del hjemmelader — kart, booking, chat, admin, support-tickets og CarPlay.</p>
+              </div>
+              <span class="hz-product__meta">1,0–1,5 mill.</span>
+              <span class="hz-product__arrow" aria-hidden="true">→</span>
+            </a>
             <a class="hz-product" href="LOOPMARKED/">
               <div class="hz-product__icon"><img src="images/loop-marked-icon.png" width="56" height="56" alt="" /></div>
               <div class="hz-product__text">
@@ -239,24 +255,6 @@
               <span class="hz-product__meta">400–600k</span>
               <span class="hz-product__arrow" aria-hidden="true">→</span>
             </a>
-            <a class="hz-product" href="KAPRE/">
-              <div class="hz-product__icon"><img src="images/kapre-app-icon.png" width="56" height="56" alt="" /></div>
-              <div class="hz-product__text">
-                <h3>KAPRE</h3>
-                <p>Kapitalvarer-markedsplass med 100-punkts admin-kontrollrom, support-tickets og IAP.</p>
-              </div>
-              <span class="hz-product__meta">1,4–2,0 mill.</span>
-              <span class="hz-product__arrow" aria-hidden="true">→</span>
-            </a>
-            <a class="hz-product" href="DELELADER/">
-              <div class="hz-product__icon"><img src="images/delelader-app-icon.png" width="56" height="56" alt="" /></div>
-              <div class="hz-product__text">
-                <h3>Delelader</h3>
-                <p>Del hjemmelader — kart, booking, chat, admin, support-tickets og CarPlay.</p>
-              </div>
-              <span class="hz-product__meta">1,0–1,5 mill.</span>
-              <span class="hz-product__arrow" aria-hidden="true">→</span>
-            </a>
           </div>
         </div>
       </section>
@@ -270,7 +268,7 @@
           </p>
           <div class="hz-value" data-reveal="up">
             <div class="hz-value__total">
-              <strong>~11,0 – 15,0 mill. NOK</strong>
+              <strong data-count-low="11" data-count-high="15">~11,0 – 15,0 mill. NOK</strong>
               <span>Samlet estimert porteføljeverdi (8 produkter)</span>
             </div>
             <div class="hz-value__row"><b>DriftPro</b><em>3,5 – 5,0 mill.</em><span>Enterprise B2B-logistikk, admin, live ruting, lager, avvik, support</span></div>
@@ -286,16 +284,16 @@
       </section>
 
       <section class="hz-section" id="stack">
-        <div class="wrap" style="text-align:center">
+        <div class="wrap" style="text-align: center">
           <p class="hz-section__label" data-reveal="up">Stack</p>
-          <h2 class="hz-section__title" data-reveal="up" style="margin-inline:auto">Samme standard i alle produkter</h2>
-          <p class="hz-section__desc" data-reveal="up" style="margin-inline:auto">
+          <h2 class="hz-section__title" data-reveal="up" style="margin-inline: auto">Samme standard i alle produkter</h2>
+          <p class="hz-section__desc" data-reveal="up" style="margin-inline: auto">
             Flutter, Godot, Supabase, RLS, sanntid, adminflater og butikkklare Support/Privacy-URL-er.
           </p>
           <div class="hz-stack" data-stagger>
             <span>Flutter</span><span>Godot</span><span>Supabase</span><span>PostgreSQL RLS</span><span>Realtime</span>
             <span>Next.js</span><span>Cloudflare</span><span>Vipps</span><span>Stripe</span>
-            <span>Apple / Google Auth</span><span>Push</span>
+            <span>Apple / Google Auth</span><span>Push</span><span>CarPlay</span>
           </div>
         </div>
       </section>
@@ -319,7 +317,7 @@
           <h2 class="hz-section__title" data-reveal="up">Bygget i Norge.</h2>
           <p class="hz-section__desc" data-reveal="up">
             Hazher drives av Hama Hazher (Haz.HER Abdullah, org.nr. 837 568 382). Vi står bak DriftPro, Chrono Blade,
-            Hurtighjelp, Loop Marked, Navnishan, Ali Barber, KAPRE og Delelader — produkter i produksjon med admin, API,
+            Hurtighjelp, KAPRE, Delelader, Loop Marked, Navnishan og Ali Barber — produkter i produksjon med admin, API,
             spillmotor og support.
           </p>
         </div>
@@ -330,7 +328,7 @@
           <div class="hz-cta" data-reveal="scale">
             <h2>La oss snakke</h2>
             <p>Produkter, samarbeid eller support — én e-post er nok.</p>
-            <a href="mailto:kontakt@hazher.no" class="hz-btn hz-btn--white">kontakt@hazher.no</a>
+            <a href="mailto:kontakt@hazher.no" class="hz-btn hz-btn--white" data-magnetic>kontakt@hazher.no</a>
           </div>
         </div>
       </section>
@@ -346,11 +344,11 @@
           <a href="DRIFTPRO/">DriftPro</a>
           <a href="CHRONOBLADE/">Chrono Blade</a>
           <a href="HURTIGHJELP/">Hurtighjelp</a>
+          <a href="KAPRE/">KAPRE</a>
+          <a href="DELELADER/">Delelader</a>
           <a href="LOOPMARKED/">Loop</a>
           <a href="NAVNISHAN/">Navnishan</a>
           <a href="ALIBARBER/">Ali Barber</a>
-          <a href="KAPRE/">KAPRE</a>
-          <a href="DELELADER/">Delelader</a>
           <a href="privacy.html">Personvern</a>
         </div>
       </div>
