@@ -4,7 +4,7 @@
     "details": [
       {
         "appID": "644LC648DB.no.hurtighjelp.hurtighjelpApp",
-        "paths": [ "/j/*", "/HURTIGHJELP/j/*", "/job/*" ]
+        "paths": [ "/j/*", "/HURTIGHJELP/j/*", "/job/*", "/u/*", "/HURTIGHJELP/u/*" ]
       },
       {
         "appID": "644LC648DB.no.hazher.kapre",
