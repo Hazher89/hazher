@@ -1,5 +1,7 @@
 /** Shared HQ helpers for hazher.no private admin. */
 
+import { isAllowedPublicPath, isJunkUserAgent, isProbePath } from './allowlist';
+
 export type Env = {
   HAZHER_HQ?: KVNamespace;
   HQ_ALLOWED_IPS?: string;
@@ -153,6 +155,14 @@ export function buildVisit(request: Request): VisitEvent {
 const RECENT_KEY = 'visits:recent';
 const RECENT_LIMIT = 250;
 
+function isNoiseVisit(v: VisitEvent): boolean {
+  const path = v.path || '/';
+  if (isProbePath(path) || !isAllowedPublicPath(path.split('?')[0] || '/')) return true;
+  if (isJunkUserAgent(v.ua || '')) return true;
+  if (/bot|crawler/i.test(v.device || '')) return true;
+  return false;
+}
+
 export async function logVisit(env: Env, visit: VisitEvent): Promise<void> {
   const kv = env.HAZHER_HQ;
   if (!kv) return;
@@ -194,6 +204,7 @@ export async function loadRecentVisits(env: Env, limit = 200): Promise<VisitEven
     if (raw) {
       const list: VisitEvent[] = JSON.parse(raw);
       return list
+        .filter((v) => !isNoiseVisit(v))
         .sort((a, b) => String(b.ts).localeCompare(String(a.ts)))
         .slice(0, limit);
     }
@@ -210,7 +221,7 @@ export async function loadRecentVisits(env: Env, limit = 200): Promise<VisitEven
       // ignore seed failure
     }
   }
-  return fallback;
+  return fallback.filter((v) => !isNoiseVisit(v));
 }
 
 export async function loadVisits(env: Env, days = 14, limit = 400): Promise<VisitEvent[]> {

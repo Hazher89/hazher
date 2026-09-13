@@ -45,6 +45,13 @@ Type **Secret** for alle:
 
 Uten denne bindingen fungerer login, men trafikklisten er tom.
 
+### 4) Cloudflare Bot Fight (anbefalt)
+
+Dashboard → **Security** → **Bots** → slå på **Bot Fight Mode** (gratis).
+Det demper automatisert skannertrafikk før den treffer siden.
+
+HQ logger ikke lenger søppel-stier / scrapers; ukjente URL-er får ekte **404**.
+
 ## Bruk
 
 1. Sett `HQ_ALLOWED_IPS` til din IP og deploy.
