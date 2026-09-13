@@ -20,6 +20,12 @@ Offentlige URL-er (Chrono Blade / App Store):
 
 DriftPro funksjonskatalog: `https://hazher.no/DRIFTPRO/#katalog`
 
+## Privat HQ (kun deg)
+
+Usynlig admin på `/hq` med IP-lås, bruker **HAZHER**, og trafikk-dashboard (land, enhet, IP, osv.).
+
+Se **[HQ_SETUP.md](./HQ_SETUP.md)** for Cloudflare env + KV-binding.
+
 
 ## Hvit skjerm på hazher.no?
 
