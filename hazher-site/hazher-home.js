@@ -92,10 +92,12 @@
         if (ticking) return;
         ticking = true;
         requestAnimationFrame(function () {
-          var y = Math.min(window.scrollY, 520);
+          var y = Math.min(window.scrollY || window.pageYOffset || 0, 520);
           var p = y / 520;
-          logo.style.transform = "scale(" + (1 - p * 0.12) + ") translateY(" + p * -40 + "px)";
-          logo.style.opacity = String(Math.max(0.15, 1 - p * 1.1));
+          logo.style.transform =
+            "scale(" + (1 - p * 0.12) + ") translateY(" + p * -40 + "px)";
+          // Keep logo readable on mobile address-bar resize / bounce scroll
+          logo.style.opacity = String(Math.max(0.55, 1 - p * 0.7));
           if (field) field.style.opacity = String(Math.max(0, 1 - p * 1.4));
           ticking = false;
         });
