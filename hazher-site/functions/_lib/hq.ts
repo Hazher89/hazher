@@ -65,7 +65,9 @@ export function parseDevice(uaRaw: string): { device: string; os: string; browse
   let os = 'Ukjent';
   let browser = 'Ukjent';
 
-  if (/iPad/i.test(ua) || (/Macintosh/i.test(ua) && /Mobile/i.test(ua))) {
+  if (/bot|crawler|spider|slurp|facebookexternalhit|preview|wget|curl|python-requests|httpclient|scrapy|semrush|ahrefs|bingpreview/i.test(ua)) {
+    device = 'Bot / crawler';
+  } else if (/iPad/i.test(ua) || (/Macintosh/i.test(ua) && /Mobile/i.test(ua))) {
     device = 'iPad';
   } else if (/iPhone/i.test(ua)) {
     device = 'iPhone';
@@ -77,23 +79,41 @@ export function parseDevice(uaRaw: string): { device: string; os: string; browse
     device = 'Mobil';
   }
 
-  if (/Windows NT/i.test(ua)) os = 'Windows';
-  else if (/Mac OS X|Macintosh/i.test(ua) && !/iPhone|iPad/i.test(ua)) os = 'macOS';
-  else if (/iPhone|iPad|iPod/i.test(ua)) {
+  if (/Windows NT 10/i.test(ua)) os = 'Windows 10/11';
+  else if (/Windows NT/i.test(ua)) os = 'Windows';
+  else if (/Mac OS X|Macintosh/i.test(ua) && !/iPhone|iPad/i.test(ua)) {
+    const m = ua.match(/Mac OS X (\d+[_\d]*)/);
+    os = m ? `macOS ${m[1].replace(/_/g, '.')}` : 'macOS';
+  } else if (/iPhone|iPad|iPod/i.test(ua)) {
     const m = ua.match(/OS (\d+[_\d]*)/);
     os = m ? `iOS ${m[1].replace(/_/g, '.')}` : 'iOS';
   } else if (/Android/i.test(ua)) {
     const m = ua.match(/Android (\d+[.\d]*)/);
     os = m ? `Android ${m[1]}` : 'Android';
-  } else if (/Linux/i.test(ua)) os = 'Linux';
-  else if (/CrOS/i.test(ua)) os = 'ChromeOS';
+  } else if (/CrOS/i.test(ua)) os = 'ChromeOS';
+  else if (/Linux/i.test(ua)) os = 'Linux';
 
-  if (/Edg\//i.test(ua)) browser = 'Edge';
-  else if (/OPR\/|Opera/i.test(ua)) browser = 'Opera';
-  else if (/Chrome\//i.test(ua) && !/Edg\//i.test(ua)) browser = 'Chrome';
-  else if (/Safari\//i.test(ua) && !/Chrome\//i.test(ua)) browser = 'Safari';
-  else if (/Firefox\//i.test(ua)) browser = 'Firefox';
-  else if (/SamsungBrowser/i.test(ua)) browser = 'Samsung Internet';
+  if (/Edg\//i.test(ua)) {
+    const m = ua.match(/Edg\/([\d.]+)/);
+    browser = m ? `Edge ${m[1]}` : 'Edge';
+  } else if (/OPR\/|Opera/i.test(ua)) {
+    const m = ua.match(/OPR\/([\d.]+)/);
+    browser = m ? `Opera ${m[1]}` : 'Opera';
+  } else if (/SamsungBrowser\/([\d.]+)/i.test(ua)) {
+    const m = ua.match(/SamsungBrowser\/([\d.]+)/i);
+    browser = m ? `Samsung ${m[1]}` : 'Samsung Internet';
+  } else if (/Chrome\/([\d.]+)/i.test(ua) && !/Edg\//i.test(ua)) {
+    const m = ua.match(/Chrome\/([\d.]+)/i);
+    browser = m ? `Chrome ${m[1]}` : 'Chrome';
+  } else if (/Firefox\/([\d.]+)/i.test(ua)) {
+    const m = ua.match(/Firefox\/([\d.]+)/i);
+    browser = m ? `Firefox ${m[1]}` : 'Firefox';
+  } else if (/Safari\//i.test(ua) && !/Chrome\//i.test(ua)) {
+    const m = ua.match(/Version\/([\d.]+)/);
+    browser = m ? `Safari ${m[1]}` : 'Safari';
+  } else if (/bot|crawler|spider/i.test(ua)) {
+    browser = 'Crawler';
+  }
 
   return { device, os, browser };
 }
@@ -124,24 +144,36 @@ export function buildVisit(request: Request): VisitEvent {
     device: parsed.device,
     os: parsed.os,
     browser: parsed.browser,
-    ua: ua.slice(0, 280),
-    referer: (request.headers.get('Referer') || '').slice(0, 300),
-    language: (request.headers.get('Accept-Language') || '').slice(0, 80),
+    ua: ua.slice(0, 420),
+    referer: (request.headers.get('Referer') || '').slice(0, 400),
+    language: (request.headers.get('Accept-Language') || '').slice(0, 120),
   };
 }
+
+const RECENT_KEY = 'visits:recent';
+const RECENT_LIMIT = 250;
 
 export async function logVisit(env: Env, visit: VisitEvent): Promise<void> {
   const kv = env.HAZHER_HQ;
   if (!kv) return;
 
   const day = visit.ts.slice(0, 10);
-  const key = `visits:${day}`;
+  const dayKey = `visits:${day}`;
   try {
-    const raw = await kv.get(key);
+    // Fast ring buffer — one key for HQ feed (newest first)
+    const recentRaw = await kv.get(RECENT_KEY);
+    const recent: VisitEvent[] = recentRaw ? JSON.parse(recentRaw) : [];
+    recent.unshift(visit);
+    await kv.put(RECENT_KEY, JSON.stringify(recent.slice(0, RECENT_LIMIT)), {
+      expirationTtl: 60 * 60 * 24 * 60,
+    });
+
+    const raw = await kv.get(dayKey);
     const list: VisitEvent[] = raw ? JSON.parse(raw) : [];
     list.unshift(visit);
-    const trimmed = list.slice(0, 800);
-    await kv.put(key, JSON.stringify(trimmed), { expirationTtl: 60 * 60 * 24 * 45 });
+    await kv.put(dayKey, JSON.stringify(list.slice(0, 800)), {
+      expirationTtl: 60 * 60 * 24 * 45,
+    });
 
     const indexRaw = await kv.get('visits:index');
     const index: string[] = indexRaw ? JSON.parse(indexRaw) : [];
@@ -152,6 +184,33 @@ export async function logVisit(env: Env, visit: VisitEvent): Promise<void> {
   } catch {
     // never break the site for logging
   }
+}
+
+export async function loadRecentVisits(env: Env, limit = 200): Promise<VisitEvent[]> {
+  const kv = env.HAZHER_HQ;
+  if (!kv) return [];
+  try {
+    const raw = await kv.get(RECENT_KEY);
+    if (raw) {
+      const list: VisitEvent[] = JSON.parse(raw);
+      return list
+        .sort((a, b) => String(b.ts).localeCompare(String(a.ts)))
+        .slice(0, limit);
+    }
+  } catch {
+    // fall through
+  }
+  const fallback = await loadVisits(env, 21, limit);
+  if (fallback.length) {
+    try {
+      await kv.put(RECENT_KEY, JSON.stringify(fallback.slice(0, RECENT_LIMIT)), {
+        expirationTtl: 60 * 60 * 24 * 60,
+      });
+    } catch {
+      // ignore seed failure
+    }
+  }
+  return fallback;
 }
 
 export async function loadVisits(env: Env, days = 14, limit = 400): Promise<VisitEvent[]> {
@@ -167,7 +226,46 @@ export async function loadVisits(env: Env, days = 14, limit = 400): Promise<Visi
     out.push(...list);
     if (out.length >= limit) break;
   }
-  return out.slice(0, limit);
+  return out
+    .sort((a, b) => String(b.ts).localeCompare(String(a.ts)))
+    .slice(0, limit);
+}
+
+export function summarizeVisits(visits: VisitEvent[]) {
+  const byCountry: Record<string, number> = {};
+  const byDevice: Record<string, number> = {};
+  const byPath: Record<string, number> = {};
+  const byDay: Record<string, number> = {};
+  const byBrowser: Record<string, number> = {};
+  const byOs: Record<string, number> = {};
+  const byIsp: Record<string, number> = {};
+
+  for (const v of visits) {
+    const c = v.country || '??';
+    byCountry[c] = (byCountry[c] || 0) + 1;
+    byDevice[v.device || 'Ukjent'] = (byDevice[v.device || 'Ukjent'] || 0) + 1;
+    byBrowser[v.browser || 'Ukjent'] = (byBrowser[v.browser || 'Ukjent'] || 0) + 1;
+    byOs[v.os || 'Ukjent'] = (byOs[v.os || 'Ukjent'] || 0) + 1;
+    if (v.isp) byIsp[v.isp] = (byIsp[v.isp] || 0) + 1;
+    const path = (v.path || '/').split('?')[0] || '/';
+    byPath[path] = (byPath[path] || 0) + 1;
+    const day = (v.ts || '').slice(0, 10);
+    if (day) byDay[day] = (byDay[day] || 0) + 1;
+  }
+
+  const sortEntries = (obj: Record<string, number>) =>
+    Object.entries(obj).sort((a, b) => b[1] - a[1]);
+
+  return {
+    total: visits.length,
+    countries: sortEntries(byCountry).slice(0, 20),
+    devices: sortEntries(byDevice),
+    browsers: sortEntries(byBrowser),
+    os: sortEntries(byOs),
+    isps: sortEntries(byIsp).slice(0, 12),
+    paths: sortEntries(byPath).slice(0, 25),
+    days: sortEntries(byDay).slice(0, 30),
+  };
 }
 
 export function shouldSkipLogging(pathname: string): boolean {
