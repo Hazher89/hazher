@@ -188,7 +188,8 @@ async function pbkdf2Hex(password: string, saltHex: string): Promise<string> {
     false,
     ['deriveBits'],
   );
-  const salt = new Uint8Array(saltHex.match(/.{1,2}/g)!.map((b) => parseInt(b, 16)));
+  // Salt is the UTF-8 bytes of the hex string (matches Node pbkdf2 with string salt).
+  const salt = enc.encode(saltHex);
   const bits = await crypto.subtle.deriveBits(
     { name: 'PBKDF2', salt, iterations: 120000, hash: 'SHA-256' },
     keyMaterial,
