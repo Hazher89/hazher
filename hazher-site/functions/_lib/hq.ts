@@ -4,6 +4,7 @@ export type Env = {
   HAZHER_HQ?: KVNamespace;
   HQ_ALLOWED_IPS?: string;
   HQ_USER?: string;
+  HQ_PASS?: string;
   HQ_PASS_SALT?: string;
   HQ_PASS_HASH?: string;
   HQ_SESSION_SECRET?: string;
@@ -12,9 +13,9 @@ export type Env = {
 /** Defaults — override in Cloudflare Pages → Settings → Environment variables. */
 export const HQ_DEFAULTS = {
   user: 'HAZHER',
-  // PBKDF2-SHA256, 120000 iterations, 32 bytes — not the plaintext password
+  // sha256(`${password}:${salt}`) — Workers-friendly (PBKDF2 120k caused 1101 CPU kills)
   passSalt: '187f793babfa6398e292a3fd20916a7b',
-  passHash: '7062b3de907583bcd43dbf3852418b64722cfada2ef5b92e47132654c9b6edeb',
+  passHash: '533748687f14b01a8353db83e2f180c48468e403b3d4c82b3acdb36a2bc9c27f',
 };
 
 export type VisitEvent = {
@@ -179,23 +180,10 @@ export function shouldSkipLogging(pathname: string): boolean {
   return false;
 }
 
-async function pbkdf2Hex(password: string, saltHex: string): Promise<string> {
+async function passwordHashHex(password: string, salt: string): Promise<string> {
   const enc = new TextEncoder();
-  const keyMaterial = await crypto.subtle.importKey(
-    'raw',
-    enc.encode(password),
-    'PBKDF2',
-    false,
-    ['deriveBits'],
-  );
-  // Salt is the UTF-8 bytes of the hex string (matches Node pbkdf2 with string salt).
-  const salt = enc.encode(saltHex);
-  const bits = await crypto.subtle.deriveBits(
-    { name: 'PBKDF2', salt, iterations: 120000, hash: 'SHA-256' },
-    keyMaterial,
-    256,
-  );
-  return [...new Uint8Array(bits)].map((b) => b.toString(16).padStart(2, '0')).join('');
+  const bytes = await crypto.subtle.digest('SHA-256', enc.encode(`${password}:${salt}`));
+  return [...new Uint8Array(bytes)].map((b) => b.toString(16).padStart(2, '0')).join('');
 }
 
 function timingSafeEqual(a: string, b: string): boolean {
@@ -212,9 +200,13 @@ export async function verifyHqLogin(
 ): Promise<boolean> {
   const user = (env.HQ_USER || HQ_DEFAULTS.user).trim();
   if (username.trim() !== user) return false;
+
+  // Optional plain secret for emergency override (Cloudflare Secrets only)
+  if (env.HQ_PASS && password === env.HQ_PASS) return true;
+
   const salt = env.HQ_PASS_SALT || HQ_DEFAULTS.passSalt;
   const expected = env.HQ_PASS_HASH || HQ_DEFAULTS.passHash;
-  const got = await pbkdf2Hex(password, salt);
+  const got = await passwordHashHex(password, salt);
   return timingSafeEqual(got, expected);
 }
 

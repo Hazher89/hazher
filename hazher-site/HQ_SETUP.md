@@ -5,11 +5,13 @@ Usynlig kontrollrom på **https://hazher.no/hq**
 ## Sikkerhet
 
 - **IP-allowlist** (`HQ_ALLOWED_IPS`): andre IP-er får **404** (siden finnes «ikke»).
-- **Kun bruker `HAZHER`** med passord du satte (lagret som PBKDF2-hash, ikke klartekst i git).
+- **Kun bruker `HAZHER`** med passord du satte (lagret som SHA-256-hash, ikke klartekst i git).
 - HttpOnly / Secure / SameSite session-cookie.
 - `X-Robots-Tag: noindex`.
 
 Viktig: passordet ble skrevet i chat — bytt det senere hvis det brukes andre steder.
+
+**Ikke sett** `HQ_PASS_HASH` / `HQ_PASS_SALT` i Cloudflare med mindre du har generert dem med `scripts/hash-hq-pass.mjs`. Feil verdier der overstyrer innebygd hash og gjør at innlogging feiler.
 
 ## Cloudflare-oppsett (påkrevd)
 

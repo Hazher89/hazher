@@ -165,9 +165,9 @@ async function login() {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username, password }),
   });
-  const data = await res.json().catch(() => ({}));
+      const data = await res.json().catch(() => ({}));
   if (!res.ok || !data.ok) {
-    $('loginErr').textContent = data.error || 'Innlogging feilet';
+    $('loginErr').textContent = data.error || ('Innlogging feilet (' + res.status + ')');
     return;
   }
   $('loginView').classList.add('hidden');
