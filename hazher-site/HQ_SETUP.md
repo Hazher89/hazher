@@ -18,26 +18,30 @@ Viktig: passordet ble skrevet i chat — bytt det senere hvis det brukes andre s
 Åpne: https://hazher.no/cdn-cgi/trace  
 Se linjen `ip=…`
 
-### 2) Environment variables
+### 2) Environment variables / secrets
 
-Cloudflare Dashboard → **Workers & Pages** → prosjektet for hazher.no → **Settings** → **Environment variables** (Production):
+Cloudflare Dashboard → **Workers & Pages** → **hazher** → **Settings** → **Variables and secrets** (Production):
+
+Type **Secret** for alle:
 
 | Navn | Verdi |
 |------|--------|
-| `HQ_ALLOWED_IPS` | Din IP (flere: `1.2.3.4,5.6.7.8`) |
-| `HQ_USER` | `HAZHER` (valgfritt — default er HAZHER) |
+| `HQ_ALLOWED_IPS` | Din IP (f.eks. `83.109.97.12`) |
 | `HQ_SESSION_SECRET` | Lang tilfeldig streng |
-| `HQ_PASS_SALT` | (valgfritt — innebygd default finnes) |
-| `HQ_PASS_HASH` | (valgfritt — innebygd default for ditt valgte passord) |
+| `HQ_USER` | `HAZHER` (valgfritt) |
 
-### 3) KV for trafikklogg
+### 3) KV-binding (dette er `HAZHER_HQ`)
 
-1. **Workers & Pages** → **KV** → Create namespace (f.eks. `hazher-hq`)
-2. Pages-prosjekt → **Settings** → **Functions** → **KV namespace bindings**
-3. Variable name: **`HAZHER_HQ`** → velg namespacen
-4. Redeploy
+`HAZHER_HQ` legges **ikke** under Variables — den legges under **Bindings**:
 
-Uten KV fungerer login, men trafikklisten er tom.
+1. Først: **Workers & Pages** → **KV** → **Create a namespace** (f.eks. `hazher-hq`)
+2. Tilbake til Pages-prosjektet **hazher** → **Settings** → **Bindings**
+3. **Add** → **KV namespace**
+4. **Variable name:** `HAZHER_HQ` (nøyaktig)
+5. Velg KV-namespacen du nettopp laget
+6. Save → **Redeploy**
+
+Uten denne bindingen fungerer login, men trafikklisten er tom.
 
 ## Bruk
 
