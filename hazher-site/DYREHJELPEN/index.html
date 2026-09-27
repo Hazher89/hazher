@@ -3,77 +3,306 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>DyreHjelpen — savnede dyr, nabolag og dyrevelferd | Hazher</title>
-<meta name="description" content="DyreHjelpen er en norsk app for savnede og funne dyr, lokal hjelp, utstyr og veterinærspleis."/>
+<title>DyreHjelpen — nabolaget for dyr | Hazher</title>
+<meta name="description" content="DyreHjelpen er Norges community-app for savnede og funne dyr, observasjoner, omplassering, dyrepass, utstyr, tips og veterinærspleis — med kart, chat og trygg moderering."/>
 <link rel="canonical" href="https://www.hazher.no/DYREHJELPEN/"/>
+<meta property="og:title" content="DyreHjelpen — nabolaget for dyr"/>
+<meta property="og:description" content="Finn savnede dyr, del observasjoner, få lokal hjelp og støtt veterinærregninger."/>
+<meta property="og:image" content="https://www.hazher.no/images/dyrehjelpen/welcome.jpg"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="../styles.css"/>
 <link rel="stylesheet" href="../hazher-apple.css"/>
 <link rel="stylesheet" href="../hazher-apple-ext.css"/>
+<link rel="stylesheet" href="../hazher-longform.css"/>
 <link rel="stylesheet" href="../hurtighjelp-extra.css"/>
+<link rel="stylesheet" href="../dyrehjelpen-extra.css"/>
 <script src="../main.js" defer></script>
 <script src="../hazher-apple.js" defer></script>
 <script src="../hurtighjelp-pages.js" defer></script>
 <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png"/>
 <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
-<style>
-  .theme-forest .hj-nav, .theme-forest .nav-cta { --hj-accent: #2E6F40; }
-  .theme-forest .doc-pill--rapid, .theme-forest .hj-badge-row .doc-pill--rapid {
-    background: #2E6F40; color: #fff;
-  }
-  .theme-forest .hero-cta-primary, .theme-forest .hz-btn--primary {
-    background: #2E6F40 !important;
-  }
-</style>
 </head>
 <body class="apple-site apple-product theme-forest hj-site">
 <div class="scroll-progress" aria-hidden="true"></div>
-<div class="bg-mesh" aria-hidden="true" data-parallax="0.02"></div>
-<div class="bg-grid" aria-hidden="true" data-parallax="0.04"></div>
+
 <header class="nav hj-nav"><div class="wrap nav-inner">
 <a href="../index.html" class="logo" aria-label="Hazher"><img src="../images/hazher-mark.png" width="48" height="48" alt="Hazher" class="logo-img"/></a>
 <button type="button" class="nav-toggle" aria-label="Meny" id="navToggle"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
 <nav class="nav-links" id="navLinks" aria-label="Hovedmeny">
-<a href="../index.html#stage">Portefølje</a>
-<a href="../index.html#produkter">Produkter</a>
-<a href="Privacy/">Personvern</a>
+<a href="index.html" class="is-active">DyreHjelpen</a>
+<a href="#funksjoner">Funksjoner</a>
 <a href="Support/">Support</a>
+<a href="Privacy/">Personvern</a>
+<a href="Terms/">Vilkår</a>
 <a href="../index.html#kontakt" class="nav-cta">Kontakt</a>
 </nav>
 </div></header>
 
-<main class="wrap" style="padding: 4rem 1.25rem 6rem; max-width: 920px;">
-  <div class="hj-badge-row" style="margin-bottom: 1rem;">
-    <span class="doc-pill doc-pill--rapid">DyreHjelpen</span>
-    <span class="doc-pill">iOS · Android</span>
+<main>
+<section class="dh-hero" aria-label="DyreHjelpen">
+  <div class="dh-hero__media" aria-hidden="true">
+    <img src="../images/dyrehjelpen/welcome.jpg" alt="" width="1600" height="1000" fetchpriority="high"/>
   </div>
-  <h1 style="font-family: Syne, sans-serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; line-height: 1.1; margin: 0 0 1rem;">
-    Nabolaget for dyr
-  </h1>
-  <p style="font-size: 1.15rem; color: #4a5c52; max-width: 36rem; line-height: 1.5;">
-    Finn savnede dyr, del observasjoner, få hjelp lokalt og støtt veterinærregninger — trygt og enkelt.
+  <div class="dh-hero__shade" aria-hidden="true"></div>
+  <div class="dh-hero__inner">
+    <p class="dh-hero__tag">DyreHjelpen · iOS &amp; Android</p>
+    <h1 class="dh-hero__brand">DyreHjelpen</h1>
+    <p class="dh-hero__lead">
+      Nabolaget for dyr. Finn savnede, del observasjoner, omplasser ansvarlig,
+      få lokal hjelp — og støtt veterinærregninger når det haster.
+    </p>
+    <div class="dh-hero__actions">
+      <a class="btn btn-rapid-primary" href="Support/">Support &amp; FAQ</a>
+      <a class="btn btn-ghost" href="#dybde">Les mer</a>
+    </div>
+  </div>
+</section>
+
+<div class="dh-strip" data-reveal="up">
+  <div class="dh-strip__card"><strong>Kart + feed</strong><span>Savnet, funnet, observert og akutt — synlig for dem rundt deg.</span></div>
+  <div class="dh-strip__card"><strong>Trygg moderering</strong><span>Nye innlegg godkjennes før de blir offentlige. Du får beskjed.</span></div>
+  <div class="dh-strip__card"><strong>Spleis</strong><span>Start eller støtt lokal innsamling til veterinærbehandling.</span></div>
+</div>
+
+<section class="apple-bento hj-portals" aria-label="Offisielle sider" data-reveal="up">
+<div class="wrap">
+<p class="hj-portals__label">For App Store &amp; Play</p>
+<h2 class="hj-portals__title">Support. Personvern. Vilkår.</h2>
+<div class="hj-tiles">
+<a href="Support/" class="hj-tile">
+<span class="hj-tile__tag">Support</span>
+<h3>Hjelp og kontakt</h3>
+<p>FAQ, feilsøking og offisiell Support URL.</p>
+<span class="hj-tile__link">Åpne support</span>
+</a>
+<a href="Privacy/" class="hj-tile">
+<span class="hj-tile__tag">Personvern</span>
+<h3>Personvernerklæring</h3>
+<p>Privacy Policy URL for iOS og Android.</p>
+<span class="hj-tile__link">Les personvern</span>
+</a>
+<a href="Terms/" class="hj-tile">
+<span class="hj-tile__tag">Vilkår</span>
+<h3>Brukervilkår</h3>
+<p>Regler for innhold, ansvar og konto.</p>
+<span class="hj-tile__link">Les vilkår</span>
+</a>
+</div>
+</div>
+</section>
+
+<section class="hj-journey wrap" data-reveal="up" id="funksjoner">
+<h2>Slik hjelper nabolaget</h2>
+<div class="hj-journey__track">
+<div class="hj-journey__step"><div class="hj-journey__num">1</div><h3>Del</h3><p>Savnet, funnet, tipset eller spørsmål — med bilde og sted.</p></div>
+<div class="hj-journey__step"><div class="hj-journey__num">2</div><h3>Godkjenn</h3><p>Teamet ser over innlegget. Du får push når det er klart.</p></div>
+<div class="hj-journey__step"><div class="hj-journey__num">3</div><h3>Nå ut</h3><p>Feed, kart og chat kobler deg til dem som kan hjelpe.</p></div>
+<div class="hj-journey__step"><div class="hj-journey__num">4</div><h3>Følg opp</h3><p>Likes, kommentarer, direkte meldinger — og spleis ved behov.</p></div>
+</div>
+</section>
+
+<section class="dh-feature" data-reveal="up">
+  <div class="dh-feature__grid">
+    <div class="dh-feature__copy">
+      <p class="dh-feature__label">Savnet &amp; funnet</p>
+      <h2>Når hvert minutt teller.</h2>
+      <p>
+        Meld savnet med bilde, kjennetegn og sted. Naboer kan dele observasjoner
+        og funn — så eiere og hjelpere møtes raskere enn i tilfeldige Facebook-tråder.
+      </p>
+      <ul class="dh-feature__list">
+        <li>Kart med klynger og filtre</li>
+        <li>Hurtigsøk på art, område og type</li>
+        <li>Del plakat og åpne chat direkte</li>
+      </ul>
+    </div>
+    <div class="dh-feature__visual">
+      <figure class="dh-photo"><img src="../images/dyrehjelpen/lost_found.jpg" alt="Savnet og funnet dyr i DyreHjelpen" width="900" height="675" loading="lazy"/></figure>
+    </div>
+  </div>
+</section>
+
+<section class="dh-feature dh-feature--flip" data-reveal="up">
+  <div class="dh-feature__grid">
+    <div class="dh-feature__copy">
+      <p class="dh-feature__label">Kart &amp; nærhet</p>
+      <h2>Lokalt først. Alltid.</h2>
+      <p>
+        DyreHjelpen er bygget for nabolaget: se saker nær deg, filtrer på avstand,
+        og del posisjon når du vil — uten å blottlegge mer enn nødvendig.
+      </p>
+      <ul class="dh-feature__list">
+        <li>Velg manuell adresse eller «bruk min posisjon»</li>
+        <li>Skru av nøyaktig GPS — vis kun område-tekst</li>
+        <li>Varsler om relevant aktivitet der du er</li>
+      </ul>
+    </div>
+    <div class="dh-feature__visual">
+      <figure class="dh-photo"><img src="../images/dyrehjelpen/map.jpg" alt="Kartvisning i DyreHjelpen" width="900" height="675" loading="lazy"/></figure>
+    </div>
+  </div>
+</section>
+
+<section class="dh-feature" data-reveal="up">
+  <div class="dh-feature__grid">
+    <div class="dh-feature__copy">
+      <p class="dh-feature__label">Community</p>
+      <h2>Spørsmål, tips og opplevelser.</h2>
+      <p>
+        Ikke bare kriser. Del gleden, still spørsmål, skriv tips — og vis video
+        når det forteller historien bedre. Smart startside samler kategoriene
+        så feeden føles levende, ikke rotete.
+      </p>
+      <ul class="dh-feature__list">
+        <li>Opplevelser med foto og video</li>
+        <li>Spørsmål og artikler under moderering</li>
+        <li>Hjelpegrupper for lokal koordinering</li>
+      </ul>
+    </div>
+    <div class="dh-feature__visual">
+      <figure class="dh-photo"><img src="../images/dyrehjelpen/qa.jpg" alt="Spørsmål og tips i DyreHjelpen" width="900" height="675" loading="lazy"/></figure>
+    </div>
+  </div>
+</section>
+
+<section class="dh-feature dh-feature--flip" data-reveal="up">
+  <div class="dh-feature__grid">
+    <div class="dh-feature__copy">
+      <p class="dh-feature__label">Omplassering &amp; pass</p>
+      <h2>Ansvarlig match — ikke hastejobb.</h2>
+      <p>
+        Omplassering krever ærlig helse- og temperamentinfo. Appen veileder med
+        alder, ventetid hos eier og artsspesifikke tips — så dyret får et tryggere hjem.
+      </p>
+      <ul class="dh-feature__list">
+        <li>Knytt dyr til profilen din</li>
+        <li>Passering: trenger eller tilbyr pass</li>
+        <li>Utstyr: selg, ønsk eller gi bort</li>
+      </ul>
+    </div>
+    <div class="dh-feature__visual">
+      <figure class="dh-photo"><img src="../images/dyrehjelpen/rehome.jpg" alt="Omplassering i DyreHjelpen" width="900" height="675" loading="lazy"/></figure>
+    </div>
+  </div>
+</section>
+
+<section class="dh-feature" data-reveal="up">
+  <div class="dh-feature__grid">
+    <div class="dh-feature__copy">
+      <p class="dh-feature__label">Veterinærspleis</p>
+      <h2>Når regningen er for stor alene.</h2>
+      <p>
+        Start en spleis for behandling, del historien, og la nabolaget bidra.
+        Bidrag håndteres trygt — med tydelig status og moderering der det trengs.
+      </p>
+      <ul class="dh-feature__list">
+        <li>Kampanjer med målbeløp</li>
+        <li>Vipps-flyt for bidrag</li>
+        <li>Synlig fremdrift i appen</li>
+      </ul>
+    </div>
+    <div class="dh-feature__visual">
+      <figure class="dh-photo"><img src="../images/dyrehjelpen/spleis.jpg" alt="Veterinærspleis i DyreHjelpen" width="900" height="675" loading="lazy"/></figure>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" style="padding: 1rem 1.25rem 2rem;" data-reveal="up">
+  <p class="hj-portals__label" style="margin-bottom:0.5rem;">Alle dyr</p>
+  <h2 class="hj-portals__title" style="margin-bottom:1.25rem;">Fra katt og hund til hest og smådyr.</h2>
+</section>
+<div class="dh-mosaic" data-reveal="up">
+  <figure class="dh-mosaic__wide">
+    <img src="../images/dyrehjelpen/variety.jpg" alt="Mange dyrearter i DyreHjelpen" width="1000" height="800" loading="lazy"/>
+    <figcaption>Ett nabolag — mange arter</figcaption>
+  </figure>
+  <figure>
+    <img src="../images/dyrehjelpen/horse.jpg" alt="Hest" width="600" height="400" loading="lazy"/>
+    <figcaption>Hest</figcaption>
+  </figure>
+  <figure>
+    <img src="../images/dyrehjelpen/rabbit.jpg" alt="Kanin" width="600" height="400" loading="lazy"/>
+    <figcaption>Smådyr</figcaption>
+  </figure>
+  <figure>
+    <img src="../images/dyrehjelpen/bird.jpg" alt="Fugl" width="600" height="400" loading="lazy"/>
+    <figcaption>Fugl</figcaption>
+  </figure>
+  <figure>
+    <img src="../images/dyrehjelpen/ready.jpg" alt="Klar til å hjelpe" width="600" height="400" loading="lazy"/>
+    <figcaption>Klar til å hjelpe</figcaption>
+  </figure>
+</div>
+
+<section class="apple-bento" data-reveal="up">
+  <h2>Bygget for trygghet.</h2>
+  <div class="apple-bento__grid" data-stagger>
+    <article class="apple-bento__cell apple-bento__cell--wide">
+      <h3>Moderering før publisering</h3>
+      <p>Nye annonser, artikler og opplevelser går til godkjenning. Avslag kommer med begrunnelse — du kan rette og sende på nytt.</p>
+    </article>
+    <article class="apple-bento__cell"><h3>Innlogging</h3><p>Apple, Google og Vipps — uten passord du må huske.</p></article>
+    <article class="apple-bento__cell"><h3>Rapporter &amp; blokker</h3><p>Du styrer hva du ser. Vi følger opp alvorlige saker.</p></article>
+    <article class="apple-bento__cell apple-bento__cell--tall"><h3>Chat</h3><p>Privat dialog mellom eier og hjelper — uten å dele telefon offentlig.</p></article>
+    <article class="apple-bento__cell"><h3>Push</h3><p>Varsler for chat, godkjenning, likes og lokal aktivitet.</p></article>
+    <article class="apple-bento__cell"><h3>Slett konto</h3><p>Full sletting i appen — inkludert tilknyttede data etter rutinene våre.</p></article>
+    <article class="apple-bento__cell"><h3>Veterinær-badge</h3><p>Verifiserte veterinærer kan synliggjøres for rådgivning i community.</p></article>
+    <article class="apple-bento__cell"><h3>Norsk</h3><p>Hele grensesnittet på bokmål — bygget for Norge.</p></article>
+  </div>
+</section>
+
+<section class="dh-prose" id="dybde" data-reveal="up">
+  <h2>Hvorfor DyreHjelpen?</h2>
+  <p>
+    Savnede dyr, skaderde dyr og akutte situasjoner skjer i vanlige nabolag — ikke bare i
+    organisasjoner med døgnåpen bemanning. Facebook-grupper og tilfeldige meldinger
+    fungerer dårlig når du trenger bilde, sted, filter og trygg kontakt på ett sted.
   </p>
-  <div style="display:flex; flex-wrap:wrap; gap:0.75rem; margin: 2rem 0 3rem;">
-    <a class="hz-btn hz-btn--primary" href="Support/">Support</a>
-    <a class="hz-btn" href="Privacy/" style="border:1px solid #2E6F40; color:#2E6F40; padding:0.7rem 1.2rem; border-radius:999px; text-decoration:none; font-weight:700;">Personvern</a>
-    <a class="hz-btn" href="Terms/" style="border:1px solid #2E6F40; color:#2E6F40; padding:0.7rem 1.2rem; border-radius:999px; text-decoration:none; font-weight:700;">Vilkår</a>
+  <p>
+    DyreHjelpen samler kart, feed, chat, omplassering, pass, utstyr og veterinærspleis
+    i én app. Vi prioriterer <strong>norsk kontekst</strong>: Vipps-innlogging, tydelig
+    språk, dyrevelferdstips og moderering før noe blir synlig for alle.
+  </p>
+  <h3>Akutt vs. community</h3>
+  <p>
+    Akutt-saker og savnet skal være raske å opprette. Samtidig er det plass til glede:
+    opplevelser, tips og spørsmål som gjør communityen levende mellom krisene.
+  </p>
+  <h3>Teknologi</h3>
+  <p>
+    Flutter-app for iOS og Android, backend med Supabase (auth, database, lagring, RLS),
+    push via FCM/APNs, og kart for lokal oppdagelse. Personvern og vilkår er publisert
+    her på hazher.no for App Store Connect og Google Play.
+  </p>
+  <h3>Viktig</h3>
+  <ul>
+    <li>DyreHjelpen erstatter ikke veterinær eller nødnummer (112 ved menneskelig nød).</li>
+    <li>Du er ansvarlig for innholdet du publiserer og avtaler du inngår.</li>
+    <li>Vi kan fjerne innhold som bryter vilkårene eller norsk lov.</li>
+  </ul>
+</section>
+
+<section class="apple-cta-band wrap" data-reveal="scale" style="max-width:980px;margin-inline:auto;margin-bottom:4rem">
+  <h2>App Store og Google Play</h2>
+  <p>Offisielle URL-er — lim inn i App Store Connect og Play Console.</p>
+  <div class="hj-url-strip" style="margin:20px auto 16px;max-width:720px">
+    <span>Support URL</span>
+    <code>https://www.hazher.no/DYREHJELPEN/Support/</code>
+    <button type="button" data-copy-url>Kopier</button>
   </div>
-  <section style="display:grid; gap:1.25rem;">
-    <article style="background:#f3f7f4; border-radius:20px; padding:1.5rem;">
-      <h2 style="margin:0 0 0.5rem; font-family:Syne,sans-serif;">Kart og feed</h2>
-      <p style="margin:0; color:#4a5c52;">Savnet, funnet, observert og akutte saker nær deg — med kommentarer, likes og direkte chat.</p>
-    </article>
-    <article style="background:#f3f7f4; border-radius:20px; padding:1.5rem;">
-      <h2 style="margin:0 0 0.5rem; font-family:Syne,sans-serif;">Trygghet</h2>
-      <p style="margin:0; color:#4a5c52;">Rapporter, skjul og blokker. Du styrer hva du ser — og kan slette kontoen når som helst.</p>
-    </article>
-    <article style="background:#f3f7f4; border-radius:20px; padding:1.5rem;">
-      <h2 style="margin:0 0 0.5rem; font-family:Syne,sans-serif;">Spleis</h2>
-      <p style="margin:0; color:#4a5c52;">Start eller støtt veterinærspleis i nabolaget når dyret trenger behandling.</p>
-    </article>
-  </section>
+  <div class="hj-url-strip" style="margin:0 auto 28px;max-width:720px">
+    <span>Privacy Policy URL</span>
+    <code>https://www.hazher.no/DYREHJELPEN/Privacy/</code>
+    <button type="button" data-copy-url>Kopier</button>
+  </div>
+  <div class="apple-cta-band__actions">
+    <a href="Support/" class="btn btn-rapid-primary">Support</a>
+    <a href="Privacy/" class="btn btn-ghost">Personvern</a>
+    <a href="Terms/" class="btn btn-ghost">Vilkår</a>
+  </div>
+</section>
 </main>
 
 <footer class="footer">
@@ -89,7 +318,7 @@
       <a href="../index.html">Hazher</a>
     </div>
   </div>
-  <p class="footer-copy wrap">© Hazher</p>
+  <p class="footer-copy wrap">© Hazher · DyreHjelpen</p>
 </footer>
 </body>
 </html>

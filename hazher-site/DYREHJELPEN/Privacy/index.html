@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Personvern — DyreHjelpen (app) | Hazher</title>
-<meta name="description" content="Personvernerklæring for mobilappen DyreHjelpen: data, formål, tredjeparter, rettigheter og kontakt. Privacy Policy URL for App Store."/>
+<meta name="description" content="Personvernerklæring for mobilappen DyreHjelpen: hvilke data vi behandler, formål, lagring, tredjeparter, dine rettigheter og kontakt. Privacy Policy URL for App Store."/>
 <link rel="canonical" href="https://www.hazher.no/DYREHJELPEN/Privacy/"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="../../hazher-apple.css"/>
 <link rel="stylesheet" href="../../hazher-apple-ext.css"/>
 <link rel="stylesheet" href="../../hurtighjelp-extra.css"/>
+<link rel="stylesheet" href="../../dyrehjelpen-extra.css"/>
 <script src="../../main.js" defer></script>
 <script src="../../hazher-apple.js" defer></script>
 <script src="../../hurtighjelp-pages.js" defer></script>
@@ -30,9 +31,9 @@
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
     </button>
     <nav class="nav-links" id="navLinks" aria-label="Hovedmeny">
-      <a href="../../index.html#stage">Portefølje</a>
       <a href="../index.html">DyreHjelpen</a>
       <a href="../Support/">Support</a>
+      <a href="../Terms/">Vilkår</a>
       <a href="../../index.html#kontakt" class="nav-cta">Kontakt</a>
     </nav>
   </div>
@@ -43,10 +44,11 @@
     <div class="hj-badge-row">
       <span class="doc-pill doc-pill--rapid">Personvern</span>
       <span class="doc-pill">GDPR</span>
+      <span class="doc-pill">App</span>
     </div>
-    <h1>Personvern for DyreHjelpen</h1>
+    <h1>Personvernerklæring for DyreHjelpen</h1>
     <p class="hj-lead">
-      Denne erklæringen gjelder mobilappen <strong>DyreHjelpen</strong> på iOS og Android.
+      Denne erklæringen gjelder mobilappen <strong>DyreHjelpen</strong> (iOS og Android).
       Bruk URL-en under som <strong>Privacy Policy URL</strong> i App Store Connect og Google Play Console.
     </p>
     <div class="hj-url-strip">
@@ -55,54 +57,179 @@
       <button type="button" data-copy-url>Kopier URL</button>
     </div>
     <p class="hj-doc-meta">
-      Sist oppdatert: <time datetime="2026-09-26">26. september 2026</time> · Vilkår finnes i appen under Profil → Konto.
+      Sist oppdatert: <time datetime="2026-09-27">27. september 2026</time>
+      · <a href="../Terms/">Brukervilkår</a>
+      · <a href="../Support/">Support</a>
     </p>
+    <nav class="hj-doc-nav" aria-label="Innhold">
+      <a href="#s1">1. Ansvar</a>
+      <a href="#s2">2. Data</a>
+      <a href="#s3">3. Formål</a>
+      <a href="#s4">4. Posisjon</a>
+      <a href="#s5">5. Tredjeparter</a>
+      <a href="#s6">6. Lagring</a>
+      <a href="#s7">7. Rettigheter</a>
+      <a href="#s8">8. Barn</a>
+      <a href="#s9">9. Sikkerhet</a>
+      <a href="#s10">10. Kontakt</a>
+    </nav>
   </header>
 
-  <article class="wrap hj-doc-body">
+  <div class="wrap hj-doc-content hj-privacy-content">
+    <div class="hj-callout">
+      <strong>Nettsted vs. app:</strong> Informasjonskapsler på <strong>www.hazher.no</strong> beskrives i
+      <a href="../../privacy.html">personvernerklæringen for hazher.no</a>.
+      Denne siden gjelder <strong>appen DyreHjelpen</strong>.
+    </div>
+
     <section id="s1">
-      <h2>1. Behandlingsansvarlig</h2>
-      <p>Hazher / DyreHjelpen er behandlingsansvarlig for personopplysninger som behandles i appen. Kontakt: <a href="mailto:kontakt@hazher.no">kontakt@hazher.no</a>.</p>
+      <h2><span class="hj-section-num">1.</span> Behandlingsansvarlig</h2>
+      <p>
+        DyreHjelpen leveres av <strong>Haz.HER Abdullah</strong> (org.nr. 837 568 382), Norge
+        («Hazher», «vi»). Vi er behandlingsansvarlig for personopplysninger som behandles i appen.
+      </p>
+      <p>
+        Personvernhenvendelser: <a href="mailto:kontakt@hazher.no">kontakt@hazher.no</a>
+        med emne «Personvern – DyreHjelpen».
+      </p>
     </section>
+
     <section id="s2">
-      <h2>2. Hvilke data vi behandler</h2>
+      <h2><span class="hj-section-num">2.</span> Hvilke data vi behandler</h2>
+      <p>Avhengig av hvordan du bruker appen, kan vi behandle:</p>
+      <h3>Konto og profil</h3>
       <ul>
-        <li>Konto: navn, e-post/telefon via Apple, Google eller Vipps, profilbilde og bio du oppgir.</li>
-        <li>Innhold: innlegg om dyr, bilder, kommentarer, chatmeldinger, posisjon når du deler den.</li>
-        <li>Teknisk: enhetstokens for push-varsler, feillogger i begrenset omfang.</li>
-        <li>Sikkerhet: rapporter og blokkeringer du sender inn.</li>
+        <li>Identifikatorer fra innlogging (Apple, Google eller Vipps)</li>
+        <li>Navn, e-post og eventuelt telefonnummer som følger med innloggingen</li>
+        <li>Profilbilde, visningsnavn og bio du selv legger inn</li>
+        <li>Valgfrie merker (f.eks. verifisert veterinær etter godkjenning)</li>
+      </ul>
+      <h3>Innhold du skaper</h3>
+      <ul>
+        <li>Annonser og innlegg (savnet, funnet, omplassering, tips, opplevelser m.m.)</li>
+        <li>Bilder og video du laster opp</li>
+        <li>Beskrivelser, adresser/område-tekst og metadata du oppgir</li>
+        <li>Kommentarer, likes og chatmeldinger</li>
+        <li>Informasjon om dyr du registrerer (navn, art, alder, chip m.m.)</li>
+        <li>Spleis-/kampanjedata og bidrag du rapporterer</li>
+      </ul>
+      <h3>Teknisk og sikkerhet</h3>
+      <ul>
+        <li>Enhetstokens for push-varsler (FCM/APNs)</li>
+        <li>App-/enhetsinformasjon i begrenset omfang for stabilitet og misbruk</li>
+        <li>Rapporter, blokkeringer og modereringslogger</li>
+        <li>Feilmeldinger/diagnostikk uten unødvendige personopplysninger</li>
       </ul>
     </section>
+
     <section id="s3">
-      <h2>3. Formål og rettslig grunnlag</h2>
-      <p>Vi behandler data for å levere tjenesten (avtale), forbedre trygghet og moderering (berettiget interesse), og sende varsler du har bedt om (samtykke/avtale). Vi selger ikke personopplysninger.</p>
-    </section>
-    <section id="s4">
-      <h2>4. Tredjeparter</h2>
+      <h2><span class="hj-section-num">3.</span> Formål og rettslig grunnlag</h2>
       <ul>
-        <li><strong>Supabase</strong> — autentisering, database og lagring (EU/EEA der mulig).</li>
-        <li><strong>Apple / Google / Vipps</strong> — innlogging.</li>
-        <li><strong>Firebase Cloud Messaging / Apple Push</strong> — push-varsler.</li>
-        <li><strong>Kartleverandører</strong> — kartfliser når du åpner kart.</li>
+        <li><strong>Levere tjenesten</strong> (konto, feed, kart, chat, spleis) — avtale / berettiget interesse</li>
+        <li><strong>Moderering og trygghet</strong> (godkjenning, rapporter, blokkering) — berettiget interesse</li>
+        <li><strong>Varsler</strong> du har aktivert — samtykke / avtale</li>
+        <li><strong>Forbedring og feilretting</strong> — berettiget interesse</li>
+        <li><strong>Lovpålagte krav</strong> — rettslig forpliktelse der det gjelder</li>
+      </ul>
+      <p>Vi <strong>selger ikke</strong> personopplysninger. Vi bruker ikke dataene dine til å bygge annonseprofiler for tredjeparts reklamenettverk i appen.</p>
+    </section>
+
+    <section id="s4">
+      <h2><span class="hj-section-num">4.</span> Posisjon og sted</h2>
+      <p>
+        Vi ber om tilgang til posisjon <strong>når du trenger det</strong> (for eksempel «bruk min posisjon»,
+        nærhetsfilter eller kart). Du kan nekte — appen fungerer fortsatt med manuell adresse/område.
+      </p>
+      <ul>
+        <li>Du kan velge å dele nøyaktig GPS på kartet, eller kun vise område-tekst offentlig.</li>
+        <li>Adresse kan fylles inn automatisk fra posisjon (omvendt geokoding) og deretter redigeres av deg.</li>
+        <li>Posisjon brukes for å vise lokale saker og beregne avstand — ikke for å spore deg i bakgrunnen uten formål.</li>
       </ul>
     </section>
+
     <section id="s5">
-      <h2>5. Lagring og sletting</h2>
-      <p>Data lagres så lenge kontoen er aktiv, eller så lenge det er nødvendig for sikkerhet og lovpålagte krav. Du kan slette kontoen i appen (Profil → Konto → Slett konto). Da fjernes profil og tilknyttet innhold i henhold til våre sletterutiner.</p>
+      <h2><span class="hj-section-num">5.</span> Tredjeparter og underleverandører</h2>
+      <p>Vi bruker pålitelige leverandører for å drifte appen:</p>
+      <ul>
+        <li><strong>Supabase</strong> — autentisering, database, fil-lagring og sanntid (EU/EEA der mulig)</li>
+        <li><strong>Apple / Google / Vipps</strong> — innlogging (vi mottar begrenset profilinfo)</li>
+        <li><strong>Firebase Cloud Messaging / Apple Push Notification</strong> — push-varsler</li>
+        <li><strong>Kart-/adresseleverandører</strong> (f.eks. kartfliser og omvendt geokoding) når du bruker sted</li>
+        <li><strong>Vipps</strong> — der bidrag/spleis eller verifisering er aktivert</li>
+      </ul>
+      <p>Leverandørene behandler data på våre vegne etter avtale, og skal ikke bruke dem til egne formål uten rettslig grunnlag.</p>
     </section>
+
     <section id="s6">
-      <h2>6. Dine rettigheter</h2>
-      <p>Du har rett til innsyn, retting, sletting, begrensning og dataportabilitet etter GDPR. Kontakt oss på <a href="mailto:kontakt@hazher.no">kontakt@hazher.no</a>. Du kan også klage til Datatilsynet.</p>
+      <h2><span class="hj-section-num">6.</span> Lagring, sletting og overføring</h2>
+      <p>
+        Data lagres så lenge kontoen er aktiv, eller så lenge det er nødvendig for sikkerhet,
+        moderering, tvister og lovpålagte krav. Offentlig innhold kan være synlig for andre brukere
+        til det slettes eller fjernes.
+      </p>
+      <p>
+        Du kan slette kontoen i appen: <strong>Profil → Konto → Slett konto</strong>.
+        Da fjernes profil og tilknyttede data i henhold til våre sletterutiner.
+        Enkelte logger (f.eks. misbruk/sikkerhet) kan beholdes begrenset tid.
+      </p>
+      <p>
+        Dersom data behandles utenfor EØS, skjer det med egnede garantier (f.eks. standardkontraktsklausuler)
+        der leverandøren krever det.
+      </p>
     </section>
+
     <section id="s7">
-      <h2>7. Barn</h2>
-      <p>Tjenesten er ikke rettet mot barn under 13 år. Ta kontakt hvis du mistenker at et barn har opprettet konto.</p>
+      <h2><span class="hj-section-num">7.</span> Dine rettigheter</h2>
+      <p>Etter GDPR har du blant annet rett til:</p>
+      <ul>
+        <li>Innsyn i hvilke opplysninger vi har om deg</li>
+        <li>Retting av uriktige opplysninger</li>
+        <li>Sletting («retten til å bli glemt») der vilkårene er oppfylt</li>
+        <li>Begrensning av behandling</li>
+        <li>Dataportabilitet der det er teknisk mulig</li>
+        <li>Å protestere mot behandling basert på berettiget interesse</li>
+        <li>Å trekke samtykke (f.eks. for enkelte varsler) uten at det påvirker lovligheten før tilbaketrekking</li>
+      </ul>
+      <p>
+        Kontakt <a href="mailto:kontakt@hazher.no">kontakt@hazher.no</a>.
+        Du kan også klage til <a href="https://www.datatilsynet.no" rel="noopener" target="_blank">Datatilsynet</a>.
+      </p>
     </section>
+
     <section id="s8">
-      <h2>8. Kontakt</h2>
-      <p>Spørsmål om personvern: <a href="mailto:kontakt@hazher.no">kontakt@hazher.no</a> · <a href="../Support/">Support-side</a>.</p>
+      <h2><span class="hj-section-num">8.</span> Barn</h2>
+      <p>
+        Tjenesten er ikke rettet mot barn under 13 år (eller høyere aldersgrense der lov krever det).
+        Ta kontakt hvis du mistenker at et barn har opprettet konto uten samtykke — vi sletter slike kontoer.
+      </p>
     </section>
-  </article>
+
+    <section id="s9">
+      <h2><span class="hj-section-num">9.</span> Sikkerhet og moderering</h2>
+      <p>
+        Vi bruker tilgangskontroll (bl.a. row-level security), kryptert transport (HTTPS) og
+        praktiske tiltak for å begrense misbruk. Ingen system er 100&nbsp;% sikkert — varsle oss
+        ved mistanke om brudd.
+      </p>
+      <p>
+        Nye innlegg kan gå via manuell godkjenning. Superadmin-varsler og supporttråder brukes
+        for å håndtere avslag, rapporter og trygghetssaker.
+      </p>
+    </section>
+
+    <section id="s10">
+      <h2><span class="hj-section-num">10.</span> Endringer og kontakt</h2>
+      <p>
+        Vi kan oppdatere denne erklæringen. Vesentlige endringer varsles i appen eller på denne siden
+        med ny «sist oppdatert»-dato.
+      </p>
+      <p>
+        Spørsmål: <a href="mailto:kontakt@hazher.no">kontakt@hazher.no</a> ·
+        <a href="../Support/">Support-side</a> ·
+        <a href="../Terms/">Brukervilkår</a>
+      </p>
+    </section>
+  </div>
 </main>
 
 <footer class="footer">
@@ -116,7 +243,7 @@
       <a href="../Terms/">Vilkår</a>
     </div>
   </div>
-  <p class="footer-copy wrap">© Hazher</p>
+  <p class="footer-copy wrap">© Hazher · DyreHjelpen</p>
 </footer>
 </body>
 </html>

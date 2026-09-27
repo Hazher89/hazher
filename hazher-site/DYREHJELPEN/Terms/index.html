@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vilkår — DyreHjelpen | Hazher</title>
-<meta name="description" content="Brukervilkår for mobilappen DyreHjelpen."/>
+<title>Brukervilkår — DyreHjelpen | Hazher</title>
+<meta name="description" content="Brukervilkår (Terms of Use) for DyreHjelpen: konto, innhold, omplassering, spleis, ansvar og oppsigelse. Offisiell URL for App Store / Google Play."/>
 <link rel="canonical" href="https://www.hazher.no/DYREHJELPEN/Terms/"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -13,21 +13,28 @@
 <link rel="stylesheet" href="../../hazher-apple.css"/>
 <link rel="stylesheet" href="../../hazher-apple-ext.css"/>
 <link rel="stylesheet" href="../../hurtighjelp-extra.css"/>
+<link rel="stylesheet" href="../../dyrehjelpen-extra.css"/>
 <script src="../../main.js" defer></script>
 <script src="../../hazher-apple.js" defer></script>
 <script src="../../hurtighjelp-pages.js" defer></script>
 <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32.png"/>
 <link rel="apple-touch-icon" href="../../images/apple-touch-icon.png"/>
 </head>
-<body class="apple-site theme-rapid hj-site">
+<body class="apple-site theme-forest hj-site dh-site">
 <div class="scroll-progress" aria-hidden="true"></div>
+<div class="bg-mesh" aria-hidden="true" data-parallax="0.03"></div>
+<div class="bg-grid" aria-hidden="true" data-parallax="0.05"></div>
 <header class="nav hj-nav">
   <div class="wrap nav-inner">
     <a href="../../index.html" class="logo" aria-label="Hazher"><img src="../../images/hazher-mark.png" width="48" height="48" alt="Hazher" class="logo-img"/></a>
+    <button type="button" class="nav-toggle" aria-label="Åpne meny" id="navToggle">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
     <nav class="nav-links" id="navLinks" aria-label="Hovedmeny">
       <a href="../index.html">DyreHjelpen</a>
       <a href="../Privacy/">Personvern</a>
       <a href="../Support/">Support</a>
+      <a href="../../index.html#kontakt" class="nav-cta">Kontakt</a>
     </nav>
   </div>
 </header>
@@ -36,45 +43,147 @@
   <header class="hj-doc-header wrap">
     <div class="hj-badge-row">
       <span class="doc-pill doc-pill--rapid">Vilkår</span>
+      <span class="doc-pill">Terms of Use</span>
     </div>
     <h1>Brukervilkår for DyreHjelpen</h1>
-    <p class="hj-doc-meta">Sist oppdatert: <time datetime="2026-09-26">26. september 2026</time></p>
+    <p class="hj-lead">
+      Disse vilkårene gjelder bruk av mobilappen <strong>DyreHjelpen</strong> (iOS og Android).
+      Ved å opprette konto eller bruke appen godtar du vilkårene. Les også
+      <a href="../Privacy/">personvernerklæringen</a>.
+    </p>
+    <div class="hj-url-strip">
+      <span>Terms of Use URL</span>
+      <code>https://www.hazher.no/DYREHJELPEN/Terms/</code>
+      <button type="button" data-copy-url>Kopier URL</button>
+    </div>
+    <p class="hj-doc-meta">
+      Sist oppdatert: <time datetime="2026-09-27">27. september 2026</time>
+      · Leverandør: Hazher
+    </p>
   </header>
+
   <article class="wrap hj-doc-body">
-    <section>
+    <section id="s1">
       <h2>1. Tjenesten</h2>
-      <p>DyreHjelpen er en community-app for savnede/funne dyr, lokal hjelp, utstyr og veterinærspleis. Tjenesten leveres «som den er» uten garanti om kontinuerlig tilgjengelighet.</p>
+      <p>
+        DyreHjelpen er en norsk community-plattform for dyrevelferd: savnede og funne dyr, observasjoner,
+        akutthjelp i nabolaget, omplassering, dyrepass, utstyr, spørsmål/tips, opplevelser og veterinærspleis.
+        Tjenesten leveres «som den er». Vi kan endre, utvide eller midlertidig stanse funksjoner ved vedlikehold,
+        sikkerhet eller kapasitet.
+      </p>
+      <p>
+        <strong>Viktig:</strong> DyreHjelpen erstatter ikke veterinær, Mattilsynet eller nødnummer.
+        Ved akutt fare for mennesker: ring 112. Ved alvorlig dyreskade: kontakt veterinærvakt.
+      </p>
     </section>
-    <section>
-      <h2>2. Konto og alder</h2>
-      <p>Du må være minst 13 år (eller eldre der lov krever det) og ansvarlig for aktivitet på kontoen din.</p>
+
+    <section id="s2">
+      <h2>2. Konto, alder og ansvar</h2>
+      <ul>
+        <li>Du må være minst 13 år, eller eldre der lokal lov krever det.</li>
+        <li>Du er ansvarlig for aktivitet på kontoen din og for å holde innloggingsmetoden trygg.</li>
+        <li>Oppgi riktig og oppdatert informasjon. Misbruk av andres identitet er forbudt.</li>
+        <li>Én person skal normalt ha én konto; vi kan stenge duplikater eller mistenkelige kontoer.</li>
+      </ul>
     </section>
-    <section>
+
+    <section id="s3">
       <h2>3. Innhold og oppførsel</h2>
-      <p>Du skal ikke publisere ulovlig, trakasserende eller villedende innhold. Vi kan fjerne innhold, blokkere brukere og samarbeide med myndigheter ved mistanke om alvorlige forhold. Akutt dyrehjelp erstatter ikke veterinær eller nødnummer.</p>
+      <p>Du skal ikke publisere eller sende innhold som:</p>
+      <ul>
+        <li>er ulovlig, truende, trakasserende, diskriminerende eller pornografisk</li>
+        <li>villeder andre (f.eks. falske savnet-saker eller svindel)</li>
+        <li>krenker andres opphavsrett, personvern eller andre rettigheter</li>
+        <li>oppfordrer til dyremishandling eller brudd på dyrevelferdsloven</li>
+        <li>spammer, scraper eller forsøker å omgå sikkerhet/moderering</li>
+      </ul>
+      <p>
+        Vi kan fjerne innhold, begrense synlighet, avvise publisering, blokkere brukere og varsle relevante
+        myndigheter ved mistanke om alvorlige forhold. Nye innlegg kan kreve godkjenning før de blir synlige.
+      </p>
     </section>
-    <section>
-      <h2>4. Markedsplass og spleis</h2>
-      <p>Private avtaler mellom brukere er brukernes ansvar. Vipps/betalingspartnere har egne vilkår der det brukes.</p>
+
+    <section id="s4">
+      <h2>4. Savnet, funnet og observasjoner</h2>
+      <p>
+        Når du melder savnet/funnet/observert, skal opplysningene være så korrekte som mulig.
+        Del ikke unødvendig privat informasjon om andre. Respekter privat eiendom og lokale regler når du leter.
+      </p>
     </section>
-    <section>
-      <h2>5. Immaterielle rettigheter</h2>
-      <p>Du beholder rettigheter til eget innhold, men gir oss lisens til å vise det i appen. Appens merkevare og kode tilhører Hazher.</p>
+
+    <section id="s5">
+      <h2>5. Omplassering og dyrepass</h2>
+      <p>
+        Omplassering og passering er avtaler mellom brukere. Du er selv ansvarlig for at dyret får forsvarlig omsorg
+        i tråd med norsk dyrevelferdslov. Oppgi ærlig informasjon om helse, temperament og behov.
+        Appen kan vise anbefalinger (f.eks. alder/ventetid) — dette er veiledning, ikke juridisk rådgivning.
+      </p>
     </section>
-    <section>
-      <h2>6. Ansvarsbegrensning</h2>
-      <p>Vi er ikke ansvarlige for tap av dyr, mislykkede gjenforeninger eller avtaler mellom brukere, utover det som følger av ufravikelig norsk lov.</p>
+
+    <section id="s6">
+      <h2>6. Marked, utstyr og spleis</h2>
+      <ul>
+        <li>Private kjøp/salg/gis bort er brukernes ansvar. Undersøk tilstand og avtaler før overlevering.</li>
+        <li>Spleis er frivillig innsamling. Bidrag via Vipps følger Vipps’ vilkår. Vi kan kreve dokumentasjon før publisering.</li>
+        <li>Vi garanterer ikke at innsamlingsmål nås, eller at midler brukes på bestemt måte utover det innsamleren oppgir — vær kritisk og rapporter mistanke om misbruk.</li>
+      </ul>
     </section>
-    <section>
-      <h2>7. Oppsigelse</h2>
-      <p>Du kan slette kontoen når som helst. Vi kan stenge tilgang ved brudd på vilkårene.</p>
+
+    <section id="s7">
+      <h2>7. Immaterielle rettigheter</h2>
+      <p>
+        Du beholder rettighetene til innhold du laster opp, men gir Hazher en ikke-eksklusiv, verdensomspennende lisens
+        til å lagre, vise og distribuere innholdet i appen og tilhørende tjenester (inkl. moderering og sikkerhetskopier).
+        Appens merkevare, design og programvare tilhører Hazher og kan ikke kopieres uten tillatelse.
+      </p>
     </section>
-    <section>
-      <h2>8. Kontakt</h2>
-      <p><a href="mailto:kontakt@hazher.no">kontakt@hazher.no</a> · <a href="../Support/">Support</a> · <a href="../Privacy/">Personvern</a></p>
+
+    <section id="s8">
+      <h2>8. Ansvarsbegrensning</h2>
+      <p>
+        I den utstrekning loven tillater det, er Hazher ikke ansvarlig for indirekte tap, tap av dyr, mislykkede gjenforeninger,
+        konflikter mellom brukere, eller tredjeparts handlinger. Ingenting i disse vilkårene begrenser rettigheter
+        du har etter ufravikelig norsk forbrukerlovgivning.
+      </p>
+    </section>
+
+    <section id="s9">
+      <h2>9. Oppsigelse</h2>
+      <p>
+        Du kan slette kontoen når som helst i appen. Vi kan stenge eller begrense tilgang ved brudd på vilkårene,
+        sikkerhetstrusler eller lovpålagte krav. Ved stenging kan innhold fjernes eller skjules.
+      </p>
+    </section>
+
+    <section id="s10">
+      <h2>10. Lovvalg</h2>
+      <p>
+        Vilkårene er underlagt norsk rett. Tvister søkes løst i minnelighet; ellers gjelder norske domstoler
+        med forbehold om ufravikelige forbrukerrettigheter.
+      </p>
+    </section>
+
+    <section id="s11">
+      <h2>11. Kontakt</h2>
+      <p>
+        <a href="mailto:kontakt@hazher.no">kontakt@hazher.no</a>
+        · <a href="../Support/">Support</a>
+        · <a href="../Privacy/">Personvern</a>
+        · <a href="../index.html">DyreHjelpen hub</a>
+      </p>
     </section>
   </article>
 </main>
-<footer class="footer"><p class="footer-copy wrap">© Hazher</p></footer>
+
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <div class="footer-links">
+      <a href="../index.html">DyreHjelpen</a>
+      <a href="../Privacy/">Personvern</a>
+      <a href="../Support/">Support</a>
+    </div>
+  </div>
+  <p class="footer-copy wrap">© Hazher · DyreHjelpen</p>
+</footer>
 </body>
 </html>
