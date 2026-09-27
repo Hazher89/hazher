@@ -77,6 +77,8 @@ export function isAllowedPublicPath(pathname: string): boolean {
   if (p === '/api/hq' || p.startsWith('/api/hq/')) return true;
   if (p === '/j' || p.startsWith('/j/')) return true;
   if (p === '/u' || p.startsWith('/u/')) return true;
+  if (p === '/d' || p.startsWith('/d/')) return true;
+  if (p.startsWith('/DYREHJELPEN/d') || p.startsWith('/dyrehjelpen/d')) return true;
   if (p.startsWith('/HURTIGHJELP/j') || p.startsWith('/HURTIGHJELP/u')) return true;
   if (p.startsWith('/.well-known/')) return true;
   if (p === '/images' || p.startsWith('/images/')) return true;
@@ -131,6 +133,7 @@ export function isAllowedPublicPath(pathname: string): boolean {
     chronoblade: 'CHRONOBLADE',
     'chrono-blade': 'CHRONOBLADE',
     hurtighjelp: 'HURTIGHJELP',
+    dyrehjelpen: 'DYREHJELPEN',
     loopmarked: 'LOOPMARKED',
     delelader: 'DELELADER',
   };

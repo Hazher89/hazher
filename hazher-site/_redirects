@@ -84,6 +84,8 @@
 /dyrehjelpen/terms/ /DYREHJELPEN/Terms/ 301
 /dyrehjelpen/support /DYREHJELPEN/Support/ 301
 /dyrehjelpen/support/ /DYREHJELPEN/Support/ 301
+/dyrehjelpen/d/* /d/:splat 302
+/DYREHJELPEN/d/* /d/:splat 302
 /DYREHJELPEN/personvern /DYREHJELPEN/Privacy/ 301
 /DYREHJELPEN/personvern/ /DYREHJELPEN/Privacy/ 301
 /DYREHJELPEN/vilkar /DYREHJELPEN/Terms/ 301
