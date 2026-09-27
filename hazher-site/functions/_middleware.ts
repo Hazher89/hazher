@@ -55,6 +55,7 @@ export async function onRequest(context: Context): Promise<Response> {
 
   if (
     context.request.method === 'GET' &&
+    (context.env.HQ_TRAFFIC_LOG || '').trim() === '1' &&
     !shouldSkipLogging(path) &&
     !isProbePath(path) &&
     isAllowedPublicPath(path) &&

@@ -32,18 +32,24 @@ Type **Secret** for alle:
 | `HQ_SESSION_SECRET` | Lang tilfeldig streng |
 | `HQ_USER` | `HAZHER` (valgfritt) |
 
-### 3) KV-binding (dette er `HAZHER_HQ`)
+### 3) KV-binding (valgfritt — `HAZHER_HQ`)
 
-`HAZHER_HQ` legges **ikke** under Variables — den legges under **Bindings**:
+`HAZHER_HQ` brukes **kun** til HQ-trafikklogg. Den ligger under **Bindings** (ikke Variables):
 
-1. Først: **Workers & Pages** → **KV** → **Create a namespace** (f.eks. `hazher-hq`)
-2. Tilbake til Pages-prosjektet **hazher** → **Settings** → **Bindings**
-3. **Add** → **KV namespace**
-4. **Variable name:** `HAZHER_HQ` (nøyaktig)
-5. Velg KV-namespacen du nettopp laget
-6. Save → **Redeploy**
+1. **Workers & Pages** → **KV** → namespace (f.eks. `hazher-hq`)
+2. Pages-prosjektet **hazher** → **Settings** → **Bindings** → **KV namespace**
+3. **Variable name:** `HAZHER_HQ` (nøyaktig)
+4. Save → **Redeploy**
 
-Uten denne bindingen fungerer login, men trafikklisten er tom.
+**Viktig om KV-kvote:** Tidligere logget *hver* sidevisning ~4–6 KV-operasjoner, som raskt fylte gratis-kvoten og utløste Cloudflare-e-post.  
+Nå er logging **av som standard**. For å skru på (kun hvis du trenger trafikklisten i `/hq`):
+
+| Navn | Verdi |
+|------|--------|
+| `HQ_TRAFFIC_LOG` | `1` |
+
+Uten `HQ_TRAFFIC_LOG=1` bruker siden **nesten ingen KV** (HQ-login fungerer fortsatt via cookie).
+Uten KV-binding fungerer login også — trafikklisten blir tom.
 
 ### 4) Cloudflare Bot Fight (anbefalt)
 

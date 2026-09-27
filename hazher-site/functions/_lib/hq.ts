@@ -10,6 +10,8 @@ export type Env = {
   HQ_PASS_SALT?: string;
   HQ_PASS_HASH?: string;
   HQ_SESSION_SECRET?: string;
+  /** Sett til "1" for å logge besøk til KV (bruker mange KV-writes). Av som standard. */
+  HQ_TRAFFIC_LOG?: string;
 };
 
 /** Defaults — override in Cloudflare Pages → Settings → Environment variables. */
@@ -166,11 +168,13 @@ function isNoiseVisit(v: VisitEvent): boolean {
 export async function logVisit(env: Env, visit: VisitEvent): Promise<void> {
   const kv = env.HAZHER_HQ;
   if (!kv) return;
+  // Gratis KV har lav write-kvote. Logging er opt-in via HQ_TRAFFIC_LOG=1.
+  if ((env.HQ_TRAFFIC_LOG || '').trim() !== '1') return;
 
   const day = visit.ts.slice(0, 10);
   const dayKey = `visits:${day}`;
   try {
-    // Fast ring buffer — one key for HQ feed (newest first)
+    // Én ring-buffer + daglig nøkkel (2 get + 2 put). Unngå ekstra index-read hver gang.
     const recentRaw = await kv.get(RECENT_KEY);
     const recent: VisitEvent[] = recentRaw ? JSON.parse(recentRaw) : [];
     recent.unshift(visit);
@@ -180,16 +184,19 @@ export async function logVisit(env: Env, visit: VisitEvent): Promise<void> {
 
     const raw = await kv.get(dayKey);
     const list: VisitEvent[] = raw ? JSON.parse(raw) : [];
+    const isFirstToday = list.length === 0;
     list.unshift(visit);
     await kv.put(dayKey, JSON.stringify(list.slice(0, 800)), {
       expirationTtl: 60 * 60 * 24 * 45,
     });
 
-    const indexRaw = await kv.get('visits:index');
-    const index: string[] = indexRaw ? JSON.parse(indexRaw) : [];
-    if (!index.includes(day)) {
-      index.unshift(day);
-      await kv.put('visits:index', JSON.stringify(index.slice(0, 45)));
+    if (isFirstToday) {
+      const indexRaw = await kv.get('visits:index');
+      const index: string[] = indexRaw ? JSON.parse(indexRaw) : [];
+      if (!index.includes(day)) {
+        index.unshift(day);
+        await kv.put('visits:index', JSON.stringify(index.slice(0, 45)));
+      }
     }
   } catch {
     // never break the site for logging
