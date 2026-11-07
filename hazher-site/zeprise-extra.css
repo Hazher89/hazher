@@ -1,0 +1,93 @@
+/* ZepRise — mist sky / sand / ember (matches in-app BrTheme) */
+.theme-zeprise .apple-hero__glow {
+  background:
+    radial-gradient(ellipse 60% 48% at 50% 28%, rgba(183, 210, 224, 0.35), transparent 72%),
+    radial-gradient(ellipse 42% 36% at 72% 62%, rgba(232, 217, 184, 0.22), transparent 68%),
+    radial-gradient(ellipse 30% 28% at 22% 70%, rgba(232, 140, 90, 0.12), transparent 70%);
+}
+
+.theme-zeprise .apple-hero__eyebrow {
+  color: rgba(183, 210, 224, 0.92);
+  letter-spacing: 0.14em;
+}
+
+.theme-zeprise .apple-hero__icon .app-squircle {
+  box-shadow:
+    0 0 0 1px rgba(183, 210, 224, 0.35),
+    0 24px 60px rgba(0, 0, 0, 0.5),
+    0 0 90px rgba(232, 140, 90, 0.18);
+}
+
+.theme-zeprise .apple-feature__label {
+  color: #b7d2e0;
+}
+
+.btn-zeprise-primary {
+  background: linear-gradient(135deg, #e8d9b8, #f7f5f1) !important;
+  color: #0c1218 !important;
+  border: none !important;
+  font-weight: 700;
+}
+
+.btn-zeprise-primary:hover {
+  filter: brightness(1.05);
+}
+
+.app-squircle--zeprise {
+  border-radius: 28%;
+  overflow: hidden;
+  background: #0e1620;
+}
+
+.theme-zeprise .zeprise-sky-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+  margin: 1.25rem 0 2rem;
+}
+
+.theme-zeprise .zeprise-sky-grid span {
+  display: block;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(183, 210, 224, 0.22);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+}
+
+.theme-zeprise .zeprise-store {
+  display: grid;
+  gap: 12px;
+  margin-top: 1.5rem;
+}
+
+.theme-zeprise .zeprise-store code {
+  display: block;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(183, 210, 224, 0.18);
+  font-size: 0.82rem;
+  word-break: break-all;
+  color: #e8d9b8;
+}
+
+.theme-zeprise .legal-prose h3 {
+  margin: 1.75rem 0 0.6rem;
+  font-size: 1.15rem;
+  color: #fff;
+}
+
+.theme-zeprise .legal-prose p,
+.theme-zeprise .legal-prose li {
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.65;
+}
+
+.theme-zeprise .legal-prose ul {
+  padding-left: 1.2rem;
+  margin: 0.5rem 0 1rem;
+}
