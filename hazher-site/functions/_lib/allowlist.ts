@@ -3,6 +3,8 @@
 const PRODUCT_PAGES: Record<string, ReadonlySet<string>> = {
   DRIFTPRO: new Set(['', 'Privacy', 'Terms', 'Support']),
   CHRONOBLADE: new Set(['', 'Privacy', 'Terms', 'Support']),
+  // Mixed-case folder on disk (hazher.no/ZepRise/) — key must match URL segment.
+  ZepRise: new Set(['', 'Privacy', 'Terms', 'Support']),
   HURTIGHJELP: new Set(['', 'Privacy', 'Support', 'app']),
   DYREHJELPEN: new Set(['', 'Privacy', 'Terms', 'Support']),
   KAPRE: new Set(['', 'Privacy', 'Terms', 'Support']),
@@ -106,6 +108,9 @@ export function isAllowedPublicPath(pathname: string): boolean {
       'navnishan',
       'chronoblade',
       'chrono-blade',
+      'zeprise',
+      'balloonrise',
+      'balloon-rise',
       'hurtighjelp',
       'dyrehjelpen',
       'loopmarked',
@@ -132,12 +137,20 @@ export function isAllowedPublicPath(pathname: string): boolean {
     navnishan: 'NAVNISHAN',
     chronoblade: 'CHRONOBLADE',
     'chrono-blade': 'CHRONOBLADE',
+    zeprise: 'ZepRise',
+    balloonrise: 'ZepRise',
+    'balloon-rise': 'ZepRise',
     hurtighjelp: 'HURTIGHJELP',
     dyrehjelpen: 'DYREHJELPEN',
     loopmarked: 'LOOPMARKED',
     delelader: 'DELELADER',
   };
-  const hub = PRODUCT_PAGES[first] ? first : aliasMap[lowFirst];
+  // Preserve mixed-case hubs (ZepRise); uppercase keys (CHRONOBLADE) still match.
+  const hub = PRODUCT_PAGES[first]
+    ? first
+    : PRODUCT_PAGES[first.toUpperCase()]
+      ? first.toUpperCase()
+      : aliasMap[lowFirst];
   if (!hub || !PRODUCT_PAGES[hub]) return false;
 
   const allowed = PRODUCT_PAGES[hub];
