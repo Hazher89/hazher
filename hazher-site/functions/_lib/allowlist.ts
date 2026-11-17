@@ -4,9 +4,9 @@ const PRODUCT_PAGES: Record<string, ReadonlySet<string>> = {
   DRIFTPRO: new Set(['', 'Privacy', 'Terms', 'Support']),
   CHRONOBLADE: new Set(['', 'Privacy', 'Terms', 'Support']),
   // Mixed-case folder on disk (hazher.no/ZepRise/) — key must match URL segment.
-  ZepRise: new Set(['', 'Privacy', 'Terms', 'Support']),
+  ZepRise: new Set(['', 'Privacy', 'Terms', 'Support', 'app-ads.txt']),
   HURTIGHJELP: new Set(['', 'Privacy', 'Support', 'app']),
-  DYREHJELPEN: new Set(['', 'Privacy', 'Terms', 'Support']),
+  DYREHJELPEN: new Set(['', 'Privacy', 'Terms', 'Support', 'app']),
   KAPRE: new Set(['', 'Privacy', 'Terms', 'Support']),
   LOOPMARKED: new Set(['']),
   ALIBARBER: new Set(['', 'Privacy', 'Support', 'Delete']),
@@ -80,7 +80,9 @@ export function isAllowedPublicPath(pathname: string): boolean {
   if (p === '/j' || p.startsWith('/j/')) return true;
   if (p === '/u' || p.startsWith('/u/')) return true;
   if (p === '/d' || p.startsWith('/d/')) return true;
+  if (p === '/h' || p.startsWith('/h/')) return true;
   if (p.startsWith('/DYREHJELPEN/d') || p.startsWith('/dyrehjelpen/d')) return true;
+  if (p.startsWith('/DYREHJELPEN/h') || p.startsWith('/dyrehjelpen/h')) return true;
   if (p.startsWith('/HURTIGHJELP/j') || p.startsWith('/HURTIGHJELP/u')) return true;
   if (p.startsWith('/.well-known/')) return true;
   if (p === '/images' || p.startsWith('/images/')) return true;
@@ -171,8 +173,14 @@ export function isAllowedPublicPath(pathname: string): boolean {
     return allowed.has(page);
   }
 
-  // /HURTIGHJELP/app only (assets under it already allowed via extension)
-  if (hub === 'HURTIGHJELP' && parts[1] === 'app' && parts.length === 2) return true;
+  // /HURTIGHJELP/app and /DYREHJELPEN/app (assets under them already via extension)
+  if (
+    (hub === 'HURTIGHJELP' || hub === 'DYREHJELPEN') &&
+    parts[1] === 'app' &&
+    parts.length === 2
+  ) {
+    return true;
+  }
 
   return false;
 }
